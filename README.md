@@ -8,8 +8,7 @@ We based our RPG on the very legendary `The Legend of Zelda` license.
 
 ## Usage
 
-*To compile the game, you'll need the SFML installed on your PC and the CSFML binding of it.*
-Get in the directory and use the `make` command in your terminal.
-Then just type `./my_rpg` and you're good to go !
+*To compile the game, you'll need the SFML installed on your PC and the CSFML binding of it.*<br>
+Get in the directory and use the `make` command in your terminal.<br>Then just type `./my_rpg` and you're good to go !
 
 ###### Made by *Aymeric Chaverot*, *Arthur Pahon*, *Eddie Klai* and *Oscar Malandin*.
