@@ -1,6 +1,6 @@
 # RPGrrr
 
-The goal of this project is to create our own *RPG game* using the **CSFML** library.
+The goal of this project is to create our own *RPG game* in **C**, using the **CSFML** library.
 
 We based our RPG on the very legendary `The Legend of Zelda` license.
 
