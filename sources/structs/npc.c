@@ -13,6 +13,7 @@ npc_t *create_npc(npc_t *start, char *name)
 
     new->name = my_strdup(name);
     new->type = 0;
+    new->depth = 0;
     new->hp_max = 10;
     new->current_hp = new->hp_max;
     new->inventory = NULL;
