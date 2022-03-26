@@ -9,6 +9,7 @@
 
 void init_intro(data_t *data)
 {
+    printf("teszez igiea\n");
     create_texture(data->texture_bank,
     "../../assets/intro_menu/metro.png", &(sfIntRect){16, 400, 256, 145});
     //set_texture_rect(data->texture_bank, (sfIntRect);
