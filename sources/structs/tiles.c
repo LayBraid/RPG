@@ -23,7 +23,7 @@ tile_t *create_tile(tile_t *start)
 
 tile_t *delete_tile(tile_t *node)
 {
-    sfSprite_destroy(node);
+    sfSprite_destroy(node->sprite);
     free(node);
     return (NULL);
 }
