@@ -26,6 +26,7 @@ SRC = ./sources/main.c \
 	  ./sources/load/loading.c \
 	  ./sources/utils/launch_rpg.c \
 	  ./sources/utils/switch_scene.c \
+	  ./sources/utils/my_strdup.c \
 	  ./sources/intro/init_intro.c \
 	  ./sources/intro/make_intro.c	\
 	  ./lib/my/my_getnbr.c \
