@@ -19,22 +19,6 @@ typedef struct tile {
     struct tile *next;
 } tile_t;
 
-typedef struct npc {
-    unsigned int id;
-    char *name;
-    unsigned char type;
-    unsigned char depth;
-    int hp_max;
-    int current_hp;
-    inventory_t *inventory;
-    sfSprite *sprite;
-    sfIntRect rect;
-    int max_rect;
-    sfVector2f position;
-    sfClock *clock;
-    struct npc *next;
-} npc_t;
-
 typedef struct button {
     unsigned int id;
     sfSprite *sprite;
@@ -66,6 +50,22 @@ typedef struct inventory {
     unsigned int count;
     struct inventory *next;
 } inventory_t;
+
+typedef struct npc {
+    unsigned int id;
+    char *name;
+    unsigned char type;
+    unsigned char depth;
+    int hp_max;
+    int current_hp;
+    inventory_t *inventory;
+    sfSprite *sprite;
+    sfIntRect rect;
+    int max_rect;
+    sfVector2f position;
+    sfClock *clock;
+    struct npc *next;
+} npc_t;
 
 typedef struct player {
     char *name;
