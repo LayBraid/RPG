@@ -5,7 +5,29 @@
 ## Makefile
 ##
 
-SRC = ./sources/main.c
+SRC = ./sources/main.c \
+	  ./sources/display/display_all.c \
+	  ./sources/display/display_utils.c \
+	  ./sources/structs/button_utils.c \
+	  ./sources/structs/button.c \
+	  ./sources/structs/data_creation.c \
+	  ./sources/structs/inventory_utils.c \
+	  ./sources/structs/inventory.c \
+	  ./sources/structs/npc_utils_2.c \
+	  ./sources/structs/npc_utils.c \
+	  ./sources/structs/npc.c \
+	  ./sources/structs/text_utils.c \
+	  ./sources/structs/text.c \
+	  ./sources/structs/texture_utils.c \
+	  ./sources/structs/texture.c \
+	  ./sources/structs/tiles_utils.c \
+	  ./sources/structs/tiles.c \
+	  ./sources/structs/video_utils.c \
+	  ./sources/load/loading.c \
+	  ./sources/utils/launch_rpg.c \
+	  ./sources/utils/switch_scene.c \
+	  ./sources/intro/init_intro.c \
+	  ./sources/intro/make_intro.c
 
 OBJ = $(SRC:%.c=%.o)
 

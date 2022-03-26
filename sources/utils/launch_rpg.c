@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2022
-** Sans titre(Espace de travail)
+** my_rpg
 ** File description:
 ** launch_rpg
 */
@@ -9,5 +9,9 @@
 
 void launch_rpg(data_t *data)
 {
-    switch_scene(data);
+    while (sfRenderWindow_isOpen(data->video.window)) {
+        sfRenderWindow_clear(data->video.window, sfBlack);
+        switch_scene(data);
+        sfRenderWindow_display(data->video.window);
+    }
 }

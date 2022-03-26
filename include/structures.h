@@ -96,6 +96,8 @@ typedef struct data {
     npc_t *npcs;
     tile_t *tiles;
     sfEvent event;
+    float delta;
+    unsigned char loading_state;
 } data_t;
 
 // display_all.c
@@ -107,6 +109,10 @@ void display_npc_depth(npc_t *start, video_t video, unsigned char depth);
 void display_buttons(button_t *start, video_t video);
 void display_texts(text_t *start, video_t video);
 void display_player_depth(player_t player, video_t video, unsigned char depth);
+
+// data_creation.c
+data_t *data_delete(data_t *data);
+data_t *data_create(void);
 
 // tiles.c
 tile_t *create_tile(tile_t *start);
