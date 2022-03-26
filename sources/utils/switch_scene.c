@@ -12,12 +12,12 @@ void switch_scene(data_t *data)
     switch (data->video.ui) {
         case (0): intro_scene(data);
             break;
-        case (1): menu_scene(data);
-            break;
-        case (2): game_scene(data);
-            break;
-        case (3): end_scene(data);
-            break;
+        // case (1): menu_scene(data);
+        //     break;
+        // case (2): game_scene(data);
+        //     break;
+        // case (3): end_scene(data);
+        //     break;
         case (32): loading(data);
             break;
         default:

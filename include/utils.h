@@ -13,10 +13,10 @@
     // launch_rpg.c
     void launch_rpg(data_t *data);
 
+    // loading.c
+    void loading(data_t *data);
+
     // switch_scene.c
     void switch_scene(data_t *data);
-
-    // analyse_events.c
-    void analyse_event(data_t *data);
 
 #endif /* !UTILS_H_ */

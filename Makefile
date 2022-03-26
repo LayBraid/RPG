@@ -26,7 +26,6 @@ SRC = ./sources/main.c \
 	  ./sources/load/loading.c \
 	  ./sources/utils/launch_rpg.c \
 	  ./sources/utils/switch_scene.c \
-	  ./sources/utils/my_strdup.c \
 	  ./sources/intro/init_intro.c \
 	  ./sources/intro/make_intro.c	\
 	  ./lib/my/my_getnbr.c \
@@ -36,6 +35,7 @@ SRC = ./sources/main.c \
 	  ./lib/my/my_strlen.c	\
 	  ./lib/my/getnbrr.c	\
 	  ./lib/my/my_strcat.c	\
+	  ./lib/my/my_strdup.c \
 
 OBJ = $(SRC:%.c=%.o)
 

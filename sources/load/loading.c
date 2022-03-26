@@ -12,7 +12,7 @@ void loading(data_t *data)
     switch (data->loading_state) {
         case (1): init_intro(data);
         break;
-        case (2): delete_intro(data);
-        break;
+        // case (2): delete_intro(data);
+        // break;
     }
 }

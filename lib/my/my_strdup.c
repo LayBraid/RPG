@@ -5,7 +5,7 @@
 ** my_strdup
 */
 
-#include <unistd.h>
+#include <stdlib.h>
 
 static int my_strlen(char *str)
 {
