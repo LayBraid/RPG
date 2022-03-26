@@ -21,6 +21,7 @@
     #include <SFML/System.h>
     #include <SFML/OpenGL.h>
 
+    #include "lib.h"
     #include "structures.h"
     #include "utils.h"
     #include "intro.h"
