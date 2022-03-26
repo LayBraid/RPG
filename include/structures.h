@@ -176,6 +176,7 @@ inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
 inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 
 // video_utils.c
+void set_fps(sfRenderWindow *window, int fps, data_t *data);
 video_t set_video(video_t video, int width, int height, int bpp);
 
 #endif /* !STRUCTURES_H_ */
