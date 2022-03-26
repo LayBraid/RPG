@@ -25,4 +25,6 @@
     #include "utils.h"
     #include "intro.h"
 
+char *my_strdup(char *str);
+
 #endif /* !MY_RPG_H_ */
