@@ -155,4 +155,7 @@ inventory_t *delete_whole_inventory(inventory_t *start);
 inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
 inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 
+// video_utils.c
+video_t set_video(video_t video, int width, int height, int bpp);
+
 #endif /* !STRUCTURES_H_ */
