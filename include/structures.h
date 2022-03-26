@@ -95,6 +95,7 @@ typedef struct data {
     button_t *buttons;
     npc_t *npcs;
     tile_t *tiles;
+    sfEvent event;
 } data_t;
 
 // display_all.c

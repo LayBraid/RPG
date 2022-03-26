@@ -5,7 +5,7 @@
 ** myh
 */
 
-#include "../include/my_rpg.h"
+#include "include/my_rpg.h"
 
 void myh(void)
 {

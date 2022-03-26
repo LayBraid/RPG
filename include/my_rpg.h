@@ -22,5 +22,7 @@
     #include <SFML/OpenGL.h>
 
     #include "structures.h"
+    #include "utils.h"
+    #include "intro.h"
 
 #endif /* !MY_RPG_H_ */
