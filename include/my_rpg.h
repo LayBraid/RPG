@@ -20,6 +20,7 @@
     #include <SFML/Config.h>
     #include <SFML/System.h>
     #include <SFML/OpenGL.h>
+
     #include "structures.h"
 
 #endif /* !MY_RPG_H_ */
