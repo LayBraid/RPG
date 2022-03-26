@@ -12,6 +12,7 @@
 
 typedef struct tile {
     unsigned int id;
+    unsigned char depth;
     sfSprite *sprite;
     sfIntRect rect;
     sfVector2f position;
@@ -22,6 +23,7 @@ typedef struct npc {
     unsigned int id;
     char *name;
     unsigned char type;
+    unsigned char depth;
     int hp_max;
     int current_hp;
     inventory_t *inventory;
@@ -67,6 +69,7 @@ typedef struct inventory {
 
 typedef struct player {
     char *name;
+    unsigned char depth;
     int hp_max;
     int current_hp;
     inventory_t *inventory;
@@ -93,6 +96,16 @@ typedef struct data {
     npc_t *npcs;
     tile_t *tiles;
 } data_t;
+
+// display_all.c
+void display_all(data_t *data);
+
+// display_utils.c
+void display_tile_depth(tile_t *start, video_t video, unsigned char depth);
+void display_npc_depth(npc_t *start, video_t video, unsigned char depth);
+void display_buttons(button_t *start, video_t video);
+void display_texts(text_t *start, video_t video);
+void display_player_depth(player_t player, video_t video, unsigned char depth);
 
 // tiles.c
 tile_t *create_tile(tile_t *start);

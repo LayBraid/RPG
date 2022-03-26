@@ -12,6 +12,7 @@ data_t *data_create(void)
     data_t *data = malloc(sizeof(data_t));
 
     data->video.ui = 0;
+    data->player.depth = 0;
     data->player.hp_max = 10;
     data->player.current_hp = 10;
     data->player.inventory = NULL;
