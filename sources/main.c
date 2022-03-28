@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2022
 ** my_rpg
 ** File description:
-** main RPG
+** main MyRPG
 */
 
 #include "../include/my_rpg.h"
