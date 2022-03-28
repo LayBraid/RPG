@@ -15,6 +15,8 @@ tile_t *create_tile(tile_t *start)
     new->sprite = sfSprite_create();
     new->rect = (sfIntRect){0, 0, 0, 0};
     new->position = (sfVector2f){0, 0};
+    new->scale = (sfVector2f){1, 1};
+    new->move = (sfVector2f){0, 0};
     new->id = (start == NULL) ? 1 : start->id + 1;
     new->next = start;
     start = new;

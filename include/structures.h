@@ -16,6 +16,8 @@ typedef struct tile {
     sfSprite *sprite;
     sfIntRect rect;
     sfVector2f position;
+    sfVector2f scale;
+    sfVector2f move;
     struct tile *next;
 } tile_t;
 
@@ -122,6 +124,8 @@ tile_t *delete_all_tiles(tile_t *start);
 // tiles_utils.c
 tile_t *set_tile_texture(tile_t *node, texture_t *texture);
 tile_t *set_tile_position(tile_t *node, sfVector2f position);
+tile_t *set_tile_scale(tile_t *node, sfVector2f scale);
+tile_t *set_tile_move(tile_t *node, sfVector2f move);
 
 // npc.c
 npc_t *create_npc(npc_t *start, char *name);
