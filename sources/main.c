@@ -5,9 +5,9 @@
 ** main MyRPG
 */
 
-#include "../include/my_rpg.h"
+#include "my_rpg.h"
 
-void myh(void)
+static void myh(void)
 {
     my_putstr("Welcome to The Legend of ZELDA Ocarina of Time !\n"
     "Save Hyrule from demons and find the princess !\n"

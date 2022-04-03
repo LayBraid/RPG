@@ -5,8 +5,8 @@
 ** my_rpg
 */
 
-#ifndef MY_RPG_H_
-    #define MY_RPG_H_
+#ifndef MY_RPG_H
+    #define MY_RPG_H
 
     #include <stdlib.h>
     #include <unistd.h>
@@ -21,7 +21,7 @@
     #include <SFML/System.h>
     #include <SFML/OpenGL.h>
 
-    #include "lib.h"
+    #include "my.h"
     #include "structures.h"
     #include "utils.h"
     #include "intro.h"
