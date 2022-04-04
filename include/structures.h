@@ -10,6 +10,15 @@
 
     #include "my_rpg.h"
 
+typedef struct data data_t;
+
+typedef struct event_type {
+    int id;
+    char *name;
+    void (*function)(data_t *data);
+    struct event_type *next;
+} event_t;
+
 typedef struct tile {
     unsigned int id;
     unsigned char depth;
@@ -88,7 +97,7 @@ typedef struct video {
     unsigned int ui;
 } video_t;
 
-typedef struct data {
+struct data {
     video_t video;
     player_t player;
     texture_t *texture_bank;
@@ -98,9 +107,10 @@ typedef struct data {
     npc_t *npcs;
     tile_t *tiles;
     sfEvent event;
+    event_t *my_event;
     float delta;
     unsigned char loading_state;
-} data_t;
+};
 
 // display_all.c
 void display_all(data_t *data);
