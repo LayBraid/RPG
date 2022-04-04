@@ -5,6 +5,7 @@
 ## Makefile
 ##
 
+<<<<<<< HEAD
 SRC = ./sources/main.c \
 	  ./sources/display/display_all.c \
 	  ./sources/display/display_utils.c \
@@ -38,21 +39,39 @@ SRC = ./sources/main.c \
 	  ./lib/my/getnbrr.c	\
 	  ./lib/my/my_strcat.c	\
 	  ./lib/my/my_strdup.c \
+=======
+SRC = $(wildcard sources/*.c) \
+	  $(wildcard sources/display/*.c) \
+	  $(wildcard sources/structs/*.c) \
+	  $(wildcard sources/load/*.c) \
+	  $(wildcard sources/utils/*.c) \
+	  $(wildcard sources/my_event/*.c) \
+	  $(wildcard sources/intro/*.c) \
+>>>>>>> c54fb406085a4284b5dec3dde0d71a128140bfeb
 
 OBJ = $(SRC:%.c=%.o)
 
-CFLAGS = -lm -lcsfml-graphics -lcsfml-system \
-		-lcsfml-window -lcsfml-audio -I ./include/
+SRC_LIB = -Llib -lmy
+SFML_L = -lcsfml-graphics -lcsfml-system -lcsfml-window -lcsfml-audio
+CFLAGS = -Iinclude/
 
 NAME = my_rpg
 
-all: $(OBJ)
-	gcc $(CFLAGS) -o $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	cd lib/my && make
+	gcc $(CFLAGS) $(SFML_L) $(SRC_LIB) -o $(NAME) $(OBJ)
 
+.PHONY: all
+all: $(NAME)
+
+.PHONY: clean
 clean:
+	cd lib/my && make fclean
 	rm -f $(OBJ)
 
+.PHONY: fclean
 fclean: clean
 	rm -f $(NAME)
 
+.PHONY: re
 re: fclean all

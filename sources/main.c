@@ -5,9 +5,9 @@
 ** main MyRPG
 */
 
-#include "../include/my_rpg.h"
+#include "my_rpg.h"
 
-void myh(void)
+static void myh(void)
 {
     my_putstr("Welcome to The Legend of ZELDA Ocarina of Time !\n"
     "Save Hyrule from demons and find the princess !\n"
@@ -17,7 +17,8 @@ void myh(void)
 
 int main(int ac, char **av)
 {
-    data_t *data = data_create();
+    data_t *data = malloc(sizeof(data_t));
+    data_create(data);
 
     data->video = set_video(data->video, 1920, 1080, 32);
     set_fps(data->video.window, 60, data);
