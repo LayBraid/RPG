@@ -25,5 +25,6 @@
     #include "structures.h"
     #include "utils.h"
     #include "intro.h"
+    #include "menu.h"
 
 #endif /* !MY_RPG_H_ */

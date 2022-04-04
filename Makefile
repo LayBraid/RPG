@@ -28,6 +28,8 @@ SRC = ./sources/main.c \
 	  ./sources/utils/switch_scene.c \
 	  ./sources/intro/init_intro.c \
 	  ./sources/intro/make_intro.c	\
+	  ./sources/menu/init_menu.c	\
+	  ./sources/menu/make_menu.c	\
 	  ./lib/my/my_getnbr.c \
 	  ./lib/my/my_putchar.c \
 	  ./lib/my/my_putnbr.c \
