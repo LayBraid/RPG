@@ -124,7 +124,7 @@ void display_player_depth(player_t player, video_t video, unsigned char depth);
 
 // data_creation.c
 data_t *data_delete(data_t *data);
-data_t *data_create(void);
+void data_create(data_t *data);
 
 // tiles.c
 tile_t *create_tile(tile_t *start);

@@ -5,7 +5,8 @@
 ** data_creation
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
+#include "my_event.h"
 
 data_t *data_delete(data_t *data)
 {
@@ -21,10 +22,10 @@ data_t *data_delete(data_t *data)
     return (NULL);
 }
 
-data_t *data_create(void)
-{
-    data_t *data = malloc(sizeof(data_t));
+//TODO Resize function "data_create"
 
+void data_create(data_t *data)
+{
     data->video.ui = 32;
     data->player.depth = 0;
     data->player.hp_max = 10;
@@ -43,5 +44,7 @@ data_t *data_create(void)
     data->tiles = NULL;
     data->delta = 1.0;
     data->loading_state = 0;
+    data->my_event = NULL;
+    initialize_events(data);
     return (data);
 }
