@@ -5,7 +5,6 @@
 ## Makefile
 ##
 
-<<<<<<< HEAD
 SRC = ./sources/main.c \
 	  ./sources/display/display_all.c \
 	  ./sources/display/display_utils.c \
@@ -39,15 +38,6 @@ SRC = ./sources/main.c \
 	  ./lib/my/getnbrr.c	\
 	  ./lib/my/my_strcat.c	\
 	  ./lib/my/my_strdup.c \
-=======
-SRC = $(wildcard sources/*.c) \
-	  $(wildcard sources/display/*.c) \
-	  $(wildcard sources/structs/*.c) \
-	  $(wildcard sources/load/*.c) \
-	  $(wildcard sources/utils/*.c) \
-	  $(wildcard sources/my_event/*.c) \
-	  $(wildcard sources/intro/*.c) \
->>>>>>> c54fb406085a4284b5dec3dde0d71a128140bfeb
 
 OBJ = $(SRC:%.c=%.o)
 
