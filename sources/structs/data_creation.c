@@ -45,6 +45,6 @@ void data_create(data_t *data)
     data->delta = 1.0;
     data->loading_state = 0;
     data->my_event = NULL;
-    initialize_events(data);
-    return (data);
+    // initialize_events(data);
+    // return (data);
 }

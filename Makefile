@@ -28,6 +28,7 @@ SRC = ./sources/main.c \
 	  ./sources/utils/switch_scene.c \
 	  ./sources/intro/init_intro.c \
 	  ./sources/intro/make_intro.c	\
+	  ./sources/intro/delete_intro.c	\
 	  ./sources/menu/init_menu.c	\
 	  ./sources/menu/make_menu.c	\
 	  ./lib/my/my_getnbr.c \
@@ -38,19 +39,6 @@ SRC = ./sources/main.c \
 	  ./lib/my/getnbrr.c	\
 	  ./lib/my/my_strcat.c	\
 	  ./lib/my/my_strdup.c \
-<<<<<<< HEAD
-=======
-=======
-SRC = $(wildcard sources/*.c) \
-	  $(wildcard sources/display/*.c) \
-	  $(wildcard sources/structs/*.c) \
-	  $(wildcard sources/load/*.c) \
-	  $(wildcard sources/utils/*.c) \
-	  $(wildcard sources/my_event/*.c) \
-	  $(wildcard sources/my_event/functions/coins/*.c) \
-	  $(wildcard sources/intro/*.c) \
->>>>>>> c54fb406085a4284b5dec3dde0d71a128140bfeb
->>>>>>> f97d87352b69f8464e131468474ab5867704aa28
 
 OBJ = $(SRC:%.c=%.o)
 

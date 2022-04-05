@@ -20,5 +20,6 @@ void init_menu(data_t *data)
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.6, 7.6});
+    data->tiles = set_tile_position(data->tiles, (sfVector2f){0, 0});
     data->video.ui = 1;
 }

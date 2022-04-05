@@ -16,7 +16,7 @@ void loading(data_t *data)
             break;
         case (2): init_menu(data);
             break;
-        case (3): delete_menu(data);
-            break;
+        // case (3): delete_menu(data);
+        //     break;
     }
 }
