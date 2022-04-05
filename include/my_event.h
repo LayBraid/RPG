@@ -10,6 +10,8 @@
 
     #include "structures.h"
 
+void call_event(data_t *data, char *event);
+
 void initialize_events(data_t *data);
 
 void add_event(event_t **node, event_t *new);
