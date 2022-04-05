@@ -11,6 +11,7 @@ event_t *cast_event(char *name, void (*function)(data_t *data))
 {
     event_t *new = malloc(sizeof(event_t));
     new->name = name;
+    new->calling = 0;
     new->function = function;
 
     return new;
