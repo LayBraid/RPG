@@ -13,10 +13,10 @@ static void analyse_event(data_t *data)
         switch (data->event.type) {
             case (sfEvtClosed): sfRenderWindow_close(data->video.window);
                 break;
-            case (sfEvtKeyPressed): analyse_key(data);
-                break;
-            case (sfEvtMouseButtonPressed): analyse_mouse(data);
-                break;
+            // case (sfEvtKeyPressed): analyse_key(data);
+            //     break;
+            // case (sfEvtMouseButtonPressed): analyse_mouse(data);
+            //     break;
             default: break;
         }
     }
@@ -24,6 +24,6 @@ static void analyse_event(data_t *data)
 
 void menu_scene(data_t *data)
 {
-
+    display_all(data);
     analyse_event(data);
 }
