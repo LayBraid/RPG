@@ -7,7 +7,7 @@
 
 #include "my_event.h"
 
-void initialize_events(data_t *data)
+void add_3_coins(data_t *data)
 {
-    first_event(&data->my_event, cast_event("add_3_coins", add_3_coins));
+    (void) data;
 }
