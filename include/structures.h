@@ -14,6 +14,7 @@ typedef struct data data_t;
 
 typedef struct event_type {
     int id;
+    int calling;
     char *name;
     void (*function)(data_t *data);
     struct event_type *next;

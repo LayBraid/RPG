@@ -10,6 +10,16 @@
 
     #include "structures.h"
 
+void call_event(data_t *data, char *event);
+
 void initialize_events(data_t *data);
+
+void add_event(event_t **node, event_t *new);
+
+void first_event(event_t **node, event_t *new);
+
+event_t *cast_event(char *name, void (*function)(data_t *data));
+
+void add_3_coins(data_t *data);
 
 #endif

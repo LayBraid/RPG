@@ -38,6 +38,19 @@ SRC = ./sources/main.c \
 	  ./lib/my/getnbrr.c	\
 	  ./lib/my/my_strcat.c	\
 	  ./lib/my/my_strdup.c \
+<<<<<<< HEAD
+=======
+=======
+SRC = $(wildcard sources/*.c) \
+	  $(wildcard sources/display/*.c) \
+	  $(wildcard sources/structs/*.c) \
+	  $(wildcard sources/load/*.c) \
+	  $(wildcard sources/utils/*.c) \
+	  $(wildcard sources/my_event/*.c) \
+	  $(wildcard sources/my_event/functions/coins/*.c) \
+	  $(wildcard sources/intro/*.c) \
+>>>>>>> c54fb406085a4284b5dec3dde0d71a128140bfeb
+>>>>>>> f97d87352b69f8464e131468474ab5867704aa28
 
 OBJ = $(SRC:%.c=%.o)
 
