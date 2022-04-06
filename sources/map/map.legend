@@ -3,7 +3,7 @@
 [0,2] [0,3]
 
 
-[0,0,0,2]
+[0,0,0,2,nom du npc]
 
 - y séparé par un '\n'
 - x séparé par un ' '
@@ -21,3 +21,4 @@ automatiquement
     - coordonnée y
     - type de pnj
     - numéro de texture
+    - nom du npc

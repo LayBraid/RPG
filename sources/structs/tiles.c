@@ -13,6 +13,7 @@ tile_t *create_tile(tile_t *start)
 
     new->depth = 0;
     new->sprite = sfSprite_create();
+    new->type = 0;
     new->rect = (sfIntRect){0, 0, 0, 0};
     new->position = (sfVector2f){0, 0};
     new->scale = (sfVector2f){1, 1};

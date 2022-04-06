@@ -7,6 +7,12 @@
 
 #include "../../include/my_rpg.h"
 
+tile_t *set_tile_depth(tile_t *tile, unsigned char depth)
+{
+    tile->depth = depth;
+    return (tile);
+}
+
 tile_t *set_tile_texture(tile_t *node, texture_t *texture)
 {
     //node->rect = texture->rect;
