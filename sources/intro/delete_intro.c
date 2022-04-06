@@ -9,7 +9,7 @@
 
 void delete_intro(data_t *data)
 {
-    delete_all_tiles(data->tiles);
-    delete_all_textures(data->texture_bank);
+    data->tiles = delete_all_tiles(data->tiles);
+    data->texture_bank = delete_all_textures(data->texture_bank);
     data->loading_state = 2;
 }

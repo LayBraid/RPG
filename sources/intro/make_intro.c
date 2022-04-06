@@ -11,9 +11,10 @@ static void analyse_key(data_t *data)
 {
     if(data->event.key.code == sfKeyEscape)
         sfRenderWindow_close(data->video.window);
-    else
+    else {
         data->video.ui = 32;
         data->loading_state = 1;
+    }
 }
 
 static void analyse_mouse(data_t *data)
