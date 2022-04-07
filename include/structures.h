@@ -45,6 +45,7 @@ typedef struct tile {
     sfVector2f position;
     sfVector2f scale;
     sfVector2f move;
+    float rotation;
     struct tile *next;
 } tile_t;
 
@@ -155,6 +156,7 @@ tile_t *set_tile_texture(tile_t *node, texture_t *texture);
 tile_t *set_tile_position(tile_t *node, sfVector2f position);
 tile_t *set_tile_scale(tile_t *node, sfVector2f scale);
 tile_t *set_tile_move(tile_t *node, sfVector2f move);
+tile_t *set_tile_rotation(tile_t *node, float rotation);
 
 // npc.c
 npc_t *create_npc(npc_t *start, char *name);
