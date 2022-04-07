@@ -10,4 +10,10 @@
 
     #include "structures.h"
 
+void parsing_data(data_t *data);
+
+void parsing_quest(data_t *data, char *buffer);
+
+void parsing_profile(data_t *data, char *buffer);
+
 #endif

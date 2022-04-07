@@ -6,43 +6,44 @@
 */
 
 #include "parsing_data.h"
+#include "my.h"
+#include "utils.h"
 
-/*void convert_data(dfd *df, char *data, int step)
+static void convert_data(data_t *data, char *buffer, int *step)
 {
-    switch (step) {
+    if (my_strcmp(buffer, "['Quests']") == 0) {
+        (*step) = 0;
+        return;
+    }
+    if (my_strcmp(buffer, "['Profiles']") == 0) {
+        (*step) = 1;
+        return;
+    }
+    switch ((*step)) {
         case 0:
-            get_info_data(df, data);
+            parsing_quest(data, buffer);
             break;
         case 1:
-            decrypt_shop(df, data);
+            parsing_profile(data, buffer);
             break;
         default:
-            decrypt_buildings(df, data);
             break;
     }
 }
-
-void open_data(dfd *df)
-{
-    char *data = get_in_buffer("data/data");
-    int step = 0;
-    char *tmp = "";
-
-    for (int i = 0; data[i] != '\0'; i++) {
-        if (data[i] == '[')
-            continue;
-        tmp = my_strcat_c(tmp, data[i]);
-        if (data[i] == ']') {
-            convert_data(df, tmp, step);
-            tmp = "";
-            step++;
-            continue;
-        }
-    }
-}
-*/
 
 void parsing_data(data_t *data)
 {
-    (void)data;
+    char *buffer = get_in_buffer("data/my_data");
+    int step = -1;
+    char *tmp = "";
+
+    for (int i = 0; buffer[i] != '\0'; i++) {
+        if (buffer[i] != '\n')
+            tmp = my_strcat_c(tmp, buffer[i]);
+        if (buffer[i] == '\n') {
+            convert_data(data, tmp, &step);
+            tmp = "";
+            continue;
+        }
+    }
 }
