@@ -11,7 +11,7 @@
 
 void switch_scene(data_t *data)
 {
-    printf("%d\n", data->video.ui);
+    //printf("%d\n", data->video.ui);
     switch (data->video.ui) {
         case (0): intro_scene(data);
             break;
