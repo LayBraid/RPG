@@ -5,7 +5,7 @@
 ** init_intro
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void init_intro(data_t *data)
 {

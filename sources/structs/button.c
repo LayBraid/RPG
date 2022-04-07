@@ -5,7 +5,7 @@
 ** button
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 button_t *create_button(button_t *start, char *string, sfFont *font)
 {

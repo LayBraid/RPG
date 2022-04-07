@@ -5,7 +5,9 @@
 ** make_game
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
+
+//TODO Comment for compilation
 
 static void analyse_event(data_t *data)
 {
@@ -13,10 +15,10 @@ static void analyse_event(data_t *data)
         switch (data->event.type) {
             case (sfEvtClosed): sfRenderWindow_close(data->video.window);
                 break;
-            case (sfEvtKeyPressed): analyse_key(data);
+            /*case (sfEvtKeyPressed): analyse_key(data);
                 break;
             case (sfEvtMouseButtonPressed): analyse_mouse(data);
-                break;
+                break;*/
             default: break;
         }
     }

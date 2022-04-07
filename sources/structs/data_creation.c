@@ -7,6 +7,7 @@
 
 #include "my_rpg.h"
 #include "my_event.h"
+#include "parsing_data.h"
 
 data_t *data_delete(data_t *data)
 {
@@ -46,5 +47,6 @@ void data_create(data_t *data)
     data->loading_state = 0;
     data->my_event = NULL;
     data->quest = NULL;
+    parsing_data(data);
     initialize_events(data);
 }

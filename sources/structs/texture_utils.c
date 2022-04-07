@@ -5,7 +5,7 @@
 ** texture_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r)
 {

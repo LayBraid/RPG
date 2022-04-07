@@ -5,7 +5,7 @@
 ** inventory_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 inventory_t *set_inventory_count(inventory_t *node, unsigned int count)
 {

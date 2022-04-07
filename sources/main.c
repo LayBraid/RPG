@@ -5,7 +5,8 @@
 ** main MyRPG
 */
 
-#include "my_rpg.h"
+#include "utils.h"
+#include "my.h"
 
 static void myh(void)
 {

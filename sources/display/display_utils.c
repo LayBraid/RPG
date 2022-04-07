@@ -5,7 +5,7 @@
 ** display_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void display_tile_depth(tile_t *start, video_t video, unsigned char depth)
 {

@@ -5,7 +5,7 @@
 ** npc_utils_2
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 npc_t *set_npc_max_hp(npc_t *node, int value)
 {

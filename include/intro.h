@@ -10,11 +10,9 @@
 #ifndef INTRO_H_
     #define INTRO_H_
 
-    // init_intro.c
-    void init_intro(data_t *data);
+void init_intro(data_t *data);
 
-    // make_intro.c
-    void intro_scene(data_t *data);
+void intro_scene(data_t *data);
 
     // delete_intro.c
     void delete_intro(data_t *data);

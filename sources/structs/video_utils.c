@@ -5,7 +5,7 @@
 ** video_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void set_fps(sfRenderWindow *window, int fps, data_t *data)
 {
