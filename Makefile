@@ -5,6 +5,7 @@
 ## Makefile
 ##
 
+<<<<<<< HEAD
 SRC = ./sources/main.c \
 	  ./sources/display/display_all.c \
 	  ./sources/display/display_utils.c \
@@ -50,6 +51,20 @@ SRC = ./sources/main.c \
 	  ./lib/my/getnbrr.c	\
 	  ./lib/my/my_strcat.c	\
 	  ./lib/my/my_strdup.c \
+=======
+SRC = $(wildcard sources/*.c) \
+	  $(wildcard sources/display/*.c) \
+	  $(wildcard sources/structs/*.c) \
+	  $(wildcard sources/load/*.c) \
+	  $(wildcard sources/utils/*.c) \
+	  $(wildcard sources/my_event/*.c) \
+	  $(wildcard sources/my_event/functions/coins/*.c) \
+	  $(wildcard sources/parsing_data/*.c) \
+	  $(wildcard sources/quests/*.c) \
+	  $(wildcard sources/intro/*.c) \
+	  $(wildcard sources/game/*.c) \
+	  $(wildcard sources/menu/*.c) \
+>>>>>>> 0983b78d3a312aae8c400668fb28581f4870eefb
 
 OBJ = $(SRC:%.c=%.o)
 

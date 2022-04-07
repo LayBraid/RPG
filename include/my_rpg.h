@@ -8,26 +8,15 @@
 #ifndef MY_RPG_H
     #define MY_RPG_H
 
-    #include <stdlib.h>
-    #include <unistd.h>
-    #include <stdio.h>
-    #include <fcntl.h>
-    #include <SFML/Graphics.h>
-    #include <string.h>
-    #include <math.h>
-    #include <SFML/Window.h>
-    #include <SFML/Audio.h>
-    #include <SFML/Config.h>
-    #include <SFML/System.h>
-    #include <SFML/OpenGL.h>
-
-    #include "my.h"
     #include "structures.h"
+<<<<<<< HEAD
     #include "utils.h"
     #include "intro.h"
     #include "menu.h"
     #include "new_game.h"
     #include "load_game.h"
     #include "settings.h"
+=======
+>>>>>>> 0983b78d3a312aae8c400668fb28581f4870eefb
 
-#endif /* !MY_RPG_H_ */
+#endif

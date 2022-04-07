@@ -5,7 +5,7 @@
 ** my_getnbr
 */
 
-#include "../../include/my_rpg.h"
+#include "my.h"
 
 void my_revstr(char *str)
 {

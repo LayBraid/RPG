@@ -5,7 +5,7 @@
 ** my_strcat
 */
 
-#include "../../include/my_rpg.h"
+#include "my.h"
 
 char *my_strcat(char const *src1, char const *src2)
 {

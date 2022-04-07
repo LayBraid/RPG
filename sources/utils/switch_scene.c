@@ -5,11 +5,13 @@
 ** switch_scene
 */
 
-#include "my_rpg.h"
+#include "utils.h"
+#include "menu.h"
+#include "intro.h"
 
 void switch_scene(data_t *data)
 {
-    printf("SCENE : %d\n", data->video.ui);
+    //printf("%d\n", data->video.ui);
     switch (data->video.ui) {
         case (0): intro_scene(data);
             break;

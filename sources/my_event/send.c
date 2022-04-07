@@ -6,6 +6,7 @@
 */
 
 #include "my_event.h"
+#include "my.h"
 
 void call_event(data_t *data, char *event)
 {

@@ -5,7 +5,8 @@
 ** npc
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
+#include "my.h"
 
 npc_t *create_npc(npc_t *start, char *name)
 {

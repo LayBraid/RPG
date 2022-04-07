@@ -14,11 +14,13 @@ SRC = getnbrr.c \
 	  my_strdup.c \
 	  my_strlen.c \
 	  my_strcmp.c \
+	  my_strcpy.c \
+	  my_strcat_c.c \
 
 OBJ = $(SRC:.c=.o)
 
 NAME = lib
-CFLAGS = -I./include
+CFLAGS = -I.
 
 $(NAME): $(OBJ)
 	ar rc libmy.a *.o

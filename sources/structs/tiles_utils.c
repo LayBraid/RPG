@@ -5,7 +5,7 @@
 ** tiles_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 tile_t *set_tile_texture(tile_t *node, texture_t *texture)
 {

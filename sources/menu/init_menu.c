@@ -5,7 +5,7 @@
 ** init_menu
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void init_menu(data_t *data)
 {

@@ -5,7 +5,7 @@
 ** make_menu
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 static void gotoo(data_t *data)
 {

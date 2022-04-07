@@ -5,7 +5,7 @@
 ** print a nbr
 */
 
-void my_putchar(char c);
+#include "my.h"
 
 int my_putnbr(int nb)
 {

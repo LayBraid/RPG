@@ -5,7 +5,8 @@
 ** inventory
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
+#include "my.h"
 
 // Creates a node for the inventory_t linked list, base count is 1
 inventory_t *create_inventory(inventory_t *start, char *name)
