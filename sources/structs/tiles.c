@@ -5,7 +5,7 @@
 ** tiles
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 tile_t *create_tile(tile_t *start)
 {

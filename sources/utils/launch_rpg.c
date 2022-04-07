@@ -5,7 +5,7 @@
 ** launch_rpg
 */
 
-#include "../../include/my_rpg.h"
+#include "utils.h"
 
 void launch_rpg(data_t *data)
 {

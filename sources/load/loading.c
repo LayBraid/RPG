@@ -5,7 +5,9 @@
 ** loading
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
+#include "intro.h"
+#include "menu.h"
 
 void loading(data_t *data)
 {

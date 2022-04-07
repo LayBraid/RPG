@@ -5,7 +5,7 @@
 ** texture
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 // Creates node for texture_t linked list, set area to NULL for whole image
 texture_t *create_texture(texture_t *start, char *filepath, sfIntRect *area)

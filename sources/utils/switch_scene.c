@@ -5,7 +5,9 @@
 ** switch_scene
 */
 
-#include "../../include/my_rpg.h"
+#include "utils.h"
+#include "menu.h"
+#include "intro.h"
 
 void switch_scene(data_t *data)
 {

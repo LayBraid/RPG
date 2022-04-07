@@ -5,7 +5,7 @@
 ** npc_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 npc_t *set_npc_type(npc_t *node, unsigned char type)
 {

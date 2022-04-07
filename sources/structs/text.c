@@ -5,7 +5,7 @@
 ** text
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 text_t *create_text(text_t *start, char *string, sfFont *font)
 {

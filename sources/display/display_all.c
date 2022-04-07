@@ -5,7 +5,7 @@
 ** display_all
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void display_all(data_t *data)
 {

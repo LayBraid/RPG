@@ -5,7 +5,7 @@
 ** text_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 text_t *set_text_position(text_t *node, sfVector2f position)
 {

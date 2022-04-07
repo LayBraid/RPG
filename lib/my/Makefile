@@ -18,7 +18,7 @@ SRC = getnbrr.c \
 OBJ = $(SRC:.c=.o)
 
 NAME = lib
-CFLAGS = -I./include
+CFLAGS = -I.
 
 $(NAME): $(OBJ)
 	ar rc libmy.a *.o

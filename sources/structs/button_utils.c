@@ -5,7 +5,7 @@
 ** button_utils
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 button_t *set_button_texture(button_t *node, texture_t *texture)
 {
