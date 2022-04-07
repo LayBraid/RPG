@@ -5,16 +5,7 @@
 ** my_strdup
 */
 
-#include <stdlib.h>
-
-static int my_strlen(char *str)
-{
-    int i = 0;
-
-    while (str[i])
-        i++;
-    return (i);
-}
+#include "my.h"
 
 char *my_strdup(char *str)
 {
