@@ -12,6 +12,23 @@
 
 typedef struct data data_t;
 
+typedef struct event_list_type {
+    char *name;
+    int calls;
+    struct event_list_type *next;
+} event_list_t;
+
+typedef struct quest_type {
+    int id;
+    int status;
+    char *name;
+    char *display_name;
+    char *description;
+    event_list_t *requirements;
+    event_list_t *rewards;
+    struct quest_type *next;
+} quest_t;
+
 typedef struct event_type {
     int id;
     int calling;
@@ -109,6 +126,7 @@ struct data {
     tile_t *tiles;
     sfEvent event;
     event_t *my_event;
+    quest_t *quest;
     float delta;
     unsigned char loading_state;
 };
