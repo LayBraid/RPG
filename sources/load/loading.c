@@ -17,7 +17,17 @@ void loading(data_t *data)
             break;
         case (2): init_menu(data);
             break;
-        // case (3): delete_menu(data);
-        //     break;
+        case (3): delete_menuN(data);
+            break;
+        case (4): delete_menuL(data);
+            break;
+        case (5): delete_menuS(data);
+            break;
+        case (6): init_new_game(data);
+            break;
+        case (7): init_load_game(data);
+            break;
+        case (8): init_settings(data);
+            break;
     }
 }

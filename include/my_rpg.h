@@ -26,5 +26,8 @@
     #include "utils.h"
     #include "intro.h"
     #include "menu.h"
+    #include "new_game.h"
+    #include "load_game.h"
+    #include "settings.h"
 
 #endif /* !MY_RPG_H_ */

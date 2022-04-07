@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_rpg
+** Sans titre(Espace de travail)
 ** File description:
-** make_game
+** make_load_game
 */
 
 #include "../../include/my_rpg.h"
@@ -13,16 +13,17 @@ static void analyse_event(data_t *data)
         switch (data->event.type) {
             case (sfEvtClosed): sfRenderWindow_close(data->video.window);
                 break;
-            case (sfEvtKeyPressed): analyse_key(data);
-                break;
-            case (sfEvtMouseButtonPressed): analyse_mouse(data);
-                break;
+            // case (sfEvtKeyPressed): analyse_key(data);
+            //     break;
+            // case (sfEvtMouseButtonPressed): analyse_mouse(data);
+            //     break;
             default: break;
         }
     }
 }
 
-void game_scene(data_t *data)
+void load_game_scene(data_t *data)
 {
+    display_all(data);
     analyse_event(data);
 }

@@ -31,6 +31,17 @@ SRC = ./sources/main.c \
 	  ./sources/intro/delete_intro.c	\
 	  ./sources/menu/init_menu.c	\
 	  ./sources/menu/make_menu.c	\
+	  ./sources/menu/delete_menu.c	\
+	  ./sources/menu/move_sword.c	\
+	  ./sources/game/init_new_game.c	\
+	  ./sources/game/init_load_game.c	\
+	  ./sources/game/make_new_game.c	\
+	  ./sources/game/make_load_game.c	\
+	  ./sources/game/delete_new_game.c	\
+	  ./sources/game/delete_load_game.c	\
+	  ./sources/settings/init_settings.c	\
+	  ./sources/settings/make_settings.c	\
+	  ./sources/settings/delete_settings.c	\
 	  ./lib/my/my_getnbr.c \
 	  ./lib/my/my_putchar.c \
 	  ./lib/my/my_putnbr.c \
