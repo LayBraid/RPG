@@ -5,18 +5,17 @@
 ** utils
 */
 
-#include "my_rpg.h"
-
 #ifndef UTILS_H_
     #define UTILS_H_
 
-    // launch_rpg.c
-    void launch_rpg(data_t *data);
+    #include "structures.h"
 
-    // loading.c
-    void loading(data_t *data);
+void launch_rpg(data_t *data);
 
-    // switch_scene.c
-    void switch_scene(data_t *data);
+void loading(data_t *data);
+
+void switch_scene(data_t *data);
+
+char *get_in_buffer(char *path);
 
 #endif /* !UTILS_H_ */
