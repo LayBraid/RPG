@@ -1,4 +1,4 @@
-name: Measure size
+name: Measure canonical app size
 
 on: ["push"]
 
