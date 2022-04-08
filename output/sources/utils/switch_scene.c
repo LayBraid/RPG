@@ -6,7 +6,7 @@
 */
 
 #include "utils.h"
-#include "menu.h"
+#include "menus.h"
 #include "intro.h"
 
 void switch_scene(data_t *data)

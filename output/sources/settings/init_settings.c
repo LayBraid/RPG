@@ -5,7 +5,7 @@
 ** init_settings
 */
 
-#include "../../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void init_settings(data_t *data)
 {

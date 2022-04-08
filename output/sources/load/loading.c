@@ -7,7 +7,7 @@
 
 #include "my_rpg.h"
 #include "intro.h"
-#include "menu.h"
+#include "menus.h"
 
 void loading(data_t *data)
 {

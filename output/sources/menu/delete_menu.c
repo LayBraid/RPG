@@ -5,7 +5,7 @@
 ** delete_menu
 */
 
-#include "../../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void delete_menuN(data_t *data)
 {

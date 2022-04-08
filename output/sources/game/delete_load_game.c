@@ -5,7 +5,7 @@
 ** delete_load_game
 */
 
-#include "../../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void delete_load_game(data_t *data)
 {

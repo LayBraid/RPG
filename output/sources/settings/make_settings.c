@@ -5,7 +5,7 @@
 ** make_settings
 */
 
-#include "../../../include/my_rpg.h"
+#include "my_rpg.h"
 
 // static void analyse_key(data_t *data)
 // {

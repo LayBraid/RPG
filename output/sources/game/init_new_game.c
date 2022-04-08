@@ -5,7 +5,7 @@
 ** init_newgame
 */
 
-#include "../../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void init_new_game(data_t *data)
 {

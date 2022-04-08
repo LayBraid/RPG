@@ -5,7 +5,7 @@
 ** make_load_game
 */
 
-#include "../../../include/my_rpg.h"
+#include "my_rpg.h"
 
 static void analyse_event(data_t *data)
 {
