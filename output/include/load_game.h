@@ -8,6 +8,8 @@
 #ifndef LOAD_GAME_H_
     #define LOAD_GAME_H_
 
+    #include "structures.h"
+
     // init_load_game.c
     void init_load_game(data_t *data);
 

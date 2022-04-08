@@ -5,10 +5,10 @@
 ** settings
 */
 
-#include "my_rpg.h"
-
 #ifndef SETTINGS_H_
     #define SETTINGS_H_
+
+    #include "structures.h"
 
     // init_settings.c
     void init_settings(data_t *data);

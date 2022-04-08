@@ -5,10 +5,10 @@
 ** new_game
 */
 
-#include "my_rpg.h"
-
 #ifndef NEW_GAME_H_
     #define NEW_GAME_H_
+
+    #include "structures.h"
 
     // init_new_game.c
     void init_new_game(data_t *data);
