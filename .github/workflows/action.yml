@@ -33,3 +33,16 @@ jobs:
           destination-repository-name: 'B-MUL-200-LYN-2-1-myrpg-arthur.pahon'
           user-email: clement.loeuillet@epitech.eu
           target-branch: main
+  size_repository:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2-beta
+        with:
+          fetch-depth: 0
+      - uses: chrysanthos/simple-asset-size-reporter@1.0.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          files: '["public/js/*.js", "public/css/*.css"]'
+          with-same: 'false'
+          build-assets: 'false'
