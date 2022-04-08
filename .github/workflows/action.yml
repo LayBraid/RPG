@@ -1,4 +1,4 @@
-name: Continuous Integration 2
+name: Continuous Integration
 
 on:
   push:
@@ -7,9 +7,19 @@ on:
     branches: main
 
 jobs:
+  check_compilation:
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: make Checking
+        run: cd output && make
+        timeout-minutes: 2
+
   push_repository:
     if: github.event_name == 'push'
-    needs: check_compilation
+    #needs: check_compilation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,13 +33,3 @@ jobs:
           destination-repository-name: 'B-MUL-200-LYN-2-1-myrpg-arthur.pahon'
           user-email: clement.loeuillet@epitech.eu
           target-branch: main
-
-  check_compilation:
-    runs-on: ubuntu-latest
-    container:
-      image: epitechcontent/epitest-docker:latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: make Checking
-        run: cd output && make
-        timeout-minutes: 2
