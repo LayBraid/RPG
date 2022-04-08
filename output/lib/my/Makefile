@@ -5,21 +5,11 @@
 ## No file there , just an epitech header example
 ##
 
-SRC = getnbrr.c \
-	  my_getnbr.c \
-	  my_putchar.c \
-	  my_putnbr.c \
-	  my_putstr.c \
-	  my_strcat.c \
-	  my_strdup.c \
-	  my_strlen.c \
-	  my_strcmp.c \
-	  my_strcpy.c \
-	  my_strcat_c.c \
+SRC = $(wildcard *.c) \
 
 OBJ = $(SRC:.c=.o)
 
-NAME = my
+NAME = lib
 CFLAGS = -I.
 
 $(NAME): $(OBJ)
