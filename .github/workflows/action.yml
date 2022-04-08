@@ -1,14 +1,25 @@
-name: Auto push on Epitech repository
+name: Global actions
 
 on:
-  workflow_run:
-    workflows: ["Test compilation"]
-    types: ["completed"]
-
+  push:
+    branches: main
+  pull_request:
+    branches: main
 
 jobs:
+  check_compilation:
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: make Checking
+        run: cd output && make
+        timeout-minutes: 2
+
   push_repository:
     if: github.event_name == 'push'
+    needs: check_compilation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
