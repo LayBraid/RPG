@@ -18,25 +18,23 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/game/*.c) \
 	  $(wildcard sources/menu/*.c) \
 	  $(wildcard sources/settings/*.c) \
+	  $(wildcard lib/my/*.c) \
 
 OBJ = $(SRC:%.c=%.o)
 
-SRC_LIB = -Llib -lmy
 SFML_L = -lcsfml-graphics -lcsfml-system -lcsfml-window -lcsfml-audio
 CFLAGS = -Iinclude/
 
 NAME = my_rpg
 
 $(NAME): $(OBJ)
-	cd lib/my && make
-	gcc $(CFLAGS) $(SFML_L) -Llib -lmy -o $(NAME) $(OBJ)
+	gcc $(CFLAGS) $(SFML_L) -o $(NAME) $(OBJ)
 
 .PHONY: all
 all: $(NAME)
 
 .PHONY: clean
 clean:
-	cd lib/my && make fclean
 	rm -f $(OBJ)
 
 .PHONY: fclean
