@@ -8,6 +8,9 @@
 #include "my_rpg.h"
 #include "intro.h"
 #include "menus.h"
+#include "load_game.h"
+#include "new_game.h"
+#include "settings.h"
 
 void loading(data_t *data)
 {

@@ -8,6 +8,9 @@
 #include "utils.h"
 #include "menus.h"
 #include "intro.h"
+#include "new_game.h"
+#include "load_game.h"
+#include "settings.h"
 
 void switch_scene(data_t *data)
 {
