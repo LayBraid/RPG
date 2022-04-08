@@ -15,6 +15,7 @@ CFLAGS = -I.
 $(NAME): $(OBJ)
 	ar rc libmy.a *.o
 	cp libmy.a ../
+	cp libmy.a ../../
 
 all: $(NAME)
 
