@@ -19,7 +19,7 @@ SRC = getnbrr.c \
 
 OBJ = $(SRC:.c=.o)
 
-NAME = lib
+NAME = my
 CFLAGS = -I.
 
 $(NAME): $(OBJ)
