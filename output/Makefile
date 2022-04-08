@@ -29,7 +29,7 @@ NAME = my_rpg
 
 $(NAME): $(OBJ)
 	cd lib/my && make
-	gcc $(CFLAGS) $(SFML_L) $(SRC_LIB) -o $(NAME) $(OBJ)
+	gcc $(CFLAGS) $(SFML_L) -Llib -lmy -o $(NAME) $(OBJ)
 
 .PHONY: all
 all: $(NAME)
