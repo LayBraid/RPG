@@ -1,0 +1,35 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  check_compilation:
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: make Checking
+        run: cd output && make
+        timeout-minutes: 2
+
+  push_repository:
+    if: github.event_name == 'push'
+    needs: check_compilation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Push to Epitech repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'output'
+          destination-github-username: 'EpitechPromo2026'
+          destination-repository-name: 'B-MUL-200-LYN-2-1-myrpg-arthur.pahon'
+          user-email: clement.loeuillet@epitech.eu
+          target-branch: main

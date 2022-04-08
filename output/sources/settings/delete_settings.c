@@ -5,7 +5,7 @@
 ** delete_settings
 */
 
-#include "../../include/my_rpg.h"
+#include "../../../include/my_rpg.h"
 
 void delete_settings(data_t *data)
 {
