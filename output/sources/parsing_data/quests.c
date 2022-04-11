@@ -8,6 +8,7 @@
 #include "parsing_data.h"
 #include "utils.h"
 #include "my.h"
+#include "quests.h"
 
 void parsing_quest(data_t *data, char *buffer)
 {
@@ -25,4 +26,5 @@ void parsing_quest(data_t *data, char *buffer)
     get_it_char_two(buffer, '[', 0) + 1, get_it_char_two(buffer, ']', 0)));
     extract_rewards(new, extract_between_limits(buffer,
     get_it_char_two(buffer, '[', 1) + 1, get_it_char_two(buffer, ']', 1)));
+    add_quest(data, new);
 }
