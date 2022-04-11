@@ -8,6 +8,8 @@
 #include "my_rpg.h"
 #include "my_event.h"
 #include "parsing_data.h"
+#include "buttons.h"
+#include "images.h"
 
 data_t *data_delete(data_t *data)
 {
@@ -49,4 +51,6 @@ void data_create(data_t *data)
     data->quest = NULL;
     parsing_data(data);
     initialize_events(data);
+    data->buttons = setup_buttons(data);
+    data->images = setup_img(data);
 }

@@ -25,6 +25,41 @@
     #include <math.h>
 
 typedef struct data data_t;
+typedef const float cf;
+
+typedef struct anim_img_struct {
+    sfSprite *sprite;
+    int texture_file;
+    int anim_max;
+    int anim_pos;
+    int x_power_anim;
+    int y_power_anim;
+    int init_rect_x;
+    int init_rect_y;
+    int step_display;
+    int depth;
+} anim_img;
+
+typedef struct hovered_button_struct {
+    anim_img *button;
+    float x_click;
+    float y_click;
+    float x_max;
+    float y_max;
+    void (* function)(data_t *data);
+} hovered_button;
+
+typedef struct node_button_struct {
+    int id;
+    hovered_button *button;
+    struct node_button_struct *next;
+} node_button;
+
+typedef struct node_img_struct {
+    int id;
+    anim_img *img;
+    struct node_img_struct *next;
+} node_img;
 
 typedef struct event_list_type {
     char *name;
@@ -136,7 +171,7 @@ struct data {
     texture_t *texture_bank;
     sfFont *font;
     text_t *texts;
-    button_t *buttons;
+    //button_t *buttons;
     npc_t *npcs;
     tile_t *tiles;
     sfEvent event;
@@ -144,6 +179,8 @@ struct data {
     quest_t *quest;
     float delta;
     unsigned char loading_state;
+    node_button *buttons;
+    node_img *images;
 };
 
 // display_all.c
