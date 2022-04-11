@@ -45,3 +45,18 @@ int get_it_char(const char *str, char c, int index)
     }
     return -1;
 }
+
+int get_it_char_two(const char *str, char c, int index)
+{
+    int it = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == c && str[i + 1] == c && it == index)
+            return i;
+        if (str[i] == c && str[i + 1] == c) {
+            it++;
+            i++;
+        }
+    }
+    return -1;
+}

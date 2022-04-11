@@ -1,5 +1,5 @@
 ['Quests']
-['kill_one_png','Kill one PNG','Description of quest',0,[['kill_png',1]],[['add_3_coins', 1],['add_1_emerald', 1]]]
+['kill_one_png','Kill one PNG','Description of quest',0,[['kill_png',1],['kill_png',1]],[['add_3_coins', 1],['add_1_emerald', 1]]]
 ['kill_one_png','Kill one PNG','Description of quest',0,[['kill_png',1]],[['add_3_coins', 1],['add_1_emerald', 1]]]
 ['kill_one_png','Kill one PNG','Description of quest',0,[['kill_png',1]],[['add_3_coins', 1],['add_1_emerald', 1]]]
 ['kill_one_png','Kill one PNG','Description of quest',0,[['kill_png',1]],[['add_3_coins', 1],['add_1_emerald', 1]]]

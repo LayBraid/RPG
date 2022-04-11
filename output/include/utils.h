@@ -22,4 +22,6 @@ char *extract_between_limits(char const *exp, int s1, int s2);
 
 int get_it_char(const char *str, char c, int index);
 
+int get_it_char_two(const char *str, char c, int index);
+
 #endif /* !UTILS_H_ */

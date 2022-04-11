@@ -23,7 +23,7 @@ SRC = $(wildcard sources/*.c) \
 OBJ = $(SRC:%.c=%.o)
 
 SFML_L = -lcsfml-graphics -lcsfml-system -lcsfml-window -lcsfml-audio
-CFLAGS = -Iinclude/
+CFLAGS = -Iinclude/ -Wno-deprecated
 
 NAME = my_rpg
 

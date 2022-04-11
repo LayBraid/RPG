@@ -16,4 +16,8 @@ void parsing_quest(data_t *data, char *buffer);
 
 void parsing_profile(data_t *data, char *buffer);
 
+void extract_requirements(quest_t *quest, char *buffer);
+
+void extract_rewards(quest_t *quest, char *buffer);
+
 #endif
