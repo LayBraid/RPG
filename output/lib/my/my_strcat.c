@@ -1,25 +1,30 @@
 /*
-** EPITECH PROJECT, 2021
-** B-MUL-100-LYN-1-1-myhunter-gregoire1.biganzoli
+** EPITECH PROJECT, 2022
+** libmy
 ** File description:
 ** my_strcat
 */
 
+#include <unistd.h>
+#include <stdlib.h>
 #include "my.h"
 
-char *my_strcat(char const *src1, char const *src2)
+char *my_strcat(char *s1, char *s2)
 {
-    int dest_size = my_strlen(src1);
     int i = 0;
     int j = 0;
-    char *dest = malloc(sizeof(char) * (my_strlen(src1) + \
-    my_strlen(src2) + 1));
+    char *str = malloc(sizeof(char) * (my_strlen(s1) + my_strlen(s2) + 1));
 
-    for (; src1[i] != '\0'; i++)
-        dest[i] = src1[i];
-    for (; src2[j] != '\0'; i++, j++)
-        dest[i] = src2[j];
-    dest[i] = '\0';
-
-    return (dest);
+    if (str == NULL)
+        return (NULL);
+    while (s1[i] != '\0') {
+        str[i] = s1[i];
+        i++;
+    }
+    while (s2[j] != '\0') {
+        str[i + j] = s2[j];
+        j++;
+    }
+    str[i + j] = '\0';
+    return (str);
 }
