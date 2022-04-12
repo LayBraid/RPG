@@ -23,6 +23,7 @@
     #include <fcntl.h>
     #include <string.h>
     #include <math.h>
+    #include <sys/stat.h>
 
 typedef struct data data_t;
 typedef const float cf;
