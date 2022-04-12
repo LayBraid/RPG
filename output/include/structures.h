@@ -171,7 +171,7 @@ struct data {
     texture_t *texture_bank;
     sfFont *font;
     text_t *texts;
-    //button_t *buttons;
+    button_t *buttons;
     npc_t *npcs;
     tile_t *tiles;
     sfEvent event;
@@ -179,7 +179,7 @@ struct data {
     quest_t *quest;
     float delta;
     unsigned char loading_state;
-    node_button *buttons;
+    node_button *button;
     node_img *images;
 };
 

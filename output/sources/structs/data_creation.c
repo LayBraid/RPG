@@ -51,6 +51,6 @@ void data_create(data_t *data)
     data->quest = NULL;
     parsing_data(data);
     initialize_events(data);
-    data->buttons = setup_buttons(data);
+    data->button = setup_buttons(data);
     data->images = setup_img(data);
 }

@@ -10,7 +10,7 @@
 
 void display_buttons_depth(data_t *data, int depth)
 {
-    node_button *tmp = data->buttons;
+    node_button *tmp = data->button;
 
     while (tmp->id < tmp->next->id) {
         if (tmp->button->button->depth == depth &&
