@@ -26,12 +26,12 @@
 * 13: fichier de texture
 */
 
-cf PLAY[14] = {683, 875, 0, 2045, 141, 434, 2, 0,0, 0, 0, MAIN_MENU, 0, 0};
+cf PLAYING[14] = {683, 875, 0, 2045, 141, 434, 2, 0,0, 0, 0, MAIN_MENU, 0, 0};
 
 node_img *setup_img(data_t *data)
 {
     node_img *node = malloc(sizeof(node_img));
 
-    setup_first_img(&node, setup_a_anim_img(data, PLAY));
+    setup_first_img(&node, setup_a_anim_img(data, PLAYING));
     return node;
 }
