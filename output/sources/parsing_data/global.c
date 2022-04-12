@@ -20,11 +20,9 @@ static void convert_data(data_t *data, char *buffer, int *step)
         return;
     }
     switch ((*step)) {
-        case 0:
-            parsing_quest(data, buffer);
+        case 0: parsing_quest(data, buffer);
             break;
-        case 1:
-            parsing_profile(data, buffer);
+        case 1: parsing_profile(data, buffer);
             break;
         default:
             break;
