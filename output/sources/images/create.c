@@ -37,7 +37,8 @@ void update(data_t *data, sfSprite *sprite, sfIntRect rect, const float info[10]
     vector.x = info[0];
     vector.y = info[1];
 
-    sfSprite_setTexture(sprite,df->texture, sfTrue);
+    //TODO Set texture
+    //sfSprite_setTexture(sprite,df->texture, sfTrue);
     sfSprite_setTextureRect(sprite, rect);
     sfSprite_setPosition(sprite, vector);
 }
