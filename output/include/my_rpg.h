@@ -10,4 +10,13 @@
 
     #include "structures.h"
 
+enum GAME_STATUS {
+    OPENING,
+    MAIN_MENU,
+    GAME,
+    QUESTS,
+    SETTINGS,
+    END,
+};
+
 #endif

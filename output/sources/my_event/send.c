@@ -7,6 +7,7 @@
 
 #include "my_event.h"
 #include "my.h"
+#include "quests.h"
 
 void call_event(data_t *data, char *event)
 {
@@ -23,4 +24,5 @@ void call_event(data_t *data, char *event)
         tmp->function(data);
         tmp->calling++;
     }
+    call_to_quests(data, event);
 }

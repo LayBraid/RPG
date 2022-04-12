@@ -29,4 +29,6 @@ char *my_strcpy(char *dest, char const *src);
 
 char *my_strcat_c(char *dest, char const src);
 
+int my_atoi(const char *str);
+
 #endif /* !LIB_H_ */
