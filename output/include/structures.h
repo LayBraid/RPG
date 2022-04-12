@@ -89,6 +89,7 @@ typedef struct event_type {
 typedef struct tile {
     unsigned int id;
     unsigned char depth;
+    unsigned int type;
     sfSprite *sprite;
     sfIntRect rect;
     sfVector2f position;
@@ -203,6 +204,7 @@ tile_t *delete_tile(tile_t *node);
 tile_t *delete_all_tiles(tile_t *start);
 
 // tiles_utils.c
+tile_t *set_tile_depth(tile_t *tile, unsigned char depth);
 tile_t *set_tile_texture(tile_t *node, texture_t *texture);
 tile_t *set_tile_position(tile_t *node, sfVector2f position);
 tile_t *set_tile_scale(tile_t *node, sfVector2f scale);

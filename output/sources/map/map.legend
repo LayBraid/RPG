@@ -1,0 +1,24 @@
+- exemple de map 2x2:
+[0,1] [1,1]
+[0,2] [0,3]
+
+
+[0,0,0,2,nom du npc]
+
+- y séparé par un '\n'
+- x séparé par un ' '
+
+- chaque élément est composé d'une profondeur (1e valeur)
+- ainsi qu'un type (2e valeur), qui déterminera sa texture et les différents
+comportements liés a la tile
+- son emplacement est déterminé par son emplacement dans le fichier
+automatiquement
+
+
+- la liste des pnj est séparée de deux '\n'
+- chaque élément est composé de, dans l'ordre :
+    - coordonnée x
+    - coordonnée y
+    - type de pnj
+    - numéro de texture
+    - nom du npc
