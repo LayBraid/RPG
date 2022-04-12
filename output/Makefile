@@ -36,10 +36,10 @@ NAME = my_rpg
 .SILENT:$(NAME)
 $(NAME): $(OBJ)
 	gcc $(CFLAGS) $(SFML_L) -o $(NAME) $(OBJ)
+	@echo "\x1b[1m\x1b[32mCompilation done !\x1b[0m"
 
 .PHONY: all
 all: $(NAME)
-	@echo "\x1b[1m\x1b[32mCompilation done !\x1b[0m"
 
 .SILENT:clean
 .PHONY: clean
