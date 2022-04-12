@@ -18,4 +18,6 @@ void setup_first_img(node_img **node, anim_img *img);
 
 node_img *setup_img(data_t *data);
 
+void display_images_depth(data_t *data, int depth);
+
 #endif

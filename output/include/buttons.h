@@ -19,6 +19,8 @@ void (* function)(data_t *data));
 
 node_button *setup_buttons(data_t *data);
 
+void display_buttons_depth(data_t *data, int depth);
+
 void nothing(data_t *data);
 
 #endif

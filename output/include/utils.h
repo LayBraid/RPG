@@ -24,4 +24,6 @@ int get_it_char(const char *str, char c, int index);
 
 int get_it_char_two(const char *str, char c, int index);
 
+int display(int step, int actual);
+
 #endif /* !UTILS_H_ */
