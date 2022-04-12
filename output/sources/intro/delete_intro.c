@@ -5,7 +5,7 @@
 ** delete_intro
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void delete_intro(data_t *data)
 {
