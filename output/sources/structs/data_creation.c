@@ -25,6 +25,12 @@ data_t *data_delete(data_t *data)
     return (NULL);
 }
 
+void init_music(data_t *data)
+{
+    create_music(data, "./assets/Sound/ladja.ogg", 1);
+    sfMusic_play(data->musics->music);
+}
+
 //TODO Resize function "data_create"
 
 void data_create(data_t *data)
@@ -49,6 +55,7 @@ void data_create(data_t *data)
     data->loading_state = 0;
     data->my_event = NULL;
     data->musics = NULL;
+    init_music(data);
     data->quest = NULL;
     parsing_data(data);
     initialize_events(data);

@@ -177,6 +177,7 @@ typedef struct music {
     int loop;
     int volume;
     int is_playing;
+    struct music *next;
 } music_t;
 
 struct data {
@@ -229,6 +230,9 @@ tile_t *set_tile_rotation(tile_t *node, float rotation);
 npc_t *create_npc(npc_t *start, char *name);
 npc_t *delete_npc(npc_t *node);
 npc_t *delete_all_npcs(npc_t *start);
+
+// music.c
+void create_music(data_t *data, const char *path, int loop);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
