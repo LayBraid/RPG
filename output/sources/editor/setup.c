@@ -14,7 +14,7 @@ void setup_editor(editor_t *editor)
     sfVideoMode mode = {1500, 1500, 32};
     editor->window = sfRenderWindow_create(mode, "RPG Editor | By LayBraid",
     sfDefaultStyle,NULL);
-    sfRenderWindow_setFramerateLimit(editor->window, 10);
+    sfRenderWindow_setFramerateLimit(editor->window, 130);
     editor->rectangles = NULL;
     editor->textures = NULL;
     editor->textures = init_textures(editor);

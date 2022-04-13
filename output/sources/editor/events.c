@@ -29,7 +29,7 @@ static void check_on_rectangles(editor_t *editor)
     }
 }
 
-static void check_keys(editor_t *editor, sfEvent event)
+static void check_for_move(editor_t *editor, sfEvent event)
 {
     if (event.key.code == sfKeyZ) {
         sfView_move(editor->view, (sfVector2f) {0, -10});
@@ -45,6 +45,19 @@ static void check_keys(editor_t *editor, sfEvent event)
     }
     if (event.key.code == sfKeyQ) {
         sfView_move(editor->view, (sfVector2f) {-10, 0});
+        sfRenderWindow_setView(editor->window, editor->view);
+    }
+}
+
+static void check_keys(editor_t *editor, sfEvent event)
+{
+    check_for_move(editor, event);
+    if (event.key.code == sfKeyA) {
+        sfView_zoom(editor->view, 0.7f);
+        sfRenderWindow_setView(editor->window, editor->view);
+    }
+    if (event.key.code == sfKeyE) {
+        sfView_zoom(editor->view, 1.3f);
         sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyRight)
