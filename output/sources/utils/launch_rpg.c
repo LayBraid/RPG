@@ -9,6 +9,7 @@
 
 void launch_rpg(data_t *data)
 {
+    
     while (sfRenderWindow_isOpen(data->video.window)) {
         sfRenderWindow_clear(data->video.window, sfBlack);
         switch_scene(data);

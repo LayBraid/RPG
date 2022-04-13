@@ -172,6 +172,13 @@ typedef struct video {
     unsigned int ui;
 } video_t;
 
+typedef struct music {
+    sfMusic *music;
+    int loop;
+    int volume;
+    int is_playing;
+} music_t;
+
 struct data {
     video_t video;
     player_t player;
@@ -182,6 +189,7 @@ struct data {
     npc_t *npcs;
     tile_t *tiles;
     sfEvent event;
+    music_t *musics;
     event_t *my_event;
     quest_t *quest;
     float delta;
