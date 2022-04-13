@@ -33,19 +33,15 @@ static void check_for_move(editor_t *editor, sfEvent event)
 {
     if (event.key.code == sfKeyZ) {
         sfView_move(editor->view, (sfVector2f) {0, -10});
-        sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyS) {
         sfView_move(editor->view, (sfVector2f) {0, 10});
-        sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyD) {
         sfView_move(editor->view, (sfVector2f) {10, 0});
-        sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyQ) {
         sfView_move(editor->view, (sfVector2f) {-10, 0});
-        sfRenderWindow_setView(editor->window, editor->view);
     }
 }
 
@@ -54,11 +50,9 @@ static void check_keys(editor_t *editor, sfEvent event)
     check_for_move(editor, event);
     if (event.key.code == sfKeyA) {
         sfView_zoom(editor->view, 0.9f);
-        sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyE) {
         sfView_zoom(editor->view, 1.1f);
-        sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyRight)
         editor->textures = editor->textures->next;
@@ -75,10 +69,10 @@ void check_events(editor_t *editor)
             sfRenderWindow_close(editor->window);
         if (event.type == sfEvtMouseButtonPressed)
             editor->press = 1;
-        if (event.type == sfEvtMouseButtonReleased)
-            editor->press = 0;
         if (editor->press)
             check_on_rectangles(editor);
+        if (event.type == sfEvtMouseButtonReleased)
+            editor->press = 0;
         if (event.type == sfEvtKeyPressed)
             check_keys(editor, event);
     }

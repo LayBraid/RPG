@@ -21,9 +21,11 @@ void setup_editor(editor_t *editor)
     editor->textures = init_textures(editor);
     editor->world = sfTexture_createFromFile(WORLD, NULL);
     editor->view = sfView_create();
-    sfView_setSize(editor->view, (sfVector2f) {750, 750});
-    sfView_setCenter(editor->view, (sfVector2f) {370, 370});
-    sfRenderWindow_setView(editor->window, editor->view);
+    editor->main = sfView_create();
+    sfView_setSize(editor->view, (sfVector2f) {1500, 1500});
+    sfView_setCenter(editor->view, (sfVector2f) {750, 750});
+    sfView_setSize(editor->main, (sfVector2f) {1500, 1500});
+    sfView_setCenter(editor->main, (sfVector2f) {750, 750});
 
     for (int i = 0; i < 100; i++)
         for (int j = 0; j < 100; j++)

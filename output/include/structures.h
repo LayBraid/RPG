@@ -222,6 +222,7 @@ struct editor_data {
     sfTexture *world;
     node_texture *textures;
     sfView *view;
+    sfView *main;
     int press;
 };
 
