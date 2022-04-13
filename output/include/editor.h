@@ -15,7 +15,7 @@ enum Tiles {
     ROAD,
 };
 
-void my_editor(void);
+void my_editor(char **av);
 
 void setup_editor(editor_t *editor);
 
@@ -30,13 +30,13 @@ void set_texture_rectangle(editor_t *editor, node_rectangle *rectangle);
 node_texture *init_textures(editor_t *editor);
 
 void add_next_texture(node_texture **node,
-void (*function)(editor_t *editor, sfRectangleShape *rectangle));
+void (*function)(editor_t *editor, node_rectangle *rectangle));
 
 void setup_first_texture(node_texture **node,
-void (*function)(editor_t *editor, sfRectangleShape *rectangle));
+void (*function)(editor_t *editor, node_rectangle *rectangle));
 
-void set_grass(editor_t *editor, sfRectangleShape *rectangle);
+void set_grass(editor_t *editor, node_rectangle *rectangle);
 
-void set_buisson(editor_t *editor, sfRectangleShape *rectangle);
+void set_buisson(editor_t *editor, node_rectangle *rectangle);
 
 #endif

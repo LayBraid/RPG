@@ -31,4 +31,10 @@ char *my_strcat_c(char *dest, char const src);
 
 int my_atoi(const char *str);
 
+char *my_strcat(char *s1, char *s2);
+
+char *my_itoa(int nb);
+
+void my_strcat_3(char **dest, char const *src);
+
 #endif /* !LIB_H_ */

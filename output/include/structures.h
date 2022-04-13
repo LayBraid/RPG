@@ -202,6 +202,8 @@ struct data {
 typedef struct node_rectangle_struct {
     int id;
     sfRectangleShape *rectangle;
+    int type;
+    int depth;
     float x;
     float y;
     struct node_rectangle_struct *next;
@@ -211,14 +213,16 @@ typedef struct editor_data editor_t;
 
 typedef struct node_texture_struct {
     int id;
-    void(*function)(editor_t *editor, sfRectangleShape *rectangle);
+    void(*function)(editor_t *editor, node_rectangle *rectangle);
     struct node_texture_struct *prev;
     struct node_texture_struct *next;
 } node_texture;
 
 struct editor_data {
+    int size;
+    char *path;
     sfRenderWindow *window;
-    sfRectangleShape *current;
+    node_rectangle *current;
     sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;

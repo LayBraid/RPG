@@ -7,16 +7,18 @@
 
 #include "editor.h"
 
-void set_grass(editor_t *editor, sfRectangleShape *rectangle)
+void set_grass(editor_t *editor, node_rectangle *rectangle)
 {
     sfIntRect rect = {233, 39, 8, 8};
-    sfRectangleShape_setTexture(rectangle, editor->world, sfTrue);
-    sfRectangleShape_setTextureRect(rectangle, rect);
+    rectangle->type = 1;
+    sfRectangleShape_setTexture(rectangle->rectangle, editor->world, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_buisson(editor_t *editor, sfRectangleShape *rectangle)
+void set_buisson(editor_t *editor, node_rectangle *rectangle)
 {
     sfIntRect rect = {241, 39, 8, 8};
-    sfRectangleShape_setTexture(rectangle, editor->world, sfTrue);
-    sfRectangleShape_setTextureRect(rectangle, rect);
+    rectangle->type = 2;
+    sfRectangleShape_setTexture(rectangle->rectangle, editor->world, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }

@@ -23,15 +23,15 @@ int main(int ac, char **av)
     data_create(data);
 
     if (ac != 1 && (my_strcmp(av[1], "--editor") == 0 ||
-        my_strcmp(av[1], "-e") == 0)) {
-        my_editor();
-        return (0);
+        my_strcmp(av[1], "-e") == 0) && ac == 4) {
+        my_editor(av);
+        return 0;
     }
     data->video = set_video(data->video, 1920, 1080, 32);
     set_fps(data->video.window, 60, data);
     if (ac != 1 && av[1][0] == '-' && av[1][1] == 'h') {
         myh();
-        return (0);
+        return 0;
     }
     launch_rpg(data);
     return 0;

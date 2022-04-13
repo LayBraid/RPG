@@ -17,14 +17,14 @@ static void check_on_rectangles(editor_t *editor)
     while (tmp->id < tmp->next->id) {
         if (mu.x > tmp->x * 15 && mu.x < tmp->x * 15 + 15 &&
             mu.y > tmp->y * 15 && mu.y < tmp->y * 15 + 15) {
-            editor->textures->function(editor, tmp->rectangle);
+            editor->textures->function(editor, tmp);
             return;
         }
         tmp = tmp->next;
     }
     if (mu.x > tmp->x * 15 && mu.x < tmp->x * 15 + 15 &&
         mu.y > tmp->y * 15 && mu.y < tmp->y * 15 + 15) {
-        editor->textures->function(editor, tmp->rectangle);
+        editor->textures->function(editor, tmp);
         return;
     }
 }

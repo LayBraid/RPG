@@ -55,7 +55,7 @@ void data_create(data_t *data)
     data->loading_state = 0;
     data->my_event = NULL;
     data->musics = NULL;
-    init_music(data);
+    //init_music(data);
     data->quest = NULL;
     parsing_data(data);
     initialize_events(data);
