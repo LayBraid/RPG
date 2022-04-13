@@ -74,6 +74,10 @@ void check_events(editor_t *editor)
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(editor->window);
         if (event.type == sfEvtMouseButtonPressed)
+            editor->press = 1;
+        if (event.type == sfEvtMouseButtonReleased)
+            editor->press = 0;
+        if (editor->press)
             check_on_rectangles(editor);
         if (event.type == sfEvtKeyPressed)
             check_keys(editor, event);

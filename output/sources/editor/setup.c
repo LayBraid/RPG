@@ -16,6 +16,7 @@ void setup_editor(editor_t *editor)
     sfDefaultStyle,NULL);
     sfRenderWindow_setFramerateLimit(editor->window, 130);
     editor->rectangles = NULL;
+    editor->press = 0;
     editor->textures = NULL;
     editor->textures = init_textures(editor);
     editor->world = sfTexture_createFromFile(WORLD, NULL);
