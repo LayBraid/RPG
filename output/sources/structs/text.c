@@ -18,7 +18,7 @@ text_t *create_text(text_t *start, char *string, sfFont *font)
     new->id = (start == NULL) ? 1 : start->id + 1;
     new->next = start;
     start = new;
-    return (start);
+    return start;
 }
 
 text_t *delete_text(text_t *node)
