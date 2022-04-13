@@ -53,11 +53,11 @@ static void check_keys(editor_t *editor, sfEvent event)
 {
     check_for_move(editor, event);
     if (event.key.code == sfKeyA) {
-        sfView_zoom(editor->view, 0.7f);
+        sfView_zoom(editor->view, 0.9f);
         sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyE) {
-        sfView_zoom(editor->view, 1.3f);
+        sfView_zoom(editor->view, 1.1f);
         sfRenderWindow_setView(editor->window, editor->view);
     }
     if (event.key.code == sfKeyRight)
