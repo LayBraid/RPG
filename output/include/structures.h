@@ -228,6 +228,7 @@ tile_t *set_tile_rotation(tile_t *node, float rotation);
 
 // npc.c
 npc_t *create_npc(npc_t *start, char *name);
+npc_t *set_npc_depth(npc_t *npc, unsigned char depth);
 npc_t *delete_npc(npc_t *node);
 npc_t *delete_all_npcs(npc_t *start);
 

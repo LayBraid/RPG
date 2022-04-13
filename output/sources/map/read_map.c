@@ -6,16 +6,17 @@
 */
 
 #include "../../include/my_rpg.h"
+#include "my.h"
 
 int make_tile(data_t *data, char *map, int i, sfVector2f pos)
 {
-    unsigned char depth = -1;
+    unsigned char depth = 11;
     char comma = 0;
-    unsigned int type = -1;
+    unsigned int type = 11;
 
     while (map[i] != ']') {
-        if (depth == -1)
-            depth = my_getnbr(&map[i]);
+        if (depth == 11)
+            depth = my_getnbr(&map[i + 1]);
         else if (comma == 1)
             type = my_getnbr(&map[i]);
         else if (map[i] != ',')
@@ -27,22 +28,6 @@ int make_tile(data_t *data, char *map, int i, sfVector2f pos)
     data->tiles = set_tile_depth(data->tiles, depth);
     data->tiles->type = type;
     return (i);
-}
-
-void construct_map(data_t *data, char *map)
-{
-    sfVector2f pos = {0, 0};
-    for (int i = 0; map[i]; i++) {
-        if (map[i] == '[') {
-            i = make_tile(data, map, i, pos);
-            pos.x++;
-        } else if (map[i] == '\n' && map[i + 1] == '\n')
-            break;
-        else if (map[i] == '\n') {
-            pos.x = 0;
-            pos.y++;
-        }
-    }
 }
 
 char *my_strdup_to_c(char *str, char c)
@@ -78,9 +63,13 @@ int make_npc(data_t *data, char *map, int i)
         i++;
     i++;
     depth = my_getnbr(&map[i]);
+    while (map[i] != ',')
+        i++;
+    i++;
     data->npcs = create_npc(data->npcs, my_strdup_to_c(&map[i], ']'));
     data->npcs = set_npc_depth(data->npcs, depth);
     data->npcs = set_npc_type(data->npcs, type);
+    data->npcs = set_npc_position(data->npcs, pos);
     return (i);
 }
 
@@ -95,6 +84,25 @@ void get_npcs(data_t *data, char *map)
             i = make_npc(data, map, i);
         }
     }
+}
+
+void construct_map(data_t *data, char *map)
+{
+    sfVector2f pos = {0, 0};
+    int i = 0;
+
+    for (; map[i]; i++) {
+        if (map[i] == '[') {
+            i = make_tile(data, map, i, pos);
+            pos.x++;
+        } else if (map[i] == '\n' && map[i + 1] == '\n')
+            break;
+        else if (map[i] == '\n') {
+            pos.x = 0;
+            pos.y++;
+        }
+    }
+    get_npcs(data, &map[i]);
 }
 
 char *make_map(char *filepath)

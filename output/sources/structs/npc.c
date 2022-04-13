@@ -29,6 +29,12 @@ npc_t *create_npc(npc_t *start, char *name)
     return (new);
 }
 
+npc_t *set_npc_depth(npc_t *npc, unsigned char depth)
+{
+    npc->depth = depth;
+    return (npc);
+}
+
 npc_t *delete_npc(npc_t *node)
 {
     free(node->name);
