@@ -9,6 +9,18 @@
 
 const char *WORLD = "assets/game/Overworld tiles.png";
 
+static void setup_next(editor_t *editor)
+{
+    editor->background = sfRectangleShape_create();
+    editor->current = sfRectangleShape_create();
+    sfRectangleShape_setSize(editor->current, (sfVector2f) {80, 80});
+    sfRectangleShape_setPosition(editor->current, (sfVector2f) {20, 20});
+    editor->textures->function(editor, editor->current);
+    sfRectangleShape_setTexture(editor->background,
+    sfTexture_createFromFile("assets/game/nono.png", NULL), sfTrue);
+    sfRectangleShape_setSize(editor->background, (sfVector2f) {1500, 1500});
+}
+
 void setup_editor(editor_t *editor)
 {
     sfVideoMode mode = {1500, 1500, 32};
@@ -26,6 +38,7 @@ void setup_editor(editor_t *editor)
     sfView_setCenter(editor->view, (sfVector2f) {750, 750});
     sfView_setSize(editor->main, (sfVector2f) {1500, 1500});
     sfView_setCenter(editor->main, (sfVector2f) {750, 750});
+    setup_next(editor);
 
     for (int i = 0; i < 100; i++)
         for (int j = 0; j < 100; j++)

@@ -54,10 +54,14 @@ static void check_keys(editor_t *editor, sfEvent event)
     if (event.key.code == sfKeyE) {
         sfView_zoom(editor->view, 1.1f);
     }
-    if (event.key.code == sfKeyRight)
+    if (event.key.code == sfKeyRight) {
         editor->textures = editor->textures->next;
-    if (event.key.code == sfKeyLeft)
+        editor->textures->function(editor, editor->current);
+    }
+    if (event.key.code == sfKeyLeft) {
         editor->textures = editor->textures->prev;
+        editor->textures->function(editor, editor->current);
+    }
 }
 
 void check_events(editor_t *editor)

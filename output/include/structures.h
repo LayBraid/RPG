@@ -218,6 +218,8 @@ typedef struct node_texture_struct {
 
 struct editor_data {
     sfRenderWindow *window;
+    sfRectangleShape *current;
+    sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;
     node_texture *textures;
