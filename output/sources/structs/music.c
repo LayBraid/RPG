@@ -5,7 +5,11 @@
 ** music
 */
 
-void create_music(data_t *data, const char *path)
+#include "my_rpg.h"
+
+void create_music(data_t *data, const char *path, int loop)
 {
-    
+    music_t *new = malloc(sizeof(music_t));
+
+    new->music = sfMusic_createFromFile(path);
 }
