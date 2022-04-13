@@ -79,6 +79,11 @@ typedef struct quest_type {
     struct quest_type *next;
 } quest_t;
 
+typedef struct profile_type {
+    char *name;
+    int coins;
+} profile_t;
+
 typedef struct event_type {
     int id;
     int calling;

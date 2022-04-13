@@ -11,11 +11,11 @@
 
 static void convert_data(data_t *data, char *buffer, int *step)
 {
-    if (my_strcmp(buffer, "['Quests']") == 0) {
+    if (my_strcmp(buffer, "['Quests']\n") == 0) {
         (*step) = 0;
         return;
     }
-    if (my_strcmp(buffer, "['Profiles']") == 0) {
+    if (my_strcmp(buffer, "['Profiles']\n") == 0) {
         (*step) = 1;
         return;
     }
