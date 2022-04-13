@@ -21,8 +21,9 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/buttons/functions/*.c) \
 	  $(wildcard sources/settings/*.c) \
 	  $(wildcard sources/images/*.c) \
-	  $(wildcard sources/editor/rectangle/*.c) \
 	  $(wildcard sources/editor/*.c) \
+	  $(wildcard sources/editor/rectangle/*.c) \
+	  $(wildcard sources/editor/rectangle/textures/*.c) \
 	  $(wildcard lib/my/*.c) \
 
 OBJ = $(SRC:%.c=%.o)

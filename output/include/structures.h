@@ -185,6 +185,30 @@ struct data {
     node_img *images;
 };
 
+typedef struct node_rectangle_struct {
+    int id;
+    sfRectangleShape *rectangle;
+    float x;
+    float y;
+    struct node_rectangle_struct *next;
+} node_rectangle;
+
+typedef struct editor_data editor_t;
+
+typedef struct node_texture_struct {
+    int id;
+    void(*function)(editor_t *editor, sfRectangleShape *rectangle);
+    struct node_texture_struct *next;
+} node_texture;
+
+struct editor_data {
+    sfRenderWindow *window;
+    int size;
+    node_rectangle *rectangles;
+    sfRectangleShape *menu;
+    sfTexture *world;
+};
+
 // display_all.c
 void display_all(data_t *data);
 
