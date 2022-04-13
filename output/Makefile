@@ -21,6 +21,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/buttons/functions/*.c) \
 	  $(wildcard sources/settings/*.c) \
 	  $(wildcard sources/images/*.c) \
+	  $(wildcard sources/map/*.c) \
 	  $(wildcard lib/my/*.c) \
 
 OBJ = $(SRC:%.c=%.o)

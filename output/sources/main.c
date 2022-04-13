@@ -7,6 +7,7 @@
 
 #include "utils.h"
 #include "my.h"
+#include "map.h"
 
 static void myh(void)
 {
