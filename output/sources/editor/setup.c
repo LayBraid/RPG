@@ -11,15 +11,18 @@ const char *WORLD = "assets/game/Overworld tiles.png";
 
 void setup_editor(editor_t *editor)
 {
-    sfVideoMode mode = {1700, 1500, 32};
+    sfVideoMode mode = {1500, 1500, 32};
     editor->window = sfRenderWindow_create(mode, "RPG Editor | By LayBraid",
     sfDefaultStyle,NULL);
+    sfRenderWindow_setFramerateLimit(editor->window, 10);
     editor->rectangles = NULL;
     editor->textures = NULL;
     editor->textures = init_textures(editor);
-    editor->menu = sfRectangleShape_create();
-    sfRectangleShape_setSize(editor->menu, (sfVector2f) {200, 200});
     editor->world = sfTexture_createFromFile(WORLD, NULL);
+    editor->view = sfView_create();
+    sfView_setSize(editor->view, (sfVector2f) {750, 750});
+    sfView_setCenter(editor->view, (sfVector2f) {370, 370});
+    sfRenderWindow_setView(editor->window, editor->view);
 
     for (int i = 0; i < 100; i++)
         for (int j = 0; j < 100; j++)

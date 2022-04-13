@@ -15,14 +15,14 @@ static void check_on_rectangles(editor_t *editor)
     node_rectangle *tmp = editor->rectangles;
 
     while (tmp->id < tmp->next->id) {
-        if (mu.x > tmp->x * 15 + 200 && mu.x < tmp->x * 15 + 215 &&
+        if (mu.x > tmp->x * 15 && mu.x < tmp->x * 15 + 15 &&
             mu.y > tmp->y * 15 && mu.y < tmp->y * 15 + 15) {
             editor->textures->function(editor, tmp->rectangle);
             return;
         }
         tmp = tmp->next;
     }
-    if (mu.x > tmp->x * 15 + 200 && mu.x < tmp->x * 15 + 215 &&
+    if (mu.x > tmp->x * 15 && mu.x < tmp->x * 15 + 15 &&
         mu.y > tmp->y * 15 && mu.y < tmp->y * 15 + 15) {
         editor->textures->function(editor, tmp->rectangle);
         return;
@@ -31,6 +31,22 @@ static void check_on_rectangles(editor_t *editor)
 
 static void check_keys(editor_t *editor, sfEvent event)
 {
+    if (event.key.code == sfKeyZ) {
+        sfView_move(editor->view, (sfVector2f) {0, -10});
+        sfRenderWindow_setView(editor->window, editor->view);
+    }
+    if (event.key.code == sfKeyS) {
+        sfView_move(editor->view, (sfVector2f) {0, 10});
+        sfRenderWindow_setView(editor->window, editor->view);
+    }
+    if (event.key.code == sfKeyD) {
+        sfView_move(editor->view, (sfVector2f) {10, 0});
+        sfRenderWindow_setView(editor->window, editor->view);
+    }
+    if (event.key.code == sfKeyQ) {
+        sfView_move(editor->view, (sfVector2f) {-10, 0});
+        sfRenderWindow_setView(editor->window, editor->view);
+    }
     if (event.key.code == sfKeyRight)
         editor->textures = editor->textures->next;
     if (event.key.code == sfKeyLeft)

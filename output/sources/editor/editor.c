@@ -13,7 +13,7 @@ void my_editor(void)
     setup_editor(editor);
 
     while (sfRenderWindow_isOpen(editor->window)) {
-        sfRenderWindow_clear(editor->window, sfBlack);
+        sfRenderWindow_clear(editor->window, sfRed);
         check_events(editor);
         display_rectangles(editor);
         sfRenderWindow_display(editor->window);

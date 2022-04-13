@@ -204,11 +204,10 @@ typedef struct node_texture_struct {
 
 struct editor_data {
     sfRenderWindow *window;
-    int size;
     node_rectangle *rectangles;
-    sfRectangleShape *menu;
     sfTexture *world;
     node_texture *textures;
+    sfView *view;
 };
 
 // display_all.c

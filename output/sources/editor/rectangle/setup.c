@@ -34,7 +34,7 @@ void add_next_rectangle(node_rectangle **node, int i, int j)
     new->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize(new->rectangle, (sfVector2f) {(float) 15, (float) 15});
     sfRectangleShape_setPosition(new->rectangle,
-    (sfVector2f) { (float) (200 + (j * 15)), (float) (15 * i)});
+    (sfVector2f) { (float) (j * 15), (float) (15 * i)});
     new->next = (*node);
     tmp->next = new;
 }
@@ -47,7 +47,7 @@ void setup_first_rectangle(node_rectangle **node, int i, int j)
     (*node)->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize((*node)->rectangle, (sfVector2f) {15, 15});
     sfRectangleShape_setPosition((*node)->rectangle,
-    (sfVector2f) { (float) (200 + (j * 15)), (float) (15 * i)});
+    (sfVector2f) { (float) (j * 15), (float) (15 * i)});
     (*node)->id = 0;
     (*node)->next = (*node);
 }
