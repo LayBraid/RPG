@@ -15,6 +15,8 @@ void setup_editor(editor_t *editor)
     editor->window = sfRenderWindow_create(mode, "RPG Editor | By LayBraid",
     sfDefaultStyle,NULL);
     editor->rectangles = NULL;
+    editor->textures = NULL;
+    editor->textures = init_textures(editor);
     editor->menu = sfRectangleShape_create();
     sfRectangleShape_setSize(editor->menu, (sfVector2f) {200, 200});
     editor->world = sfTexture_createFromFile(WORLD, NULL);

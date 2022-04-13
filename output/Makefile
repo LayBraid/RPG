@@ -23,7 +23,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/images/*.c) \
 	  $(wildcard sources/editor/*.c) \
 	  $(wildcard sources/editor/rectangle/*.c) \
-	  $(wildcard sources/editor/rectangle/textures/*.c) \
+	  $(wildcard sources/editor/textures/*.c) \
 	  $(wildcard lib/my/*.c) \
 
 OBJ = $(SRC:%.c=%.o)

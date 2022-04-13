@@ -198,6 +198,7 @@ typedef struct editor_data editor_t;
 typedef struct node_texture_struct {
     int id;
     void(*function)(editor_t *editor, sfRectangleShape *rectangle);
+    struct node_texture_struct *prev;
     struct node_texture_struct *next;
 } node_texture;
 
@@ -207,6 +208,7 @@ struct editor_data {
     node_rectangle *rectangles;
     sfRectangleShape *menu;
     sfTexture *world;
+    node_texture *textures;
 };
 
 // display_all.c
