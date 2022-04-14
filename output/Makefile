@@ -17,6 +17,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/intro/*.c) \
 	  $(wildcard sources/game/*.c) \
 	  $(wildcard sources/menu/*.c) \
+	  $(wildcard sources/name/*.c) \
 	  $(wildcard sources/buttons/*.c) \
 	  $(wildcard sources/buttons/functions/*.c) \
 	  $(wildcard sources/settings/*.c) \
