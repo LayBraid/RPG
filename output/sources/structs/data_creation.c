@@ -61,4 +61,7 @@ void data_create(data_t *data)
     initialize_events(data);
     data->button = setup_buttons(data);
     data->images = setup_img(data);
+    data->main = sfView_create();
+    sfView_setSize(data->main, (sfVector2f) {1920, 1080});
+    sfView_setCenter(data->main, (sfVector2f) {1920 / 2, 1080 / 2});
 }

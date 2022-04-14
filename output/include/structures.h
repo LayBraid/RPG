@@ -197,6 +197,7 @@ struct data {
     unsigned char loading_state;
     node_button *button;
     node_img *images;
+    sfView *main;
 };
 
 typedef struct node_rectangle_struct {
