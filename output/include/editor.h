@@ -35,8 +35,14 @@ void (*function)(editor_t *editor, node_rectangle *rectangle));
 void setup_first_texture(node_texture **node,
 void (*function)(editor_t *editor, node_rectangle *rectangle));
 
+void set_void(editor_t *editor, node_rectangle *rectangle);
+
 void set_grass(editor_t *editor, node_rectangle *rectangle);
 
 void set_buisson(editor_t *editor, node_rectangle *rectangle);
+
+void set_data(editor_t *editor);
+
+void update_data(editor_t *editor);
 
 #endif

@@ -30,6 +30,7 @@ void (*function)(editor_t *editor, node_rectangle *rectangle))
     while (tmp->next->id != 0)
         tmp = tmp->next;
     new->id = get_max(node) + 1;
+    new->type = new->id + 1;
     new->function = function;
     new->next = (*node);
     new->prev = tmp;
@@ -41,6 +42,7 @@ void (*function)(editor_t *editor, node_rectangle *rectangle))
 {
     (*node) = malloc(sizeof(node_texture));
     (*node)->id = 0;
+    (*node)->type = 1;
     (*node)->function = function;
     (*node)->next = (*node);
     (*node)->prev = (*node);

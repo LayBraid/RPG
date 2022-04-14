@@ -213,6 +213,7 @@ typedef struct editor_data editor_t;
 
 typedef struct node_texture_struct {
     int id;
+    int type;
     void(*function)(editor_t *editor, node_rectangle *rectangle);
     struct node_texture_struct *prev;
     struct node_texture_struct *next;
