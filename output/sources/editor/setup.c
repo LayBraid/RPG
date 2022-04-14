@@ -12,18 +12,24 @@ const char *WORLD = "assets/game/Overworld tiles.png";
 static void setup_next(editor_t *editor)
 {
     editor->background = sfRectangleShape_create();
-    editor->current = sfRectangleShape_create();
-    sfRectangleShape_setSize(editor->current, (sfVector2f) {80, 80});
-    sfRectangleShape_setPosition(editor->current, (sfVector2f) {20, 20});
+    editor->current = malloc(sizeof(node_rectangle));
+    editor->current->rectangle = sfRectangleShape_create();
+    sfRectangleShape_setSize(editor->current->rectangle,
+    (sfVector2f) {80, 80});
+    sfRectangleShape_setPosition(editor->current->rectangle,
+    (sfVector2f) {20, 20});
     editor->textures->function(editor, editor->current);
     sfRectangleShape_setTexture(editor->background,
     sfTexture_createFromFile("assets/game/nono.png", NULL), sfTrue);
     sfRectangleShape_setSize(editor->background, (sfVector2f) {1500, 1500});
+    for (int i = 0; i < editor->size; i++)
+        for (int j = 0; j < editor->size; j++)
+            add_rectangle(&editor->rectangles, i, j);
 }
 
 void setup_editor(editor_t *editor)
 {
-    sfVideoMode mode = {1500, 1500, 32};
+    sfVideoMode mode = {editor->size * 15, editor->size * 15, 32};
     editor->window = sfRenderWindow_create(mode, "RPG Editor | By LayBraid",
     sfDefaultStyle,NULL);
     sfRenderWindow_setFramerateLimit(editor->window, 130);
@@ -34,13 +40,11 @@ void setup_editor(editor_t *editor)
     editor->world = sfTexture_createFromFile(WORLD, NULL);
     editor->view = sfView_create();
     editor->main = sfView_create();
-    sfView_setSize(editor->view, (sfVector2f) {1500, 1500});
-    sfView_setCenter(editor->view, (sfVector2f) {750, 750});
-    sfView_setSize(editor->main, (sfVector2f) {1500, 1500});
-    sfView_setCenter(editor->main, (sfVector2f) {750, 750});
+    sfView_setSize(editor->view, (sfVector2f) {1500,1500});
+    sfView_setCenter(editor->view,(sfVector2f)
+    {(float) 1500 / 2, (float) 1500 / 2});
+    sfView_setSize(editor->main, (sfVector2f) {1500,1500});
+    sfView_setCenter(editor->main, (sfVector2f)
+    {(float) 1500 / 2, (float) 1500 / 2});
     setup_next(editor);
-
-    for (int i = 0; i < 100; i++)
-        for (int j = 0; j < 100; j++)
-            add_rectangle(&editor->rectangles, i, j);
 }

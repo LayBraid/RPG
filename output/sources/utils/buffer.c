@@ -12,12 +12,12 @@ char *get_in_buffer(char *path)
     int fd;
     char *buffer;
 
-    buffer = malloc(sizeof(char) * (3000));
+    buffer = malloc(sizeof(char) * (2999));
     fd = open(path, O_RDONLY);
     if (fd == -1)
         return "error";
-    read(fd, buffer, 3000);
-    buffer[3000] = '\0';
+    read(fd, buffer, 2999);
+    buffer[2999] = '\0';
     close(fd);
     return buffer;
 }
