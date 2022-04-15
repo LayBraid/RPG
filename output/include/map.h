@@ -22,10 +22,10 @@ void (*function)(data_t *data, node_rectangle *rectangle));
 void setup_first_texture_map(node_texture_map **node,
 void (*function)(data_t *data, node_rectangle *rectangle));
 
-void set_void(data_t *data, node_rectangle *rectangle);
+void set_void_map(data_t *data, node_rectangle *rectangle);
 
-void set_grass(data_t *data, node_rectangle *rectangle);
+void set_grass_map(data_t *data, node_rectangle *rectangle);
 
-void set_buisson(data_t *data, node_rectangle *rectangle);
+void set_buisson_map(data_t *data, node_rectangle *rectangle);
 
 #endif /* !MAP_H_ */

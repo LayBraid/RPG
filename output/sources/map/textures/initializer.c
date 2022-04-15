@@ -11,8 +11,8 @@ node_texture_map *init_textures_map(data_t *editor)
 {
     node_texture_map *texture = malloc(sizeof(node_texture_map));
 
-    setup_first_texture_map(&texture, set_void);
-    add_next_texture_map(&texture, set_grass);
-    add_next_texture_map(&texture, set_buisson);
+    setup_first_texture_map(&texture, set_void_map);
+    add_next_texture_map(&texture, set_grass_map);
+    add_next_texture_map(&texture, set_buisson_map);
     return texture;
 }

@@ -9,7 +9,7 @@
 
 //TODO Change texture because is a random texture
 
-void set_void(data_t *data, node_rectangle *rectangle)
+void set_void_map(data_t *data, node_rectangle *rectangle)
 {
     sfIntRect rect = {0, 0, 8, 8};
     rectangle->type = 0;
@@ -17,7 +17,7 @@ void set_void(data_t *data, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_grass(data_t *data, node_rectangle *rectangle)
+void set_grass_map(data_t *data, node_rectangle *rectangle)
 {
     sfIntRect rect = {233, 39, 8, 8};
     rectangle->type = 1;
@@ -25,7 +25,7 @@ void set_grass(data_t *data, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_buisson(data_t *data, node_rectangle *rectangle)
+void set_buisson_map(data_t *data, node_rectangle *rectangle)
 {
     sfIntRect rect = {241, 39, 8, 8};
     rectangle->type = 2;
