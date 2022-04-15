@@ -180,6 +180,16 @@ typedef struct music {
     struct music *next;
 } music_t;
 
+typedef struct node_rectangle_struct {
+    int id;
+    sfRectangleShape *rectangle;
+    int type;
+    int depth;
+    float x;
+    float y;
+    struct node_rectangle_struct *next;
+} node_rectangle;
+
 struct data {
     video_t video;
     player_t player;
@@ -189,6 +199,7 @@ struct data {
     button_t *buttons;
     npc_t *npcs;
     tile_t *tiles;
+    node_rectangle *map;
     sfEvent event;
     music_t *musics;
     event_t *my_event;
@@ -199,16 +210,6 @@ struct data {
     node_img *images;
     sfView *main;
 };
-
-typedef struct node_rectangle_struct {
-    int id;
-    sfRectangleShape *rectangle;
-    int type;
-    int depth;
-    float x;
-    float y;
-    struct node_rectangle_struct *next;
-} node_rectangle;
 
 typedef struct editor_data editor_t;
 
