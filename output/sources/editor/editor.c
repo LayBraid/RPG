@@ -23,6 +23,8 @@ void my_editor(char **av)
         sfRenderWindow_drawRectangleShape(editor->window,
         editor->background, NULL);
         sfRenderWindow_drawRectangleShape(editor->window,
+        editor->current_back->rectangle, NULL);
+        sfRenderWindow_drawRectangleShape(editor->window,
         editor->current->rectangle, NULL);
         sfRenderWindow_setView(editor->window, editor->view);
         display_rectangles(editor);

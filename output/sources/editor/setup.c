@@ -13,12 +13,18 @@ static void setup_next(editor_t *editor)
 {
     editor->background = sfRectangleShape_create();
     editor->current = malloc(sizeof(node_rectangle));
+    editor->current_back = malloc(sizeof(node_rectangle));
     editor->current->rectangle = sfRectangleShape_create();
-    sfRectangleShape_setSize(editor->current->rectangle,
-    (sfVector2f) {80, 80});
+    editor->current_back->rectangle = sfRectangleShape_create();
+    sfRectangleShape_setSize(editor->current->rectangle,(sfVector2f) {80, 80});
+    sfRectangleShape_setSize(editor->current_back->rectangle,
+    (sfVector2f) {82, 82});
     sfRectangleShape_setPosition(editor->current->rectangle,
     (sfVector2f) {20, 20});
+    sfRectangleShape_setPosition(editor->current_back->rectangle,
+    (sfVector2f) {19, 19});
     editor->textures->function(editor, editor->current);
+    sfRectangleShape_setFillColor(editor->current_back->rectangle, sfWhite);
     sfRectangleShape_setTexture(editor->background,
     sfTexture_createFromFile("assets/game/nono.png", NULL), sfTrue);
     sfRectangleShape_setSize(editor->background, (sfVector2f) {1500, 1500});

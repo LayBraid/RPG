@@ -225,6 +225,7 @@ struct editor_data {
     char *path;
     sfRenderWindow *window;
     node_rectangle *current;
+    node_rectangle *current_back;
     sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;
