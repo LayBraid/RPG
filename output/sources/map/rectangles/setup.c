@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "editor.h"
+#include "map.h"
 
 static int get_max(node_rectangle **node)
 {
@@ -21,8 +21,10 @@ static int get_max(node_rectangle **node)
     return count;
 }
 
-static void add_map_rectangle(node_rectangle **node, const float info[4])
+static void add_map_rectangle(data_t *data, node_rectangle **node,
+const float info[4])
 {
+    node_texture_map *texture = data->texture;
     node_rectangle *new = malloc(sizeof(node_rectangle));
     node_rectangle *tmp = (*node);
 
@@ -36,14 +38,19 @@ static void add_map_rectangle(node_rectangle **node, const float info[4])
     new->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize(new->rectangle, (sfVector2f)
     {(float) 15, (float) 15});
+    for (int i = 0; i < (*node)->type; i++)
+        texture = texture->next;
+    texture->function(data, (*node));
     sfRectangleShape_setPosition(new->rectangle,
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     new->next = (*node);
     tmp->next = new;
 }
 
-static void setup_map_rectangle(node_rectangle **node, const float info[4])
+static void setup_map_rectangle(data_t *data, node_rectangle **node,
+const float info[4])
 {
+    node_texture_map *texture = data->texture;
     (*node) = malloc(sizeof(node_rectangle));
     (*node)->x = info[0];
     (*node)->y = info[1];
@@ -51,16 +58,19 @@ static void setup_map_rectangle(node_rectangle **node, const float info[4])
     (*node)->depth = (int) info[3];
     (*node)->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize((*node)->rectangle, (sfVector2f) {15, 15});
+    for (int i = 0; i < (*node)->type; i++)
+        texture = texture->next;
+    texture->function(data, (*node));
     sfRectangleShape_setPosition((*node)->rectangle,
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     (*node)->id = 0;
     (*node)->next = (*node);
 }
 
-void add_map(node_rectangle **node, const float info[4])
+void add_map(data_t *data, const float info[4])
 {
-    if ((*node) == NULL)
-        setup_map_rectangle(node, info);
+    if (data->map == NULL)
+        setup_map_rectangle(data, &data->map, info);
     else
-        add_map_rectangle(node, info);
+        add_map_rectangle(data, &data->map, info);
 }

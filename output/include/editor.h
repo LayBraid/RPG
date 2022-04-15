@@ -45,6 +45,4 @@ void set_data(editor_t *editor);
 
 void update_data(editor_t *editor);
 
-void add_map(node_rectangle **node, const float info[4]);
-
 #endif

@@ -23,8 +23,8 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/settings/*.c) \
 	  $(wildcard sources/images/*.c) \
 	  $(wildcard sources/map/*.c) \
-	  $(wildcard sources/map/rectangles/*.c) \
 	  $(wildcard sources/map/textures/*.c) \
+	  $(wildcard sources/map/rectangles/*.c) \
 	  $(wildcard sources/editor/*.c) \
 	  $(wildcard sources/editor/rectangle/*.c) \
 	  $(wildcard sources/editor/textures/*.c) \

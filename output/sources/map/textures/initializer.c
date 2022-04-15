@@ -7,7 +7,7 @@
 
 #include "map.h"
 
-node_texture_map *init_textures_map(data_t *editor)
+node_texture_map *init_textures_map(void)
 {
     node_texture_map *texture = malloc(sizeof(node_texture_map));
 

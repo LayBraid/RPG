@@ -225,8 +225,10 @@ struct data {
     node_button *button;
     node_img *images;
     sfView *main;
+    sfView *mapping;
     node_rectangle *map;
     node_texture_map *texture;
+    sfTexture *tmp;
 };
 
 struct editor_data {

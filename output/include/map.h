@@ -14,7 +14,7 @@ void create_map_from_file(data_t *data, char *filepath);
 
 void get_map(data_t *data);
 
-node_texture_map *init_textures_map(data_t *editor);
+node_texture_map *init_textures_map(void);
 
 void add_next_texture_map(node_texture_map **node,
 void (*function)(data_t *data, node_rectangle *rectangle));
@@ -27,5 +27,9 @@ void set_void_map(data_t *data, node_rectangle *rectangle);
 void set_grass_map(data_t *data, node_rectangle *rectangle);
 
 void set_buisson_map(data_t *data, node_rectangle *rectangle);
+
+void add_map(data_t *data, const float info[4]);
+
+void display_rectangles_map(data_t *data);
 
 #endif /* !MAP_H_ */

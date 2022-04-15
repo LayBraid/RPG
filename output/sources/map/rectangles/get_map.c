@@ -9,25 +9,20 @@
 #include "my.h"
 #include "utils.h"
 
-static void update_texture(data_t *data, char *buffer,
-node_rectangle *rectangle)
+static void update_texture(data_t *data, char *buffer, int info[5])
 {
-    node_texture_map *texture = data->texture;
-    rectangle->type = my_atoi(extract_between_limits(buffer,
-    get_it_char(buffer, '[', 0) + 1,get_it_char(buffer, ',', 0) - 1));
-    rectangle->depth = my_atoi(extract_between_limits(buffer,
-    get_it_char(buffer, ',', 0) + 1,get_it_char(buffer, ']', 0) - 1));
-
-    for (int i = 0; i < rectangle->type; i++)
-        texture = texture->next;
-    texture->function(data, rectangle);
+    float map[4] = {(float) info[3], (float) info[4],
+    (float) my_atoi(extract_between_limits(buffer,get_it_char(buffer, '[', 0)
+    + 1,get_it_char(buffer, ',', 0) - 1)), (float) my_atoi(
+    extract_between_limits(buffer,get_it_char(buffer, ',', 0) + 1,
+    get_it_char(buffer, ']', 0) - 1))};
+    add_map(data, map);
 }
 
 void get_map(data_t *data)
 {
-    node_rectangle *rectangle = data->map;
     char *buffer = get_in_buffer("data/map");
-    int info[3] = {0};
+    int info[5] = {0};
 
     for (int i = 0; buffer[i] != '\0'; i++) {
         if (buffer[i] == '[')
@@ -35,8 +30,8 @@ void get_map(data_t *data)
         if (buffer[i] == ']') {
             info[1] = i;
             update_texture(data,
-            extract_between_limits(buffer, info[0], info[1]), rectangle);
-            rectangle = rectangle->next;
+            extract_between_limits(buffer, info[0], info[1]), info);
+            info[3]++;
         }
     }
 }
