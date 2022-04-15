@@ -11,13 +11,15 @@ char *get_in_buffer(char *path)
 {
     int fd;
     char *buffer;
+    struct stat st;
 
-    buffer = malloc(sizeof(char) * (300000));
+    stat(path, &st);
+    buffer = malloc(sizeof(char) * ((st.st_size + 1)));
     fd = open(path, O_RDONLY);
     if (fd == -1)
         return "error";
-    read(fd, buffer, 300000);
-    buffer[300000] = '\0';
+    read(fd, buffer, st.st_size);
+    buffer[st.st_size] = '\0';
     close(fd);
     return buffer;
 }

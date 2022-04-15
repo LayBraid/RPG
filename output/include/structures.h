@@ -26,6 +26,7 @@
     #include <sys/stat.h>
 
 typedef struct data data_t;
+typedef struct editor_data editor_t;
 typedef const float cf;
 
 typedef struct anim_img_struct {
@@ -190,6 +191,22 @@ typedef struct node_rectangle_struct {
     struct node_rectangle_struct *next;
 } node_rectangle;
 
+typedef struct node_texture_struct {
+    int id;
+    int type;
+    void(*function)(editor_t *editor, node_rectangle *rectangle);
+    struct node_texture_struct *prev;
+    struct node_texture_struct *next;
+} node_texture;
+
+typedef struct node_texture_map_struct {
+    int id;
+    int type;
+    void(*function)(data_t *data, node_rectangle *rectangle);
+    struct node_texture_map_struct *prev;
+    struct node_texture_map_struct *next;
+} node_texture_map;
+
 struct data {
     video_t video;
     player_t player;
@@ -199,7 +216,6 @@ struct data {
     button_t *buttons;
     npc_t *npcs;
     tile_t *tiles;
-    node_rectangle *map;
     sfEvent event;
     music_t *musics;
     event_t *my_event;
@@ -209,17 +225,9 @@ struct data {
     node_button *button;
     node_img *images;
     sfView *main;
+    node_rectangle *map;
+    node_texture_map *texture;
 };
-
-typedef struct editor_data editor_t;
-
-typedef struct node_texture_struct {
-    int id;
-    int type;
-    void(*function)(editor_t *editor, node_rectangle *rectangle);
-    struct node_texture_struct *prev;
-    struct node_texture_struct *next;
-} node_texture;
 
 struct editor_data {
     int size;
