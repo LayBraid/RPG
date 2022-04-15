@@ -18,7 +18,7 @@ void display_all(data_t *data)
     }
     display_buttons(data->buttons, data->video);
     display_texts(data->texts, data->video);
-    if (data->video.ui == GAME) {
+    if (data->video.ui == 2) {
         sfRenderWindow_setView(data->video.window, data->mapping);
         display_rectangles_map(data);
     }
