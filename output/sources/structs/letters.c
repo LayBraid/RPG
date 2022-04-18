@@ -29,7 +29,7 @@ static void next_put_letter(data_t *data)
     put_letter(data, 'S', (IntR) {142, 104, 6, 13}, (sfVector2f) {1157, 390});
     put_letter(data, 'T', (IntR) {158, 104, 6, 13}, (sfVector2f) {1277, 390});
     put_letter(data, 'U', (IntR) {14, 120, 6, 13}, (sfVector2f) {195, 470});
-    put_letter(data, 'V', (IntR) {29, 120, 7, 13}, (sfVector2f) {317, 470});
+    put_letter(data, 'V', (IntR) {29, 120, 8, 13}, (sfVector2f) {317, 470});
     put_letter(data, 'W', (IntR) {45, 120, 7, 13}, (sfVector2f) {437, 470});
     put_letter(data, 'X', (IntR) {61, 120, 7, 13}, (sfVector2f) {557, 470});
     put_letter(data, 'Y', (IntR) {77, 120, 7, 13}, (sfVector2f) {677, 470});

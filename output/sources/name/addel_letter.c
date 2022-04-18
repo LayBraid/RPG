@@ -32,14 +32,16 @@
 void put_letter(data_t *data)
 {
     IntR *rect = get_rect_letter(data, data->letter->pos);
+    float comp = 7.00f;
     data->texture_bank = create_texture(data->texture_bank,
     "assets/game/input name hud.png", rect);
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
-    data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55, 4.86});
-    data->tiles = set_tile_position(data->tiles,
-    (sfVector2f){data->letter->view.x, data->letter->view.y});
+    data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55f, 4.86f});
+    if (rect->height < 13)
+        comp += 7.55f * 2;
+    data->tiles = set_tile_position(data->tiles,(sfVector2f) {data->letter->view.x, (float) (data->letter->view.y + comp)});
     data->tiles->depth = 2;
-    data->letter->view.x += 55;
+    data->letter->view.x += (float) rect->width * 7.55f + 6;
     // fill_name(data, 1);
 }
