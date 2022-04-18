@@ -24,4 +24,7 @@ void go_right(data_t *data);
 void go_up(data_t *data);
 void go_down(data_t *data);
 
+// addel_letter.c
+void put_letter(data_t *data);
+
 #endif /* !NAME_H_ */

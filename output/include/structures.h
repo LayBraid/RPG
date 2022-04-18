@@ -180,6 +180,12 @@ typedef struct music {
     struct music *next;
 } music_t;
 
+typedef struct letter {
+    sfVector2f pos;
+    sfVector2f view;
+    int count;
+} letter_t;
+
 struct data {
     video_t video;
     player_t player;
@@ -191,6 +197,7 @@ struct data {
     tile_t *tiles;
     sfEvent event;
     music_t *musics;
+    letter_t *letter;
     event_t *my_event;
     quest_t *quest;
     float delta;
