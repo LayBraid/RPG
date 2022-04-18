@@ -15,24 +15,42 @@ void go_left(data_t *data)
     while (tile->id != 1)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
-    if (pos.x == 317)
+    if (pos.x == 317) {
         tile = set_tile_position(tile, (sfVector2f){195, pos.y});
-    if (pos.x == 437)
+        data->letter->pos.x = 195;
+    }
+    if (pos.x == 437) {
         tile = set_tile_position(tile, (sfVector2f){317, pos.y});
-    if (pos.x == 557)
+        data->letter->pos.x = 317;
+    }
+    if (pos.x == 557) {
         tile = set_tile_position(tile, (sfVector2f){437, pos.y});
-    if (pos.x == 677)
+        data->letter->pos.x = 437;
+    }
+    if (pos.x == 677) {
         tile = set_tile_position(tile, (sfVector2f){557, pos.y});
-    if (pos.x == 797)
+        data->letter->pos.x = 557;
+    }
+    if (pos.x == 797) {
         tile = set_tile_position(tile, (sfVector2f){677, pos.y});
-    if (pos.x == 917)
+        data->letter->pos.x = 677;
+    }
+    if (pos.x == 917) {
         tile = set_tile_position(tile, (sfVector2f){797, pos.y});
-    if (pos.x == 1037)
+        data->letter->pos.x = 797;
+    }
+    if (pos.x == 1037) {
         tile = set_tile_position(tile, (sfVector2f){917, pos.y});
-    if (pos.x == 1157)
+        data->letter->pos.x = 917;
+    }
+    if (pos.x == 1157) {
         tile = set_tile_position(tile, (sfVector2f){1037, pos.y});
-    if (pos.x == 1277)
+        data->letter->pos.x = 1037;
+    }
+    if (pos.x == 1277) {
         tile = set_tile_position(tile, (sfVector2f){1157, pos.y});
+        data->letter->pos.x = 1157;
+    }
 }
 
 void go_right(data_t *data)
