@@ -208,6 +208,12 @@ typedef struct node_texture_map_struct {
     struct node_texture_map_struct *next;
 } node_texture_map;
 
+typedef struct letter {
+    sfVector2f pos;
+    sfVector2f view;
+    int count;
+} letter_t;
+
 typedef struct node_letter_struct {
     char letter;
     sfIntRect rect;
