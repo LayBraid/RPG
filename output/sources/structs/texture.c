@@ -17,7 +17,6 @@ texture_t *create_texture(texture_t *start, char *filepath, sfIntRect *area)
         free(new);
         return (NULL);
     }
-    printf("ici\n");
     new->rect = (sfIntRect){0, 0, 0, 0};
     new->max_rect = 0;
     if (start == NULL)

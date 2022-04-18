@@ -31,10 +31,8 @@
 
 void put_letter(data_t *data)
 {
-    printf("%f\n", data->letter->pos.x);
-    printf("%f\n", data->letter->pos.y);
     data->texture_bank = create_texture(data->texture_bank,
-    "assets/game/input name hud.png", get_rect_letter(data, data->letter->view));
+    "assets/game/input name hud.png", get_rect_letter(data, data->letter->pos));
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55, 4.86});

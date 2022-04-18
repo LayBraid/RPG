@@ -18,10 +18,12 @@ sfIntRect *get_rect_letter(data_t *data, sfVector2f position)
 {
     node_letter *tmp = data->letters;
 
-    while (!check_vector(position, tmp->pos)) {
-        if (tmp == NULL)
-            return NULL;
+    while (tmp->next != NULL) {
+        if (check_vector(tmp->pos, position))
+            return &tmp->rect;
         tmp = tmp->next;
     }
-    return &tmp->rect;
+    if (check_vector(tmp->pos, position))
+        return &tmp->rect;
+    return NULL;
 }
