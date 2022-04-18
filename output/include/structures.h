@@ -349,4 +349,6 @@ inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 void set_fps(sfRenderWindow *window, int fps, data_t *data);
 video_t set_video(video_t video, int width, int height, int bpp);
 
+void set_letters(data_t *data);
+
 #endif /* !STRUCTURES_H_ */
