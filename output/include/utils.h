@@ -26,6 +26,6 @@ int get_it_char_two(const char *str, char c, int index);
 
 int display(int step, int actual);
 
-sfIntRect get_rect_letter(data_t *data, sfVector2f position);
+sfIntRect *get_rect_letter(data_t *data, sfVector2f position);
 
 #endif /* !UTILS_H_ */
