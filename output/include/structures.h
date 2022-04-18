@@ -234,6 +234,7 @@ struct data {
     music_t *musics;
     event_t *my_event;
     quest_t *quest;
+    letter_t *letter;
     node_letter *letters;
     float delta;
     unsigned char loading_state;
