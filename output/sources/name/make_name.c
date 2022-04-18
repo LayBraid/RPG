@@ -26,8 +26,8 @@ static void analyse_key(data_t *data)
             break;
         case sfKeyDown: go_down(data);
             break;
-        // case sfKeySpace: put_letter(data);
-        //     break;
+        case sfKeySpace: put_letter(data);
+            break;
         // case sfKeyBackspace: delete_letter(data);
         //     break;
         default: break;

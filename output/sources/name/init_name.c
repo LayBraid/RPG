@@ -9,6 +9,11 @@
 
 void init_name(data_t *data)
 {
+    data->letter = malloc(sizeof(letter_t));
+    data->letter->pos.x = 195;
+    data->letter->pos.y = 310;
+    data->letter->view.x = 230;
+    data->letter->view.y = 105;
     data->texture_bank = create_texture(data->texture_bank,
     "assets/game/input name hud.png", &(sfIntRect){45, 168, 27, 18});
     data->tiles = create_tile(data->tiles);
