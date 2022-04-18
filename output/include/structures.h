@@ -28,6 +28,7 @@
 typedef struct data data_t;
 typedef struct editor_data editor_t;
 typedef const float cf;
+typedef sfIntRect IntR;
 
 typedef struct anim_img_struct {
     sfSprite *sprite;
@@ -207,6 +208,13 @@ typedef struct node_texture_map_struct {
     struct node_texture_map_struct *next;
 } node_texture_map;
 
+typedef struct node_letter_struct {
+    char letter;
+    sfIntRect rect;
+    sfVector2f pos;
+    struct node_letter_struct *next;
+} node_letter;
+
 struct data {
     video_t video;
     player_t player;
@@ -220,6 +228,7 @@ struct data {
     music_t *musics;
     event_t *my_event;
     quest_t *quest;
+    node_letter *letters;
     float delta;
     unsigned char loading_state;
     node_button *button;

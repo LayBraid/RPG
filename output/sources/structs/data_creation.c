@@ -32,6 +32,27 @@ void init_music(data_t *data)
     sfMusic_play(data->musics->music);
 }
 
+//TODO Move function
+
+static void put_letter(data_t *data, char letter, sfIntRect rect, sfVector2f vector)
+{
+    node_letter *new = malloc(sizeof(node_letter));
+    new->letter = letter;
+    new->rect = rect;
+    new->pos = vector;
+    new->next = data->letters;
+    data->letters = new;
+}
+
+static void set_letters(data_t *data)
+{
+    data->letters = NULL;
+    put_letter(data, 'a', (IntR) {14, 88, 6, 10}, (sfVector2f) {195, 590});
+    put_letter(data, 'b', (IntR) {30, 88, 6, 13}, (sfVector2f) {317, 590});
+    put_letter(data, 'A', (IntR) {14, 88, 6, 13}, (sfVector2f) {195, 310});
+    put_letter(data, 'B', (IntR) {30, 88, 6, 13}, (sfVector2f) {317, 310});
+}
+
 //TODO Resize function "data_create"
 
 void data_create(data_t *data)
@@ -73,4 +94,5 @@ void data_create(data_t *data)
     data->tmp = sfTexture_createFromFile("assets/game/Overworld tiles.png", NULL);
     data->map = NULL;
     get_map(data);
+    set_letters(data);
 }
