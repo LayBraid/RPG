@@ -254,13 +254,15 @@ struct editor_data {
     char *path;
     sfRenderWindow *window;
     node_rectangle *current;
-    node_rectangle *current_back;
+    node_rectangle *current_next;
+    node_rectangle *current_prev;
     sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;
     node_texture *textures;
     sfView *view;
     sfView *main;
+    sfView *preview;
     int press;
 };
 

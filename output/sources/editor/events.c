@@ -56,11 +56,15 @@ static void check_keys(editor_t *editor, sfEvent event)
     }
     if (event.key.code == sfKeyRight) {
         editor->textures = editor->textures->next;
+        editor->textures->prev->function(editor, editor->current_prev);
         editor->textures->function(editor, editor->current);
+        editor->textures->next->function(editor, editor->current_next);
     }
     if (event.key.code == sfKeyLeft) {
         editor->textures = editor->textures->prev;
+        editor->textures->prev->function(editor, editor->current_prev);
         editor->textures->function(editor, editor->current);
+        editor->textures->next->function(editor, editor->current_next);
     }
 }
 

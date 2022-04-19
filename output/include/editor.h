@@ -81,8 +81,6 @@ void set_entry13(editor_t *editor, node_rectangle *rectangle);
 void set_entry14(editor_t *editor, node_rectangle *rectangle);
 void set_entry15(editor_t *editor, node_rectangle *rectangle);
 void set_entry16(editor_t *editor, node_rectangle *rectangle);
-
-#endif
 void set_chemin1(editor_t *editor, node_rectangle *rectangle);
 void set_chemin2(editor_t *editor, node_rectangle *rectangle);
 void set_chemin3(editor_t *editor, node_rectangle *rectangle);
@@ -204,3 +202,5 @@ void set_stairs13(editor_t *editor, node_rectangle *rectangle);
 void set_stairs14(editor_t *editor, node_rectangle *rectangle);
 void set_stairs15(editor_t *editor, node_rectangle *rectangle);
 void set_stairs16(editor_t *editor, node_rectangle *rectangle);
+
+#endif
