@@ -33,6 +33,9 @@ static void set_view(editor_t *editor)
 
 static void setup_next(editor_t *editor)
 {
+    sfView_setSize(editor->main, (sfVector2f) {1500,1500});
+    sfView_setCenter(editor->main, (sfVector2f)
+    {(float) 1500 / 2, (float) 1500 / 2});
     editor->background = sfRectangleShape_create();
     editor->current = malloc(sizeof(node_rectangle));
     editor->current_prev = malloc(sizeof(node_rectangle));
@@ -71,9 +74,6 @@ void setup_editor(editor_t *editor)
     {(float) 1500 / 2, (float) 1500 / 2});
     sfView_setSize(editor->preview, (sfVector2f) {1500,1500});
     sfView_setCenter(editor->preview,(sfVector2f)
-    {(float) 1500 / 2, (float) 1500 / 2});
-    sfView_setSize(editor->main, (sfVector2f) {1500,1500});
-    sfView_setCenter(editor->main, (sfVector2f)
     {(float) 1500 / 2, (float) 1500 / 2});
     setup_next(editor);
 }
