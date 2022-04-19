@@ -17,9 +17,9 @@ t.close()
 
 
 h = open("../include/editor.h", "a")
-h.write("void set_" + str(function_name) + "(editor_t *editor, node_rectangle *rectangle);")
+h.write("\nvoid set_" + str(function_name) + "(editor_t *editor, node_rectangle *rectangle);")
 h.close()
 
 i = open("../sources/editor/textures/initializer.c", "a")
-i.write("add_next_texture(&texture, set_" + str(function_name) + ");")
+i.write("\nadd_next_texture(&texture, set_" + str(function_name) + ");")
 i.close()
