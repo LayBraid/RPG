@@ -40,8 +40,6 @@ void init_music(data_t *data)
 
 void data_create(data_t *data)
 {
-    float info[4] = {0};
-    data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->video.ui = 32;
     data->player.depth = 0;
     data->player.hp_max = 10;
@@ -62,6 +60,7 @@ void data_create(data_t *data)
     data->loading_state = 0;
     data->my_event = NULL;
     data->musics = NULL;
+    data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     // init_music(data);
     data->quest = NULL;
     parsing_data(data);
