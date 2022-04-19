@@ -21,6 +21,8 @@ static int get_max(node_rectangle **node)
     return count;
 }
 
+//TODO Resize function
+
 static void add_map_rectangle(data_t *data, node_rectangle **node,
 const float info[4])
 {
