@@ -238,6 +238,7 @@ struct data {
     letter_t *letter;
     node_letter *letters;
     float delta;
+    sfClock *clock;
     unsigned char loading_state;
     node_button *button;
     node_img *images;

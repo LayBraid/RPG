@@ -18,9 +18,6 @@ node_texture *init_textures(editor_t *editor)
     add_next_texture(&texture, set_hole1);
     add_next_texture(&texture, set_hole2);
     add_next_texture(&texture, set_panneau1);
-    add_next_texture(&texture, set_panneau2);
-    return texture;
-}
 add_next_texture(&texture, set_support);
 add_next_texture(&texture, set_support2);
 add_next_texture(&texture, set_entry1);
@@ -160,3 +157,6 @@ add_next_texture(&texture, set_stairs13);
 add_next_texture(&texture, set_stairs14);
 add_next_texture(&texture, set_stairs15);
 add_next_texture(&texture, set_stairs16);
+    add_next_texture(&texture, set_panneau2);
+    return texture;
+}
