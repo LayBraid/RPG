@@ -22,7 +22,7 @@ static int get_max(node_texture **node)
 }
 
 void add_next_texture(node_texture **node,
-void (*function)(editor_t *editor, node_rectangle *rectangle))
+void (*function)(sfTexture *texture, node_rectangle *rectangle))
 {
     node_texture *new = malloc(sizeof(node_texture));
     node_texture *tmp = (*node);
@@ -38,7 +38,7 @@ void (*function)(editor_t *editor, node_rectangle *rectangle))
 }
 
 void setup_first_texture(node_texture **node,
-void (*function)(editor_t *editor, node_rectangle *rectangle))
+void (*function)(sfTexture *texture, node_rectangle *rectangle))
 {
     (*node) = malloc(sizeof(node_texture));
     (*node)->id = 0;

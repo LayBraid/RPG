@@ -12,8 +12,10 @@ void display_rectangles_map(data_t *data)
     node_rectangle *tmp = data->map;
 
     while (tmp->id < tmp->next->id) {
-        sfRenderWindow_drawRectangleShape(data->video.window, tmp->rectangle, NULL);
+        sfRenderWindow_drawRectangleShape(data->video.window,
+        tmp->rectangle, NULL);
         tmp = tmp->next;
     }
-    sfRenderWindow_drawRectangleShape(data->video.window, tmp->rectangle, NULL);
+    sfRenderWindow_drawRectangleShape(data->video.window,
+    tmp->rectangle, NULL);
 }
