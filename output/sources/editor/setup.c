@@ -14,9 +14,12 @@ static void set_view(editor_t *editor)
     editor->current->rectangle = sfRectangleShape_create();
     editor->current_prev->rectangle = sfRectangleShape_create();
     editor->current_next->rectangle = sfRectangleShape_create();
-    sfRectangleShape_setSize(editor->current->rectangle,(sfVector2f) {100, 100});
-    sfRectangleShape_setSize(editor->current_prev->rectangle,(sfVector2f) {80, 80});
-    sfRectangleShape_setSize(editor->current_next->rectangle,(sfVector2f) {80, 80});
+    sfRectangleShape_setSize(editor->current->rectangle,(sfVector2f)
+    {100, 100});
+    sfRectangleShape_setSize(editor->current_prev->rectangle,(sfVector2f)
+    {80, 80});
+    sfRectangleShape_setSize(editor->current_next->rectangle,(sfVector2f)
+    {80, 80});
     sfRectangleShape_setPosition(editor->current->rectangle,
     (sfVector2f) {120, 10});
     sfRectangleShape_setPosition(editor->current_next->rectangle,
