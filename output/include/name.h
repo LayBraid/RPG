@@ -10,6 +10,17 @@
 
     #include "structures.h"
 
+enum {
+    NAME_SELEC = 1,
+    NAME_END,
+    NAME_MIN2,
+    NAME_MIN,
+    NAME_MAJ2,
+    NAME_MAJ,
+    NAME_REGISTER,
+    NAME_BACKGROUND
+};
+
 // init_name.c
 void init_name(data_t *data);
 
@@ -28,7 +39,10 @@ void go_down(data_t *data);
 
 // addel_letter.c
 void put_letter(data_t *data);
+void delete_letter(data_t *data);
 
+void anim_end(data_t *data);
+void stop_anim_end(data_t *data);
 void enter_name(data_t *data);
 
 #endif /* !NAME_H_ */

@@ -28,4 +28,8 @@ int display(int step, int actual);
 
 node_letter *get_letter(data_t *data, sfVector2f position);
 
+node_letter *del_letter(data_t *data, sfVector2f position);
+
+node_letter *get_letter_c(data_t *data, char c);
+
 #endif /* !UTILS_H_ */

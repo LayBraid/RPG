@@ -18,3 +18,14 @@ char *my_strcat_c(char *dest, char const src)
     returned[i + 1] = '\0';
     return (returned);
 }
+
+char *my_strdel_c(char *src)
+{
+    int i = my_strlen(src);
+
+    char *returned;
+    returned = malloc(sizeof(char) * (i + 1));
+    returned = my_strcpy(returned, src);
+    returned[i - 1] = '\0';
+    return (returned);
+}
