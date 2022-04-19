@@ -11,6 +11,7 @@
 #include "buttons.h"
 #include "images.h"
 #include "map.h"
+#include "player.h"
 
 data_t *data_delete(data_t *data)
 {
@@ -42,13 +43,13 @@ void data_create(data_t *data)
     data->player.hp_max = 10;
     data->player.current_hp = 10;
     data->player.inventory = NULL;
-    data->player.sprite = sfSprite_create();
+    data->player.name = "";
+    data->player.rectangle = sfRectangleShape_create();
     data->player.rect = (sfIntRect){0, 0, 0, 0};
-    data->player.max_rect = 0;
     data->player.position = (sfVector2f){0, 0};
     data->player.clock = sfClock_create();
     data->texture_bank = NULL;
-    data->font = NULL; // TODO ajouter font
+    data->font = NULL; // TODO add font
     data->texts = NULL;
     data->buttons = NULL;
     data->npcs = NULL;
@@ -65,14 +66,18 @@ void data_create(data_t *data)
     data->images = setup_img(data);
     data->main = sfView_create();
     data->mapping = sfView_create();
+    data->players = sfView_create();
     sfView_setSize(data->main, (sfVector2f) {1920, 1080});
     sfView_setSize(data->mapping, (sfVector2f) {1920, 1080});
-    sfView_zoom(data->mapping, 0.5f);
+    sfView_setSize(data->players, (sfVector2f) {1920, 1080});
+    //sfView_zoom(data->mapping, 0.5f);
     sfView_setCenter(data->main, (sfVector2f) {1920 / 2, 1080 / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {1920 / 2, 1080 / 2});
+    sfView_setCenter(data->players, (sfVector2f) {1920 / 2, 1080 / 2});
     data->texture = init_textures_map();
     data->tmp = sfTexture_createFromFile("assets/game/Overworld tiles.png", NULL);
     data->map = NULL;
     get_map(data);
     set_letters(data);
+    setup_texture_player(data);
 }

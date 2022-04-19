@@ -160,10 +160,11 @@ typedef struct player {
     unsigned char depth;
     int hp_max;
     int current_hp;
+    int state;
+    int animation;
     inventory_t *inventory;
-    sfSprite *sprite;
+    sfRectangleShape *rectangle;
     sfIntRect rect;
-    int max_rect;
     sfVector2f position;
     sfClock *clock;
 } player_t;
@@ -212,7 +213,6 @@ typedef struct letter {
     sfVector2f pos;
     sfVector2f view;
     int count;
-    char *name;
 } letter_t;
 
 typedef struct node_letter_struct {
@@ -243,6 +243,7 @@ struct data {
     node_img *images;
     sfView *main;
     sfView *mapping;
+    sfView *players;
     node_rectangle *map;
     node_texture_map *texture;
     sfTexture *tmp;

@@ -45,6 +45,6 @@ void put_letter(data_t *data)
     {data->letter->view.x, (float) (data->letter->view.y + comp)});
     data->tiles->depth = 2;
     data->letter->view.x += (float) letter->rect.width * 7.55f + 6;
-    data->letter->name = my_strcat_c(data->letter->name, letter->letter);
+    data->player.name = my_strcat_c(data->player.name, letter->letter);
     // fill_name(data, 1);
 }
