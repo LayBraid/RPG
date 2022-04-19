@@ -261,6 +261,9 @@ struct editor_data {
     sfView *main;
     sfView *preview;
     int press;
+    int mode;
+    int anim_pos;
+    sfClock *anim;
 };
 
 // display_all.c

@@ -10,6 +10,12 @@
 const char *WORLD = "assets/game/Overworld tiles.png";
 const char *HOME = "assets/game/Overworld tiles.png";
 
+static void set_next_setup(editor_t *editor)
+{
+    editor->anim_pos = 0;
+    editor->anim = sfClock_create();
+}
+
 static void set_view(editor_t *editor)
 {
     editor->current->rectangle = sfRectangleShape_create();
@@ -30,6 +36,8 @@ static void set_view(editor_t *editor)
     editor->textures->prev->function(editor->world, editor->current_prev);
     editor->textures->function(editor->world, editor->current);
     editor->textures->next->function(editor->world, editor->current_next);
+    editor->mode = 0;
+    set_next_setup(editor);
 }
 
 static void setup_next(editor_t *editor)
