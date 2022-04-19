@@ -25,6 +25,10 @@ void get_map(data_t *data)
     int info[5] = {0};
 
     for (int i = 0; buffer[i] != '\0'; i++) {
+        if (buffer[i] == '\n') {
+            info[4]++;
+            info[3] = 0;
+        }
         if (buffer[i] == '[')
             info[0] = i;
         if (buffer[i] == ']') {
