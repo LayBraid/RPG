@@ -10,6 +10,7 @@
 void init_name(data_t *data)
 {
     data->letter = malloc(sizeof(letter_t));
+    data->letter->name = "";
     data->letter->pos.x = 195;
     data->letter->pos.y = 310;
     data->letter->view.x = 240;

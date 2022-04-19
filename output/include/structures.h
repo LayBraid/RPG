@@ -212,6 +212,7 @@ typedef struct letter {
     sfVector2f pos;
     sfVector2f view;
     int count;
+    char *name;
 } letter_t;
 
 typedef struct node_letter_struct {
