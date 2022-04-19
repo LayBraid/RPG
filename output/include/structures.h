@@ -196,18 +196,10 @@ typedef struct node_rectangle_struct {
 typedef struct node_texture_struct {
     int id;
     int type;
-    void(*function)(editor_t *editor, node_rectangle *rectangle);
+    void(*function)(sfTexture *texture, node_rectangle *rectangle);
     struct node_texture_struct *prev;
     struct node_texture_struct *next;
 } node_texture;
-
-typedef struct node_texture_map_struct {
-    int id;
-    int type;
-    void(*function)(data_t *data, node_rectangle *rectangle);
-    struct node_texture_map_struct *prev;
-    struct node_texture_map_struct *next;
-} node_texture_map;
 
 typedef struct letter {
     sfVector2f pos;
@@ -248,8 +240,8 @@ struct data {
     sfView *mapping;
     sfView *players;
     node_rectangle *map;
-    node_texture_map *texture;
-    sfTexture *tmp;
+    node_texture *textures;
+    sfTexture *world;
 };
 
 struct editor_data {
@@ -257,13 +249,15 @@ struct editor_data {
     char *path;
     sfRenderWindow *window;
     node_rectangle *current;
-    node_rectangle *current_back;
+    node_rectangle *current_next;
+    node_rectangle *current_prev;
     sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;
     node_texture *textures;
     sfView *view;
     sfView *main;
+    sfView *preview;
     int press;
 };
 

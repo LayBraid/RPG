@@ -17,14 +17,14 @@ static void check_on_rectangles(editor_t *editor)
     while (tmp->id < tmp->next->id) {
         if (mu.x > tmp->x * 15 && mu.x < tmp->x * 15 + 15 &&
             mu.y > tmp->y * 15 && mu.y < tmp->y * 15 + 15) {
-            editor->textures->function(editor, tmp);
+            editor->textures->function(editor->world, tmp);
             return;
         }
         tmp = tmp->next;
     }
     if (mu.x > tmp->x * 15 && mu.x < tmp->x * 15 + 15 &&
         mu.y > tmp->y * 15 && mu.y < tmp->y * 15 + 15) {
-        editor->textures->function(editor, tmp);
+        editor->textures->function(editor->world, tmp);
         return;
     }
 }
@@ -56,11 +56,15 @@ static void check_keys(editor_t *editor, sfEvent event)
     }
     if (event.key.code == sfKeyRight) {
         editor->textures = editor->textures->next;
-        editor->textures->function(editor, editor->current);
+        editor->textures->prev->function(editor->world, editor->current_prev);
+        editor->textures->function(editor->world, editor->current);
+        editor->textures->next->function(editor->world, editor->current_next);
     }
     if (event.key.code == sfKeyLeft) {
         editor->textures = editor->textures->prev;
-        editor->textures->function(editor, editor->current);
+        editor->textures->prev->function(editor->world, editor->current_prev);
+        editor->textures->function(editor->world, editor->current);
+        editor->textures->next->function(editor->world, editor->current_next);
     }
 }
 

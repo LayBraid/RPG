@@ -8,6 +8,23 @@
 #include "editor.h"
 #include "my.h"
 
+static void display(editor_t *editor)
+{
+    sfRenderWindow_setView(editor->window, editor->main);
+    sfRenderWindow_drawRectangleShape(editor->window,
+    editor->background, NULL);
+    sfRenderWindow_setView(editor->window, editor->view);
+    display_rectangles(editor);
+    check_events(editor);
+    sfRenderWindow_setView(editor->window, editor->preview);
+    sfRenderWindow_drawRectangleShape(editor->window,
+    editor->current->rectangle, NULL);
+    sfRenderWindow_drawRectangleShape(editor->window,
+    editor->current_prev->rectangle, NULL);
+    sfRenderWindow_drawRectangleShape(editor->window,
+    editor->current_next->rectangle, NULL);
+}
+
 void my_editor(char **av)
 {
     editor_t *editor = malloc(sizeof(editor_t));
@@ -18,16 +35,7 @@ void my_editor(char **av)
 
     while (sfRenderWindow_isOpen(editor->window)) {
         sfRenderWindow_clear(editor->window, sfRed);
-        check_events(editor);
-        sfRenderWindow_setView(editor->window, editor->main);
-        sfRenderWindow_drawRectangleShape(editor->window,
-        editor->background, NULL);
-        sfRenderWindow_drawRectangleShape(editor->window,
-        editor->current_back->rectangle, NULL);
-        sfRenderWindow_drawRectangleShape(editor->window,
-        editor->current->rectangle, NULL);
-        sfRenderWindow_setView(editor->window, editor->view);
-        display_rectangles(editor);
+        display(editor);
         sfRenderWindow_display(editor->window);
     }
     set_data(editor);
