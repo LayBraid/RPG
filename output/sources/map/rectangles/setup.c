@@ -42,7 +42,7 @@ const float info[4])
     {(float) 15, (float) 15});
     for (int i = 0; i < (*node)->type; i++)
         texture = texture->next;
-    texture->function(data, (*node));
+    texture->function(data, new);
     sfRectangleShape_setPosition(new->rectangle,
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     new->next = (*node);
