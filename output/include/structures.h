@@ -196,6 +196,7 @@ typedef struct node_rectangle_struct {
 typedef struct node_texture_struct {
     int id;
     int type;
+    char *name;
     void(*function)(sfTexture *texture, node_rectangle *rectangle);
     struct node_texture_struct *prev;
     struct node_texture_struct *next;

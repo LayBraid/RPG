@@ -28,10 +28,10 @@ void check_events(editor_t *editor);
 node_texture *init_textures(void);
 
 void add_next_texture(node_texture **node,
-void (*function)(sfTexture *texture, node_rectangle *rectangle));
+void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name);
 
 void setup_first_texture(node_texture **node,
-void (*function)(sfTexture *texture, node_rectangle *rectangle));
+void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name);
 
 void set_void(sfTexture *texture, node_rectangle *rectangle);
 
