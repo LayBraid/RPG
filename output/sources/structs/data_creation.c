@@ -67,6 +67,7 @@ void data_create(data_t *data)
     data->mapping = sfView_create();
     sfView_setSize(data->main, (sfVector2f) {1920, 1080});
     sfView_setSize(data->mapping, (sfVector2f) {1920, 1080});
+    sfView_zoom(data->mapping, 0.5f);
     sfView_setCenter(data->main, (sfVector2f) {1920 / 2, 1080 / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {1920 / 2, 1080 / 2});
     data->texture = init_textures_map();
