@@ -16,6 +16,10 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_buisson);
     add_next_texture(&texture, set_buisson2);
     add_next_texture(&texture, set_hole1);
+    add_next_texture(&texture, set_souch1);
+    add_next_texture(&texture, set_souch2);
+    add_next_texture(&texture, set_trefle1);
+    add_next_texture(&texture, set_trefle2);
     add_next_texture(&texture, set_hole2);
     add_next_texture(&texture, set_panneau1);
     add_next_texture(&texture, set_panneau2);

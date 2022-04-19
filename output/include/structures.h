@@ -254,6 +254,7 @@ struct editor_data {
     sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;
+    sfTexture *home;
     node_texture *textures;
     sfView *view;
     sfView *main;
