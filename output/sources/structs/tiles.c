@@ -24,6 +24,19 @@ tile_t *create_tile(tile_t *start)
     return (new);
 }
 
+tile_t *delete_first_tile(data_t *data)
+{
+    tile_t *cursor = data->tiles;
+
+    if (cursor != NULL) {
+        data->tiles = cursor->next;
+        cursor->next = NULL;
+        sfSprite_destroy(cursor->sprite);
+        free(cursor);
+    }
+    return (data->tiles);
+}
+
 tile_t *delete_tile(tile_t *node)
 {
     if (node->sprite != NULL)

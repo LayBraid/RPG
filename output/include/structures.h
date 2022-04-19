@@ -212,6 +212,9 @@ typedef struct letter {
     sfVector2f pos;
     sfVector2f view;
     int count;
+    int state;
+    sfClock *clock;
+    char *name;
 } letter_t;
 
 typedef struct node_letter_struct {
@@ -234,6 +237,7 @@ struct data {
     music_t *musics;
     event_t *my_event;
     quest_t *quest;
+    letter_t *letter;
     node_letter *letters;
     float delta;
     unsigned char loading_state;
@@ -278,6 +282,7 @@ void data_create(data_t *data);
 // tiles.c
 tile_t *create_tile(tile_t *start);
 tile_t *delete_tile(tile_t *node);
+tile_t *delete_first_tile(data_t *data);
 tile_t *delete_all_tiles(tile_t *start);
 
 // tiles_utils.c
@@ -347,5 +352,7 @@ inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 // video_utils.c
 void set_fps(sfRenderWindow *window, int fps, data_t *data);
 video_t set_video(video_t video, int width, int height, int bpp);
+
+void set_letters(data_t *data);
 
 #endif /* !STRUCTURES_H_ */
