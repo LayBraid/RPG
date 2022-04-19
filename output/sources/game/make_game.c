@@ -19,6 +19,10 @@ static void analyse_key(data_t *data)
         sfView_move(data->mapping, (sfVector2f) {10, 0});
     if (data->event.key.code == sfKeyQ)
         sfView_move(data->mapping, (sfVector2f) {-10, 0});
+    if (data->event.key.code == sfKeyA)
+        sfView_zoom(data->mapping, 0.9f);
+    if (data->event.key.code == sfKeyE)
+        sfView_zoom(data->mapping, 1.1f);
 }
 
 static void analyse_event(data_t *data)
