@@ -9,12 +9,8 @@
 
 const char *WORLD = "assets/game/Overworld tiles.png";
 
-static void setup_next(editor_t *editor)
+static void set_view(editor_t *editor)
 {
-    editor->background = sfRectangleShape_create();
-    editor->current = malloc(sizeof(node_rectangle));
-    editor->current_prev = malloc(sizeof(node_rectangle));
-    editor->current_next = malloc(sizeof(node_rectangle));
     editor->current->rectangle = sfRectangleShape_create();
     editor->current_prev->rectangle = sfRectangleShape_create();
     editor->current_next->rectangle = sfRectangleShape_create();
@@ -30,6 +26,15 @@ static void setup_next(editor_t *editor)
     editor->textures->prev->function(editor, editor->current_prev);
     editor->textures->function(editor, editor->current);
     editor->textures->next->function(editor, editor->current_next);
+}
+
+static void setup_next(editor_t *editor)
+{
+    editor->background = sfRectangleShape_create();
+    editor->current = malloc(sizeof(node_rectangle));
+    editor->current_prev = malloc(sizeof(node_rectangle));
+    editor->current_next = malloc(sizeof(node_rectangle));
+    set_view(editor);
     sfRectangleShape_setOutlineColor(editor->current->rectangle, sfRed);
     sfRectangleShape_setOutlineThickness(editor->current->rectangle, 5);
     sfRectangleShape_setOutlineColor(editor->current_next->rectangle, sfWhite);
