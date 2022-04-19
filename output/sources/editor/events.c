@@ -74,11 +74,11 @@ static void check_for_move(editor_t *editor, sfEvent event)
 static void check_keys(editor_t *editor, sfEvent event)
 {
     check_for_move(editor, event);
-    if (event.key.code == sfKeyA) {
-        sfView_zoom(editor->view, 0.9f);
-    }
-    if (event.key.code == sfKeyE) {
-        sfView_zoom(editor->view, 1.1f);
+    if (!editor->mode) {
+        if (event.key.code == sfKeyA)
+            sfView_zoom(editor->view, 0.9f);
+        if (event.key.code == sfKeyE)
+            sfView_zoom(editor->view, 1.1f);
     }
     if (event.key.code == sfKeyRight) {
         editor->textures = editor->textures->next;
