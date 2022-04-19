@@ -19,4 +19,6 @@ void setup_texture_player(data_t *data);
 
 sfIntRect get_rect_player(int state, int animation);
 
+void clock_move_player(data_t *data);
+
 #endif

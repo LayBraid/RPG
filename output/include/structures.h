@@ -166,7 +166,7 @@ typedef struct player {
     sfRectangleShape *rectangle;
     sfIntRect rect;
     sfVector2f position;
-    sfClock *clock;
+    sfClock *move_animation;
 } player_t;
 
 typedef struct video {

@@ -5,12 +5,15 @@
 ** make_game
 */
 
+#include "player.h"
 #include "my_rpg.h"
 
 //TODO Comment for compilation
 
 static void analyse_key(data_t *data)
 {
+    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS || data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
+        data->player.state = WALK_DOWN;
     if (data->event.key.code == sfKeyZ)
         sfView_move(data->mapping, (sfVector2f) {0, -10});
     if (data->event.key.code == sfKeyS)
@@ -37,6 +40,8 @@ static void analyse_event(data_t *data)
                 break;
             case (sfEvtKeyPressed): analyse_key(data);
                 break;
+            case (sfEvtKeyReleased): data->player.state = NOTHING;
+                break;
             // case (sfEvtMouseButtonPressed): analyse_mouse(data);
             //     break;
             default: break;
@@ -48,4 +53,5 @@ void new_game_scene(data_t *data)
 {
     display_all(data);
     analyse_event(data);
+    clock_move_player(data);
 }
