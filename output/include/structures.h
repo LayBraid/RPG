@@ -264,6 +264,7 @@ struct editor_data {
     int mode;
     int anim_pos;
     sfClock *anim;
+    char *research;
 };
 
 // display_all.c
