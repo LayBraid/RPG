@@ -20,7 +20,8 @@ void my_text(data_t *data, sfVector2f position, float scale, const char *text)
         {(float) letter->rect.width * scale,(float) letter->rect.height * scale});
         sfRectangleShape_setTexture(rectangle, texture, sfTrue);
         sfRectangleShape_setTextureRect(rectangle, letter->rect);
-        sfRectangleShape_setPosition(rectangle, (sfVector2f) {position.x, position.y + (15 - position.y)});
+        sfRectangleShape_setPosition(rectangle, (sfVector2f)
+        {position.x, position.y + (15 - position.y)});
         position.x += (float) letter->rect.width + (6 * scale);
         sfRenderWindow_drawRectangleShape(data->video.window, rectangle, NULL);
     }
