@@ -41,6 +41,8 @@ void set_grass(editor_t *editor, node_rectangle *rectangle);
 
 void set_buisson(editor_t *editor, node_rectangle *rectangle);
 
+void set_buisson2(editor_t *editor, node_rectangle *rectangle);
+
 void set_data(editor_t *editor);
 
 void update_data(editor_t *editor);

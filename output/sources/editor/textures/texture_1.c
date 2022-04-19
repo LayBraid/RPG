@@ -30,3 +30,11 @@ void set_buisson(editor_t *editor, node_rectangle *rectangle)
     sfRectangleShape_setTexture(rectangle->rectangle, editor->world, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
+
+void set_buisson2(editor_t *editor, node_rectangle *rectangle)
+{
+    sfIntRect rect = {233, 48, 16, 8};
+    rectangle->type = 3;
+    sfRectangleShape_setTexture(rectangle->rectangle, editor->world, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}

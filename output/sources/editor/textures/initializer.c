@@ -14,5 +14,6 @@ node_texture *init_textures(editor_t *editor)
     setup_first_texture(&texture, set_void);
     add_next_texture(&texture, set_grass);
     add_next_texture(&texture, set_buisson);
+    add_next_texture(&texture, set_buisson2);
     return texture;
 }
