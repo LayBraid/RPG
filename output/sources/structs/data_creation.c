@@ -5,6 +5,8 @@
 ** data_creation
 */
 
+const char *WORLD_TILES = "assets/game/Overworld tiles.png";
+
 #include "my_rpg.h"
 #include "my_event.h"
 #include "parsing_data.h"
@@ -12,6 +14,7 @@
 #include "images.h"
 #include "map.h"
 #include "player.h"
+#include "editor.h"
 
 data_t *data_delete(data_t *data)
 {
@@ -38,6 +41,7 @@ void init_music(data_t *data)
 void data_create(data_t *data)
 {
     float info[4] = {0};
+    data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->video.ui = 32;
     data->player.depth = 0;
     data->player.hp_max = 10;
@@ -74,8 +78,7 @@ void data_create(data_t *data)
     sfView_setCenter(data->main, (sfVector2f) {1920 / 2, 1080 / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {1920 / 2, 1080 / 2});
     sfView_setCenter(data->players, (sfVector2f) {1920 / 2, 1080 / 2});
-    data->texture = init_textures_map();
-    data->tmp = sfTexture_createFromFile("assets/game/Overworld tiles.png", NULL);
+    data->textures = init_textures();
     data->map = NULL;
     get_map(data);
     set_letters(data);

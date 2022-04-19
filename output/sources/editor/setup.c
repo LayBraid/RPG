@@ -26,9 +26,9 @@ static void set_view(editor_t *editor)
     (sfVector2f) {235, 20});
     sfRectangleShape_setPosition(editor->current_prev->rectangle,
     (sfVector2f) {20, 20});
-    editor->textures->prev->function(editor, editor->current_prev);
-    editor->textures->function(editor, editor->current);
-    editor->textures->next->function(editor, editor->current_next);
+    editor->textures->prev->function(editor->world, editor->current_prev);
+    editor->textures->function(editor->world, editor->current);
+    editor->textures->next->function(editor->world, editor->current_next);
 }
 
 static void setup_next(editor_t *editor)
@@ -64,7 +64,7 @@ void setup_editor(editor_t *editor)
     editor->rectangles = NULL;
     editor->press = 0;
     editor->textures = NULL;
-    editor->textures = init_textures(editor);
+    editor->textures = init_textures();
     editor->world = sfTexture_createFromFile(WORLD, NULL);
     editor->view = sfView_create();
     editor->main = sfView_create();

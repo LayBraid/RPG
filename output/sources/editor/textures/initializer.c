@@ -7,7 +7,7 @@
 
 #include "editor.h"
 
-node_texture *init_textures(editor_t *editor)
+node_texture *init_textures(void)
 {
     node_texture *texture = malloc(sizeof(node_texture));
 
