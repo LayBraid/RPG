@@ -36,6 +36,7 @@ void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name)
     new->next = (*node);
     new->prev = tmp;
     tmp->next = new;
+    (*node)->prev = new;
 }
 
 void setup_first_texture(node_texture **node,
