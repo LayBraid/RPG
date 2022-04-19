@@ -212,6 +212,8 @@ typedef struct letter {
     sfVector2f pos;
     sfVector2f view;
     int count;
+    int state;
+    sfClock *clock;
     char *name;
 } letter_t;
 
@@ -280,6 +282,7 @@ void data_create(data_t *data);
 // tiles.c
 tile_t *create_tile(tile_t *start);
 tile_t *delete_tile(tile_t *node);
+tile_t *delete_first_tile(data_t *data);
 tile_t *delete_all_tiles(tile_t *start);
 
 // tiles_utils.c

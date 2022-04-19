@@ -29,6 +29,8 @@ char *my_strcpy(char *dest, char const *src);
 
 char *my_strcat_c(char *dest, char const src);
 
+char *my_strdel_c(char *src);
+
 int my_atoi(const char *str);
 
 char *my_strcat(char *s1, char *s2);

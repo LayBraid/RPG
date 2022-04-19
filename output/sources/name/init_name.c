@@ -15,6 +15,9 @@ void init_name(data_t *data)
     data->letter->pos.y = 310;
     data->letter->view.x = 240;
     data->letter->view.y = 105;
+    data->letter->count = 0;
+    data->letter->state = 0;
+    data->letter->clock = sfClock_create();
     data->texture_bank = create_texture(data->texture_bank,
     "assets/game/input name hud.png", &(sfIntRect){45, 168, 27, 18});
     data->tiles = create_tile(data->tiles);
@@ -55,8 +58,8 @@ void init_name(data_t *data)
     "assets/game/input name hud.png", &(sfIntRect){10, 40, 164, 20});
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
-    data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55, 4.86});
-    data->tiles = set_tile_position(data->tiles, (sfVector2f){180, -300});
+    data->tiles = set_tile_scale(data->tiles, (sfVector2f){4.55, 4.86});
+    data->tiles = set_tile_position(data->tiles, (sfVector2f){340, 90});
     data->texture_bank = create_texture(data->texture_bank,
     "assets/game/input name hud.png", &(sfIntRect){180, 236, 255, 222});
     data->tiles = create_tile(data->tiles);
