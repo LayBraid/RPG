@@ -21,5 +21,5 @@ h.write("\nvoid set_" + str(function_name) + "(editor_t *editor, node_rectangle 
 h.close()
 
 i = open("../sources/editor/textures/initializer.c", "a")
-i.write("\nadd_next_texture(&texture, set_" + str(function_name) + ");")
+i.write("\nadd_next_texture(&texture, set_" + str(function_name) + ", \"" + str(function_name) + "\");")
 i.close()
