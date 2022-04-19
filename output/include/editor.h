@@ -28,10 +28,10 @@ void check_events(editor_t *editor);
 node_texture *init_textures(void);
 
 void add_next_texture(node_texture **node,
-void (*function)(sfTexture *texture, node_rectangle *rectangle));
+void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name);
 
 void setup_first_texture(node_texture **node,
-void (*function)(sfTexture *texture, node_rectangle *rectangle));
+void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name);
 
 void set_void(sfTexture *texture, node_rectangle *rectangle);
 
@@ -60,6 +60,11 @@ void set_panneau2(sfTexture *texture, node_rectangle *rectangle);
 void set_data(editor_t *editor);
 
 void update_data(editor_t *editor);
+
+void set_souch1(sfTexture *texture, node_rectangle *rectangle);
+void set_souch2(sfTexture *texture, node_rectangle *rectangle);
+void set_trefle1(sfTexture *texture, node_rectangle *rectangle);
+void set_trefle2(sfTexture *texture, node_rectangle *rectangle);
 
 void set_support(sfTexture *texture, node_rectangle *rectangle);
 void set_support2(sfTexture *texture, node_rectangle *rectangle);

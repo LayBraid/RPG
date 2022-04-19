@@ -9,7 +9,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-char *add_str(char *str, int *i, char *str2)
+static char *add_str(char *str, int *i, char *str2)
 {
     char *new = malloc(sizeof(char) * (my_strlen(str) + my_strlen(str2) + 1));
     int k = 0;
@@ -43,26 +43,7 @@ static int nblen(int nbr)
     return (len);
 }
 
-char *my_itoa(int n)
-{
-    unsigned int nbr = (n < 0 ? -n : n);
-    int sign = (n < 0 ? 1 : 0);
-    int len = nblen(n);
-    char *res = NULL;
-
-    res = (char *)malloc((len + 1) * sizeof(char));
-    res[len--] = '\0';
-    while (len >= 0) {
-        res[len] = nbr % 10 + '0';
-        nbr /= 10;
-        len--;
-    }
-    if (sign == 1)
-        res[0] = '-';
-    return (res);
-}
-
-char *check_format(char *str, int *i, va_list ap)
+static char *check_format(char *str, int *i, va_list ap)
 {
     if (str[*i + 1] == 's')
         return (add_str(str, i, va_arg(ap, char *)));

@@ -196,6 +196,7 @@ typedef struct node_rectangle_struct {
 typedef struct node_texture_struct {
     int id;
     int type;
+    char *name;
     void(*function)(sfTexture *texture, node_rectangle *rectangle);
     struct node_texture_struct *prev;
     struct node_texture_struct *next;
@@ -254,11 +255,15 @@ struct editor_data {
     sfRectangleShape *background;
     node_rectangle *rectangles;
     sfTexture *world;
+    sfTexture *home;
     node_texture *textures;
     sfView *view;
     sfView *main;
     sfView *preview;
     int press;
+    int mode;
+    int anim_pos;
+    sfClock *anim;
 };
 
 // display_all.c

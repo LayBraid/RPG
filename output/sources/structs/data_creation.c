@@ -5,9 +5,6 @@
 ** data_creation
 */
 
-const char *WORLD_TILES = "assets/game/Overworld tiles.png";
-
-#include "my_rpg.h"
 #include "my_event.h"
 #include "parsing_data.h"
 #include "buttons.h"
@@ -15,6 +12,8 @@ const char *WORLD_TILES = "assets/game/Overworld tiles.png";
 #include "map.h"
 #include "player.h"
 #include "editor.h"
+
+const char *WORLD_TILES = "assets/game/Overworld tiles.png";
 
 data_t *data_delete(data_t *data)
 {

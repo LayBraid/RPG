@@ -32,4 +32,6 @@ node_letter *del_letter(data_t *data, sfVector2f position);
 
 node_letter *get_letter_c(data_t *data, char c);
 
+void my_text(data_t *data, sfVector2f position, float scale, const char *text);
+
 #endif /* !UTILS_H_ */

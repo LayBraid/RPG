@@ -32,5 +32,6 @@ for i in range(1, x + 1):
         h.close()
 
         inc = open("../sources/editor/textures/initializer.c", "a")
-        inc.write("\nadd_next_texture(&texture, set_" + str(function_name) + str(count) + ");")
+        inc.write("\nadd_next_texture(&texture, set_" + str(function_name) + str(count) + ", \"" + str(function_name) +
+                  str(count) + "\");")
         inc.close()
