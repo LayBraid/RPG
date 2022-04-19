@@ -8,6 +8,8 @@
 #ifndef NAME_H_
     #define NAME_H_
 
+    #include "structures.h"
+
 // init_name.c
 void init_name(data_t *data);
 
@@ -26,5 +28,7 @@ void go_down(data_t *data);
 
 // addel_letter.c
 void put_letter(data_t *data);
+
+void enter_name(data_t *data);
 
 #endif /* !NAME_H_ */

@@ -10,10 +10,6 @@
 
 static void analyse_key(data_t *data)
 {
-    // if (data->event.key.code == sfKeyEscape) {
-    //     data->video.ui = 32;
-    //     data->loading_state = 14;
-    // }
     switch (data->event.key.code) {
         case sfKeyEscape: data->video.ui = 32;
             data->loading_state = 14;
@@ -27,6 +23,8 @@ static void analyse_key(data_t *data)
         case sfKeyDown: go_down(data);
             break;
         case sfKeySpace: put_letter(data);
+            break;
+        case sfKeyEnter: enter_name(data);
             break;
         // case sfKeyBackspace: delete_letter(data);
         //     break;
