@@ -7,6 +7,7 @@
 
 #include "my_rpg.h"
 #include "menus.h"
+#include "utils.h"
 
 static void gotoo(data_t *data)
 {
