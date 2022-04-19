@@ -14,6 +14,7 @@ static void set_next_setup(editor_t *editor)
 {
     editor->anim_pos = 0;
     editor->anim = sfClock_create();
+    editor->research = "";
 }
 
 static void set_view(editor_t *editor)

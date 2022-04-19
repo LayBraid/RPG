@@ -66,6 +66,7 @@ static void check_for_move(editor_t *editor, sfEvent event)
     }
     if (event.key.code == sfKeyEnter) {
         editor->mode = 0;
+        editor->research = "";
         sfRectangleShape_setOutlineColor(editor->current->rectangle,
         sfRed);
     }
@@ -73,6 +74,8 @@ static void check_for_move(editor_t *editor, sfEvent event)
 
 static void check_keys(editor_t *editor, sfEvent event)
 {
+    if (editor->mode)
+        research(editor, event);
     check_for_move(editor, event);
     if (!editor->mode) {
         if (event.key.code == sfKeyA)
@@ -98,8 +101,10 @@ void check_events(editor_t *editor)
 {
     sfEvent event;
 
-    if (editor->mode)
+    if (editor->mode) {
         clock_anim(editor);
+        draw_research(editor);
+    }
     while (sfRenderWindow_pollEvent(editor->window, &event)) {
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(editor->window);

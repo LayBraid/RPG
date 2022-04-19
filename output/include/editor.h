@@ -17,6 +17,10 @@ enum Tiles {
 
 void my_editor(char **av);
 
+void research(editor_t *editor, sfEvent event);
+
+void draw_research(editor_t *editor);
+
 void setup_editor(editor_t *editor);
 
 void add_rectangle(node_rectangle **node, int i, int j);
