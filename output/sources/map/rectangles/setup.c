@@ -40,7 +40,7 @@ const float info[4])
     new->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize(new->rectangle, (sfVector2f)
     {(float) 15, (float) 15});
-    for (int i = 0; i < (*node)->type; i++)
+    for (int i = 0; i < new->type; i++)
         texture = texture->next;
     texture->function(data, new);
     sfRectangleShape_setPosition(new->rectangle,
