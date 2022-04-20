@@ -162,7 +162,7 @@ void set_house1_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house1_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,762,8,8};
-    rectangle->type = 180;
+    rectangle->type = 270;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -170,7 +170,7 @@ void set_house1_1(sfTexture *texture, node_rectangle *rectangle)
 void set_house1_2(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {571,762,8,8};
-    rectangle->type = 181;
+    rectangle->type = 271;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -250,7 +250,7 @@ void set_house1_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house2_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,770,8,8};
-    rectangle->type = 189;
+    rectangle->type = 272;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -258,7 +258,7 @@ void set_house2_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house2_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,770,8,8};
-    rectangle->type = 190;
+    rectangle->type = 273;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -338,7 +338,7 @@ void set_house2_10(sfTexture *texture, node_rectangle *rectangle)
 void set_house2_11(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {643,770,8,8};
-    rectangle->type = 200;
+    rectangle->type = 274;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -346,7 +346,7 @@ void set_house2_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house3_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,778,8,8};
-    rectangle->type = 199;
+    rectangle->type = 275;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -442,7 +442,7 @@ void set_house3_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house4_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,786,8,8};
-    rectangle->type = 209;
+    rectangle->type = 276;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -450,7 +450,7 @@ void set_house4_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house4_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,786,8,8};
-    rectangle->type = 210;
+    rectangle->type = 277;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -538,7 +538,7 @@ void set_house4_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house5_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,794,8,8};
-    rectangle->type = 219;
+    rectangle->type = 278;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -546,7 +546,7 @@ void set_house5_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house5_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,794,8,8};
-    rectangle->type = 220;
+    rectangle->type = 279;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -634,7 +634,7 @@ void set_house5_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house6_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,802,8,8};
-    rectangle->type = 229;
+    rectangle->type = 280;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -642,7 +642,7 @@ void set_house6_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house6_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,802,8,8};
-    rectangle->type = 230;
+    rectangle->type = 281;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -730,7 +730,7 @@ void set_house6_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house7_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,810,8,8};
-    rectangle->type = 239;
+    rectangle->type = 282;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -738,7 +738,7 @@ void set_house7_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house7_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,810,8,8};
-    rectangle->type = 240;
+    rectangle->type = 283;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -826,7 +826,7 @@ void set_house7_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house8_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,818,8,8};
-    rectangle->type = 249;
+    rectangle->type = 284;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -834,7 +834,7 @@ void set_house8_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house8_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,818,8,8};
-    rectangle->type = 250;
+    rectangle->type = 285;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -922,7 +922,7 @@ void set_house8_11(sfTexture *texture, node_rectangle *rectangle)
 void set_house9_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {555,826,8,8};
-    rectangle->type = 259;
+    rectangle->type = 286;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -930,7 +930,7 @@ void set_house9_0(sfTexture *texture, node_rectangle *rectangle)
 void set_house9_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {563,826,8,8};
-    rectangle->type = 260;
+    rectangle->type = 287;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }

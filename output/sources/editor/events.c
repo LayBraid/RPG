@@ -56,13 +56,13 @@ static void check_for_move(editor_t *editor, sfEvent event)
             return;
         }
         if (event.key.code == sfKeyZ)
-            sfView_move(editor->view, (sfVector2f) {0, -10});
+            sfView_move(editor->view, (sfVector2f) {0, -20});
         if (event.key.code == sfKeyS)
-            sfView_move(editor->view, (sfVector2f) {0, 10});
+            sfView_move(editor->view, (sfVector2f) {0, 20});
         if (event.key.code == sfKeyD)
-            sfView_move(editor->view, (sfVector2f) {10, 0});
+            sfView_move(editor->view, (sfVector2f) {20, 0});
         if (event.key.code == sfKeyQ)
-            sfView_move(editor->view, (sfVector2f) {-10, 0});
+            sfView_move(editor->view, (sfVector2f) {-20, 0});
     }
     if (event.key.code == sfKeyEnter) {
         editor->mode = 0;
