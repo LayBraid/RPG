@@ -25,11 +25,11 @@ static void update_anim_move_player(data_t *data)
 
 void clock_move_player(data_t *data)
 {
-    sfTime time = sfClock_getElapsedTime(data->player.move_animation);
+    sfTime time = sfClock_getElapsedTime(data->player.movement_clock);
     double diff = time.microseconds / 1000000.0;
 
     if (diff > 0.2) {
         update_anim_move_player(data);
-        sfClock_restart(data->player.move_animation);
+        sfClock_restart(data->player.movement_clock);
     }
 }
