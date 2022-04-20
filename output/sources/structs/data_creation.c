@@ -18,7 +18,8 @@ const char *WORLD_TILES = "assets/game/Overworld tiles.png";
 data_t *data_delete(data_t *data)
 {
     data->player.inventory = delete_inventory(data->player.inventory);
-    sfClock_destroy(data->player.move_animation);
+    sfClock_destroy(data->player.movement_clock);
+    sfClock_destroy(data->player.movement_anim_clock);
     data->texture_bank = delete_all_textures(data->texture_bank);
     sfFont_destroy(data->font);
     data->texts = delete_all_texts(data->texts);
@@ -48,7 +49,8 @@ void data_create(data_t *data)
     data->player.rectangle = sfRectangleShape_create();
     data->player.rect = (sfIntRect){0, 0, 0, 0};
     data->player.position = (sfVector2f){0, 0};
-    data->player.move_animation = sfClock_create();
+    data->player.movement_clock = sfClock_create();
+    data->player.movement_anim_clock = sfClock_create();
     data->texture_bank = NULL;
     data->font = NULL; // TODO add font
     data->texts = NULL;
