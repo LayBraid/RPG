@@ -19,16 +19,16 @@ for i in range(1, x + 1):
         tmp3 = type_tile + count
 
         t = open("../sources/editor/textures/texture_1.c", "a")
-        t.write("\nvoid set_" + str(function_name) + str(count) + "(editor_t *editor, node_rectangle *rectangle)\n{\n "
+        t.write("\nvoid set_" + str(function_name) + str(count) + "(sfTexture *texture, node_rectangle *rectangle)\n{\n "
                                                                   "   sfIntRect rect = {" +
                 str(tmp) + "," + str(tmp2) + "," +
                 str(rect_width) + "," + str(rect_height) + "};\n    rectangle->type = "
-                + str(tmp3) + ";\n    sfRectangleShape_setTexture(rectangle->rectangle, editor->world, sfTrue);\n"
+                + str(tmp3) + ";\n    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);\n"
                 + "    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);\n}\n")
         t.close()
 
         h = open("../include/editor.h", "a")
-        h.write("\nvoid set_" + str(function_name) + str(count) + "(editor_t *editor, node_rectangle *rectangle);")
+        h.write("\nvoid set_" + str(function_name) + str(count) + "(sfTexture *texture, node_rectangle *rectangle);")
         h.close()
 
         inc = open("../sources/editor/textures/initializer.c", "a")
