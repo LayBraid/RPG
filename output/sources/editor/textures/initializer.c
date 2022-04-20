@@ -186,7 +186,7 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_house1_9, "house1_9",188);
     add_next_texture(&texture, set_house1_10, "house1_10",189);
     add_next_texture(&texture, set_house1_11, "house1_11",190);
-    add_next_texture(&texture, set_house2_0, "house2_0",271);
+    add_next_texture(&texture, set_house2_0, "house2_0",272);
     add_next_texture(&texture, set_house2_1, "house2_1",273);
     add_next_texture(&texture, set_house2_2, "house2_2",191);
     add_next_texture(&texture, set_house2_3, "house2_3",192);
