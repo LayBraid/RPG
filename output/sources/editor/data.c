@@ -15,20 +15,11 @@ void set_data(editor_t *editor)
     char *file = "";
 
     while (editor->rectangles->id < editor->rectangles->next->id) {
-        file = my_strcat_c(file, '[');
-        file = my_strcat(file, my_itoa(editor->rectangles->type));
-        file = my_strcat_c(file, ',');
-        file = my_strcat(file, my_itoa(editor->rectangles->depth));
-        file = my_strcat_c(file, ']');
-        file = my_strcat(file, (editor->rectangles->x == (float)
-        editor->size - 1 ? "\n" : " "));
+        file = my_strcat(file, my_fprintf("[%d,%d]", editor->rectangles->type, editor->rectangles->depth));
+        file = my_strcat(file, (editor->rectangles->x == (float) editor->size - 1 ? "\n" : " "));
         editor->rectangles = editor->rectangles->next;
     }
-    file = my_strcat_c(file, '[');
-    file = my_strcat(file, my_itoa(editor->rectangles->type));
-    file = my_strcat_c(file, ',');
-    file = my_strcat(file, my_itoa(editor->rectangles->depth));
-    file = my_strcat_c(file, ']');
+    file = my_strcat(file, my_fprintf("[%d,%d]", editor->rectangles->type, editor->rectangles->depth));
     fwrite(file, 1, my_strlen(file), input);
 }
 
@@ -41,7 +32,7 @@ node_rectangle *rectangle)
     rectangle->depth = my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, ',', 0) + 1,get_it_char(buffer, ']', 0) - 1));
 
-    while (texture->id != rectangle->type)
+    while (texture->id_r != rectangle->type)
         texture = texture->next;
     texture->function(editor->world, rectangle);
 }
