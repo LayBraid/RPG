@@ -41,7 +41,7 @@ node_rectangle *rectangle)
     rectangle->depth = my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, ',', 0) + 1,get_it_char(buffer, ']', 0) - 1));
 
-    for (int i = 0; i < rectangle->type; i++)
+    while (texture->id != rectangle->type)
         texture = texture->next;
     texture->function(editor->world, rectangle);
 }
