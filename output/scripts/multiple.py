@@ -28,10 +28,10 @@ for i in range(1, x + 1):
         t.close()
 
         h = open("../include/editor.h", "a")
-        h.write("\nvoid set_" + str(function_name) + str((i - 1)) + "_" + str(j - 1) + "(sfTexture *texture, node_rectangle *rectangle, " + str(tmp3) + ");")
+        h.write("\nvoid set_" + str(function_name) + str((i - 1)) + "_" + str(j - 1) + "(sfTexture *texture, node_rectangle *rectangle);")
         h.close()
 
         inc = open("../sources/editor/textures/initializer.c", "a")
         inc.write("\nadd_next_texture(&texture, set_" + str(function_name) + str((i - 1)) + "_" + str(j - 1) + ", \"" + str(function_name) +
-                  str((i - 1)) + "_" + str(j - 1) + "\");")
+                  str((i - 1)) + "_" + str(j - 1) + "\"," + str(tmp3) + ");")
         inc.close()

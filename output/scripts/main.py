@@ -17,9 +17,9 @@ t.close()
 
 
 h = open("../include/editor.h", "a")
-h.write("\nvoid set_" + str(function_name) + "(sfTexture *texture, node_rectangle *rectangle, " + str(type) +");")
+h.write("\nvoid set_" + str(function_name) + "(sfTexture *texture, node_rectangle *rectangle);")
 h.close()
 
 i = open("../sources/editor/textures/initializer.c", "a")
-i.write("\nadd_next_texture(&texture, set_" + str(function_name) + ", \"" + str(function_name) + "\");")
+i.write("\nadd_next_texture(&texture, set_" + str(function_name) + ", \"" + str(function_name) + "\"," + str(type) + ");")
 i.close()
