@@ -19,7 +19,7 @@ for i in range(1, x + 1):
         tmp3 = type_tile + count
 
         t = open("../sources/editor/textures/texture_1.c", "a")
-        t.write("\nvoid set_" + str(function_name) + str((i - 1) * x) + "_" + str(j - 1) + "(sfTexture *texture, node_rectangle *rectangle)\n{\n "
+        t.write("\nvoid set_" + str(function_name) + str((i - 1)) + "_" + str(j - 1) + "(sfTexture *texture, node_rectangle *rectangle)\n{\n "
                                                                   "   sfIntRect rect = {" +
                 str(tmp) + "," + str(tmp2) + "," +
                 str(rect_width) + "," + str(rect_height) + "};\n    rectangle->type = "
@@ -28,10 +28,10 @@ for i in range(1, x + 1):
         t.close()
 
         h = open("../include/editor.h", "a")
-        h.write("\nvoid set_" + str(function_name) + str((i - 1) * x) + "_" + str(j - 1) + "(sfTexture *texture, node_rectangle *rectangle);")
+        h.write("\nvoid set_" + str(function_name) + str((i - 1)) + "_" + str(j - 1) + "(sfTexture *texture, node_rectangle *rectangle);")
         h.close()
 
         inc = open("../sources/editor/textures/initializer.c", "a")
-        inc.write("\nadd_next_texture(&texture, set_" + str(function_name) + str((i - 1) * x) + "_" + str(j - 1) + ", \"" + str(function_name) +
-                  str((i - 1) * x) + "_" + str(j - 1) + "\");")
+        inc.write("\nadd_next_texture(&texture, set_" + str(function_name) + str((i - 1)) + "_" + str(j - 1) + ", \"" + str(function_name) +
+                  str((i - 1)) + "_" + str(j - 1) + "\");")
         inc.close()
