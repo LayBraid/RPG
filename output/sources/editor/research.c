@@ -68,6 +68,6 @@ void research(editor_t *editor, sfEvent event)
         editor->research[my_strlen(editor->research) - 1] = '\0';
     if (event.key.code >= sfKeyNum0 && event.key.code <= sfKeyNum9)
         editor->research = my_strcat_c(editor->research,
-        event.key.code - 'a' + '0');
+        event.key.code - 26 + '0');
     search_texture(editor);
 }
