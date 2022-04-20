@@ -1010,7 +1010,7 @@ void set_house9_10(sfTexture *texture, node_rectangle *rectangle)
 void set_house9_11(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {643,826,8,8};
-    rectangle->type = 270;
+    rectangle->type = 288;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
