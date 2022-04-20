@@ -20,10 +20,12 @@ void dialog(data_t *data, char *dialog, char *name, char is_talking)
         new[i + 1] = '\0';
         sfText_setString(data->texts->text, new);
         printf("%d\n", i);
-        while (sfClock_getElapsedTime(data->clock).microseconds < 1000000);
+        if (dialog[i] != ' ')
+            while (sfClock_getElapsedTime(data->clock).microseconds < 50000);
         sfRenderWindow_clear(data->video.window, sfWhite);
         display_all(data);
         sfRenderWindow_display(data->video.window);
+        sfClock_restart(data->clock);
     }
 }
 
