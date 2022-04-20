@@ -40,7 +40,7 @@ const float info[4])
     new->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize(new->rectangle, (sfVector2f)
     {(float) 15, (float) 15});
-    for (int i = 0; i < new->type; i++)
+    while (texture->id_r != new->type)
         texture = texture->next;
     texture->function(data->world, new);
     sfRectangleShape_setPosition(new->rectangle,
@@ -60,7 +60,7 @@ const float info[4])
     (*node)->depth = (int) info[3];
     (*node)->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize((*node)->rectangle, (sfVector2f) {15, 15});
-    for (int i = 0; i < (*node)->type; i++)
+    while (texture->id_r != (*node)->type)
         texture = texture->next;
     texture->function(data->world, (*node));
     sfRectangleShape_setPosition((*node)->rectangle,

@@ -29,8 +29,8 @@ static void analyse_event(data_t *data)
                 break;
             // case (sfEvtKeyPressed): analyse_key(data);
             //     break;
-            case (sfEvtMouseButtonPressed): analyse_mouse(data);
-                break;
+            /*case (sfEvtMouseButtonPressed): analyse_mouse(data);
+                break;*/
             default: break;
         }
     }

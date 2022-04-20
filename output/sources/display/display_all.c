@@ -18,8 +18,11 @@ void display_all(data_t *data)
     display_buttons(data->buttons, data->video);
     display_texts(data->texts, data->video);
     if (data->video.ui == 2) {
+        printf("ici\n");
         sfRenderWindow_setView(data->video.window, data->mapping);
+        printf("eh\n");
         display_rectangles_map(data);
+        printf("là\n");
         sfRenderWindow_setView(data->video.window, data->players);
         display_player_depth(data->player, data->video, data->player.depth);
     }

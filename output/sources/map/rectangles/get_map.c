@@ -16,12 +16,13 @@ static void update_texture(data_t *data, char *buffer, int info[5])
     + 1,get_it_char(buffer, ',', 0) - 1)), (float) my_atoi(
     extract_between_limits(buffer,get_it_char(buffer, ',', 0) + 1,
     get_it_char(buffer, ']', 0) - 1))};
+    printf("%.1f %.1f\n", map[2], map[3]);
     add_map(data, map);
 }
 
 void get_map(data_t *data)
 {
-    char *buffer = get_in_buffer("data/map");
+    char *buffer = get_in_buffer("data/hyrule");
     int info[5] = {0};
 
     for (int i = 0; buffer[i] != '\0'; i++) {
