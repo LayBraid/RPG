@@ -15,11 +15,11 @@ void set_data(editor_t *editor)
     char *file = "";
 
     while (editor->rectangles->id < editor->rectangles->next->id) {
-        file = my_strcat(file, my_fprintf("[%d,%d]", editor->rectangles->type, 0));
+        file = my_strcat(file, my_fprintf("[%d,0]", editor->rectangles->type));
         file = my_strcat(file, (editor->rectangles->x == (float) editor->size - 1 ? "\n" : " "));
         editor->rectangles = editor->rectangles->next;
     }
-    file = my_strcat(file, my_fprintf("[%d,%d]", editor->rectangles->type, 0));
+    file = my_strcat(file, my_fprintf("[%d,0]", editor->rectangles->type));
     fwrite(file, 1, my_strlen(file), input);
 }
 
