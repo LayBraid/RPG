@@ -22,7 +22,8 @@ static int get_max(node_texture **node)
 }
 
 void add_next_texture(node_texture **node,
-void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name)
+void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name,
+int id_r)
 {
     node_texture *new = malloc(sizeof(node_texture));
     node_texture *tmp = (*node);
@@ -30,6 +31,7 @@ void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name)
     while (tmp->next->id != 0)
         tmp = tmp->next;
     new->id = get_max(node) + 1;
+    new->id_r = id_r;
     new->type = new->id + 1;
     new->function = function;
     new->name = name;
@@ -40,10 +42,12 @@ void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name)
 }
 
 void setup_first_texture(node_texture **node,
-void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name)
+void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name,
+int id_r)
 {
     (*node) = malloc(sizeof(node_texture));
     (*node)->id = 0;
+    (*node)->id_r = id_r;
     (*node)->type = 1;
     (*node)->name = name;
     (*node)->function = function;
