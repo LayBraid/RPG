@@ -43,7 +43,7 @@ node_rectangle *rectangle)
 
     for (int i = 0; i < rectangle->type; i++)
         texture = texture->next;
-    texture->function(editor, rectangle);
+    texture->function(editor->world, rectangle);
 }
 
 void update_data(editor_t *editor)

@@ -36,7 +36,7 @@ void parsing_data(data_t *data)
     int info[2] = {0};
 
     for (int i = 0; buffer[i] != '\0'; i++) {
-        if (buffer[i] == '\n') {
+        if (buffer[i] == '\n' || buffer[i] == '\0') {
             info[1] = i;
             convert_data(data,
             extract_between_limits(buffer, info[0], info[1]), &step);

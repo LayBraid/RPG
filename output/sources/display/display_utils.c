@@ -58,7 +58,7 @@ void display_texts(text_t *start, video_t video)
 void display_player_depth(player_t player, video_t video, unsigned char depth)
 {
     if (player.depth == depth) {
-        sfRenderWindow_drawSprite(video.window, player.sprite, NULL);
-        player.position = sfSprite_getPosition(player.sprite);
+        sfRenderWindow_drawRectangleShape(video.window, player.rectangle, NULL);
+        player.position = sfRectangleShape_getPosition(player.rectangle);
     }
 }

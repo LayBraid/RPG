@@ -9,6 +9,5 @@
 
 void parsing_profile(data_t *data, char *buffer)
 {
-    // profile_t new;
-    // new.name = 
+    (void) data;
 }
