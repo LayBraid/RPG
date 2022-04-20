@@ -102,8 +102,8 @@ void check_events(editor_t *editor)
     sfEvent event;
 
     if (editor->mode) {
-        clock_anim(editor);
         draw_research(editor);
+        clock_anim(editor);
     }
     while (sfRenderWindow_pollEvent(editor->window, &event)) {
         if (event.type == sfEvtClosed)
