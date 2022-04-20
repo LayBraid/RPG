@@ -39,4 +39,6 @@ char *my_itoa(int nb);
 
 void my_strcat_3(char **dest, char const *src);
 
+char *my_fprintf(char *str, ...);
+
 #endif /* !LIB_H_ */

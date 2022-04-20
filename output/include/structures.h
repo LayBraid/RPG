@@ -155,6 +155,31 @@ typedef struct npc {
     struct npc *next;
 } npc_t;
 
+typedef struct node_movement_struct {
+    int id;
+    sfVector2f delta;
+    struct node_movement_struct *next;
+} node_movement;
+
+typedef struct node_animation_struct {
+    int id;
+    int state;
+    int value;
+    struct node_movement_struct *next;
+} node_animation;
+
+typedef struct enemy_struct {
+    int id;
+    char *name;
+    int type;
+    int depth;
+    int hp;
+    sfClock *movement_clock;
+    node_movement *movement;
+    sfRectangleShape *rectangle;
+    sfVector2f position;
+} enemy_t;
+
 typedef struct player {
     char *name;
     unsigned char depth;
@@ -162,11 +187,14 @@ typedef struct player {
     int current_hp;
     int state;
     int animation;
+    sfClock *movement_clock;
+    node_movement *movement;
+    sfClock *movement_anim_clock;
+    node_movement *movement_anim;
     inventory_t *inventory;
     sfRectangleShape *rectangle;
     sfIntRect rect;
     sfVector2f position;
-    sfClock *move_animation;
 } player_t;
 
 typedef struct video {
@@ -195,6 +223,7 @@ typedef struct node_rectangle_struct {
 
 typedef struct node_texture_struct {
     int id;
+    int id_r;
     int type;
     char *name;
     void(*function)(sfTexture *texture, node_rectangle *rectangle);
