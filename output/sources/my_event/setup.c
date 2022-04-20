@@ -7,16 +7,6 @@
 
 #include "my_event.h"
 
-event_t *cast_event(char *name, void (*function)(data_t *data))
-{
-    event_t *new = malloc(sizeof(event_t));
-    new->name = name;
-    new->calling = 0;
-    new->function = function;
-
-    return new;
-}
-
 static int get_max_event(event_t **node)
 {
     int count = 0;
@@ -31,21 +21,27 @@ static int get_max_event(event_t **node)
     return count;
 }
 
-void add_event(event_t **node, event_t *new)
+void add_event(event_t **node, char *name, void (*function)(data_t *data))
 {
     event_t *tmp = (*node);
+    event_t *new = malloc(sizeof(event_t));
 
     while (tmp->next->id != 0)
         tmp = tmp->next;
     new->id = get_max_event(node) + 1;
+    new->name = name;
+    new->function = function;
+    new->calling = 0;
     new->next = (*node);
     tmp->next = new;
 }
 
-void first_event(event_t **node, event_t *new)
+void first_event(event_t **node, char *name, void (*function)(data_t *data))
 {
     (*node) = malloc(sizeof(event_t));
     (*node)->id = 0;
-    (*node) = new;
+    (*node)->name = name;
+    (*node)->function = function;
+    (*node)->calling = 0;
     (*node)->next = (*node);
 }

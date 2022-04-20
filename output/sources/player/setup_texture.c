@@ -13,11 +13,11 @@ void setup_texture_player(data_t *data)
     data->player.state = NOTHING;
     data->player.movement = NULL;
     data->player.movement_anim = NULL;
-    sfRectangleShape_setSize(data->player.rectangle, (sfVector2f) {64, 120});
+    sfRectangleShape_setSize(data->player.rectangle, (sfVector2f) {64, 100});
     sfRectangleShape_setTexture(data->player.rectangle,
     sfTexture_createFromFile("assets/game/Link.png", NULL), sfTrue);
     sfRectangleShape_setTextureRect(data->player.rectangle,
     get_rect_player(data->player.state, data->player.animation));
-    sfRectangleShape_move(data->player.rectangle, (sfVector2f)
-    {1920 / 2 - 32, 1080 / 2 - 60});
+    sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
+    {0, 980});
 }
