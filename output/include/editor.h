@@ -332,3 +332,4 @@ void set_house9_10(sfTexture *texture, node_rectangle *rectangle);
 void set_house9_11(sfTexture *texture, node_rectangle *rectangle);
 
 #endif
+void set_sand(sfTexture *texture, node_rectangle *rectangle);
