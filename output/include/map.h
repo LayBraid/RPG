@@ -13,10 +13,10 @@
     #define MAP_PATH "data/hyrule"
     #define SIZE_MAP 100
 
-typedef enum entity_e {
+enum entity_game {
     PLAYER,
     NPC,
-} entity_t;
+};
 
 void create_map_from_file(data_t *data, char *filepath);
 
