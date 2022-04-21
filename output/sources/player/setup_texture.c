@@ -6,6 +6,7 @@
 */
 
 #include "player.h"
+#include "map.h"
 
 void setup_texture_player(data_t *data)
 {
@@ -20,4 +21,5 @@ void setup_texture_player(data_t *data)
     get_rect_player(data->player.state, data->player.animation));
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
     {0, 980});
+    data->positions[SIZE_MAP - 1][0] = PLAYER;
 }

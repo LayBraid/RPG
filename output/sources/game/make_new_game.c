@@ -6,10 +6,7 @@
 */
 
 #include "player.h"
-#include "my_rpg.h"
 #include "my_event.h"
-
-//TODO Comment for compilation
 
 static void analyse_key(data_t *data)
 {
@@ -24,12 +21,10 @@ static void analyse_key(data_t *data)
         call_event(data, "player_walk_left");
     if (data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_right");
-    if (data->event.key.code == sfKeyA) {
-        sfView_zoom(data->mapping, 0.9f);
-    }
-    if (data->event.key.code == sfKeyE) {
-        sfView_zoom(data->mapping, 1.1f);
-    }
+    if (data->event.key.code == sfKeyA)
+        call_event(data, "zoom_map");
+    if (data->event.key.code == sfKeyE)
+        call_event(data, "unzoom_map");
 }
 
 static void analyse_event(data_t *data)
