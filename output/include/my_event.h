@@ -22,4 +22,8 @@ void add_3_coins(data_t *data);
 
 void player_walk_keys(data_t *data);
 
+void zoom_map(data_t *data);
+
+void unzoom_map(data_t *data);
+
 #endif
