@@ -35,7 +35,7 @@ static void analyse_key(data_t *data)
                 put_letter(data);
             break;
         case sfKeyEnter:
-            if (data->letter->state == 0)
+            if (data->letter->state == 0 && data->letter->count > 0)
                 data->letter->state = 1;
             else if (data->letter->state == 1)
                 enter_name(data);

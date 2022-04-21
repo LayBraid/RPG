@@ -7,13 +7,15 @@
 
 #include "player.h"
 #include "my_rpg.h"
+#include "my_event.h"
 
 //TODO Comment for compilation
 
 static void analyse_key(data_t *data)
 {
-    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS || data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
-        data->player.state = WALK_DOWN;
+    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
+        data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
+        call_event(data, "player_walk_keys");
     if (data->event.key.code == sfKeyZ)
         sfView_move(data->mapping, (sfVector2f) {0, -10});
     if (data->event.key.code == sfKeyS)

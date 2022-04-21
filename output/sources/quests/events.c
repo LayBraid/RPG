@@ -43,9 +43,8 @@ void call_to_quests(data_t *data, char *event)
 {
     quest_t *tmp = data->quest;
 
-    while (tmp->next != NULL) {
+    while (tmp->id != 0) {
         call_to_requirements(tmp, event);
         tmp = tmp->next;
     }
-    call_to_requirements(tmp, event);
 }

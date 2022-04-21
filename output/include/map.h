@@ -8,7 +8,9 @@
 #ifndef MAP_H_
     #define MAP_H_
 
-#include "my_rpg.h"
+    #include "structures.h"
+
+    #define MAP_PATH "data/hyrule"
 
 void create_map_from_file(data_t *data, char *filepath);
 

@@ -9,5 +9,6 @@
 
 void initialize_events(data_t *data)
 {
-    first_event(&data->my_event, cast_event("add_3_coins", add_3_coins));
+    first_event(&data->my_event, "add_3_coins", add_3_coins);
+    add_event(&data->my_event, "player_walk_keys", player_walk_keys);
 }

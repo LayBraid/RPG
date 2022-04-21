@@ -24,18 +24,30 @@ static int get_max_quest(quest_t **node)
 void any_quest(quest_t **node, quest_t *new)
 {
     quest_t *tmp = (*node);
+    quest_t *dup = malloc(sizeof(quest_t));
 
     while (tmp->next->id != 0)
         tmp = tmp->next;
-    new->id = get_max_quest(node) + 1;
-    new->next = (*node);
-    tmp->next = new;
+    dup->id = get_max_quest(node) + 1;
+    dup->name = new->name;
+    dup->rewards = new->rewards;
+    dup->requirements = new->requirements;
+    dup->description = new->description;
+    dup->display_name = new->display_name;
+    dup->status = new->status;
+    dup->next = (*node);
+    tmp->next = dup;
 }
 
 void first_quest(quest_t **node, quest_t *new)
 {
-    (*node) = malloc(sizeof(event_t));
+    (*node) = malloc(sizeof(quest_t));
     (*node)->id = 0;
-    (*node) = new;
+    (*node)->name = new->name;
+    (*node)->rewards = new->rewards;
+    (*node)->requirements = new->requirements;
+    (*node)->description = new->description;
+    (*node)->display_name = new->display_name;
+    (*node)->status = new->status;
     (*node)->next = (*node);
 }
