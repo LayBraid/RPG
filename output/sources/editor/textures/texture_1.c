@@ -1014,3 +1014,43 @@ void set_house9_11(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
+
+void set_poteau0_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {322,40,8,8};
+    rectangle->type = 271;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_poteau1_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {322,48,8,8};
+    rectangle->type = 272;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_poteau(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {313,48,8,8};
+    rectangle->type = 273;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_poteau20_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {331,40,8,8};
+    rectangle->type = 274;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_poteau21_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {331,48,8,8};
+    rectangle->type = 275;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}

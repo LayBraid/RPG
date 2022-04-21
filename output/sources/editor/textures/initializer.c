@@ -282,5 +282,10 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_house9_9, "house9_9",268);
     add_next_texture(&texture, set_house9_10, "house9_10",269);
     add_next_texture(&texture, set_house9_11, "house9_11",288);
+    add_next_texture(&texture, set_poteau0_0, "poteau0_0",290);
+    add_next_texture(&texture, set_poteau1_0, "poteau1_0",292);
+    add_next_texture(&texture, set_poteau, "poteau",293);
+    add_next_texture(&texture, set_poteau20_0, "poteau20_0",294);
+    add_next_texture(&texture, set_poteau21_0, "poteau21_0",296);
     return texture;
-}
+    }

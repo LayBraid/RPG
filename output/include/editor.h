@@ -331,4 +331,9 @@ void set_house9_8(sfTexture *texture, node_rectangle *rectangle);
 void set_house9_9(sfTexture *texture, node_rectangle *rectangle);
 void set_house9_10(sfTexture *texture, node_rectangle *rectangle);
 void set_house9_11(sfTexture *texture, node_rectangle *rectangle);
+void set_poteau0_0(sfTexture *texture, node_rectangle *rectangle);
+void set_poteau1_0(sfTexture *texture, node_rectangle *rectangle);
+void set_poteau(sfTexture *texture, node_rectangle *rectangle);
+void set_poteau20_0(sfTexture *texture, node_rectangle *rectangle);
+void set_poteau21_0(sfTexture *texture, node_rectangle *rectangle);
 #endif
