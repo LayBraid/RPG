@@ -272,6 +272,8 @@ struct data {
     node_rectangle *map;
     node_texture *textures;
     sfTexture *world;
+    int **collisions;
+    int **positions;
 };
 
 struct editor_data {
