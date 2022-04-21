@@ -20,7 +20,6 @@ void display_all(data_t *data)
     if (data->video.ui == 2) {
         sfRenderWindow_setView(data->video.window, data->mapping);
         display_rectangles_map(data);
-        sfRenderWindow_setView(data->video.window, data->players);
         display_player_depth(data->player, data->video, data->player.depth);
     }
 }

@@ -24,6 +24,7 @@ void get_map(data_t *data)
     char *buffer = get_in_buffer("data/hyrule");
     int info[5] = {0};
 
+    setup_collisions(data);
     for (int i = 0; buffer[i] != '\0'; i++) {
         if (buffer[i] == '\n') {
             info[4]++;

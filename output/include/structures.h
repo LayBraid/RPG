@@ -268,7 +268,6 @@ struct data {
     node_img *images;
     sfView *main;
     sfView *mapping;
-    sfView *players;
     node_rectangle *map;
     node_texture *textures;
     sfTexture *world;

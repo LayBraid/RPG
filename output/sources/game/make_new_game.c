@@ -17,20 +17,18 @@ static void analyse_key(data_t *data)
         data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_keys");
     if (data->event.key.code == sfKeyZ)
-        sfView_move(data->mapping, (sfVector2f) {0, -10});
+        call_event(data, "player_walk_up");
     if (data->event.key.code == sfKeyS)
-        sfView_move(data->mapping, (sfVector2f) {0, 10});
+        call_event(data, "player_walk_down");
     if (data->event.key.code == sfKeyD)
-        sfView_move(data->mapping, (sfVector2f) {10, 0});
+        call_event(data, "player_walk_left");
     if (data->event.key.code == sfKeyQ)
-        sfView_move(data->mapping, (sfVector2f) {-10, 0});
+        call_event(data, "player_walk_right");
     if (data->event.key.code == sfKeyA) {
         sfView_zoom(data->mapping, 0.9f);
-        sfView_zoom(data->players, 0.9f);
     }
     if (data->event.key.code == sfKeyE) {
         sfView_zoom(data->mapping, 1.1f);
-        sfView_zoom(data->players, 1.1f);
     }
 }
 

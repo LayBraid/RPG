@@ -8,7 +8,9 @@
 #ifndef MAP_H_
     #define MAP_H_
 
-#include "my_rpg.h"
+    #include "structures.h"
+
+    #define SIZE_MAP 100
 
 void create_map_from_file(data_t *data, char *filepath);
 
@@ -17,5 +19,7 @@ void get_map(data_t *data);
 void add_map(data_t *data, const float info[4]);
 
 void display_rectangles_map(data_t *data);
+
+void setup_collisions(data_t *data);
 
 #endif /* !MAP_H_ */
