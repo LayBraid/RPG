@@ -239,6 +239,8 @@ struct data {
     node_letter *letters;
     float delta;
     sfClock *clock;
+    char dialog_skip;
+    int id_text_player;
     unsigned char loading_state;
     node_button *button;
     node_img *images;
