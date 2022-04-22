@@ -336,4 +336,9 @@ void set_poteau1_0(sfTexture *texture, node_rectangle *rectangle);
 void set_poteau(sfTexture *texture, node_rectangle *rectangle);
 void set_poteau20_0(sfTexture *texture, node_rectangle *rectangle);
 void set_poteau21_0(sfTexture *texture, node_rectangle *rectangle);
+void set_eau_base(sfTexture *texture, node_rectangle *rectangle);
+void set_water_edge0_0(sfTexture *texture, node_rectangle *rectangle);
+void set_water_edge0_1(sfTexture *texture, node_rectangle *rectangle);
+void set_water_edge0_2(sfTexture *texture, node_rectangle *rectangle);
+void set_water_edge0_3(sfTexture *texture, node_rectangle *rectangle);
 #endif

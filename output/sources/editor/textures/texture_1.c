@@ -1018,7 +1018,7 @@ void set_house9_11(sfTexture *texture, node_rectangle *rectangle)
 void set_poteau0_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {322,40,8,8};
-    rectangle->type = 271;
+    rectangle->type = 290;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1026,7 +1026,7 @@ void set_poteau0_0(sfTexture *texture, node_rectangle *rectangle)
 void set_poteau1_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {322,48,8,8};
-    rectangle->type = 272;
+    rectangle->type = 292;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1034,7 +1034,7 @@ void set_poteau1_0(sfTexture *texture, node_rectangle *rectangle)
 void set_poteau(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {313,48,8,8};
-    rectangle->type = 273;
+    rectangle->type = 293;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1042,7 +1042,7 @@ void set_poteau(sfTexture *texture, node_rectangle *rectangle)
 void set_poteau20_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {331,40,8,8};
-    rectangle->type = 274;
+    rectangle->type = 294;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1050,7 +1050,47 @@ void set_poteau20_0(sfTexture *texture, node_rectangle *rectangle)
 void set_poteau21_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {331,48,8,8};
-    rectangle->type = 275;
+    rectangle->type = 296;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_eau_base(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,2046,8,8};
+    rectangle->type = 297;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_water_edge0_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {302,1995,8,8};
+    rectangle->type = 298;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_water_edge0_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {310,1995,8,8};
+    rectangle->type = 299;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_water_edge0_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {318,1995,8,8};
+    rectangle->type = 300;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_water_edge0_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {326,1995,8,8};
+    rectangle->type = 301;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }

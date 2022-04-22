@@ -287,5 +287,10 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_poteau, "poteau",293);
     add_next_texture(&texture, set_poteau20_0, "poteau20_0",294);
     add_next_texture(&texture, set_poteau21_0, "poteau21_0",296);
+    add_next_texture(&texture, set_eau_base, "eau_base",297);
+    add_next_texture(&texture, set_water_edge0_0, "water_edge0_0",298);
+    add_next_texture(&texture, set_water_edge0_1, "water_edge0_1",299);
+    add_next_texture(&texture, set_water_edge0_2, "water_edge0_2",300);
+    add_next_texture(&texture, set_water_edge0_3, "water_edge0_3",301);
     return texture;
     }
