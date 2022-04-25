@@ -273,6 +273,8 @@ struct data {
     sfTexture *world;
     int **collisions;
     int **positions;
+    int x_pile;
+    int y_pile;
 };
 
 struct editor_data {
