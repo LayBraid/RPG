@@ -15,32 +15,40 @@ void player_walk_keys(data_t *data)
 
 void player_walk_down(data_t *data)
 {
-    sfVector2f position = sfRectangleShape_getPosition(data->player.rectangle);
-    if (position.y >= 1500 - 28)
+    sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
+    if (player.y >= 1500 - 28)
         return;
-    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {0, 1});
+    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {0, 3});
+    if (player.y < 1500 - 180 && player.y > 177)
+        sfView_move(data->mapping, (sfVector2f) {0, 3});
 }
 
 void player_walk_up(data_t *data)
 {
-    sfVector2f position = sfRectangleShape_getPosition(data->player.rectangle);
-    if (position.y <= 28)
+    sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
+    if (player.y <= 28)
         return;
-    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {0, -1});
+    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {0, -3});
+    if (player.y > 360 && player.y < 1500 - 177)
+        sfView_move(data->mapping, (sfVector2f) {0, -3});
 }
 
 void player_walk_right(data_t *data)
 {
-    sfVector2f position = sfRectangleShape_getPosition(data->player.rectangle);
-    if (position.x >= 1500 - 16)
+    sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
+    if (player.x >= 1500 - 16)
         return;
-    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {1, 0});
+    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {3, 0});
+    if (player.x > 317 && player.x < 1500 - 317)
+        sfView_move(data->mapping, (sfVector2f) {3, 0});
 }
 
 void player_walk_left(data_t *data)
 {
-    sfVector2f position = sfRectangleShape_getPosition(data->player.rectangle);
-    if (position.x <= 0)
+    sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
+    if (player.x <= 0)
         return;
-    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {-1, 0});
+    sfRectangleShape_move(data->player.rectangle, (sfVector2f) {-3, 0});
+    if (player.x > 320 && player.x < 1500 - 317)
+        sfView_move(data->mapping, (sfVector2f) {-3, 0});
 }
