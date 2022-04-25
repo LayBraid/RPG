@@ -38,8 +38,7 @@ const float info[4])
     new->type = (int) info[2];
     new->depth = (int) info[3];
     new->rectangle = sfRectangleShape_create();
-    sfRectangleShape_setSize(new->rectangle, (sfVector2f)
-    {(float) 15, (float) 15});
+    sfRectangleShape_setSize(new->rectangle, (sfVector2f) { 15.0f, 15.0f});
     while (texture->id_r != new->type)
         texture = texture->next;
     texture->function(data->world, new);

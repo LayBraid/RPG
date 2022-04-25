@@ -22,4 +22,12 @@ void add_3_coins(data_t *data);
 
 void player_walk_keys(data_t *data);
 
+void player_walk_down(data_t *data);
+
+void player_walk_up(data_t *data);
+
+void player_walk_right(data_t *data);
+
+void player_walk_left(data_t *data);
+
 #endif

@@ -21,9 +21,9 @@ static void analyse_key(data_t *data)
     if (data->event.key.code == sfKeyS)
         call_event(data, "player_walk_down");
     if (data->event.key.code == sfKeyD)
-        call_event(data, "player_walk_left");
-    if (data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_right");
+    if (data->event.key.code == sfKeyQ)
+        call_event(data, "player_walk_left");
     if (data->event.key.code == sfKeyA) {
         sfView_zoom(data->mapping, 0.9f);
     }
