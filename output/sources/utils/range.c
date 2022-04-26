@@ -6,7 +6,6 @@
 */
 
 #include "utils.h"
-#include "math.h"
 
 double my_sqrt(double nb)
 {
