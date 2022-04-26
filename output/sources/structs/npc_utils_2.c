@@ -26,3 +26,9 @@ npc_t *set_npc_to_max_hp(npc_t *node)
     node->current_hp = node->hp_max;
     return (node);
 }
+
+npc_t *npc_set_event(npc_t *node, char *event)
+{
+    node->event_call = event;
+    return (node);
+}

@@ -20,8 +20,8 @@ static void put_letter(data_t *data, char letter, sfIntRect rect, sfVector2f vec
 static void next_put_letter(data_t *data)
 {
     put_letter(data, 'L', (IntR) {29, 104, 6, 13}, (sfVector2f) {317, 390});
-    put_letter(data, 'M', (IntR) {45, 104, 7, 13}, (sfVector2f) {437, 390});
-    put_letter(data, 'N', (IntR) {61, 104, 6, 13}, (sfVector2f) {557, 390});
+    put_letter(data, 'M', (IntR) {45, 104, 8, 13}, (sfVector2f) {437, 390});
+    put_letter(data, 'N', (IntR) {61, 104, 7, 13}, (sfVector2f) {557, 390});
     put_letter(data, 'O', (IntR) {77, 104, 6, 13}, (sfVector2f) {677, 390});
     put_letter(data, 'P', (IntR) {93, 104, 6, 13}, (sfVector2f) {797, 390});
     put_letter(data, 'Q', (IntR) {109, 104, 6, 13}, (sfVector2f) {917, 390});
@@ -30,10 +30,11 @@ static void next_put_letter(data_t *data)
     put_letter(data, 'T', (IntR) {158, 104, 7, 13}, (sfVector2f) {1277, 390});
     put_letter(data, 'U', (IntR) {14, 120, 6, 13}, (sfVector2f) {195, 470});
     put_letter(data, 'V', (IntR) {29, 120, 8, 13}, (sfVector2f) {317, 470});
-    put_letter(data, 'W', (IntR) {45, 120, 7, 13}, (sfVector2f) {437, 470});
+    put_letter(data, 'W', (IntR) {45, 120, 8, 13}, (sfVector2f) {437, 470});
     put_letter(data, 'X', (IntR) {61, 120, 7, 13}, (sfVector2f) {557, 470});
     put_letter(data, 'Y', (IntR) {77, 120, 7, 13}, (sfVector2f) {677, 470});
     put_letter(data, 'Z', (IntR) {93, 120, 6, 13}, (sfVector2f) {797, 470});
+    put_letter(data, ' ', (IntR) {17, 0, 6, 10}, (sfVector2f) {0, 0});
 }
 
 static void next_letter(data_t *data)
@@ -52,7 +53,7 @@ static void next_letter(data_t *data)
     put_letter(data, 'D', (IntR) {61, 88, 6, 13}, (sfVector2f) {557, 310});
     put_letter(data, 'E', (IntR) {77, 88, 7, 13}, (sfVector2f) {677, 310});
     put_letter(data, 'F', (IntR) {93, 88, 6, 13}, (sfVector2f) {797, 310});
-    put_letter(data, 'G', (IntR) {109, 88, 6, 13}, (sfVector2f) {917, 310});
+    put_letter(data, 'G', (IntR) {109, 88, 7, 13}, (sfVector2f) {917, 310});
     put_letter(data, 'H', (IntR) {125, 88, 6, 13}, (sfVector2f) {1037, 310});
     put_letter(data, 'I', (IntR) {144, 88, 3, 13}, (sfVector2f) {1157, 310});
     put_letter(data, 'J', (IntR) {158, 88, 6, 13}, (sfVector2f) {1277, 310});

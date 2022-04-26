@@ -8,6 +8,12 @@
 #include "my_rpg.h"
 #include "menus.h"
 #include "utils.h"
+#include "my.h"
+
+static void drawtext(data_t *data)
+{
+    my_text(data, (sfVector2f) {300, 300}, 30, "NEW GAME");
+}
 
 static void gotoo(data_t *data)
 {
@@ -65,5 +71,6 @@ static void analyse_event(data_t *data)
 void menu_scene(data_t *data)
 {
     display_all(data);
+    drawtext(data);
     analyse_event(data);
 }

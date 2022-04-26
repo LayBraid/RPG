@@ -38,4 +38,6 @@ sfVector2i get_position(data_t *data, int entity, int index);
 
 int can_move(int block);
 
+int my_range(sfVector2i v1, sfVector2i v2, double range);
+
 #endif /* !UTILS_H_ */
