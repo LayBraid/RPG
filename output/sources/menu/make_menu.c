@@ -12,7 +12,7 @@
 
 static void drawtext(data_t *data)
 {
-    my_text(data, (sfVector2f) {100, 100}, 30, "NEW GAME");
+    my_text(data, (sfVector2f) {300, 900}, 5, "NEW GAME");
 }
 
 static void gotoo(data_t *data)
