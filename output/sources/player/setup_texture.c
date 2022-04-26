@@ -18,7 +18,7 @@ void setup_texture_player(data_t *data)
     data->y_pile = 0;
     sfRectangleShape_setSize(data->player.rectangle, (sfVector2f) {16, 28});
     sfRectangleShape_setTexture(data->player.rectangle,
-    sfTexture_createFromFile("assets/game/LinkBorder.png", NULL), sfTrue);
+    sfTexture_createFromFile("assets/game/Link.png", NULL), sfTrue);
     sfRectangleShape_setTextureRect(data->player.rectangle,
     get_rect_player(data->player.state, data->player.animation));
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
