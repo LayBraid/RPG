@@ -8,6 +8,23 @@
 #include "editor.h"
 #include "my.h"
 
+void draw_current(editor_t *editor)
+{
+    sfFont* font = sfFont_createFromFile("assets/font.ttf");
+    sfText* text = sfText_create();
+    sfVector2f vector2F;
+    if (!font)
+        return;
+    sfText_setString(text, my_itoa(editor->current->type));
+    sfText_setFont(text, font);
+    sfText_setCharacterSize(text, 50);
+    sfText_setColor(text, sfWhite);
+    vector2F.x = 350;
+    vector2F.y = 20;
+    sfText_setPosition(text, vector2F);
+    sfRenderWindow_drawText(editor->window, text, NULL);
+}
+
 static void display(editor_t *editor)
 {
     sfRenderWindow_setView(editor->window, editor->main);
@@ -23,6 +40,7 @@ static void display(editor_t *editor)
     editor->current_prev->rectangle, NULL);
     sfRenderWindow_drawRectangleShape(editor->window,
     editor->current_next->rectangle, NULL);
+    draw_current(editor);
 }
 
 void my_editor(char **av)
