@@ -17,4 +17,5 @@ void initialize_events(data_t *data)
     add_event(&data->my_event, "player_walk_right", player_walk_right);
     add_event(&data->my_event, "zoom_map", zoom_map);
     add_event(&data->my_event, "unzoom_map", unzoom_map);
+    add_event(&data->my_event, "open_inventory", inventory_loop);
 }

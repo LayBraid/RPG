@@ -135,7 +135,7 @@ typedef struct inventory {
     sfTexture *texture;
     sfSprite *sprite;
     sfVector2f position;
-    sfIntRect rect;
+    sfIntRect *rect;
     struct inventory *next;
 } inventory_t;
 
@@ -237,6 +237,7 @@ typedef struct letter {
     sfVector2f view;
     int count;
     int state;
+    char *name;
     sfClock *clock;
 } letter_t;
 
@@ -276,7 +277,6 @@ struct data {
     int **positions;
     int x_pile;
     int y_pile;
-    char *items;
 };
 
 struct editor_data {
@@ -376,14 +376,10 @@ texture_t *delete_all_textures(texture_t *start);
 // texture_utils.c
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 
-// inventory.c
-inventory_t *create_inventory(inventory_t *start, char *name);
-inventory_t *delete_inventory(inventory_t *node);
-inventory_t *delete_whole_inventory(inventory_t *start);
-
 // inventory_utils.c
-inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
-inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
+void get_items(data_t *data);
+void display_items(data_t *data);
+void create_items(data_t *data, int idx);
 
 // video_utils.c
 void set_fps(sfRenderWindow *window, int fps, data_t *data);

@@ -11,6 +11,7 @@
 #include "new_game.h"
 #include "load_game.h"
 #include "settings.h"
+#include "my_event.h"
 #include "name.h"
 
 void switch_scene(data_t *data)
@@ -27,6 +28,8 @@ void switch_scene(data_t *data)
         case (4): settings_scene(data);
             break;
         case (5): name_scene(data);
+            break;
+        case (6): inventory_loop(data);
             break;
         case (32): loading(data);
             break;
