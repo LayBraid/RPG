@@ -62,6 +62,8 @@ static void search_texture(editor_t *editor)
 
 void research(editor_t *editor, sfEvent event)
 {
+    if (event.key.code == 55)
+        editor->research = my_strcat_c(editor->research, '_');
     if (event.key.code >= sfKeyA && event.key.code <= sfKeyZ)
         editor->research = my_strcat_c(editor->research, event.key.code + 'a');
     if (event.key.code == sfKeyBack)
