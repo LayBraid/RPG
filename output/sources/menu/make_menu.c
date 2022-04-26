@@ -12,7 +12,7 @@
 
 static void drawtext(data_t *data)
 {
-    my_text(data, (sfVector2f) {100, 100}, 3, "NEW GAME");
+    my_text(data, (sfVector2f) {100, 100}, 30, "NEW GAME");
 }
 
 static void gotoo(data_t *data)
@@ -70,7 +70,7 @@ static void analyse_event(data_t *data)
 
 void menu_scene(data_t *data)
 {
-    drawtext(data);
     display_all(data);
+    drawtext(data);
     analyse_event(data);
 }
