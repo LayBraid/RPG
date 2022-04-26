@@ -26,8 +26,8 @@ void display_npc_depth(npc_t *start, video_t video, unsigned char depth)
 
     while (node != NULL) {
         if (node->depth == depth) {
-            sfRenderWindow_drawSprite(video.window, node->sprite, NULL);
-            node->position = sfSprite_getPosition(node->sprite);
+            sfRenderWindow_drawRectangleShape(video.window, node->rectangle, NULL);
+            node->position = sfRectangleShape_getPosition(node->rectangle);
         }
         node = node->next;
     }
