@@ -34,6 +34,7 @@ static void next_put_letter(data_t *data)
     put_letter(data, 'X', (IntR) {61, 120, 7, 13}, (sfVector2f) {557, 470});
     put_letter(data, 'Y', (IntR) {77, 120, 7, 13}, (sfVector2f) {677, 470});
     put_letter(data, 'Z', (IntR) {93, 120, 6, 13}, (sfVector2f) {797, 470});
+    put_letter(data, ' ', (IntR) {93, 100, 6, 13}, (sfVector2f) {0, 0});
 }
 
 static void next_letter(data_t *data)
