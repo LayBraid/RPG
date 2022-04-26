@@ -13,11 +13,6 @@
     #define MAP_PATH "data/hyrule"
     #define SIZE_MAP 100
 
-enum entity_game {
-    PLAYER,
-    NPC,
-};
-
 enum Entity_list {
     VOID,
     PLAYER,
