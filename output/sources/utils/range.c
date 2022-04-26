@@ -32,7 +32,7 @@ int my_range(sfVector2i v1, sfVector2i v2, double range)
     int x = v2.x - v1.x;
     int y = v2.y - v1.y;
     double h = x * x + y * y;
-    double r = sqrt(h);
+    double r = my_sqrt(h);
 
     if (r <= range)
         return (1);
