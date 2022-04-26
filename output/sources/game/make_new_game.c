@@ -8,6 +8,8 @@
 #include "player.h"
 #include "my_event.h"
 
+//TODO Comment for compilation
+
 static void analyse_key(data_t *data)
 {
     if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
@@ -18,9 +20,9 @@ static void analyse_key(data_t *data)
     if (data->event.key.code == sfKeyS)
         call_event(data, "player_walk_down");
     if (data->event.key.code == sfKeyD)
-        call_event(data, "player_walk_left");
-    if (data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_right");
+    if (data->event.key.code == sfKeyQ)
+        call_event(data, "player_walk_left");
     if (data->event.key.code == sfKeyA)
         call_event(data, "zoom_map");
     if (data->event.key.code == sfKeyE)

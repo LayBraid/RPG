@@ -72,10 +72,10 @@ void data_create(data_t *data)
     data->mapping = sfView_create();
     sfView_setSize(data->main, (sfVector2f) {1920, 1080});
     sfView_setSize(data->mapping, (sfVector2f) {1920, 1080});
-    sfView_zoom(data->mapping, 0.3f);
-    sfView_setCenter(data->main, (sfVector2f) {1920 / 2, 1080 / 2});
-    sfView_setCenter(data->mapping, (sfVector2f) {1920 / 2, 1080 / 2});
-    sfView_move(data->mapping, (sfVector2f) {-670, 790});
+    sfView_zoom(data->mapping, 0.33f); //TODO Create a reverse function for zoom
+    sfView_setCenter(data->main, (sfVector2f) {1920.0f / 2, 1080.0f / 2});
+    sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
+    sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243});
     data->textures = init_textures();
     data->map = NULL;
     get_map(data);

@@ -26,4 +26,12 @@ void zoom_map(data_t *data);
 
 void unzoom_map(data_t *data);
 
+void player_walk_down(data_t *data);
+
+void player_walk_up(data_t *data);
+
+void player_walk_right(data_t *data);
+
+void player_walk_left(data_t *data);
+
 #endif

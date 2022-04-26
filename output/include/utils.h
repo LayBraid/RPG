@@ -34,4 +34,8 @@ node_letter *get_letter_c(data_t *data, char c);
 
 void my_text(data_t *data, sfVector2f position, float scale, const char *text);
 
+sfVector2i get_position(data_t *data, int entity, int index);
+
+int can_move(int block);
+
 #endif /* !UTILS_H_ */

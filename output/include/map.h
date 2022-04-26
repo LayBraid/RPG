@@ -18,6 +18,13 @@ enum entity_game {
     NPC,
 };
 
+enum Entity_list {
+    VOID,
+    PLAYER,
+    ENEMY,
+    NPC,
+};
+
 void create_map_from_file(data_t *data, char *filepath);
 
 void get_map(data_t *data);
