@@ -7,16 +7,34 @@
 
 #include "my_rpg.h"
 
-inventory_t *set_inventory_count(inventory_t *node, unsigned int count)
+void create_items(data_t *data, int idx)
 {
-    node->count = count;
-    return (node);
+    inventory_t *new = malloc(sizeof(inventory_t));
+    switch(idx) {
+        case 0: new->rect = (sfIntRect*){0,270,10,20};
+            new->texture = sfTexture_createFromFile("../../assets/game/Link.png", new->rect);
+            new->position = (sfVector2f){800,500};
+            break;
+    }
+    new->sprite = sfSprite_create();
+    new->next = data->items;
+    data->items = new;
 }
 
-inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture)
+void get_items(data_t *data)
 {
-    node->rect = texture->rect;
-    sfSprite_setTexture(node->sprite, texture->texture, sfTrue);
-    sfSprite_setTextureRect(node->sprite, node->rect);
-    return (node);
+    for (int i = 0 ; data->player.items[i] ; i++) {
+        if (data->player.items[i] == '1')
+            create_items(data, i);
+    }
+}
+
+void display_items(data_t *data)
+{
+    inventory_t *tmp = data->items;
+
+    while (tmp != NULL) {
+        sfRenderWindow_drawSprite(data->video.window, tmp->sprite, NULL);
+        tmp = tmp->next
+    }
 }

@@ -132,10 +132,10 @@ typedef struct texture {
 } texture_t;
 
 typedef struct inventory {
-    char *item_name;
+    sfTexture *texture;
     sfSprite *sprite;
+    sfVector2f position;
     sfIntRect rect;
-    unsigned int count;
     struct inventory *next;
 } inventory_t;
 
@@ -182,6 +182,7 @@ typedef struct enemy_struct {
 
 typedef struct player {
     char *name;
+    char *items;
     unsigned char depth;
     int hp_max;
     int current_hp;
@@ -237,7 +238,6 @@ typedef struct letter {
     int count;
     int state;
     sfClock *clock;
-    char *name;
 } letter_t;
 
 typedef struct node_letter_struct {
@@ -254,6 +254,7 @@ struct data {
     sfFont *font;
     text_t *texts;
     button_t *buttons;
+    inventory_t *items;
     npc_t *npcs;
     tile_t *tiles;
     sfEvent event;
@@ -275,6 +276,7 @@ struct data {
     int **positions;
     int x_pile;
     int y_pile;
+    char *items;
 };
 
 struct editor_data {
