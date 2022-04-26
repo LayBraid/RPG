@@ -31,13 +31,16 @@ static void analyse_events(data_t *data)
 
 // TODO tester en situation reelle
 
-static void set_dialog_characters(data_t *data, int id_npc, char is_talking)
+static void set_dialog_characters(data_t *data, int id_npc_texture, char is_talking, int id_npc)
 {
     texture_t *player = data->texture_bank;
-    texture_t *npc = data->texture_bank;
+    texture_t *npc_texture = data->texture_bank;
+    npc_t *npc = data->npcs;
 
     while (player != NULL && player->id != data->id_text_player)
         player = player->next;
+    while (npc_texture != NULL && npc_texture->id != id_npc_texture)
+        npc_texture = npc_texture->next;
     while (npc != NULL && npc->id != id_npc)
         npc = npc->next;
     data->tiles = create_tile(data->tiles);
@@ -47,11 +50,19 @@ static void set_dialog_characters(data_t *data, int id_npc, char is_talking)
     else
         data->tiles = set_tile_depth(data->tiles, 6);
     data->tiles = create_tile(data->tiles);
-    data->tiles = set_tile_texture(data->tiles, npc);
+    data->tiles = set_tile_texture(data->tiles, npc_texture);
     if (is_talking)
         data->tiles = set_tile_depth(data->tiles, 6);
     else
         data->tiles = set_tile_depth(data->tiles, 7);
+    data->texts = create_text(data->texts, data->player.name, data->font);
+    data->texts = create_text(data->texts, npc->name, data->font);
+    if (is_talking)
+        sfText_setStyle(data->texts->text, sfTextBold);
+    else
+        sfText_setStyle(data->texts->next->text, sfTextBold);
+    data->texts = set_text_position(data->texts, (sfVector2f){500, 500});
+    data->texts->next = set_text_position(data->texts->next, (sfVector2f){500, 550});
 }
 
 static void dialog(data_t *data, char *dialog, int id_npc, char is_talking)
