@@ -6,6 +6,7 @@
 */
 
 #include "utils.h"
+#include "math.h"
 
 int my_range(sfVector2i v1, sfVector2i v2, double range)
 {
