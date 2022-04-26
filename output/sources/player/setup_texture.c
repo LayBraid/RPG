@@ -6,6 +6,7 @@
 */
 
 #include "player.h"
+#include "map.h"
 
 void setup_texture_player(data_t *data)
 {
@@ -14,7 +15,7 @@ void setup_texture_player(data_t *data)
     data->player.movement = NULL;
     data->player.movement_anim = NULL;
     data->x_pile = 0;
-    data->y_pile = 15;
+    data->y_pile = 0;
     sfRectangleShape_setSize(data->player.rectangle, (sfVector2f) {16, 28});
     sfRectangleShape_setTexture(data->player.rectangle,
     sfTexture_createFromFile("assets/game/LinkBorder.png", NULL), sfTrue);
@@ -22,5 +23,5 @@ void setup_texture_player(data_t *data)
     get_rect_player(data->player.state, data->player.animation));
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
     {120, 1500 - 26 - 135});
-    data->positions[99 - 8][9] = -1;
+    data->positions[99 - 9][8] = PLAYER;
 }
