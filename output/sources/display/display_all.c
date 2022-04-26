@@ -22,5 +22,6 @@ void display_all(data_t *data)
         display_rectangles_map(data);
         display_player_depth(data->player, data->video, data->player.depth);
     }
-    display_items(data);
+    if (data->video.ui == 6)
+        display_items(data);
 }

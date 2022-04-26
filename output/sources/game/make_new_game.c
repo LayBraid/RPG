@@ -27,8 +27,10 @@ static void analyse_key(data_t *data)
         call_event(data, "zoom_map");
     if (data->event.key.code == sfKeyE)
         call_event(data, "unzoom_map");
-    if (data->event.key.code == sfKeyTab)
+    if (data->event.key.code == sfKeyTab) {
+        printf("oui\n");
         call_event(data, "open_inventory");
+    }
 }
 
 static void analyse_event(data_t *data)

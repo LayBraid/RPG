@@ -43,6 +43,7 @@ void data_create(data_t *data)
     data->player.depth = 0;
     data->player.hp_max = 10;
     data->player.items = "1";
+    get_items(data);
     data->player.current_hp = 10;
     data->player.inventory = NULL;
     data->player.name = "";
@@ -66,7 +67,6 @@ void data_create(data_t *data)
     data->quest = NULL;
     parsing_data(data);
     initialize_events(data);
-    data->items = NULL;
     data->button = setup_buttons(data);
     data->images = setup_img(data);
     data->main = sfView_create();
@@ -82,4 +82,5 @@ void data_create(data_t *data)
     get_map(data);
     set_letters(data);
     setup_texture_player(data);
+    get_items(data);
 }
