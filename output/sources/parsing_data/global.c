@@ -19,10 +19,16 @@ static void convert_data(data_t *data, char *buffer, int *step)
         (*step) = 1;
         return;
     }
+    if (my_strcmp(buffer, "['NPC']\n") == 0) {
+        (*step) = 2;
+        return;
+    }
     switch ((*step)) {
         case 0: parsing_quest(data, buffer);
             break;
         case 1: parsing_profile(data, buffer);
+            break;
+        case 2: parsing_npc(data, buffer);
             break;
         default:
             break;

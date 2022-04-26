@@ -147,8 +147,9 @@ typedef struct npc {
     int hp_max;
     int current_hp;
     inventory_t *inventory;
-    sfSprite *sprite;
+    sfRectangleShape *rectangle;
     sfIntRect rect;
+    char *event_call;
     int max_rect;
     sfVector2f position;
     sfClock *clock;
@@ -347,6 +348,7 @@ npc_t *increase_npc_hp(npc_t *node, int value);
 npc_t *set_npc_max_hp(npc_t *node, int value);
 npc_t *set_npc_current_hp(npc_t *node, int value);
 npc_t *set_npc_to_max_hp(npc_t *node);
+npc_t *npc_set_event(npc_t *node, char *event);
 
 // button.c
 button_t *create_button(button_t *start, char *string, sfFont *font);
