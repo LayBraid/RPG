@@ -139,6 +139,19 @@ typedef struct inventory {
     struct inventory *next;
 } inventory_t;
 
+typedef struct node_movement_struct {
+    int id;
+    sfVector2f delta;
+    struct node_movement_struct *next;
+} node_movement;
+
+typedef struct node_animation_struct {
+    int id;
+    int state;
+    int value;
+    struct node_movement_struct *next;
+} node_animation;
+
 typedef struct npc {
     unsigned int id;
     char *name;
@@ -154,19 +167,6 @@ typedef struct npc {
     sfClock *clock;
     struct npc *next;
 } npc_t;
-
-typedef struct node_movement_struct {
-    int id;
-    sfVector2f delta;
-    struct node_movement_struct *next;
-} node_movement;
-
-typedef struct node_animation_struct {
-    int id;
-    int state;
-    int value;
-    struct node_movement_struct *next;
-} node_animation;
 
 typedef struct enemy_struct {
     int id;
