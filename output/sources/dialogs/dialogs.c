@@ -36,7 +36,7 @@ static void set_dialog_characters(data_t *data, int id_npc_texture, char is_talk
     texture_t *player = data->texture_bank;
     texture_t *npc_texture = data->texture_bank;
     npc_t *npc = data->npcs;
-/*
+
     while (player != NULL && player->id != data->id_text_player)
         player = player->next;
     while (npc_texture != NULL && npc_texture->id != id_npc_texture)
@@ -45,16 +45,20 @@ static void set_dialog_characters(data_t *data, int id_npc_texture, char is_talk
         npc = npc->next;
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, player);
+    set_tile_scale(data->tiles, (sfVector2f){28, 28});
+    set_tile_position(data->tiles, (sfVector2f){60, 350});
     if (is_talking)
         data->tiles = set_tile_depth(data->tiles, 7);
     else
         data->tiles = set_tile_depth(data->tiles, 6);
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, npc_texture);
+    set_tile_scale(data->tiles, (sfVector2f){28, 28});
+    set_tile_position(data->tiles, (sfVector2f){1370, 350});
     if (is_talking)
         data->tiles = set_tile_depth(data->tiles, 6);
     else
-        data->tiles = set_tile_depth(data->tiles, 7); */
+        data->tiles = set_tile_depth(data->tiles, 7);
     data->texts = create_text(data->texts, data->player.name, data->font);
     data->texts = create_text(data->texts, npc->name, data->font);
     if (is_talking)
@@ -156,11 +160,12 @@ void destroy_dialogs(data_t *data)
 
 void dialog_init(data_t *data)
 {
+    data->texture_bank = create_texture(data->texture_bank, "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
     data->player.name = strdup("Link");
+    data->id_text_player = data->texture_bank->id;
     data->npcs = create_npc(data->npcs, "Kamel");
     data->tiles = create_tile(data->tiles);
     data->texture_bank = create_texture(data->texture_bank, "./assets/textures/dialog.png", NULL);
-    data->texture_bank = create
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_depth(data->tiles, 6);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f) {4, 4});
@@ -171,9 +176,11 @@ void dialog_init(data_t *data)
     data->tiles = set_tile_position(data->tiles, (sfVector2f) {0, 870});
     data->dialog_skip = 0;
     printf("here\n");
-    dialog(data, "...\n\n...........\n\n#choque", 0, 0, 1);
+    dialog(data, "...\n\n...........\n\n#choque", data->id_text_player, 0, 1);
     printf("entering dialog_inter\n");
     inter_dialog(data);
+    delete_first_tile(data);
+    delete_first_tile(data);
     sfText_destroy(data->texts->next->next->text);
     free(data->texts->next->next);
     data->texts->next->next = NULL;
@@ -183,9 +190,11 @@ void dialog_init(data_t *data)
     sfText_destroy(data->texts->text);
     free(data->texts);
     data->texts = NULL;
-    dialog(data, "Ola ! Je suis Kamel, le CEO de KFC !\n\nAlors comme ca on a mange des donuts sucres ? Au sucre ??\n\nBon garcon...", 0, 1, 1);
+    dialog(data, "Ola ! Je suis Kamel, le CEO de KFC !\n\nAlors comme ca on a mange des donuts sucres ? Au sucre ??\n\nBon garcon...", data->id_text_player, 1, 1);
     // delete_all_texts(data->texts);
     inter_dialog(data);
+    delete_first_tile(data);
+    delete_first_tile(data);
     sfText_destroy(data->texts->next->next->text);
     free(data->texts->next->next);
     data->texts->next->next = NULL;
