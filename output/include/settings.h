@@ -19,4 +19,16 @@
     // delete_settings.c
     void delete_settings(data_t *data);
 
+    // change_settings.c
+    void goleft(data_t *data);
+    void goright(data_t *data);
+
+    // fps.c
+    void change_fpsl(data_t *data);
+    void change_fpsr(data_t *data);
+
+    // volume.c
+    void change_volumer(data_t *data);
+    void change_volumel(data_t *data);
+
 #endif /* !SETTINGS_H_ */
