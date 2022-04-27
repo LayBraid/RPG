@@ -32,3 +32,9 @@ npc_t *npc_set_event(npc_t *node, char *event)
     node->event_call = event;
     return (node);
 }
+
+npc_t *npc_set_map(npc_t *node, int value)
+{
+    node->map = value;
+    return (node);
+}

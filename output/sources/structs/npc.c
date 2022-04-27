@@ -15,6 +15,8 @@ npc_t *create_npc(npc_t *start, char *name)
     new->name = my_strdup(name);
     new->type = 0;
     new->depth = 0;
+    new->map = 2;
+    new->event_call = "no_event_npc";
     new->hp_max = 10;
     new->current_hp = new->hp_max;
     new->inventory = NULL;

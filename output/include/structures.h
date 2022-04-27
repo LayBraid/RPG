@@ -139,23 +139,6 @@ typedef struct inventory {
     struct inventory *next;
 } inventory_t;
 
-typedef struct npc {
-    unsigned int id;
-    char *name;
-    unsigned char type;
-    unsigned char depth;
-    int hp_max;
-    int current_hp;
-    inventory_t *inventory;
-    sfRectangleShape *rectangle;
-    sfIntRect rect;
-    char *event_call;
-    int max_rect;
-    sfVector2f position;
-    sfClock *clock;
-    struct npc *next;
-} npc_t;
-
 typedef struct node_movement_struct {
     int id;
     sfVector2f delta;
@@ -168,6 +151,24 @@ typedef struct node_animation_struct {
     int value;
     struct node_movement_struct *next;
 } node_animation;
+
+typedef struct npc {
+    unsigned int id;
+    char *name;
+    unsigned char type;
+    unsigned char map;
+    unsigned char depth;
+    int hp_max;
+    int current_hp;
+    inventory_t *inventory;
+    sfRectangleShape *rectangle;
+    sfIntRect rect;
+    char *event_call;
+    int max_rect;
+    sfVector2f position;
+    sfClock *clock;
+    struct npc *next;
+} npc_t;
 
 typedef struct enemy_struct {
     int id;
@@ -351,6 +352,7 @@ npc_t *set_npc_max_hp(npc_t *node, int value);
 npc_t *set_npc_current_hp(npc_t *node, int value);
 npc_t *set_npc_to_max_hp(npc_t *node);
 npc_t *npc_set_event(npc_t *node, char *event);
+npc_t *npc_set_map(npc_t *node, int value);
 
 // button.c
 button_t *create_button(button_t *start, char *string, sfFont *font);
