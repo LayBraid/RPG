@@ -250,8 +250,23 @@ typedef struct node_letter_struct {
     struct node_letter_struct *next;
 } node_letter;
 
+typedef struct settings_s {
+    int fps;
+    int volume;
+    int up;
+    int down;
+    int left;
+    int right;
+    int attatck;
+    int interact;
+    int back;
+    int inventory;
+    int pause;
+}settings_t;
+
 struct data {
     video_t video;
+    settings_t *settings;
     player_t player;
     texture_t *texture_bank;
     sfFont *font;

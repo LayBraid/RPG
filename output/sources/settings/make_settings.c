@@ -7,19 +7,23 @@
 
 #include "my_rpg.h"
 
-// static void analyse_key(data_t *data)
-// {
-//     switch (data->event.key.code) {
-//         case sfKeyDown: godown(data);
-//             break;
-//         case sfKeyUp: gotop(data);
-//             break;
-//         case sfKeySpace: gotoo(data);
-//             break;
-//         default:
-//             break;
-//     }
-// }
+static void analyse_key(data_t *data)
+{
+    switch (data->event.key.code) {
+        case sfKeyDown: godown(data);
+            break;
+        case sfKeyUp: gotop(data);
+            break;
+        case sfKeyRight: goright(data);
+            break;
+        case sfKeyLeft: goleft(data);
+            break;
+        case sfKeyEnter: changekey(data);
+            break;
+        default:
+            break;
+    }
+}
 
 static void analyse_event(data_t *data)
 {
