@@ -11,18 +11,16 @@
 
 static void convert_data(data_t *data, char *buffer, int *step)
 {
-    if (my_strcmp(buffer, "['Quests']\n") == 0) {
+    int save = (*step);
+
+    if (my_strcmp(buffer, "['Quests']\n") == 0)
         (*step) = 0;
-        return;
-    }
-    if (my_strcmp(buffer, "['Profiles']\n") == 0) {
+    if (my_strcmp(buffer, "['Profiles']\n") == 0)
         (*step) = 1;
-        return;
-    }
-    if (my_strcmp(buffer, "['NPC']\n") == 0) {
+    if (my_strcmp(buffer, "['NPC']\n") == 0)
         (*step) = 2;
+    if (save != (*step))
         return;
-    }
     switch ((*step)) {
         case 0: parsing_quest(data, buffer);
             break;
