@@ -7,6 +7,19 @@
 
 #include "utils.h"
 
+static int max_height(data_t *data, const char *str)
+{
+    int max = 0;
+    node_letter *tmp = NULL;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        tmp = get_letter_c(data, str[i]);
+        if (tmp->rect.height > max)
+            max = tmp->rect.height;
+    }
+    return (max);
+}
+
 void my_text(data_t *data, sfVector2f position, float scale, const char *text)
 {
     sfVector2f vector = {position.x, position.y};
