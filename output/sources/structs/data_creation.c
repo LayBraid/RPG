@@ -49,7 +49,7 @@ void data_create(data_t *data)
     data->player.position = (sfVector2f){0, 0};
     data->player.move_animation = sfClock_create();
     data->texture_bank = NULL;
-    data->font = sfFont_createFromFile("./assets/zeldadxt.ttf"); // TODO add font
+    data->font = sfFont_createFromFile("assets/zeldadxt.ttf"); // TODO add font
     data->texts = NULL;
     data->buttons = NULL;
     data->npcs = NULL;
