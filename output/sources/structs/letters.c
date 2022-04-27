@@ -17,13 +17,28 @@ static void put_letter(data_t *data, char letter, sfIntRect rect, sfVector2f vec
     data->letters = new;
 }
 
+static void set_nbrs(data_t *data)
+{
+    put_letter(data, '0', (IntR) {15, 140, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '1', (IntR) {33, 140, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '2', (IntR) {47, 140, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '3', (IntR) {63, 140, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '4', (IntR) {79, 140, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '5', (IntR) {15, 156, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '6', (IntR) {33, 156, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '7', (IntR) {47, 156, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '8', (IntR) {63, 156, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, '9', (IntR) {79, 156, 6, 13}, (sfVector2f) {317, 390});
+    put_letter(data, ':', (IntR) {79, 156, 6, 13}, (sfVector2f) {317, 390});
+}
+
 static void next_put_letter(data_t *data)
 {
     put_letter(data, 'L', (IntR) {29, 104, 6, 13}, (sfVector2f) {317, 390});
     put_letter(data, 'M', (IntR) {45, 104, 8, 13}, (sfVector2f) {437, 390});
     put_letter(data, 'N', (IntR) {61, 104, 7, 13}, (sfVector2f) {557, 390});
     put_letter(data, 'O', (IntR) {77, 104, 6, 13}, (sfVector2f) {677, 390});
-    put_letter(data, 'P', (IntR) {93, 104, 6, 13}, (sfVector2f) {797, 390});
+    put_letter(data, 'P', (IntR) {93, 104, 8, 13}, (sfVector2f) {797, 390});
     put_letter(data, 'Q', (IntR) {109, 104, 6, 13}, (sfVector2f) {917, 390});
     put_letter(data, 'R', (IntR) {125, 104, 6, 13}, (sfVector2f) {1037, 390});
     put_letter(data, 'S', (IntR) {142, 104, 6, 13}, (sfVector2f) {1157, 390});
@@ -35,6 +50,7 @@ static void next_put_letter(data_t *data)
     put_letter(data, 'Y', (IntR) {77, 120, 7, 13}, (sfVector2f) {677, 470});
     put_letter(data, 'Z', (IntR) {93, 120, 6, 13}, (sfVector2f) {797, 470});
     put_letter(data, ' ', (IntR) {17, 0, 6, 10}, (sfVector2f) {0, 0});
+    set_nbrs(data);
 }
 
 static void next_letter(data_t *data)

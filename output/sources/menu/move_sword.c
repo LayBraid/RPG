@@ -16,11 +16,11 @@ void godown(data_t *data)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
     if (pos.y == 200)
-        tile = set_tile_position(tile, (sfVector2f){400, 300});
+        tile = set_tile_position(tile, (sfVector2f){600, 300});
     if (pos.y == 300)
-        tile = set_tile_position(tile, (sfVector2f){400, 400});
+        tile = set_tile_position(tile, (sfVector2f){600, 400});
     if (pos.y == 400)
-        tile = set_tile_position(tile, (sfVector2f){400, 500});
+        tile = set_tile_position(tile, (sfVector2f){600, 500});
 
 }
 
@@ -33,9 +33,9 @@ void gotop(data_t *data)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
     if (pos.y == 300)
-        tile = set_tile_position(tile, (sfVector2f){400, 200});
+        tile = set_tile_position(tile, (sfVector2f){600, 200});
     if (pos.y == 400)
-        tile = set_tile_position(tile, (sfVector2f){400, 300});
+        tile = set_tile_position(tile, (sfVector2f){600, 300});
     if (pos.y == 500)
-        tile = set_tile_position(tile, (sfVector2f){400, 400});
+        tile = set_tile_position(tile, (sfVector2f){600, 400});
 }

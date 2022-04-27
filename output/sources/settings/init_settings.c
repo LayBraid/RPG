@@ -10,6 +10,8 @@
 void init_settings(data_t *data)
 {
     data->settings = malloc(sizeof(settings_t));
+    data->settings->fps = 60;
+    data->settings->volume = 50;
     data->texture_bank = create_texture(data->texture_bank,
     "assets/intro_menu/metro.png", &(sfIntRect){500, 390, 30, 140});
     data->tiles = create_tile(data->tiles);
