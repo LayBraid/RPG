@@ -21,4 +21,6 @@ sfIntRect get_rect_player(int state, int animation);
 
 void clock_move_player(data_t *data);
 
+void inventory_loop(data_t *data);
+
 #endif

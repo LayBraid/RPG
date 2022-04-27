@@ -132,10 +132,15 @@ typedef struct texture {
 } texture_t;
 
 typedef struct inventory {
-    char *item_name;
-    sfSprite *sprite;
-    sfIntRect rect;
-    unsigned int count;
+    sfTexture *texture_item;
+    sfTexture *texture_rect;
+    sfSprite *sprite_item;
+    sfSprite *sprite_rect;
+    sfVector2f position_item;
+    sfVector2f position_rect;
+    sfIntRect rect_item;
+    sfIntRect rect_rect;
+    int item;
     struct inventory *next;
 } inventory_t;
 
@@ -182,9 +187,11 @@ typedef struct enemy_struct {
 
 typedef struct player {
     char *name;
+    char *items;
     unsigned char depth;
     int hp_max;
     int current_hp;
+    int equiped;
     int state;
     int animation;
     sfClock *movement_clock;
@@ -255,6 +262,7 @@ struct data {
     text_t *texts;
     button_t *buttons;
     npc_t *npcs;
+    inventory_t *items;
     tile_t *tiles;
     sfEvent event;
     music_t *musics;
@@ -335,6 +343,7 @@ npc_t *delete_all_npcs(npc_t *start);
 
 // music.c
 void create_music(data_t *data, const char *path, int loop);
+void intro_music(data_t *data);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
@@ -374,14 +383,20 @@ texture_t *delete_all_textures(texture_t *start);
 // texture_utils.c
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 
-// inventory.c
-inventory_t *create_inventory(inventory_t *start, char *name);
-inventory_t *delete_inventory(inventory_t *node);
-inventory_t *delete_whole_inventory(inventory_t *start);
+// // inventory.c
+// inventory_t *create_inventory(inventory_t *start, char *name);
+// inventory_t *delete_inventory(inventory_t *node);
+// inventory_t *delete_whole_inventory(inventory_t *start);
+
+// // inventory_utils.c
+// inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
+// inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 
 // inventory_utils.c
-inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
-inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
+void get_items(data_t *data);
+void display_items(data_t *data);
+void create_items(data_t *data, int idx);
+
 
 // video_utils.c
 void set_fps(sfRenderWindow *window, int fps, data_t *data);
