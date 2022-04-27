@@ -262,7 +262,7 @@ typedef struct settings_s {
     int back;
     int inventory;
     int pause;
-}settings_t;
+} settings_t;
 
 struct data {
     video_t video;
@@ -290,6 +290,7 @@ struct data {
     node_rectangle *map;
     node_texture *textures;
     sfTexture *world;
+    sfTexture *npc;
     int **collisions;
     int **positions;
     int x_pile;
@@ -368,6 +369,8 @@ npc_t *set_npc_current_hp(npc_t *node, int value);
 npc_t *set_npc_to_max_hp(npc_t *node);
 npc_t *npc_set_event(npc_t *node, char *event);
 npc_t *npc_set_map(npc_t *node, int value);
+
+void npc_set_size_rectangle(npc_t *node, sfVector2f size);
 
 // button.c
 button_t *create_button(button_t *start, char *string, sfFont *font);

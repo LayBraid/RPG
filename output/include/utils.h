@@ -40,4 +40,6 @@ int can_move(int block);
 
 int my_range(sfVector2i v1, sfVector2i v2, double range);
 
+sfVector2f get_size_type(size_t type);
+
 #endif /* !UTILS_H_ */

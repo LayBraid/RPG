@@ -31,7 +31,7 @@ data_t *data_delete(data_t *data)
 
 void init_music(data_t *data)
 {
-    create_music(data, "./assets/Sound/ladja.ogg", 1);
+    create_music(data, "./assets/sound/ladja.ogg", 1);
     sfMusic_play(data->musics->music);
 }
 

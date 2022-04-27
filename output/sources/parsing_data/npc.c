@@ -25,4 +25,5 @@ void parsing_npc(data_t *data, char *buffer)
     vector.y = (float) my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, ',', 4) + 1, get_it_char(buffer, ']', 1) - 1));
     data->npcs = set_npc_position(data->npcs, vector);
+    npc_set_size_rectangle(data->npcs, get_size_type(data->npcs->type));
 }
