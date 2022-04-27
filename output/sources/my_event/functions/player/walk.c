@@ -19,7 +19,7 @@ void player_walk_down(data_t *data)
 {
     sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
     sfVector2i position = get_position(data, PLAYER, 0);
-    if (player.y >= 1500 - 28)
+    if (player.y >= 2250 - 28)
         return;
     if (!can_move(data->collisions[position.y + 1][position.x]))
         return;
@@ -30,7 +30,7 @@ void player_walk_down(data_t *data)
         data->positions[position.y][position.x] = 0;
     } else
         data->y_pile += 3;
-    if (player.y < 1500 - 180 && player.y > 177)
+    if (player.y < 2250 - 180 && player.y > 177)
         sfView_move(data->mapping, (sfVector2f) {0, 3});
 }
 
@@ -49,7 +49,7 @@ void player_walk_up(data_t *data)
     } else
         data->y_pile -= 3;
     sfRectangleShape_move(data->player.rectangle, (sfVector2f) {0, -3});
-    if (player.y > 360 && player.y < 1500 - 177)
+    if (player.y > 360 && player.y < 2250 - 177)
         sfView_move(data->mapping, (sfVector2f) {0, -3});
 }
 
@@ -57,7 +57,7 @@ void player_walk_right(data_t *data)
 {
     sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
     sfVector2i position = get_position(data, PLAYER, 0);
-    if (player.x >= 1500 - 16)
+    if (player.x >= 2250 - 16)
         return;
     if (!can_move(data->collisions[position.y][position.x + 1]))
         return;
@@ -68,7 +68,7 @@ void player_walk_right(data_t *data)
         data->positions[position.y][position.x] = 0;
     } else
         data->x_pile += 3;
-    if (player.x > 317 && player.x < 1500 - 317)
+    if (player.x > 317 && player.x < 2250 - 317)
         sfView_move(data->mapping, (sfVector2f) {3, 0});
 }
 
@@ -87,6 +87,6 @@ void player_walk_left(data_t *data)
         data->positions[position.y][position.x] = 0;
     } else
         data->x_pile -= 3;
-    if (player.x > 320 && player.x < 1500 - 317)
+    if (player.x > 320 && player.x < 2250 - 317)
         sfView_move(data->mapping, (sfVector2f) {-3, 0});
 }
