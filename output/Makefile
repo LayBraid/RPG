@@ -16,6 +16,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/my_event/functions/player/*.c) \
 	  $(wildcard sources/my_event/functions/coins/*.c) \
 	  $(wildcard sources/parsing_data/*.c) \
+	  $(wildcard sources/pause_menu/*.c) \
 	  $(wildcard sources/quests/*.c) \
 	  $(wildcard sources/intro/*.c) \
 	  $(wildcard sources/game/*.c) \

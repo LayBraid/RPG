@@ -7,13 +7,13 @@
 
 #include "my_rpg.h"
 
-tile_t *create_tile(tile_t *start)
+tile_t *create_tile(tile_t *start, int type)
 {
     tile_t *new = malloc(sizeof(tile_t));
 
     new->depth = 0;
     new->sprite = sfSprite_create();
-    new->type = 0;
+    new->type = type;
     new->rect = (sfIntRect){0, 0, 0, 0};
     new->position = (sfVector2f){0, 0};
     new->scale = (sfVector2f){1, 1};

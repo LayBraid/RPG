@@ -29,7 +29,7 @@ void put_letter(data_t *data)
         float comp = 7.00f;
         data->texture_bank = create_texture(data->texture_bank,
         "assets/game/input name hud.png", &letter->rect);
-        data->tiles = create_tile(data->tiles);
+        data->tiles = create_tile(data->tiles, 0);
         data->tiles = set_tile_texture(data->tiles, data->texture_bank);
         data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55f, 4.86f});
         if (letter->rect.height < 13)

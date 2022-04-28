@@ -47,5 +47,6 @@ void loading(data_t *data)
             break;
         case (14): delete_nameM(data);
             break;
+        case (15): init_pause_menu(data);
     }
 }

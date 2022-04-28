@@ -7,16 +7,19 @@
 
 #include "my_rpg.h"
 
-button_t *create_button(button_t *start, char *string, sfFont *font)
+button_t *create_button(button_t *start, char *string, sfIntRect rect, char *path)
 {
     button_t *new = malloc(sizeof(button_t));
 
     new->sprite = sfSprite_create();
-    new->rect = (sfIntRect){0, 0, 0, 0};
+    new->rect = rect;
     new->position = (sfVector2f){0, 0};
     new->text = sfText_create();
-    sfText_setFont(new->text, font);
+    new->font = sfFont_createFromFile("./assets/font.ttf");
+    new->texture = sfTexture_createFromFile(path, &new->rect);
+    sfText_setFont(new->text, new->font);
     sfText_setString(new->text, string);
+    sfSprite_setTexture(new->sprite, new->texture, sfTrue);
     new->id = (start == NULL) ? 1 : start->id + 1;
     new->next = start;
     start = new;

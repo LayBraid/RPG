@@ -31,6 +31,8 @@ void switch_scene(data_t *data)
             break;
         case (6): inventory_loop(data);
             break;
+        case (7): pause_menu(data);
+            break;
         case (32): loading(data);
             break;
         default:

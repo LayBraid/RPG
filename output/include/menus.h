@@ -25,4 +25,9 @@ void delete_menuS(data_t *data);
 void godown(data_t *data);
 void gotop(data_t *data);
 
+//menu_pause
+void init_pause_menu(data_t *data);
+void pause_menu(data_t *data);
+void redirection(data_t *data);
+
 #endif /* !MENU_H_ */

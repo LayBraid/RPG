@@ -110,8 +110,10 @@ typedef struct tile {
 typedef struct button {
     unsigned int id;
     sfSprite *sprite;
+    sfTexture *texture;
     sfIntRect rect;
     sfText *text;
+    sfFont *font;
     sfVector2f position;
     struct button *next;
 } button_t;
@@ -334,7 +336,7 @@ data_t *data_delete(data_t *data);
 void data_create(data_t *data);
 
 // tiles.c
-tile_t *create_tile(tile_t *start);
+tile_t *create_tile(tile_t *start, int type);
 tile_t *delete_tile(tile_t *node);
 tile_t *delete_first_tile(data_t *data);
 tile_t *delete_all_tiles(tile_t *start);
@@ -373,7 +375,7 @@ npc_t *npc_set_map(npc_t *node, int value);
 void npc_set_size_rectangle(npc_t *node, sfVector2f size);
 
 // button.c
-button_t *create_button(button_t *start, char *string, sfFont *font);
+button_t *create_button(button_t *start, char *string, sfIntRect rect, char *path);
 button_t *delete_button(button_t *node);
 button_t *delete_all_buttons(button_t *start);
 

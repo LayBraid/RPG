@@ -23,7 +23,7 @@ int make_tile(data_t *data, char *map, int i, sfVector2f pos)
             comma++;
         i++;
     }
-    data->tiles = create_tile(data->tiles);
+    data->tiles = create_tile(data->tiles, 0);
     data->tiles = set_tile_position(data->tiles, pos);
     data->tiles = set_tile_depth(data->tiles, depth);
     data->tiles->type = type;

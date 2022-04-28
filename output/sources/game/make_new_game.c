@@ -31,6 +31,11 @@ static void analyse_key(data_t *data)
         printf("oui\n");
         call_event(data, "open_inventory");
     }
+    if (data->event.key.code == sfKeyEscape) {
+        data->video.ui = 32;
+        data->loading_state = 15;
+    }
+
 }
 
 static void analyse_event(data_t *data)

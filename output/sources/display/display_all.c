@@ -14,7 +14,6 @@ void display_all(data_t *data)
     for (unsigned char depth = 0; depth < 10; depth++)
         display_tile_depth(data->tiles, data->video, depth);
     display_buttons(data->buttons, data->video);
-    display_texts(data->texts, data->video);
     if (data->video.ui == 2 || data->video.ui == 6) {
         sfRenderWindow_setView(data->video.window, data->mapping);
         display_rectangles_map(data);
@@ -24,4 +23,5 @@ void display_all(data_t *data)
     }
     if (data->video.ui == 6)
         display_items(data);
+    // display_texts(data->texts, data->video);
 }

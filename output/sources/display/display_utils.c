@@ -38,9 +38,9 @@ void display_buttons(button_t *start, video_t video)
     button_t *node = start;
 
     while (node != NULL) {
+        sfText_setPosition(node->text, node->position);
         sfRenderWindow_drawSprite(video.window, node->sprite, NULL);
         sfRenderWindow_drawText(video.window, node->text, NULL);
-        node->position = sfSprite_getPosition(node->sprite);
         node = node->next;
     }
 }
@@ -50,6 +50,7 @@ void display_texts(text_t *start, video_t video)
     text_t *node = start;
 
     while (node != NULL) {
+        sfText_setPosition(node->text, node->position);
         sfRenderWindow_drawText(video.window, node->text, NULL);
         node = node->next;
     }

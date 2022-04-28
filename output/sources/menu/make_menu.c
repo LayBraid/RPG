@@ -23,7 +23,7 @@ static void gotoo(data_t *data)
     tile_t *tile = data->tiles;
     sfVector2f pos;
 
-    while (tile->id != 1)
+    while (tile->type != 2)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
     if (pos.y == 200) {
