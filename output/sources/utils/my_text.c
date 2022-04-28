@@ -27,6 +27,7 @@ void my_text(data_t *data, sfVector2f position, float scale, const char *text)
     "assets/game/input name hud.png", NULL);
     sfRectangleShape *rectangle = sfRectangleShape_create();
     node_letter *letter = NULL;
+    int max = max_height(data, text) * scale;
 
     for (int i = 0; text[i] != '\0'; i++) {
         letter = get_letter_c(data, text[i]);
@@ -35,7 +36,7 @@ void my_text(data_t *data, sfVector2f position, float scale, const char *text)
         sfRectangleShape_setTexture(rectangle, texture, sfTrue);
         sfRectangleShape_setTextureRect(rectangle, letter->rect);
         sfRectangleShape_setPosition(rectangle, (sfVector2f) {vector.x,
-        (vector.y + ((15 * scale) - letter->rect.height))});
+        (vector.y + (max - (letter->rect.height * scale)))});
         vector.x += (float) letter->rect.width + letter->rect.width * 4;
         sfRenderWindow_drawRectangleShape(data->video.window, rectangle, NULL);
     }

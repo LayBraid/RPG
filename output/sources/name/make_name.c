@@ -12,7 +12,7 @@ static void analyse_key(data_t *data)
 {
     switch (data->event.key.code) {
         case sfKeyEscape: data->video.ui = 32;
-            data->loading_state = 14;
+            data->loading_state = 16;
             break;
         case sfKeyLeft:
             if (data->letter->state == 0)

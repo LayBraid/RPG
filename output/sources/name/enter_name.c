@@ -35,6 +35,6 @@ void anim_end(data_t *data)
 
 void enter_name(data_t *data)
 {
-    data->loading_state = 13;
+    data->loading_state = 15;
     data->video.ui = 32;
 }

@@ -6,34 +6,46 @@
 */
 
 #include "my_rpg.h"
-#include "menus.h"
 #include "settings.h"
 #include "utils.h"
 #include "my.h"
 
 static void drawtext(data_t *data)
 {
-    char *fps = my_fprintf("FPS :         %d", data->settings->fps);
-    char *volume = my_fprintf("Volume :      %d", data->settings->volume);
+    char *fps = my_fprintf("                    FPS           %d", data->settings->fps);
+    char *volume = my_fprintf("                    Volume        %d", data->settings->volume);
 
     my_text(data, (sfVector2f) {100, 200}, 5, fps);
     my_text(data, (sfVector2f) {100, 300}, 5, volume);
-    // my_text(data, (sfVector2f) {100, 400}, 5, my_fprintf("Key :         %d", data->video.ui));
+    my_text(data, (sfVector2f) {100, 400}, 5, "                    Controls");
 }
 
 static void analyse_key(data_t *data)
 {
+    tile_t *tile = data->tiles;
+    sfVector2f pos;
+
+    while (tile->id != 1)
+        tile = tile->next;
+    pos = sfSprite_getPosition(tile->sprite);
     switch (data->event.key.code) {
-        case sfKeyDown: godown(data);
+        case sfKeyDown: go_downn(data);
             break;
-        case sfKeyUp: gotop(data);
+        case sfKeyUp: go_topp(data);
             break;
         case sfKeyRight: goright(data);
             break;
         case sfKeyLeft: goleft(data);
             break;
-        // case sfKeyEnter: changekey(data);
-        //     break;
+        case sfKeySpace:
+            if (pos.y == 430) {
+                data->video.ui = 32;
+                data->loading_state = 17;
+            }
+            break;
+        case sfKeyEscape: data->video.ui = 32;
+            data->loading_state = 9;
+            break;
         default:
             break;
     }

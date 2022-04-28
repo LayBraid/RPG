@@ -12,6 +12,7 @@
 #include "map.h"
 #include "player.h"
 #include "editor.h"
+#include "keybind.h"
 
 const char *WORLD_TILES = "assets/game/Overworld tiles.png";
 
@@ -83,4 +84,5 @@ void data_create(data_t *data)
     set_letters(data);
     setup_texture_player(data);
     get_items(data);
+    assign_keys(data);
 }

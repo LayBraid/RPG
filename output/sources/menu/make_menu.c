@@ -26,19 +26,19 @@ static void gotoo(data_t *data)
     while (tile->id != 1)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
-    if (pos.y == 200) {
+    if (pos.y == 210) {
         data->video.ui = 32;
         data->loading_state = 3;
     }
-    if (pos.y == 300) {
+    if (pos.y == 317) {
         data->video.ui = 32;
         data->loading_state = 4;
     }
-    if (pos.y == 400) {
+    if (pos.y == 420) {
         data->video.ui = 32;
         data->loading_state = 5;
     }
-    if (pos.y == 500)
+    if (pos.y == 520)
         sfRenderWindow_close(data->video.window);
 }
 

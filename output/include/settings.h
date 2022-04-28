@@ -18,10 +18,13 @@
 
     // delete_settings.c
     void delete_settings(data_t *data);
+    void delete_settingsK(data_t *data);
 
     // change_settings.c
     void goleft(data_t *data);
     void goright(data_t *data);
+    void go_downn(data_t *data);
+    void go_topp(data_t *data);
 
     // fps.c
     void change_fpsl(data_t *data);
