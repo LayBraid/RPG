@@ -14,6 +14,7 @@
 #include "editor.h"
 
 const char *WORLD_TILES = "assets/game/Overworld tiles.png";
+const char *NPC_TILES = "assets/game/npc.png";
 
 data_t *data_delete(data_t *data)
 {
@@ -63,6 +64,7 @@ void data_create(data_t *data)
     data->my_event = NULL;
     data->musics = NULL;
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
+    data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
     // init_music(data);
     data->quest = NULL;
     parsing_data(data);

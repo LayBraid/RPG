@@ -371,6 +371,8 @@ npc_t *npc_set_event(npc_t *node, char *event);
 npc_t *npc_set_map(npc_t *node, int value);
 
 void npc_set_size_rectangle(npc_t *node, sfVector2f size);
+void npc_set_rectangle_texture(npc_t *node, sfTexture *texture);
+void npc_set_rectangle_texture_rect(npc_t *node, sfIntRect rect);
 
 // button.c
 button_t *create_button(button_t *start, char *string, sfFont *font);

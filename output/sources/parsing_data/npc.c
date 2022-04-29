@@ -26,4 +26,6 @@ void parsing_npc(data_t *data, char *buffer)
     get_it_char(buffer, ',', 4) + 1, get_it_char(buffer, ']', 1) - 1));
     data->npcs = set_npc_position(data->npcs, vector);
     npc_set_size_rectangle(data->npcs, get_size_type(data->npcs->type));
+    npc_set_rectangle_texture(data->npcs, data->npc);
+    npc_set_rectangle_texture_rect(data->npcs, get_rect_type(data->npcs->type));
 }

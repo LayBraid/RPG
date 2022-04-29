@@ -25,6 +25,7 @@ npc_t *set_npc_texture(npc_t *node, texture_t *texture)
 npc_t *set_npc_position(npc_t *node, sfVector2f position)
 {
     node->position = position;
+    sfRectangleShape_setPosition(node->rectangle, node->position);
     return (node);
 }
 
