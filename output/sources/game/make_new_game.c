@@ -21,10 +21,8 @@ static void analyse_key(data_t *data)
         call_event(data, "player_walk_right");
     if (data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_left");
-    if (data->event.key.code == sfKeyA)
-        call_event(data, "zoom_map");
-    if (data->event.key.code == sfKeyE)
-        call_event(data, "unzoom_map");
+    if (data->event.key.code == sfKeyR)
+        call_event(data, "interact_npc");
     if (data->event.key.code == sfKeyTab)
         call_event(data, "open_inventory");
 }

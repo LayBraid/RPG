@@ -44,4 +44,6 @@ sfVector2f get_size_type(int type);
 
 IntR get_rect_type(int type);
 
+npc_t *get_npc_by_id(data_t *data, int id);
+
 #endif /* !UTILS_H_ */

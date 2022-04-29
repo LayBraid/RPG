@@ -20,7 +20,6 @@ void check_range(data_t *data)
             save = range;
             data->interact.status = 1;
             data->interact.npc_id = (int) tmp->id;
-            call_event(data, "interact_npc");
         }
         tmp = tmp->next;
     }
@@ -28,5 +27,4 @@ void check_range(data_t *data)
         return;
     data->interact.status = 0;
     data->interact.npc_id = -1;
-    call_event(data, "stop_interact_npc");
 }
