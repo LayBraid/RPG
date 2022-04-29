@@ -38,7 +38,7 @@ sfVector2i get_position(data_t *data, int entity, int index);
 
 int can_move(int block);
 
-int my_range(sfVector2f v1, sfVector2f v2, double range);
+double my_range(sfVector2f v1, sfVector2f v2);
 
 sfVector2f get_size_type(int type);
 
