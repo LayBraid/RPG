@@ -190,6 +190,7 @@ typedef struct player {
     int current_hp;
     int state;
     int animation;
+    int scale_reverse;
     sfClock *movement_clock;
     node_movement *movement;
     sfClock *movement_anim_clock;

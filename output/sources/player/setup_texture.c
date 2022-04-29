@@ -11,7 +11,8 @@
 void setup_texture_player(data_t *data)
 {
     data->player.animation = 0;
-    data->player.state = NOTHING;
+    data->player.scale_reverse = 0;
+    data->player.state = IDLE_DOWN;
     data->player.movement = NULL;
     data->player.movement_anim = NULL;
     data->x_pile = 0;

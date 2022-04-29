@@ -10,9 +10,6 @@
 
 static void analyse_key(data_t *data)
 {
-    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
-        data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
-        call_event(data, "player_walk_keys");
     if (data->event.key.code == sfKeyZ)
         call_event(data, "player_walk_up");
     if (data->event.key.code == sfKeyS)
@@ -21,6 +18,11 @@ static void analyse_key(data_t *data)
         call_event(data, "player_walk_right");
     if (data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_left");
+    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
+        data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
+        call_event(data, "player_walk_keys");
+    else
+        call_event(data, "player_stop_walk_keys");
     if (data->event.key.code == sfKeyR)
         call_event(data, "interact_npc");
     if (data->event.key.code == sfKeyTab)

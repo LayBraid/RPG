@@ -10,11 +10,12 @@
 
 void player_walk_keys(data_t *data)
 {
-    data->player.state = WALK_DOWN;
     call_event(data, "check_range");
 }
 
 void player_stop_walk_keys(data_t *data)
 {
-    data->player.state = NOTHING;
+    if (data->player.state < 4)
+        return;
+    data->player.state -= 4;
 }
