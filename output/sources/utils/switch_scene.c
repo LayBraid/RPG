@@ -9,6 +9,7 @@
 #include "menus.h"
 #include "intro.h"
 #include "new_game.h"
+#include "skill_tree.h"
 #include "load_game.h"
 #include "settings.h"
 #include "my_event.h"
@@ -33,6 +34,8 @@ void switch_scene(data_t *data)
         case (6): inventory_loop(data);
             break;
         case (7): keybind_scene(data);
+            break;
+        case (8): skill_tree(data);
             break;
         case (32): loading(data);
             break;

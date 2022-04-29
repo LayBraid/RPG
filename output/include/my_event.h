@@ -44,4 +44,6 @@ void interact_npc(data_t *data);
 
 void stop_interact_npc(data_t *data);
 
+void init_skill_tree(data_t *data);
+
 #endif

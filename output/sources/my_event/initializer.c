@@ -22,4 +22,5 @@ void initialize_events(data_t *data)
     add_event(&data->my_event, "check_range", check_range);
     add_event(&data->my_event, "interact_npc", interact_npc);
     add_event(&data->my_event, "stop_interact_npc", stop_interact_npc);
+    add_event(&data->my_event, "open skill tree", init_skill_tree);
 }

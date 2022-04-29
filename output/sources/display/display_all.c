@@ -26,7 +26,6 @@ void display_all(data_t *data)
             sfRenderWindow_setView(data->video.window, data->main);
             my_text(data, (sfVector2f) {680, 980}, 4, "press R to interact");
         }
-
     }
     if (data->video.ui == 6)
         display_items(data);
