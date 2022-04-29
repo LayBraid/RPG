@@ -264,6 +264,11 @@ typedef struct settings_s {
     int pause;
 } settings_t;
 
+typedef struct interact_s {
+    int status;
+    int npc_id;
+} interact_t;
+
 struct data {
     video_t video;
     settings_t *settings;
@@ -291,6 +296,7 @@ struct data {
     node_texture *textures;
     sfTexture *world;
     sfTexture *npc;
+    interact_t interact;
     int **collisions;
     int **positions;
     int x_pile;

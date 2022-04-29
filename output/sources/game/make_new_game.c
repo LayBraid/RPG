@@ -8,8 +8,6 @@
 #include "player.h"
 #include "my_event.h"
 
-//TODO Comment for compilation
-
 static void analyse_key(data_t *data)
 {
     if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
@@ -48,8 +46,6 @@ static void analyse_event(data_t *data)
                 break;
             case (sfEvtKeyReleased): analyse_released_key(data);
                 break;
-            // case (sfEvtMouseButtonPressed): analyse_mouse(data);
-            //     break;
             default: break;
         }
     }

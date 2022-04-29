@@ -7,31 +7,12 @@
 
 #include "utils.h"
 
-double my_sqrt(double nb)
+int my_range(sfVector2f v1, sfVector2f v2, double range)
 {
-    double result = 0;
-    double i = 0;
-
-    while (i * i <= nb) {
-        i += 0.1;
-    }
-    i -= 0.1;
-    while (i * i <= nb) {
-        if (i * i == nb) {
-            result = i;
-            return (result);
-        }
-        i += 0.1;
-    }
-    return (result);
-}
-
-int my_range(sfVector2i v1, sfVector2i v2, double range)
-{
-    int x = v2.x - v1.x;
-    int y = v2.y - v1.y;
+    double x = v2.x - v1.x;
+    double y = v2.y - v1.y;
     double h = x * x + y * y;
-    double r = my_sqrt(h);
+    double r = sqrt(h);
 
     if (r <= range)
         return (1);

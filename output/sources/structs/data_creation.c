@@ -59,6 +59,8 @@ void data_create(data_t *data)
     data->buttons = NULL;
     data->npcs = NULL;
     data->tiles = NULL;
+    data->interact.status = 0;
+    data->interact.npc_id = -1;
     data->delta = 1.0f;
     data->loading_state = 0;
     data->my_event = NULL;

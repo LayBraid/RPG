@@ -7,6 +7,7 @@
 
 #include "my_rpg.h"
 #include "map.h"
+#include "utils.h"
 
 void display_all(data_t *data)
 {
@@ -21,6 +22,11 @@ void display_all(data_t *data)
         display_player_depth(data->player, data->video, data->player.depth);
         for (unsigned char depth = 0; depth < 10; depth++)
             display_npc_depth(data->npcs, data->video, depth);
+        if (data->interact.status) {
+            sfRenderWindow_setView(data->video.window, data->main);
+            my_text(data, (sfVector2f) {100, 100}, 4, "R to interact");
+        }
+
     }
     if (data->video.ui == 6)
         display_items(data);

@@ -11,6 +11,7 @@
 void player_walk_keys(data_t *data)
 {
     data->player.state = WALK_DOWN;
+    call_event(data, "check_range");
 }
 
 void player_stop_walk_keys(data_t *data)

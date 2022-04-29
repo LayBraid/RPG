@@ -38,4 +38,10 @@ void inventory_loop(data_t *data);
 
 void player_stop_walk_keys(data_t *data);
 
+void check_range(data_t *data);
+
+void interact_npc(data_t *data);
+
+void stop_interact_npc(data_t *data);
+
 #endif
