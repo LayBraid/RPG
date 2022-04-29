@@ -36,4 +36,6 @@ void player_walk_left(data_t *data);
 
 void inventory_loop(data_t *data);
 
+void player_stop_walk_keys(data_t *data);
+
 #endif

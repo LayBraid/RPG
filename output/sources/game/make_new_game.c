@@ -27,10 +27,15 @@ static void analyse_key(data_t *data)
         call_event(data, "zoom_map");
     if (data->event.key.code == sfKeyE)
         call_event(data, "unzoom_map");
-    if (data->event.key.code == sfKeyTab) {
-        printf("oui\n");
+    if (data->event.key.code == sfKeyTab)
         call_event(data, "open_inventory");
-    }
+}
+
+static void analyse_released_key(data_t *data)
+{
+    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
+        data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
+        call_event(data, "player_stop_walk_keys");
 }
 
 static void analyse_event(data_t *data)
@@ -41,7 +46,7 @@ static void analyse_event(data_t *data)
                 break;
             case (sfEvtKeyPressed): analyse_key(data);
                 break;
-            case (sfEvtKeyReleased): data->player.state = NOTHING;
+            case (sfEvtKeyReleased): analyse_released_key(data);
                 break;
             // case (sfEvtMouseButtonPressed): analyse_mouse(data);
             //     break;
