@@ -24,6 +24,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/buttons/*.c) \
 	  $(wildcard sources/buttons/functions/*.c) \
 	  $(wildcard sources/settings/*.c) \
+	  $(wildcard sources/settings/keybind/*.c)	\
 	  $(wildcard sources/player/*.c) \
 	  $(wildcard sources/player/animations/*.c) \
 	  $(wildcard sources/images/*.c) \

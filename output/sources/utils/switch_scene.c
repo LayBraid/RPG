@@ -13,6 +13,7 @@
 #include "settings.h"
 #include "my_event.h"
 #include "name.h"
+#include "keybind.h"
 
 void switch_scene(data_t *data)
 {
@@ -30,6 +31,8 @@ void switch_scene(data_t *data)
         case (5): name_scene(data);
             break;
         case (6): inventory_loop(data);
+            break;
+        case (7): keybind_scene(data);
             break;
         case (32): loading(data);
             break;

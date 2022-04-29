@@ -13,3 +13,10 @@ void delete_settings(data_t *data)
     data->texture_bank = delete_all_textures(data->texture_bank);
     data->loading_state = 2;
 }
+
+void delete_settingsK(data_t *data)
+{
+    data->tiles = delete_all_tiles(data->tiles);
+    data->texture_bank = delete_all_textures(data->texture_bank);
+    data->loading_state = 10;
+}

@@ -5,7 +5,7 @@
 ** move_sword
 */
 
-#include "../../include/my_rpg.h"
+#include "my_rpg.h"
 
 void godown(data_t *data)
 {
@@ -15,12 +15,12 @@ void godown(data_t *data)
     while (tile->id != 1)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
-    if (pos.y == 200)
-        tile = set_tile_position(tile, (sfVector2f){600, 300});
-    if (pos.y == 300)
-        tile = set_tile_position(tile, (sfVector2f){600, 400});
-    if (pos.y == 400)
-        tile = set_tile_position(tile, (sfVector2f){600, 500});
+    if (pos.y == 210)
+        tile = set_tile_position(tile, (sfVector2f){700, 317});
+    if (pos.y == 317)
+        tile = set_tile_position(tile, (sfVector2f){700, 420});
+    if (pos.y == 420)
+        tile = set_tile_position(tile, (sfVector2f){700, 520});
 
 }
 
@@ -32,10 +32,10 @@ void gotop(data_t *data)
     while (tile->id != 1)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
-    if (pos.y == 300)
-        tile = set_tile_position(tile, (sfVector2f){600, 200});
-    if (pos.y == 400)
-        tile = set_tile_position(tile, (sfVector2f){600, 300});
-    if (pos.y == 500)
-        tile = set_tile_position(tile, (sfVector2f){600, 400});
+    if (pos.y == 317)
+        tile = set_tile_position(tile, (sfVector2f){700, 210});
+    if (pos.y == 420)
+        tile = set_tile_position(tile, (sfVector2f){700, 317});
+    if (pos.y == 520)
+        tile = set_tile_position(tile, (sfVector2f){700, 420});
 }

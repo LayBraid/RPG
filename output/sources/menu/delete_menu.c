@@ -11,7 +11,7 @@ void delete_menuN(data_t *data)
 {
     data->tiles = delete_all_tiles(data->tiles);
     data->texture_bank = delete_all_textures(data->texture_bank);
-    data->loading_state = 12;
+    data->loading_state = 14;
 }
 
 void delete_menuL(data_t *data)

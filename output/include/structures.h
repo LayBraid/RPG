@@ -6,24 +6,24 @@
 */
 
 #ifndef STRUCTURES_H_
-    #define STRUCTURES_H_
+#define STRUCTURES_H_
 
-    #include <SFML/Graphics.h>
-    #include <SFML/Window.h>
-    #include <SFML/Audio.h>
-    #include <SFML/Config.h>
-    #include <SFML/System.h>
-    #include <SFML/OpenGL.h>
+#include <SFML/Graphics.h>
+#include <SFML/Window.h>
+#include <SFML/Audio.h>
+#include <SFML/Config.h>
+#include <SFML/System.h>
+#include <SFML/OpenGL.h>
 
 //TODO Reformat imports
 
-    #include <stdlib.h>
-    #include <unistd.h>
-    #include <stdio.h>
-    #include <fcntl.h>
-    #include <string.h>
-    #include <math.h>
-    #include <sys/stat.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <string.h>
+#include <math.h>
+#include <sys/stat.h>
 
 typedef struct data data_t;
 typedef struct editor_data editor_t;
@@ -253,16 +253,20 @@ typedef struct node_letter_struct {
 typedef struct settings_s {
     int fps;
     int volume;
+}settings_t;
+
+typedef struct keys_s {
     int up;
     int down;
     int left;
     int right;
-    int attatck;
+    int attack;
     int interact;
     int back;
     int inventory;
     int pause;
-} settings_t;
+    char **key;
+}keys_t;
 
 typedef struct interact_s {
     int status;
@@ -272,6 +276,7 @@ typedef struct interact_s {
 struct data {
     video_t video;
     settings_t *settings;
+    keys_t *keys;
     player_t player;
     texture_t *texture_bank;
     sfFont *font;
