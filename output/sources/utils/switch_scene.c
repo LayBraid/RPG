@@ -29,6 +29,8 @@ void switch_scene(data_t *data)
             break;
         case (5): name_scene(data);
             break;
+        case (6): menu_scene(data);
+            break;
         case (32): loading(data);
             break;
         default:

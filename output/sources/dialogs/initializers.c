@@ -29,7 +29,7 @@ void init_dialog_choice(data_t *data, sfVector2f pos)
 
 // TODO tester en situation reelle
 
-void set_dialog_characters(data_t *data, int id_npc_texture, char is_talking, int id_npc)
+void set_dialog_characters(data_t *data, char is_talking, int id_npc)
 {
     texture_t *player = data->texture_bank;
     texture_t *npc_texture = data->texture_bank;
@@ -37,10 +37,10 @@ void set_dialog_characters(data_t *data, int id_npc_texture, char is_talking, in
 
     while (player != NULL && player->id != data->id_text_player)
         player = player->next;
-    while (npc_texture != NULL && npc_texture->id != id_npc_texture)
-        npc_texture = npc_texture->next;
     while (npc != NULL && npc->id != id_npc)
         npc = npc->next;
+    while (npc_texture != NULL && npc_texture->id != npc->texture_id)
+        npc_texture = npc_texture->next;
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, player);
     set_tile_scale(data->tiles, (sfVector2f){28, 28});

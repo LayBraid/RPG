@@ -17,6 +17,7 @@ npc_t *set_npc_texture(npc_t *node, texture_t *texture)
 {
     node->rect = texture->rect;
     node->max_rect = texture->max_rect;
+    node->texture_id = texture->id;
     sfSprite_setTexture(node->sprite, texture->texture, sfTrue);
     sfSprite_setTextureRect(node->sprite, node->rect);
     return (node);

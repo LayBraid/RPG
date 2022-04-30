@@ -29,4 +29,5 @@ void dialog_example(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     destroy_dialogs(data);
+    data->video.ui = 6;
 }

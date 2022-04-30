@@ -146,6 +146,7 @@ typedef struct npc {
     unsigned char depth;
     int hp_max;
     int current_hp;
+    int texture_id;
     inventory_t *inventory;
     sfSprite *sprite;
     sfIntRect rect;
