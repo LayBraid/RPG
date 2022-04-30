@@ -14,9 +14,12 @@
 #include "my_event.h"
 #include "name.h"
 #include "keybind.h"
+#include "pause.h"
+#include "howtoplay.h"
 
 void switch_scene(data_t *data)
 {
+    printf("SWITCH : %d\n", data->video.ui);
     switch (data->video.ui) {
         case (0): intro_scene(data);
             break;
@@ -33,6 +36,10 @@ void switch_scene(data_t *data)
         case (6): inventory_loop(data);
             break;
         case (7): keybind_scene(data);
+            break;
+        case (8): pause_scene(data);
+            break;
+        case (9): howtoplay_scene(data);
             break;
         case (32): loading(data);
             break;

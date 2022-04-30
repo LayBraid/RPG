@@ -13,6 +13,8 @@
 #include "settings.h"
 #include "keybind.h"
 #include "name.h"
+#include "pause.h"
+#include "howtoplay.h"
 
 void loading(data_t *data)
 {
@@ -53,6 +55,20 @@ void loading(data_t *data)
         case (16): delete_nameM(data);
             break;
         case (17): delete_settingsK(data);
+            break;
+        case (18): init_pause(data);
+            break;
+        case (19): delete_pauseN(data);
+            break;
+        case (20): delete_pauseM(data);
+            break;
+        case (21): delete_pauseH(data);
+            break;
+        case (22): delete_pauseS(data);
+            break;
+        case (23): init_howtoplay(data);
+            break;
+        case (24): delete_howtoplay(data);
             break;
     }
 }

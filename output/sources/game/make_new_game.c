@@ -31,6 +31,8 @@ static void analyse_key(data_t *data)
         printf("oui\n");
         call_event(data, "open_inventory");
     }
+    if (data->event.key.code == sfKeyEscape)
+        call_event(data, "pause_event");
 }
 
 static void analyse_event(data_t *data)
