@@ -15,7 +15,7 @@ void init_skill_tree(data_t *data)
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){1, 1});
-    data->tiles = set_tile_position(data->tiles, (sfVector2f){200, 200});
+    data->tiles = set_tile_position(data->tiles, (sfVector2f){0,0});
     data->texture_bank = create_texture(data->texture_bank,
     "assets/game/input name hud.png", &(sfIntRect){179, 286, 254, 171});
     data->tiles = create_tile(data->tiles);

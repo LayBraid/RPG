@@ -6,47 +6,10 @@
 */
 
 #include "my_rpg.h"
+#include "skill_tree.h"
 #include "menus.h"
 #include "utils.h"
 #include "my.h"
-
-static void gotoo(data_t *data)
-{
-    tile_t *tile = data->tiles;
-    sfVector2f pos;
-
-    while (tile->id != 1)
-        tile = tile->next;
-    pos = sfSprite_getPosition(tile->sprite);
-    if (pos.y == 210) {
-        data->video.ui = 32;
-        data->loading_state = 3;
-    }
-    if (pos.y == 317) {
-        data->video.ui = 32;
-        data->loading_state = 4;
-    }
-    if (pos.y == 420) {
-        data->video.ui = 32;
-        data->loading_state = 5;
-    }
-    if (pos.y == 520)
-        sfRenderWindow_close(data->video.window);
-}
-
-static void analyse_key(data_t *data)
-{
-    switch (data->event.key.code) {
-        case sfKeyDown: godown(data);
-            break;
-        case sfKeyUp: gotop(data);
-            break;
-        case sfKeySpace: gotoo(data);
-            break;
-        default:
-            break;
-    }
-}
 
 static void analyse_event(data_t *data)
 {
@@ -54,17 +17,64 @@ static void analyse_event(data_t *data)
         switch (data->event.type) {
             case (sfEvtClosed): sfRenderWindow_close(data->video.window);
                 break;
-            case (sfEvtKeyPressed): analyse_key(data);
+            case (sfEvtMouseButtonPressed): analyse_mouse_skill_tree(data);
                 break;
-                // case (sfEvtMouseButtonPressed): analyse_mouse(data);
-                //     break;
             default: break;
         }
+    }
+}
+
+static int is_in_rect(sfIntRect rect, int x, int y)
+{
+    if (((x >= rect.left) && (x <= (rect.left + rect.width))) &&
+    (y >= rect.top) && (y <= (rect.top + rect.height)))
+        return 1;
+    return 0;
+}
+
+void analyse_mouse_skill_tree(data_t *data)
+{
+    if (is_in_rect((sfIntRect){504,420,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.skill_pts > 0) {
+        printf("rentrer\n");
+        data->player.items[0] = '1';
+        data->player.skill_pts -= 1;
+    }
+    if (is_in_rect((sfIntRect){660,267,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.items[0] == '1' && data->player.skill_pts > 0) {
+        data->player.items[1] = '1';
+        data->player.skill_pts -= 1;
+    }
+    if (is_in_rect((sfIntRect){660,578,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.items[0] == '1' && data->player.skill_pts > 0) {
+        data->player.items[2] = '1';
+        data->player.skill_pts -= 1;
+    }
+    if (is_in_rect((sfIntRect){852,267,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.items[1] == '1' && data->player.skill_pts > 0) {
+        data->player.items[3] = '1';
+        data->player.skill_pts -= 1;
+    }
+    if (is_in_rect((sfIntRect){852,578,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.items[2] == '1' && data->player.skill_pts > 0) {
+        data->player.items[4] = '1';
+        data->player.skill_pts -= 1;
+    }
+    if (is_in_rect((sfIntRect){1047,267,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.items[3] == '1' && data->player.skill_pts > 0) {
+        data->player.items[5] = '1';
+        data->player.skill_pts -= 1;
+    }
+    if (is_in_rect((sfIntRect){1047,578,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
+    && data->player.items[4] == '1' && data->player.skill_pts > 0) {
+        data->player.items[6] = '1';
+        data->player.skill_pts -= 1;
     }
 }
 
 void skill_tree(data_t *data)
 {
     display_all(data);
+    printf("%s\n", data->player.items);
     analyse_event(data);
 }

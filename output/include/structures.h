@@ -191,6 +191,7 @@ typedef struct player {
     int state;
     int animation;
     int scale_reverse;
+    int skill_pts;
     sfClock *movement_clock;
     node_movement *movement;
     sfClock *movement_anim_clock;
