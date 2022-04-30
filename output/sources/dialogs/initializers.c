@@ -75,6 +75,7 @@ void dialog_init(data_t *data)
     data->player.name = strdup("Link");
     data->id_text_player = data->texture_bank->id;
     data->npcs = create_npc(data->npcs, "Arthur"); // ! supprimer au dessus et cette ligne
+    data->npcs = set_npc_texture(data->npcs, data->texture_bank);
     data->tiles = create_tile(data->tiles);
     data->texture_bank = create_texture(data->texture_bank, "./assets/textures/dialog.png", NULL);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);

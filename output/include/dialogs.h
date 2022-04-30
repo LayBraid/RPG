@@ -21,7 +21,7 @@ void destroy_dialog_frame(data_t *data);
 // initializers.c
 void init_dialog_choice(data_t *data, sfVector2f pos);
 void set_dialog_characters
-    (data_t *data, int id_npc_texture, char is_talking, int id_npc);
+    (data_t *data, char is_talking, int id_npc);
 void dialog_init(data_t *data);
 
 // choice.c
