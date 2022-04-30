@@ -11,30 +11,10 @@
 void init_howtoplay(data_t *data)
 {
     sfFont *font = sfFont_createFromFile("assets/font.ttf");
-    char *move = my_fprintf("To move Link, use the %s\n %s %s %s keys", data->keys->key[data->keys->up], data->keys->key[data->keys->down], data->keys->key[data->keys->left], data->keys->key[data->keys->right]);
-    char *attack = my_fprintf("To attack, use the %s key", data->keys->key[data->keys->attack]);
-    char *interact = my_fprintf("To interact, use the %s key", data->keys->key[data->keys->interact]);
-    char *back = my_fprintf("To quit, use the %s key", data->keys->key[data->keys->back]);
-    char *inventory = my_fprintf("To open the inventory, use the %s key", data->keys->key[data->keys->inventory]);
-    char *pause = my_fprintf("To pause the game, use the %s key", data->keys->key[data->keys->pause]);
-    data->buttons = create_button(data->buttons, move, font);
-    data->buttons = set_button_position(data->buttons, (sfVector2f){50, 185});
-    sfText_setCharacterSize(data->buttons->text, 64);
-    data->buttons = create_button(data->buttons, attack, font);
-    data->buttons = set_button_position(data->buttons, (sfVector2f){0, 200});
-    sfText_setCharacterSize(data->buttons->text, 64);
-    data->buttons = create_button(data->buttons, interact, font);
-    data->buttons = set_button_position(data->buttons, (sfVector2f){0, 215});
-    sfText_setCharacterSize(data->buttons->text, 64);
-    data->buttons = create_button(data->buttons, back, font);
-    data->buttons = set_button_position(data->buttons, (sfVector2f){0, 230});
-    sfText_setCharacterSize(data->buttons->text, 64);
-    data->buttons = create_button(data->buttons, inventory, font);
-    data->buttons = set_button_position(data->buttons, (sfVector2f){0, 245});
-    sfText_setCharacterSize(data->buttons->text, 64);
-    data->buttons = create_button(data->buttons, pause, font);
-    data->buttons = set_button_position(data->buttons, (sfVector2f){0, 260});
-    sfText_setCharacterSize(data->buttons->text, 64);
+    char *commands = my_fprintf("To move Link, use the\n%s %s %s %s keys\n\nTo attack, use the %s key\n\nTo interact, use the %s key\n\nTo quit, use the %s key\n\nTo open the inventory, use the %s key\n\nTo pause the game, use the %s key", data->keys->key[data->keys->up], data->keys->key[data->keys->down], data->keys->key[data->keys->left], data->keys->key[data->keys->right], data->keys->key[data->keys->attack], data->keys->key[data->keys->interact], data->keys->key[data->keys->back], data->keys->key[data->keys->inventory], data->keys->key[data->keys->pause]);
+    data->buttons = create_button(data->buttons, commands, font);
+    data->buttons = set_button_position(data->buttons, (sfVector2f){510, 260});
+    sfText_setCharacterSize(data->buttons->text, 45);
     data->texture_bank = create_texture(data->texture_bank,
     "assets/game/board.png", &(sfIntRect){0, 0, 1920, 1080});
     data->tiles = create_tile(data->tiles);

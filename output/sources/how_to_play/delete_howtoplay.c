@@ -10,6 +10,6 @@
 void delete_howtoplay(data_t *data)
 {
     data->tiles = delete_all_tiles(data->tiles);
-    data->texture_bank = delete_all_textures(data->texture_bank);
+    data->buttons = delete_all_buttons(data->buttons);
     data->loading_state = 18;
 }
