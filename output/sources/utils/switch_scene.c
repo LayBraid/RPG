@@ -19,7 +19,7 @@ void switch_scene(data_t *data)
     switch (data->video.ui) {
         case (0): intro_scene(data);
             break;
-        case (1): dialog_example(data);
+        case (1): dialog_example(data, 1);
             break;
         case (2): new_game_scene(data);
             break;
