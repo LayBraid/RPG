@@ -20,6 +20,8 @@ void redirection(data_t *data)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
     if (pos.y == 200) {
+        data->tiles = delete_all_tiles(data->tiles);
+        data->buttons = delete_all_buttons(data->buttons);
         data->video.ui = 2;
     }
     if (pos.y == 300) {
@@ -49,7 +51,9 @@ static void analyse_key(data_t *data)
                 break;
         case sfKeySpace: redirection(data);
             break;
-        case sfKeyEscape: data->video.ui = 2;
+        case sfKeyEscape: data->tiles = delete_all_tiles(data->tiles);
+            data->buttons = delete_all_buttons(data->buttons);
+            data->video.ui = 2;
             break;
         default: break;
     }
