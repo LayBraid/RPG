@@ -38,6 +38,12 @@ void init_music(data_t *data)
     sfMusic_play(data->musics->music);
 }
 
+void fill_items(data_t *data)
+{
+    for (int i = 0 ; i < 7 ; i++)
+        data->player.items[i] = '0';
+}
+
 //TODO Resize function "data_create"
 
 void data_create(data_t *data)
@@ -45,7 +51,9 @@ void data_create(data_t *data)
     data->video.ui = 32;
     data->player.depth = 0;
     data->player.hp_max = 10;
-    data->player.items = "1";
+    data->player.items = malloc(sizeof(char) * 8);
+    fill_items(data);
+    data->player.skill_pts = 1;
     get_items(data);
     data->player.current_hp = 10;
     data->player.inventory = NULL;

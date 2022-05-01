@@ -9,6 +9,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/display/*.c) \
 	  $(wildcard sources/structs/*.c) \
 	  $(wildcard sources/load/*.c) \
+	  $(wildcard sources/skill_tree/*.c) \
 	  $(wildcard sources/utils/*.c) \
 	  $(wildcard sources/inventory/*.c) \
 	  $(wildcard sources/my_event/*.c) \

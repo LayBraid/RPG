@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "my_event.h": "c",
+        "utils.h": "c",
+        "structures.h": "c"
+    }
+}

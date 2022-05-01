@@ -8,8 +8,6 @@
 #include "player.h"
 #include "my_event.h"
 
-//TODO Comment for compilation
-
 static void analyse_key(data_t *data)
 {
     if (data->event.key.code == sfKeyZ)
@@ -28,7 +26,8 @@ static void analyse_key(data_t *data)
     if (data->event.key.code == sfKeyTab) {
         get_items(data);
         call_event(data, "open_inventory");
-    }
+    if (data->event.key.code == sfKeyK)
+        call_event(data, "open skill tree");
 }
 
 static void analyse_released_key(data_t *data)
@@ -48,8 +47,6 @@ static void analyse_event(data_t *data)
                 break;
             case (sfEvtKeyReleased): analyse_released_key(data);
                 break;
-            // case (sfEvtMouseButtonPressed): analyse_mouse(data);
-            //     break;
             default: break;
         }
     }
