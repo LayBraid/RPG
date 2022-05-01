@@ -19,6 +19,8 @@ static void convert_data(data_t *data, char *buffer, int *step)
         (*step) = 1;
     if (my_strcmp(buffer, "['NPC']\n") == 0)
         (*step) = 2;
+    if (my_strcmp(buffer, "['Enemies']\n") == 0)
+        (*step) = 3;
     if (save != (*step))
         return;
     switch ((*step)) {
@@ -27,6 +29,8 @@ static void convert_data(data_t *data, char *buffer, int *step)
         case 1: parsing_profile(data, buffer);
             break;
         case 2: parsing_npc(data, buffer);
+            break;
+        case 3: parse_enemy(data, buffer);
             break;
         default:
             break;

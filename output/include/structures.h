@@ -175,11 +175,13 @@ typedef struct enemy_struct {
     char *name;
     int type;
     int depth;
-    int hp;
+    float hp;
+    float max_hp;
     sfClock *movement_clock;
     node_movement *movement;
     sfRectangleShape *rectangle;
     sfVector2f position;
+    struct enemy_struct *next;
 } enemy_t;
 
 typedef struct player {
@@ -307,6 +309,7 @@ struct data {
     int **positions;
     int x_pile;
     int y_pile;
+    enemy_t *enemies;
 };
 
 struct editor_data {

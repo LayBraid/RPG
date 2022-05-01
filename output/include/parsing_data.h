@@ -22,4 +22,6 @@ void extract_rewards(quest_t *quest, char *buffer);
 
 void parsing_npc(data_t *data, char *buffer);
 
+void parse_enemy(data_t *data, char *buffer);
+
 #endif
