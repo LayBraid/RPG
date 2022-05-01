@@ -6,24 +6,24 @@
 */
 
 #ifndef STRUCTURES_H_
-    #define STRUCTURES_H_
+#define STRUCTURES_H_
 
-    #include <SFML/Graphics.h>
-    #include <SFML/Window.h>
-    #include <SFML/Audio.h>
-    #include <SFML/Config.h>
-    #include <SFML/System.h>
-    #include <SFML/OpenGL.h>
+#include <SFML/Graphics.h>
+#include <SFML/Window.h>
+#include <SFML/Audio.h>
+#include <SFML/Config.h>
+#include <SFML/System.h>
+#include <SFML/OpenGL.h>
 
 //TODO Reformat imports
 
-    #include <stdlib.h>
-    #include <unistd.h>
-    #include <stdio.h>
-    #include <fcntl.h>
-    #include <string.h>
-    #include <math.h>
-    #include <sys/stat.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <string.h>
+#include <math.h>
+#include <sys/stat.h>
 
 typedef struct data data_t;
 typedef struct editor_data editor_t;
@@ -190,6 +190,7 @@ typedef struct player {
     int current_hp;
     int state;
     int animation;
+    int scale_reverse;
     sfClock *movement_clock;
     node_movement *movement;
     sfClock *movement_anim_clock;
@@ -268,6 +269,11 @@ typedef struct keys_s {
     char **key;
 }keys_t;
 
+typedef struct interact_s {
+    int status;
+    int npc_id;
+} interact_t;
+
 struct data {
     video_t video;
     settings_t *settings;
@@ -295,6 +301,8 @@ struct data {
     node_rectangle *map;
     node_texture *textures;
     sfTexture *world;
+    sfTexture *npc;
+    interact_t interact;
     int **collisions;
     int **positions;
     int x_pile;
@@ -374,6 +382,10 @@ npc_t *set_npc_current_hp(npc_t *node, int value);
 npc_t *set_npc_to_max_hp(npc_t *node);
 npc_t *npc_set_event(npc_t *node, char *event);
 npc_t *npc_set_map(npc_t *node, int value);
+
+void npc_set_size_rectangle(npc_t *node, sfVector2f size);
+void npc_set_rectangle_texture(npc_t *node, sfTexture *texture);
+void npc_set_rectangle_texture_rect(npc_t *node, sfIntRect rect);
 
 // button.c
 button_t *create_button(button_t *start, char *string, sfFont *font);

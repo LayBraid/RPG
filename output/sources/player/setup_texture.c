@@ -11,7 +11,8 @@
 void setup_texture_player(data_t *data)
 {
     data->player.animation = 0;
-    data->player.state = NOTHING;
+    data->player.scale_reverse = 0;
+    data->player.state = IDLE_DOWN;
     data->player.movement = NULL;
     data->player.movement_anim = NULL;
     data->x_pile = 0;
@@ -22,6 +23,6 @@ void setup_texture_player(data_t *data)
     sfRectangleShape_setTextureRect(data->player.rectangle,
     get_rect_player(data->player.state, data->player.animation));
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
-    {120, 1500 - 26 - 135});
-    data->positions[99 - 9][8] = PLAYER;
+    {120, 1500 - 26 - 135 + 750});
+    data->positions[149 - 9][8] = PLAYER;
 }

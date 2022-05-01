@@ -38,6 +38,12 @@ sfVector2i get_position(data_t *data, int entity, int index);
 
 int can_move(int block);
 
-int my_range(sfVector2i v1, sfVector2i v2, double range);
+double my_range(sfVector2f v1, sfVector2f v2);
+
+sfVector2f get_size_type(int type);
+
+IntR get_rect_type(int type);
+
+npc_t *get_npc_by_id(data_t *data, int id);
 
 #endif /* !UTILS_H_ */

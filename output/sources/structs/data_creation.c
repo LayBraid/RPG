@@ -15,6 +15,7 @@
 #include "keybind.h"
 
 const char *WORLD_TILES = "assets/game/Overworld tiles.png";
+const char *NPC_TILES = "assets/game/npc.png";
 
 data_t *data_delete(data_t *data)
 {
@@ -32,7 +33,7 @@ data_t *data_delete(data_t *data)
 
 void init_music(data_t *data)
 {
-    create_music(data, "./assets/Sound/ladja.ogg", 1);
+    create_music(data, "./assets/sound/ladja.ogg", 1);
     sfMusic_play(data->musics->music);
 }
 
@@ -59,11 +60,14 @@ void data_create(data_t *data)
     data->buttons = NULL;
     data->npcs = NULL;
     data->tiles = NULL;
+    data->interact.status = 0;
+    data->interact.npc_id = -1;
     data->delta = 1.0f;
     data->loading_state = 0;
     data->my_event = NULL;
     data->musics = NULL;
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
+    data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
     // init_music(data);
     data->quest = NULL;
     parsing_data(data);
@@ -77,7 +81,7 @@ void data_create(data_t *data)
     sfView_zoom(data->mapping, 0.33f); //TODO Create a reverse function for zoom
     sfView_setCenter(data->main, (sfVector2f) {1920.0f / 2, 1080.0f / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
-    sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243});
+    sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243 + 750});
     data->textures = init_textures();
     data->map = NULL;
     get_map(data);

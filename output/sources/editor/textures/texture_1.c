@@ -1434,7 +1434,7 @@ void set_caves_entry40_5(sfTexture *texture, node_rectangle *rectangle)
 void set_caves_entry41_0(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {756,605,8,8};
-    rectangle->type = 376;
+    rectangle->type = 464;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1442,7 +1442,7 @@ void set_caves_entry41_0(sfTexture *texture, node_rectangle *rectangle)
 void set_caves_entry41_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {764,605,8,8};
-    rectangle->type = 377;
+    rectangle->type = 465;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1450,7 +1450,7 @@ void set_caves_entry41_1(sfTexture *texture, node_rectangle *rectangle)
 void set_caves_entry41_2(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {772,605,8,8};
-    rectangle->type = 378;
+    rectangle->type = 466;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -1458,7 +1458,7 @@ void set_caves_entry41_2(sfTexture *texture, node_rectangle *rectangle)
 void set_caves_entry41_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {780,605,8,8};
-    rectangle->type = 379;
+    rectangle->type = 467;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2115,6 +2115,390 @@ void set_enter_cave44_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {1049,777,8,8};
     rectangle->type = 463;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {109,850,8,8};
+    rectangle->type = 468;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,850,8,8};
+    rectangle->type = 469;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {125,850,8,8};
+    rectangle->type = 470;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {133,850,8,8};
+    rectangle->type = 471;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {141,850,8,8};
+    rectangle->type = 472;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {149,850,8,8};
+    rectangle->type = 473;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {157,850,8,8};
+    rectangle->type = 474;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top0_7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {165,850,8,8};
+    rectangle->type = 475;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {109,858,8,8};
+    rectangle->type = 470;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,858,8,8};
+    rectangle->type = 471;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {125,858,8,8};
+    rectangle->type = 472;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {133,858,8,8};
+    rectangle->type = 473;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {141,858,8,8};
+    rectangle->type = 474;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {149,858,8,8};
+    rectangle->type = 475;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {157,858,8,8};
+    rectangle->type = 476;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house_top1_7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {165,858,8,8};
+    rectangle->type = 477;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {109,882,8,8};
+    rectangle->type = 478;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,882,8,8};
+    rectangle->type = 479;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {125,882,8,8};
+    rectangle->type = 480;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {133,882,8,8};
+    rectangle->type = 481;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {141,882,8,8};
+    rectangle->type = 482;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {149,882,8,8};
+    rectangle->type = 483;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {157,882,8,8};
+    rectangle->type = 484;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house0_7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {165,882,8,8};
+    rectangle->type = 485;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {109,890,8,8};
+    rectangle->type = 482;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,890,8,8};
+    rectangle->type = 483;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {125,890,8,8};
+    rectangle->type = 484;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {133,890,8,8};
+    rectangle->type = 485;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {141,890,8,8};
+    rectangle->type = 486;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {149,890,8,8};
+    rectangle->type = 487;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {157,890,8,8};
+    rectangle->type = 488;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house1_7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {165,890,8,8};
+    rectangle->type = 489;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {109,898,8,8};
+    rectangle->type = 486;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,898,8,8};
+    rectangle->type = 487;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {125,898,8,8};
+    rectangle->type = 488;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {133,898,8,8};
+    rectangle->type = 489;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {141,898,8,8};
+    rectangle->type = 490;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {149,898,8,8};
+    rectangle->type = 491;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {157,898,8,8};
+    rectangle->type = 492;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house2_7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {165,898,8,8};
+    rectangle->type = 493;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_0(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {109,906,8,8};
+    rectangle->type = 490;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,906,8,8};
+    rectangle->type = 491;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {125,906,8,8};
+    rectangle->type = 492;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {133,906,8,8};
+    rectangle->type = 493;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {141,906,8,8};
+    rectangle->type = 494;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {149,906,8,8};
+    rectangle->type = 495;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {157,906,8,8};
+    rectangle->type = 496;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_village_house3_7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {165,906,8,8};
+    rectangle->type = 497;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
