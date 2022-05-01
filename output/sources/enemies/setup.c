@@ -6,6 +6,7 @@
 */
 
 #include "enemies.h"
+#include "utils.h"
 
 static int get_max_enemy(enemy_t **node)
 {
@@ -21,7 +22,17 @@ static int get_max_enemy(enemy_t **node)
     return count;
 }
 
-void any_enemy(enemy_t **node, enemy_t *new)
+static void update_rectangle(enemy_t *node, sfTexture *texture)
+{
+    node->rectangle = sfRectangleShape_create();
+    sfRectangleShape_setSize(node->rectangle, get_size_enemies(node->type));
+    sfRectangleShape_setTexture(node->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(node->rectangle,
+    get_rect_type_enemies(node->type));
+    sfRectangleShape_setPosition(node->rectangle, node->position);
+}
+
+void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
 {
     enemy_t *tmp = (*node);
     enemy_t *dup = malloc(sizeof(enemy_t));
@@ -35,13 +46,14 @@ void any_enemy(enemy_t **node, enemy_t *new)
     dup->hp = new->hp;
     dup->max_hp = new->max_hp;
     dup->position = new->position;
+    update_rectangle(dup, texture);
     dup->movement_clock = sfClock_create();
     dup->movement = NULL;
     dup->next = (*node);
     tmp->next = dup;
 }
 
-void first_enemy(enemy_t **node, enemy_t *new)
+void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
 {
     (*node) = malloc(sizeof(enemy_t));
     (*node)->id = 0;
@@ -50,6 +62,7 @@ void first_enemy(enemy_t **node, enemy_t *new)
     (*node)->depth = new->depth;
     (*node)->hp = new->hp;
     (*node)->position = new->position;
+    update_rectangle((*node), texture);
     (*node)->max_hp = new->max_hp;
     (*node)->movement_clock = sfClock_create();
     (*node)->movement = NULL;

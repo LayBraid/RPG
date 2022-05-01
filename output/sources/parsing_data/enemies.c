@@ -10,6 +10,14 @@
 #include "my.h"
 #include "enemies.h"
 
+static void parsing_enemy(data_t *data, enemy_t *enemy)
+{
+    if (data->enemies == NULL)
+        first_enemy(&data->enemies, enemy, data->enemies_texture);
+    else
+        any_enemy(&data->enemies, enemy, data->enemies_texture);
+}
+
 void parse_enemy(data_t *data, char *buffer)
 {
     enemy_t *enemy = malloc(sizeof(enemy_t));
@@ -25,11 +33,8 @@ void parse_enemy(data_t *data, char *buffer)
     enemy->max_hp = enemy->max_hp;
     pos.x = (float) my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, '[', 1) + 1,get_it_char(buffer, ',', 4) - 1));
-    pos.x = (float) my_atoi(extract_between_limits(buffer,
+    pos.y = (float) my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, ',', 4) + 1,get_it_char(buffer, ']', 0) - 1));
     enemy->position = pos;
-    if (data->enemies == NULL)
-        first_enemy(&data->enemies, enemy);
-    else
-        any_enemy(&data->enemies, enemy);
+    parsing_enemy(data, enemy);
 }

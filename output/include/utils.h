@@ -48,4 +48,8 @@ npc_t *get_npc_by_id(data_t *data, int id);
 
 int is_in_rect(sfIntRect rect, int x, int y);
 
+IntR get_rect_type_enemies(int type);
+
+sfVector2f get_size_enemies(int type);
+
 #endif /* !UTILS_H_ */

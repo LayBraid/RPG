@@ -10,8 +10,8 @@
 
     #include "structures.h"
 
-void any_enemy(enemy_t **node, enemy_t *new);
+void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture);
 
-void first_enemy(enemy_t **node, enemy_t *new);
+void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture);
 
 #endif

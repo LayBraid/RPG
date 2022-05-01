@@ -15,8 +15,8 @@ void create_music(data_t *data, const char *path, int loop)
     new->loop = loop;
     if (new->loop == 1)
         sfMusic_setLoop(new->music, sfTrue);
-    new->volume = 50;
-    sfMusic_setVolume(new->music, 50);
+    new->volume = 5;
+    sfMusic_setVolume(new->music, 5);
     new->is_playing = 0;
     new->next = data->musics;
     data->musics = new;

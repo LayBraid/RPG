@@ -19,8 +19,10 @@ void display_all(data_t *data)
         sfRenderWindow_setView(data->video.window, data->mapping);
         display_rectangles_map(data);
         display_player_depth(data->player, data->video, data->player.depth);
-        for (unsigned char depth = 0; depth < 10; depth++)
+        for (unsigned char depth = 0; depth < 10; depth++) {
             display_npc_depth(data->npcs, data->video, depth);
+            display_enemies_depth(data->enemies, data->video, depth);
+        }
         if (data->interact.status) {
             sfRenderWindow_setView(data->video.window, data->main);
             my_text(data, (sfVector2f) {680, 980}, 4, "press R to interact");
