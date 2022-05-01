@@ -27,6 +27,8 @@ static void analyse_key(data_t *data)
         call_event(data, "interact_npc");
     if (data->event.key.code == sfKeyTab)
         call_event(data, "open_inventory");
+    if (data->event.key.code == sfKeyEscape)
+        call_event(data, "pause_event");
 }
 
 static void analyse_released_key(data_t *data)

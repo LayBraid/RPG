@@ -309,6 +309,7 @@ struct data {
     int **positions;
     int x_pile;
     int y_pile;
+    char *settings_state;
     enemy_t *enemies;
 };
 

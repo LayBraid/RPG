@@ -89,4 +89,6 @@ void data_create(data_t *data)
     setup_texture_player(data);
     get_items(data);
     assign_keys(data);
+    data->settings_state = malloc(sizeof(char) * 4);
+    data->settings_state = "MENU";
 }
