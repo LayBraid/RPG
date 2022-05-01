@@ -315,6 +315,7 @@ struct data {
     node_texture *textures;
     sfTexture *world;
     sfTexture *npc;
+    sfTexture *enemies_texture;
     interact_t interact;
     int **collisions;
     int **positions;

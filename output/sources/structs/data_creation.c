@@ -16,6 +16,7 @@
 
 const char *WORLD_TILES = "assets/game/Overworld tiles.png";
 const char *NPC_TILES = "assets/game/npc.png";
+const char *ENEMIES_TILES = "assets/game/enemies.png";
 
 data_t *data_delete(data_t *data)
 {
@@ -77,6 +78,7 @@ void data_create(data_t *data)
     data->musics = NULL;
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
+    data->enemies_texture = sfTexture_createFromFile(ENEMIES_TILES, NULL);
     // init_music(data);
     data->quest = NULL;
     parsing_data(data);
