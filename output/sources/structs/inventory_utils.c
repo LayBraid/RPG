@@ -47,9 +47,10 @@ void create_items(data_t *data, int idx)
 
 void get_items(data_t *data)
 {
-    for (int i = 0 ; data->player.items[i] ; i++)
+    for (int i = 0 ; data->player.items[i] ; i++) {
         if (data->player.items[i] == '1')
             create_items(data, i);
+    }
 }
 
 void display_items(data_t *data)
