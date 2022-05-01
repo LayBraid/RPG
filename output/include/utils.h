@@ -52,4 +52,6 @@ IntR get_rect_type_enemies(int type);
 
 sfVector2f get_size_enemies(int type);
 
+enemy_t *get_enemy_by_id(data_t *data, int id);
+
 #endif /* !UTILS_H_ */

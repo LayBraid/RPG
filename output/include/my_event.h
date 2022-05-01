@@ -52,4 +52,8 @@ void enemies_aggro(data_t *data);
 
 void move_enemy_aggro(data_t *data);
 
+void enemy_move(data_t *data);
+
+void enemy_attack(data_t *data);
+
 #endif
