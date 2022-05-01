@@ -383,7 +383,7 @@ npc_t *delete_npc(npc_t *node);
 npc_t *delete_all_npcs(npc_t *start);
 
 // music.c
-void create_music(data_t *data, const char *path, int loop);
+void add_music(data_t *data, char *path, int loop);
 void intro_music(data_t *data);
 
 // npc_utils.c

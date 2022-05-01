@@ -9,7 +9,9 @@
 
 void init_intro(data_t *data)
 {
-    intro_music(data);
+    // intro_music(data);
+    music_t *tmp = data->musics;
+    sfMusic_play(tmp->music);
     data->texture_bank = create_texture(data->texture_bank,
     "assets/intro_menu/metro.png", &(sfIntRect){300, 410, 180, 100});
     data->tiles = create_tile(data->tiles);
