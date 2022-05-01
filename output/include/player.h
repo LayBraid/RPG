@@ -29,6 +29,4 @@ void clock_move_player(data_t *data);
 
 void update_anim_move_player(data_t *data);
 
-void inventory_loop(data_t *data);
-
 #endif

@@ -26,6 +26,7 @@ static void analyse_key(data_t *data)
     if (data->event.key.code == sfKeyTab) {
         get_items(data);
         call_event(data, "open_inventory");
+    }
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
 }

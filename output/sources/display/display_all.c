@@ -5,7 +5,6 @@
 ** display_all
 */
 
-#include "my_rpg.h"
 #include "map.h"
 #include "utils.h"
 

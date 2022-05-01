@@ -41,7 +41,7 @@ void switch_scene(data_t *data)
             break;
         case (9): howtoplay_scene(data);
             break;
-        case (8): skill_tree(data);
+        case (10): skill_tree(data);
             break;
         case (32): loading(data);
             break;

@@ -13,11 +13,11 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/utils/*.c) \
 	  $(wildcard sources/inventory/*.c) \
 	  $(wildcard sources/my_event/*.c) \
-	  $(wildcard sources/inventory/*.c) \
 	  $(wildcard sources/my_event/functions/views/*.c) \
 	  $(wildcard sources/my_event/functions/player/*.c) \
 	  $(wildcard sources/my_event/functions/coins/*.c) \
 	  $(wildcard sources/my_event/functions/menu/*.c) \
+	  $(wildcard sources/my_event/functions/inventory/*.c) \
 	  $(wildcard sources/parsing_data/*.c) \
 	  $(wildcard sources/quests/*.c) \
 	  $(wildcard sources/intro/*.c) \

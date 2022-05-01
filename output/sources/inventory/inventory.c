@@ -5,19 +5,8 @@
 ** inventory
 */
 
-#include "my_rpg.h"
+#include "inventory.h"
 #include "utils.h"
-
-static void analyse_event(data_t *data)
-{
-    while (sfRenderWindow_pollEvent(data->video.window, &data->event)) {
-        switch (data->event.type) {
-            case (sfEvtClosed): sfRenderWindow_close(data->video.window);
-                break;
-            case(sfEvtMouseButtonPressed): get_inventory_mouse_click(data);
-        }
-    }
-}
 
 void get_inventory_mouse_click(data_t *data)
 {
@@ -34,9 +23,14 @@ void get_inventory_mouse_click(data_t *data)
     }
 }
 
-void inventory_loop(data_t *data)
+void analyse_event_inventory(data_t *data)
 {
-    data->video.ui = 6;
-    display_all(data);
-    analyse_event(data);
+    while (sfRenderWindow_pollEvent(data->video.window, &data->event)) {
+        switch (data->event.type) {
+            case (sfEvtClosed): sfRenderWindow_close(data->video.window);
+                break;
+            case (sfEvtMouseButtonPressed): get_inventory_mouse_click(data);
+                break;
+        }
+    }
 }

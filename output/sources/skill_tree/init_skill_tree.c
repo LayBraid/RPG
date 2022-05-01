@@ -22,5 +22,5 @@ void init_skill_tree(data_t *data)
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55, 6.32});
     data->tiles = set_tile_position(data->tiles, (sfVector2f){0, 0});
-    data->video.ui = 8;
+    data->video.ui = 10;
 }
