@@ -285,6 +285,8 @@ typedef struct keys_s {
 typedef struct interact_s {
     int status;
     int npc_id;
+    int enemy_id;
+    double enemy_distance;
 } interact_t;
 
 struct data {

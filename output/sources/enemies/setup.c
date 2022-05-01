@@ -61,6 +61,7 @@ void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
     (*node)->type = new->type;
     (*node)->depth = new->depth;
     (*node)->hp = new->hp;
+    (*node)->max_hp = new->max_hp;
     (*node)->position = new->position;
     update_rectangle((*node), texture);
     (*node)->max_hp = new->max_hp;

@@ -28,3 +28,27 @@ void check_range(data_t *data)
     data->interact.status = 0;
     data->interact.npc_id = -1;
 }
+
+void enemies_aggro(data_t *data)
+{
+    enemy_t *tmp = data->enemies;
+    double range;
+    double save = 10000.0;
+
+    while (tmp->id < tmp->next->id) {
+        range = my_range(data->player.position, tmp->position);
+        if (range <= 40.0 && range < save) {
+            data->interact.enemy_id = tmp->id;
+            call_event(data, "move_enemy_aggro");
+            save = range;
+        }
+        tmp = tmp->next;
+    }
+    range = my_range(data->player.position, tmp->position);
+    if (range <= 40.0 && range < save) {
+        data->interact.enemy_id = tmp->id;
+        save = range;
+    }
+    if (save <= 40.0)
+        return;
+}

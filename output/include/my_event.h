@@ -48,4 +48,6 @@ void stop_interact_npc(data_t *data);
 
 void init_skill_tree(data_t *data);
 
+void enemies_aggro(data_t *data);
+
 #endif
