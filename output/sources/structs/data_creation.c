@@ -35,8 +35,15 @@ data_t *data_delete(data_t *data)
 
 void init_music(data_t *data)
 {
-    create_music(data, "./assets/sound/ladja.ogg", 1);
-    sfMusic_play(data->musics->music);
+    add_music(data, "assets/sound/menu.ogg", 1);
+    add_music(data, "assets/sound/aventure.ogg", 1);
+    add_music(data, "assets/sound/village.ogg", 1);
+    add_music(data, "assets/sound/foret.ogg", 1);
+    add_music(data, "assets/sound/combat.ogg", 1);
+    add_music(data, "assets/sound/montagnes.ogg", 1);
+    add_music(data, "assets/sound/cavedj1.ogg", 1);
+    add_music(data, "assets/sound/djfinal.ogg", 1);
+    add_music(data, "assets/sound/finalboss.ogg", 1);
 }
 
 void fill_items(data_t *data)
@@ -81,7 +88,7 @@ void data_create(data_t *data)
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
     data->enemies_texture = sfTexture_createFromFile(ENEMIES_TILES, NULL);
-    // init_music(data);
+    init_music(data);
     data->quest = NULL;
     parsing_data(data);
     initialize_events(data);
