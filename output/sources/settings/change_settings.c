@@ -16,9 +16,9 @@ void goright(data_t *data)
     while (tile->id != 1)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
-    if (pos.y == 200)
+    if (pos.y == 210)
         change_fpsr(data);
-    if (pos.y == 300)
+    if (pos.y == 320)
         change_volumer(data);
 }
 
@@ -30,9 +30,9 @@ void goleft(data_t *data)
     while (tile->id != 1)
         tile = tile->next;
     pos = sfSprite_getPosition(tile->sprite);
-    if (pos.y == 200)
+    if (pos.y == 210)
         change_fpsl(data);
-    if (pos.y == 300)
+    if (pos.y == 320)
         change_volumel(data);
 }
 
