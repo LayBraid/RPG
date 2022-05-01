@@ -50,4 +50,6 @@ void init_skill_tree(data_t *data);
 
 void enemies_aggro(data_t *data);
 
+void move_enemy_aggro(data_t *data);
+
 #endif

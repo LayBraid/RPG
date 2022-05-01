@@ -325,6 +325,7 @@ struct data {
     int y_pile;
     char *settings_state;
     enemy_t *enemies;
+    sfClock *enemies_aggro;
 };
 
 struct editor_data {

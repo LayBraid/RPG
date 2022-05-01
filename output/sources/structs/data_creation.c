@@ -64,6 +64,7 @@ void data_create(data_t *data)
     data->player.position = (sfVector2f){0, 0};
     data->player.movement_clock = sfClock_create();
     data->player.movement_anim_clock = sfClock_create();
+    data->enemies_aggro = sfClock_create();
     data->texture_bank = NULL;
     data->font = NULL; // TODO add font
     data->texts = NULL;

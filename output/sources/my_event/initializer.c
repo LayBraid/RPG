@@ -25,4 +25,5 @@ void initialize_events(data_t *data)
     add_event(&data->my_event, "stop_interact_npc", stop_interact_npc);
     add_event(&data->my_event, "open_inventory", inventory_loop);
     add_event(&data->my_event, "open skill tree", init_skill_tree);
+    add_event(&data->my_event, "move_enemy_aggro", move_enemy_aggro);
 }

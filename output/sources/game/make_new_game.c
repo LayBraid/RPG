@@ -7,6 +7,7 @@
 
 #include "player.h"
 #include "my_event.h"
+#include "enemies.h"
 
 static void analyse_key(data_t *data)
 {
@@ -58,4 +59,5 @@ void new_game_scene(data_t *data)
     display_all(data);
     analyse_event(data);
     clock_move_player(data);
+    clock_enemies_aggro(data);
 }
