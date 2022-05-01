@@ -19,6 +19,7 @@ const char *NPC_TILES = "assets/game/npc.png";
 
 data_t *data_delete(data_t *data)
 {
+    // data->player.inventory = delete_inventory(data->player.inventory);
     sfClock_destroy(data->player.movement_clock);
     sfClock_destroy(data->player.movement_anim_clock);
     data->texture_bank = delete_all_textures(data->texture_bank);

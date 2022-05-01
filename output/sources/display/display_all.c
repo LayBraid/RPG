@@ -28,6 +28,8 @@ void display_all(data_t *data)
         }
 
     }
-    if (data->video.ui == 6)
+    if (data->video.ui == 6) {
+        sfRenderWindow_setView(data->video.window, data->main);
         display_items(data);
+    }
 }

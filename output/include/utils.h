@@ -46,4 +46,10 @@ IntR get_rect_type(int type);
 
 npc_t *get_npc_by_id(data_t *data, int id);
 
+int is_in_rect(sfIntRect rect, int x, int y);
+
+void get_inventory_mouse_click(data_t *data);
+
+void inventory_loop(data_t *data);
+
 #endif /* !UTILS_H_ */

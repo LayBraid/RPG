@@ -8,6 +8,8 @@
 #include "player.h"
 #include "my_event.h"
 
+//TODO Comment for compilation
+
 static void analyse_key(data_t *data)
 {
     if (data->event.key.code == sfKeyZ)
@@ -23,12 +25,10 @@ static void analyse_key(data_t *data)
         call_event(data, "player_walk_keys");
     else
         call_event(data, "player_stop_walk_keys");
-    if (data->event.key.code == sfKeyR)
-        call_event(data, "interact_npc");
-    if (data->event.key.code == sfKeyTab)
+    if (data->event.key.code == sfKeyTab) {
+        get_items(data);
         call_event(data, "open_inventory");
-    if (data->event.key.code == sfKeyEscape)
-        call_event(data, "pause_event");
+    }
 }
 
 static void analyse_released_key(data_t *data)
@@ -48,6 +48,8 @@ static void analyse_event(data_t *data)
                 break;
             case (sfEvtKeyReleased): analyse_released_key(data);
                 break;
+            // case (sfEvtMouseButtonPressed): analyse_mouse(data);
+            //     break;
             default: break;
         }
     }

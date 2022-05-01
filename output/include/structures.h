@@ -6,24 +6,24 @@
 */
 
 #ifndef STRUCTURES_H_
-#define STRUCTURES_H_
+    #define STRUCTURES_H_
 
-#include <SFML/Graphics.h>
-#include <SFML/Window.h>
-#include <SFML/Audio.h>
-#include <SFML/Config.h>
-#include <SFML/System.h>
-#include <SFML/OpenGL.h>
+    #include <SFML/Graphics.h>
+    #include <SFML/Window.h>
+    #include <SFML/Audio.h>
+    #include <SFML/Config.h>
+    #include <SFML/System.h>
+    #include <SFML/OpenGL.h>
 
 //TODO Reformat imports
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
-#include <string.h>
-#include <math.h>
-#include <sys/stat.h>
+    #include <stdlib.h>
+    #include <unistd.h>
+    #include <stdio.h>
+    #include <fcntl.h>
+    #include <string.h>
+    #include <math.h>
+    #include <sys/stat.h>
 
 typedef struct data data_t;
 typedef struct editor_data editor_t;
@@ -132,6 +132,15 @@ typedef struct texture {
 } texture_t;
 
 typedef struct inventory {
+    sfTexture *texture_item;
+    sfTexture *texture_rect;
+    sfSprite *sprite_item;
+    sfSprite *sprite_rect;
+    sfVector2f position_item;
+    sfVector2f position_rect;
+    sfIntRect rect_item;
+    sfIntRect rect_rect;
+    int item;
     sfTexture *texture;
     sfSprite *sprite;
     sfVector2f position;
@@ -190,6 +199,7 @@ typedef struct player {
     unsigned char depth;
     int hp_max;
     int current_hp;
+    int equiped;
     int state;
     int animation;
     int scale_reverse;
@@ -285,8 +295,8 @@ struct data {
     sfFont *font;
     text_t *texts;
     button_t *buttons;
-    inventory_t *items;
     npc_t *npcs;
+    inventory_t *items;
     tile_t *tiles;
     sfEvent event;
     music_t *musics;
@@ -371,6 +381,7 @@ npc_t *delete_all_npcs(npc_t *start);
 
 // music.c
 void create_music(data_t *data, const char *path, int loop);
+void intro_music(data_t *data);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
@@ -415,6 +426,15 @@ texture_t *delete_all_textures(texture_t *start);
 
 // texture_utils.c
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
+
+// // inventory.c
+// inventory_t *create_inventory(inventory_t *start, char *name);
+// inventory_t *delete_inventory(inventory_t *node);
+// inventory_t *delete_whole_inventory(inventory_t *start);
+
+// // inventory_utils.c
+// inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
+// inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 
 // inventory_utils.c
 void get_items(data_t *data);
