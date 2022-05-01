@@ -33,22 +33,20 @@ void enemies_aggro(data_t *data)
 {
     enemy_t *tmp = data->enemies;
     double range;
-    double save = 10000.0;
 
     while (tmp->id < tmp->next->id) {
         range = my_range(data->player.position, tmp->position);
-        if (range <= 40.0 && range < save) {
+        if (range <= tmp->range) {
             data->interact.enemy_id = tmp->id;
+            data->interact.enemy_distance = range;
             call_event(data, "move_enemy_aggro");
-            save = range;
         }
         tmp = tmp->next;
     }
     range = my_range(data->player.position, tmp->position);
-    if (range <= 40.0 && range < save) {
+    if (range <= tmp->range) {
         data->interact.enemy_id = tmp->id;
-        save = range;
+        data->interact.enemy_distance = range;
+        call_event(data, "move_enemy_aggro");
     }
-    if (save <= 40.0)
-        return;
 }

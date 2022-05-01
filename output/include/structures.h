@@ -184,6 +184,7 @@ typedef struct enemy_struct {
     char *name;
     int type;
     int depth;
+    int range;
     float hp;
     float max_hp;
     sfClock *movement_clock;
@@ -267,7 +268,7 @@ typedef struct node_letter_struct {
 typedef struct settings_s {
     int fps;
     int volume;
-}settings_t;
+} settings_t;
 
 typedef struct keys_s {
     int up;
@@ -280,7 +281,7 @@ typedef struct keys_s {
     int inventory;
     int pause;
     char **key;
-}keys_t;
+} keys_t;
 
 typedef struct interact_s {
     int status;

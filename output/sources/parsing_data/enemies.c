@@ -30,6 +30,8 @@ void parse_enemy(data_t *data, char *buffer)
     get_it_char(buffer, ',', 1) + 1,get_it_char(buffer, ',', 2) - 1));
     enemy->max_hp = (float) my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, ',', 2) + 1,get_it_char(buffer, ',', 3) - 1));
+    enemy->range = my_atoi(extract_between_limits(buffer,
+    get_it_char(buffer, ',', 3) + 1,get_it_char(buffer, ',', 4) - 1));
     enemy->hp = enemy->max_hp;
     pos.x = (float) my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, '[', 1) + 1,get_it_char(buffer, ',', 4) - 1));
