@@ -50,6 +50,7 @@ void change_key_g(data_t *data)
         case sfKeyRight:
             change_goods(data, sfKeyRight);
             break;
+        default: break;
     }
 }
 

@@ -11,11 +11,6 @@
 #include "my.h"
 #include "keybind.h"
 
-// char * get_word(data_t *data)
-// {
-
-// }
-
 static void drawtext(data_t *data)
 {
     char *up = my_fprintf("                    Up           %s", data->keys->key[data->keys->up]);

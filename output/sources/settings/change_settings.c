@@ -20,8 +20,6 @@ void goright(data_t *data)
         change_fpsr(data);
     if (pos.y == 300)
         change_volumer(data);
-    // if (pos.y == 400)
-    //     keybind(data);
 }
 
 void goleft(data_t *data)
@@ -36,8 +34,6 @@ void goleft(data_t *data)
         change_fpsl(data);
     if (pos.y == 300)
         change_volumel(data);
-    // if (pos.y == 400)
-    //     keybind(data);
 }
 
 void go_downn(data_t *data)
