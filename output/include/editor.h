@@ -577,4 +577,9 @@ void set_mount_entry3_2(sfTexture *texture, node_rectangle *rectangle);
 void set_mount_entry3_3(sfTexture *texture, node_rectangle *rectangle);
 void set_plain(sfTexture *texture, node_rectangle *rectangle);
 void set_snow(sfTexture *texture, node_rectangle *rectangle);
+void set_desert_herbe0_0(sfTexture *texture, node_rectangle *rectangle);
+void set_desert_herbe1_0(sfTexture *texture, node_rectangle *rectangle);
+void set_cac0_0(sfTexture *texture, node_rectangle *rectangle);
+void set_cac1_0(sfTexture *texture, node_rectangle *rectangle);
+void set_cac2_0(sfTexture *texture, node_rectangle *rectangle);
 #endif
