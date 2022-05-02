@@ -339,7 +339,7 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_caves_entry41_2, "caves_entry41_2",466);
     add_next_texture(&texture, set_caves_entry41_3, "caves_entry41_3",467);
     add_next_texture(&texture, set_caves_entry41_4, "caves_entry41_4",380);
-    add_next_texture(&texture, set_caves_entry41_5, "caves_entry41_5",381); 
+    add_next_texture(&texture, set_caves_entry41_5, "caves_entry41_5",381);
     add_next_texture(&texture, set_enter_cave0_0, "enter_cave0_0",382);
     add_next_texture(&texture, set_enter_cave0_1, "enter_cave0_1",383);
     add_next_texture(&texture, set_enter_cave0_2, "enter_cave0_2",384);
@@ -468,6 +468,34 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_village_house3_5, "village_house3_5",495);
     add_next_texture(&texture, set_village_house3_6, "village_house3_6",496);
     add_next_texture(&texture, set_village_house3_7, "village_house3_7",497);
+    add_next_texture(&texture, set_bed, "bed",2000);
+    add_next_texture(&texture, set_bed1, "bed1",2001);
+    add_next_texture(&texture, set_bed2, "bed2",2002);
+    add_next_texture(&texture, set_bed3, "bed3",2003);
+    add_next_texture(&texture, set_bed4, "bed4",2004);
+    add_next_texture(&texture, set_bed5, "bed5",2005);
+    add_next_texture(&texture, set_bed6, "bed6",2006);
+    add_next_texture(&texture, set_bed7, "bed7",2007);
+    add_next_texture(&texture, set_bed8, "bed8",2008);
+    add_next_texture(&texture, set_bed9, "bed9",2009);
+    add_next_texture(&texture, set_bed10, "bed10",2010);
+    add_next_texture(&texture, set_bed11, "bed11",2011);
+    add_next_texture(&texture, set_groundbed, "groundbed",2012);
+    add_next_texture(&texture, set_shelf, "shelf",2013);
+    add_next_texture(&texture, set_shelf2, "shelf2",2014);
+    add_next_texture(&texture, set_shelf3, "shelf3",2015);
+    add_next_texture(&texture, set_shelf4, "shelf4",2016);
+    add_next_texture(&texture, set_shelf5, "shelf5",2017);
+    add_next_texture(&texture, set_shelf6, "shelf6",2018);
+    add_next_texture(&texture, set_shelf7, "shelf7",2019);
+    add_next_texture(&texture, set_shelf8, "shelf8",2020);
+    add_next_texture(&texture, set_shelf9, "shelf9",2021);
+    add_next_texture(&texture, set_shelf10, "shelf10",2022);
+    add_next_texture(&texture, set_shelf11, "shelf11",2023);
+    add_next_texture(&texture, set_shelf12, "shelf12",2024);
+    add_next_texture(&texture, set_shelf13, "shelf13",2025);
+    add_next_texture(&texture, set_stairstop, "stairstop",2026);
+    add_next_texture(&texture, set_stairsdown, "stairsdown",2027);
     return texture;
     }
 
