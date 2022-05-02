@@ -8,6 +8,9 @@
 #ifndef DIALOGS_H_
     #define DIALOGS_H_
 
+// shop.c
+void open_shop(data_t *data, int npc_id);
+
 // dialog_utils.c
 void delete_first_tile(data_t *data);
 
