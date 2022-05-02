@@ -205,6 +205,8 @@ typedef struct player {
     int animation;
     int scale_reverse;
     int skill_pts;
+    int damage_display;
+    sfClock *damage_display_clock;
     sfClock *movement_clock;
     node_movement *movement;
     sfClock *movement_anim_clock;
