@@ -161,6 +161,16 @@ typedef struct node_animation_struct {
     struct node_movement_struct *next;
 } node_animation;
 
+typedef struct attack_effect_s {
+    int id;
+    int type;
+    sfRectangleShape *rectangle;
+    sfVector2f position;
+    sfClock *movement_clock;
+    node_movement *movement;
+    struct attack_effect_s *next;
+} attack_effect_t;
+
 typedef struct npc {
     unsigned int id;
     char *name;
@@ -188,6 +198,7 @@ typedef struct enemy_struct {
     float hp;
     float max_hp;
     int display_life;
+    attack_effect_t *attack_effect;
     sfClock *display_life_clock;
     sfClock *movement_clock;
     node_movement *movement;

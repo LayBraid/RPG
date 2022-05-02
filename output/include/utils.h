@@ -58,4 +58,8 @@ double get_damage(int type);
 
 void display_life_player(player_t *player, video_t video);
 
+sfVector2f get_size_effect(int type);
+
+IntR get_rect_effect(int type);
+
 #endif /* !UTILS_H_ */

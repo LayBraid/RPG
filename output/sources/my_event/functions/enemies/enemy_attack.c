@@ -7,6 +7,7 @@
 
 #include "my_event.h"
 #include "utils.h"
+#include "enemies.h"
 
 void enemy_attack(data_t *data)
 {
@@ -14,8 +15,7 @@ void enemy_attack(data_t *data)
     double damage = get_damage(enemy->type);
     data->player.damage_display = 1;
     sfClock_restart(data->player.damage_display_clock);
-    printf("%d %d\n", data->player.current_hp, data->player.hp_max);
-   printf("%f\n", damage);
+    add_effect_enemy(data, enemy, 0, data->player.position);
     if (data->player.current_hp >= damage)
         data->player.current_hp -= (int) damage;
     else {
