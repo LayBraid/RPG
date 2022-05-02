@@ -39,6 +39,7 @@ void enemies_aggro(data_t *data)
         if (range <= tmp->range) {
             data->interact.enemy_id = tmp->id;
             data->interact.enemy_distance = range;
+            tmp->movement = NULL;
             call_event(data, "move_enemy_aggro");
         }
         tmp = tmp->next;
@@ -47,6 +48,7 @@ void enemies_aggro(data_t *data)
     if (range <= tmp->range) {
         data->interact.enemy_id = tmp->id;
         data->interact.enemy_distance = range;
+        tmp->movement = NULL;
         call_event(data, "move_enemy_aggro");
     }
 }

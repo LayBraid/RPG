@@ -16,4 +16,6 @@ void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture);
 
 void clock_enemies_aggro(data_t *data);
 
+void clock_enemies_move(data_t *data);
+
 #endif

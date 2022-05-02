@@ -45,6 +45,7 @@ void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
     dup->depth = new->depth;
     dup->hp = new->hp;
     dup->max_hp = new->max_hp;
+    dup->range = new->range;
     dup->position = new->position;
     update_rectangle(dup, texture);
     dup->movement_clock = sfClock_create();
@@ -62,6 +63,7 @@ void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
     (*node)->depth = new->depth;
     (*node)->hp = new->hp;
     (*node)->max_hp = new->max_hp;
+    (*node)->range = new->range;
     (*node)->position = new->position;
     update_rectangle((*node), texture);
     (*node)->max_hp = new->max_hp;
