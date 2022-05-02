@@ -60,4 +60,5 @@ void new_game_scene(data_t *data)
     analyse_event(data);
     clock_move_player(data);
     clock_enemies_aggro(data);
+    clock_enemies_move(data);
 }
