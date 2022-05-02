@@ -74,6 +74,7 @@ void analyse_mouse_skill_tree(data_t *data)
 
 void skill_tree(data_t *data)
 {
+    outline_clock(data);
     display_all(data);
     printf("%s\n", data->player.items);
     analyse_event(data);

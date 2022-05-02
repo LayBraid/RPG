@@ -351,6 +351,7 @@ tile_t *create_tile(tile_t *start);
 tile_t *delete_tile(tile_t *node);
 tile_t *delete_first_tile(data_t *data);
 tile_t *delete_all_tiles(tile_t *start);
+tile_t *tile_set_type(tile_t *tile, int type);
 
 // tiles_utils.c
 tile_t *set_tile_depth(tile_t *tile, unsigned char depth);

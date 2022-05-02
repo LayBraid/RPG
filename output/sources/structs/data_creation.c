@@ -41,6 +41,7 @@ void fill_items(data_t *data)
 {
     for (int i = 0 ; i < 7 ; i++)
         data->player.items[i] = '0';
+    data->player.items[0] = '1';
 }
 
 //TODO Resize function "data_create"

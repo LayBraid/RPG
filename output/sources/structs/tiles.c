@@ -61,3 +61,9 @@ tile_t *delete_all_tiles(tile_t *start)
     }
     return (NULL);
 }
+
+tile_t *tile_set_type(tile_t *tile, int type)
+{
+    tile->type = type;
+    return tile;
+}

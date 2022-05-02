@@ -14,4 +14,6 @@ void skill_tree(data_t *data);
 
 void analyse_mouse_skill_tree(data_t *data);
 
+void outline_clock(data_t *data);
+
 #endif /* !SKILL_TREE_H_ */
