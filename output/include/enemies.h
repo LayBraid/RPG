@@ -18,4 +18,6 @@ void clock_enemies_aggro(data_t *data);
 
 void clock_enemies_move(data_t *data);
 
+void clock_enemies_life_display(data_t *data);
+
 #endif

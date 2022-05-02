@@ -29,4 +29,6 @@ void clock_move_player(data_t *data);
 
 void update_anim_move_player(data_t *data);
 
+void clock_stop_display_life(data_t *data);
+
 #endif

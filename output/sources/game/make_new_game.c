@@ -61,4 +61,6 @@ void new_game_scene(data_t *data)
     clock_move_player(data);
     clock_enemies_aggro(data);
     clock_enemies_move(data);
+    clock_stop_display_life(data);
+    clock_enemies_life_display(data);
 }

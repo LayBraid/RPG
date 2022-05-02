@@ -56,4 +56,6 @@ void enemy_move(data_t *data);
 
 void enemy_attack(data_t *data);
 
+void loose_game(data_t *data);
+
 #endif

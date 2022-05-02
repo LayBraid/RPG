@@ -187,6 +187,8 @@ typedef struct enemy_struct {
     int range;
     float hp;
     float max_hp;
+    int display_life;
+    sfClock *display_life_clock;
     sfClock *movement_clock;
     node_movement *movement;
     sfRectangleShape *rectangle;

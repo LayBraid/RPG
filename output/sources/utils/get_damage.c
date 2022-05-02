@@ -17,7 +17,7 @@ int random_number(int max)
 
 double get_damage(int type)
 {
-    if (type == 1)
-        return (random_number(15));
+    if (type == 0)
+        return (random_number(2) + 1);
     return 0;
 }

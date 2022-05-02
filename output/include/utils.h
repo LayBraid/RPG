@@ -56,4 +56,6 @@ enemy_t *get_enemy_by_id(data_t *data, int id);
 
 double get_damage(int type);
 
+void display_life_player(player_t *player, video_t video);
+
 #endif /* !UTILS_H_ */
