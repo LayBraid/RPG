@@ -36,38 +36,37 @@ void analyse_mouse_skill_tree(data_t *data)
 {
     if (is_in_rect((sfIntRect){504,420,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.skill_pts > 0) {
-        printf("rentrer\n");
         data->player.items[0] = '1';
         data->player.skill_pts -= 1;
     }
     if (is_in_rect((sfIntRect){660,267,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.items[0] == '1' && data->player.skill_pts > 0) {
-        data->player.items[1] = '1';
+        data->player.dmg += 1;
         data->player.skill_pts -= 1;
     }
     if (is_in_rect((sfIntRect){660,578,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.items[0] == '1' && data->player.skill_pts > 0) {
-        data->player.items[2] = '1';
+        data->player.hp_max += 1;
         data->player.skill_pts -= 1;
     }
     if (is_in_rect((sfIntRect){852,267,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.items[1] == '1' && data->player.skill_pts > 0) {
-        data->player.items[3] = '1';
+        data->player.dmg += 1;
         data->player.skill_pts -= 1;
     }
     if (is_in_rect((sfIntRect){852,578,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.items[2] == '1' && data->player.skill_pts > 0) {
-        data->player.items[4] = '1';
+        data->player.hp_max += 1;
         data->player.skill_pts -= 1;
     }
     if (is_in_rect((sfIntRect){1047,267,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.items[3] == '1' && data->player.skill_pts > 0) {
-        data->player.items[5] = '1';
+        data->player.items[1] = '1';
         data->player.skill_pts -= 1;
     }
     if (is_in_rect((sfIntRect){1047,578,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
     && data->player.items[4] == '1' && data->player.skill_pts > 0) {
-        data->player.items[6] = '1';
+        data->player.items[2] = '1';
         data->player.skill_pts -= 1;
     }
 }

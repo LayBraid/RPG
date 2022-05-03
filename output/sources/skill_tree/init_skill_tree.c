@@ -36,7 +36,11 @@ void init_outline(data_t *data, int idx)
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = tile_set_type(data->tiles, 3);
     get_outline_position(data, idx);
+}
 
+void init_tree_text(data_t *data)
+{
+    
 }
 
 void init_skill_tree(data_t *data)
@@ -57,5 +61,4 @@ void init_skill_tree(data_t *data)
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){7.55, 6.32});
     data->tiles = set_tile_position(data->tiles, (sfVector2f){0, 0});
     data->video.ui = 8;
-
 }
