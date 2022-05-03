@@ -151,6 +151,8 @@ text_t *delete_first_text(text_t *text)
     text = text->next;
     sfText_destroy(tmp->text);
     free(tmp);
+    if (text == NULL)
+        return (NULL);
     return (text);
 }
 
@@ -158,9 +160,6 @@ void destroy_shop(data_t *data)
 {
     delete_first_tile(data);
     delete_first_tile(data);
-    // while (data->texts != NULL) {
-    //     data->texts = delete_first_text(data->texts);
-    // }
     data->dialog_skip = 0;
 }
 
