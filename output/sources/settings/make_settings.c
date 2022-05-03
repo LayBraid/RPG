@@ -9,6 +9,7 @@
 #include "settings.h"
 #include "utils.h"
 #include "my.h"
+#include "my_fprintf.h"
 
 static void drawtext(data_t *data)
 {

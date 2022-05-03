@@ -44,7 +44,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/editor/textures/*.c) \
 	  $(wildcard sources/fprintf/*.c) \
 	  $(wildcard lib/my/*.c) \
-	  $(wildcard sources/dialogs/*.c) \
+	  #$(wildcard sources/dialogs/*.c) \
 
 OBJ = $(SRC:%.c=%.o)
 .SILENT:$(OBJ)

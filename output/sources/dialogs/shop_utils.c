@@ -8,6 +8,7 @@
 #include "my_rpg.h"
 #include "dialogs.h"
 #include "my.h"
+#include "my_fprintf.h"
 
 sfVector2f shop_up
     (data_t *data, unsigned int *current, unsigned int count, sfVector2f pos)

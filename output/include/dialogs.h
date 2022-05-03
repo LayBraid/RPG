@@ -20,7 +20,7 @@ char select_current
 void open_shop(data_t *data, int npc_id);
 
 // dialog_utils.c
-void delete_first_tile(data_t *data);
+//void delete_first_tile(data_t *data);
 
 // dialog_example.c
 void dialog_example(data_t *data, int npc_id);

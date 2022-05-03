@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2022
 ** output
 ** File description:
-** frpintf
+** fprintf
 */
 
 #include "my.h"
@@ -29,18 +29,6 @@ static char *add_str(char *str, int *i, char *str2)
     *i = save;
     new[l] = '\0';
     return (new);
-}
-
-static int nblen(int nbr)
-{
-    int len;
-
-    len = (nbr <= 0 ? 1 : 0);
-    while (nbr != 0) {
-        nbr = nbr / 10;
-        len++;
-    }
-    return (len);
 }
 
 static char *check_format(char *str, int *i, va_list ap)

@@ -8,6 +8,7 @@
 #include "editor.h"
 #include "my.h"
 #include "utils.h"
+#include "my_fprintf.h"
 
 void set_data(editor_t *editor)
 {

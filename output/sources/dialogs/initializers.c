@@ -8,6 +8,7 @@
 #include "my_rpg.h"
 #include "dialogs.h"
 #include "my.h"
+#include "my_fprintf.h"
 
 void init_dialog_shop_background(data_t *data, sfVector2f pos)
 {
