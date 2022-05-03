@@ -21,15 +21,32 @@
 
 #include "my_rpg.h"
 
+inventory_t *set_items_value(inventory_t *new, sfIntRect rect, sfVector2f pos)
+{
+    new->rect_item = rect;
+    new->texture_item = sfTexture_createFromFile("./assets/game/Link.png", &new->rect_item);
+    new->position_item = pos;
+    return new;
+}
+
 void create_items(data_t *data, int idx)
 {
     inventory_t *new = malloc(sizeof(inventory_t));
 
     switch (idx) {
-        case (0) : new->rect_item = (sfIntRect){0,270,10,20};
-            new->texture_item = sfTexture_createFromFile("./assets/game/Link.png", &new->rect_item);
-            new->position_item = (sfVector2f){800,980};
-            new->item = 1;
+        case (0) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
+            break;
+        case (1) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
+            break;
+        case (2) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
+            break;
+        case (3) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
+            break;
+        case (4) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
+            break;
+        case (5) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
+            break;
+        case (6) : new = set_items_value(new, (sfIntRect){0,270,10,20}, (sfVector2f){800,980});
             break;
     }
     new->position_rect = (sfVector2f){new->position_item.x - 30, new->position_item.y - 20};
