@@ -79,6 +79,7 @@ void data_create(data_t *data)
     data->npcs = NULL;
     data->tiles = NULL;
     data->enemies = NULL;
+    data->clock = sfClock_create();
     data->interact.status = 0;
     data->interact.npc_id = -1;
     data->delta = 1.0f;

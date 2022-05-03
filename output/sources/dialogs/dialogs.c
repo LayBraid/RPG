@@ -104,16 +104,6 @@ static void dialog(data_t *data, char *dialog, int id_npc_texture, char is_talki
     data->dialog_skip = 0;
 }
 
-static void delete_first_tile(data_t *data)
-{
-    tile_t *cursor = data->tiles;
-
-    if (data->tiles != NULL) {
-        data->tiles = data->tiles->next;
-        cursor = delete_tile(cursor);
-    }
-}
-
 void inter_dialog(data_t *data)
 {
     int anim = 0;
