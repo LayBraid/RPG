@@ -2503,10 +2503,26 @@ void set_village_house3_7(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {595,1333,8,8};
+    rectangle->type = 2000;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_ground(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {2054,226,8,8};
     rectangle->type = 516;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bed1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {603,1333,8,8};
+    rectangle->type = 2001;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2519,10 +2535,26 @@ void set_mountain0_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {611,1333,8,8};
+    rectangle->type = 2002;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain0_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {534,698,8,8};
     rectangle->type = 518;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bed3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {619,1333,8,8};
+    rectangle->type = 2003;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2535,10 +2567,26 @@ void set_mountain0_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {595,1341,8,8};
+    rectangle->type = 2004;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain0_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {550,698,8,8};
     rectangle->type = 520;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bed5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {603,1341,8,8};
+    rectangle->type = 2005;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2551,10 +2599,26 @@ void set_mountain0_4(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {611,1341,8,8};
+    rectangle->type = 2006;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain0_5(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {566,698,8,8};
     rectangle->type = 545;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bed7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {619,1341,8,8};
+    rectangle->type = 2007;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2567,10 +2631,26 @@ void set_mountain0_6(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {595,1349,8,8};
+    rectangle->type = 2008;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain0_7(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {582,698,8,8};
     rectangle->type = 547;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bed9(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {603,1349,8,8};
+    rectangle->type = 2009;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2583,10 +2663,26 @@ void set_mountain1_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed10(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {611,1349,8,8};
+    rectangle->type = 2010;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain1_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {534,706,8,8};
     rectangle->type = 523;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bed11(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {619,1349,8,8};
+    rectangle->type = 2011;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2599,10 +2695,26 @@ void set_mountain1_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_groundbed(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {918,1337,8,8};
+    rectangle->type = 2012;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain1_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {550,706,8,8};
     rectangle->type = 525;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {945,1409,8,8};
+    rectangle->type = 2013;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2615,10 +2727,26 @@ void set_mountain1_4(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {962,1409,8,8};
+    rectangle->type = 2014;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain1_5(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {566,706,8,8};
     rectangle->type = 548;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {971,1409,8,8};
+    rectangle->type = 2015;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2631,10 +2759,26 @@ void set_mountain1_6(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {945,1417,8,8};
+    rectangle->type = 2016;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain1_7(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {582,706,8,8};
     rectangle->type = 550;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {954,1417,8,8};
+    rectangle->type = 2017;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2647,10 +2791,26 @@ void set_mountain2_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {971,1417,8,8};
+    rectangle->type = 2018;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain2_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {534,714,8,8};
     rectangle->type = 528;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {945,1426,8,8};
+    rectangle->type = 2019;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2663,10 +2823,26 @@ void set_mountain2_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {954,1426,8,8};
+    rectangle->type = 2020;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain2_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {550,714,8,8};
     rectangle->type = 530;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf9(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {962,1426,8,8};
+    rectangle->type = 2021;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2679,10 +2855,26 @@ void set_mountain2_4(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf10(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {971,1426,8,8};
+    rectangle->type = 2022;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain2_5(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {566,714,8,8};
     rectangle->type = 551;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf11(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {945,1434,8,8};
+    rectangle->type = 2023;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2695,10 +2887,26 @@ void set_mountain2_6(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf12(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {954,1434,8,8};
+    rectangle->type = 2024;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain2_7(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {582,714,8,8};
     rectangle->type = 553;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf13(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {971,1434,8,8};
+    rectangle->type = 2025;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2711,10 +2919,26 @@ void set_mountain3_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_stairstop(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1349,498,8,8};
+    rectangle->type = 2026;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain3_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {534,722,8,8};
     rectangle->type = 533;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_stairsdown(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1358,498,8,8};
+    rectangle->type = 2027;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2727,10 +2951,26 @@ void set_mountain3_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bed12(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {631,1369,8,8};
+    rectangle->type = 2028;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain3_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {550,722,8,8};
     rectangle->type = 535;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_groundhouse(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {901,1337,16,16};
+    rectangle->type = 2028;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2743,10 +2983,26 @@ void set_mountain3_4(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_table(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {850,1354,16,16};
+    rectangle->type = 2029;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain3_5(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {566,722,8,8};
     rectangle->type = 554;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_table2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {867,1354,16,16};
+    rectangle->type = 2030;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2759,10 +3015,26 @@ void set_mountain3_6(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_table3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {884,1354,16,16};
+    rectangle->type = 2031;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain3_7(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {582,722,8,8};
     rectangle->type = 556;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_stairsup(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1309,493,16,16};
+    rectangle->type = 2032;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2775,10 +3047,26 @@ void set_mountain4_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bench(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {897,1435,8,8};
+    rectangle->type = 2033;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain4_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {534,730,8,8};
     rectangle->type = 538;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_bench2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {905,1435,8,8};
+    rectangle->type = 2034;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2791,10 +3079,26 @@ void set_mountain4_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_bench3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {914,1435,8,8};
+    rectangle->type = 2035;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain4_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {550,730,8,8};
     rectangle->type = 540;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf14(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {947,1369,16,16};
+    rectangle->type = 2036;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2807,10 +3111,26 @@ void set_mountain4_4(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf15(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {963,1369,16,16};
+    rectangle->type = 2037;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain4_5(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {566,730,8,8};
     rectangle->type = 542;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_shelf16(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {947,1385,16,16};
+    rectangle->type = 2038;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2823,10 +3143,26 @@ void set_mountain4_6(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_shelf17(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {963,1385,16,16};
+    rectangle->type = 2039;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mountain4_7(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {582,730,8,8};
     rectangle->type = 544;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_doorh(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {783,1496,8,8};
+    rectangle->type = 2040;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2839,10 +3175,26 @@ void set_mount_entry0_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_doorh1(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {791,1411,8,8};
+    rectangle->type = 2041;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry0_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {615,706,8,8};
     rectangle->type = 558;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_doorh2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {799,1363,8,8};
+    rectangle->type = 2042;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2855,10 +3207,26 @@ void set_mount_entry0_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_doorh3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {807,1496,8,8};
+    rectangle->type = 2043;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry0_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {631,706,8,8};
     rectangle->type = 560;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_doorh4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {783,1504,8,8};
+    rectangle->type = 2044;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2871,10 +3239,26 @@ void set_mount_entry1_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_doorh5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {807,1504,8,8};
+    rectangle->type = 2045;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry1_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {615,714,8,8};
     rectangle->type = 562;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_doorh6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {783,1512,8,8};
+    rectangle->type = 2046;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2887,10 +3271,26 @@ void set_mount_entry1_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_doorh7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {791,1512,8,8};
+    rectangle->type = 2047;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry1_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {631,714,8,8};
     rectangle->type = 564;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_doorh8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {799,1512,8,8};
+    rectangle->type = 2048;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2903,10 +3303,26 @@ void set_mount_entry2_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_doorh9(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {807,1512,8,8};
+    rectangle->type = 2049;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry2_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {615,722,8,8};
     rectangle->type = 566;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1ground(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1089,620,8,8};
+    rectangle->type = 2050;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2919,10 +3335,26 @@ void set_mount_entry2_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_dj1door(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1114,600,16,16};
+    rectangle->type = 2051;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry2_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {631,722,8,8};
     rectangle->type = 568;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1door2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1098,600,16,16};
+    rectangle->type = 2052;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2935,10 +3367,26 @@ void set_mount_entry3_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_dj1door3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1114,616,16,16};
+    rectangle->type = 2053;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry3_1(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {615,730,8,8};
     rectangle->type = 570;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1door4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1098,616,16,16};
+    rectangle->type = 2054;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
@@ -2951,6 +3399,14 @@ void set_mount_entry3_2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_dj1door5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1114,632,16,16};
+    rectangle->type = 2055;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_mount_entry3_3(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {631,730,8,8};
@@ -2959,10 +3415,882 @@ void set_mount_entry3_3(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
+void set_dj1door6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1098,632,16,16};
+    rectangle->type = 2056;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
 void set_plain(sfTexture *texture, node_rectangle *rectangle)
 {
     sfIntRect rect = {86,580,16,16};
     rectangle->type = 573;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1025,703,16,16};
+    rectangle->type = 2057;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1041,703,16,16};
+    rectangle->type = 2058;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1025,719,16,16};
+    rectangle->type = 2059;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1041,719,16,16};
+    rectangle->type = 2060;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1025,735,8,8};
+    rectangle->type = 2061;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1033,735,8,8};
+    rectangle->type = 2062;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1041,735,8,8};
+    rectangle->type = 2063;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_dj1hole8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1049,735,8,8};
+    rectangle->type = 2064;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djground2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {948,819,16,16};
+    rectangle->type = 2065;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djground21(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {965,819,16,16};
+    rectangle->type = 2066;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djground22(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {982,819,16,16};
+    rectangle->type = 2067;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djwater(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {143,2046,8,8};
+    rectangle->type = 2068;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djwater2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {151,2046,8,8};
+    rectangle->type = 2069;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djwater3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {143,2054,8,8};
+    rectangle->type = 2070;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djwater4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {151,2054,8,8};
+    rectangle->type = 2071;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djwater5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {117,2046,8,8};
+    rectangle->type = 2072;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djcascade(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {61,2044,8,8};
+    rectangle->type = 2073;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djcascade2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {69,2044,8,8};
+    rectangle->type = 2074;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djcascade3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {61,2052,8,8};
+    rectangle->type = 2075;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djcascade4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {69,2052,8,8};
+    rectangle->type = 2076;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djcascade5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {61,2060,8,8};
+    rectangle->type = 2077;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djcascade6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {69,2060,8,8};
+    rectangle->type = 2078;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1282,1630,8,8};
+    rectangle->type = 2079;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1290,1630,8,8};
+    rectangle->type = 2080;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1298,1630,8,8};
+    rectangle->type = 2081;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1306,1630,8,8};
+    rectangle->type = 2082;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1282,1638,8,8};
+    rectangle->type = 2083;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1306,1638,8,8};
+    rectangle->type = 2084;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1282,1646,8,8};
+    rectangle->type = 2085;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoortoboss8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1306,1646,8,8};
+    rectangle->type = 2086;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djpillar(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1422,1353,16,16};
+    rectangle->type = 2087;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djpillar2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1422,1369,16,16};
+    rectangle->type = 2088;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {982,719,16,16};
+    rectangle->type = 2089;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {998,719,16,16};
+    rectangle->type = 2090;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1014,719,8,8};
+    rectangle->type = 2091;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1014,727,8,8};
+    rectangle->type = 2092;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {982,735,16,16};
+    rectangle->type = 2093;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {998,735,16,16};
+    rectangle->type = 2094;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1014,735,8,8};
+    rectangle->type = 2095;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djbreach8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1014,743,8,8};
+    rectangle->type = 2096;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1389,8,8};
+    rectangle->type = 2097;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1389,8,8};
+    rectangle->type = 2098;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1397,8,8};
+    rectangle->type = 2099;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1397,8,8};
+    rectangle->type = 2100;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1406,8,8};
+    rectangle->type = 2101;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1406,8,8};
+    rectangle->type = 2102;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1406,8,8};
+    rectangle->type = 2103;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djgroundlast8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1335,1406,8,8};
+    rectangle->type = 2104;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1287,1414,8,8};
+    rectangle->type = 2105;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1295,1414,8,8};
+    rectangle->type = 2106;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1414,8,8};
+    rectangle->type = 2107;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1414,8,8};
+    rectangle->type = 2108;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1414,8,8};
+    rectangle->type = 2109;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1414,8,8};
+    rectangle->type = 2110;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1335,1414,8,8};
+    rectangle->type = 2111;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1343,1414,8,8};
+    rectangle->type = 2112;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast9(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1351,1414,8,8};
+    rectangle->type = 2113;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast10(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1359,1414,8,8};
+    rectangle->type = 2114;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast11(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1287,1422,8,8};
+    rectangle->type = 2115;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast12(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1295,1422,8,8};
+    rectangle->type = 2116;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast13(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1422,8,8};
+    rectangle->type = 2117;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast14(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1422,8,8};
+    rectangle->type = 2118;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast15(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1422,8,8};
+    rectangle->type = 2119;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast16(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1422,8,8};
+    rectangle->type = 2120;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast17(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1335,1422,8,8};
+    rectangle->type = 2121;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast18(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1343,1422,8,8};
+    rectangle->type = 2122;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast19(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1351,1422,8,8};
+    rectangle->type = 2123;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast20(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1359,1422,8,8};
+    rectangle->type = 2124;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast21(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1287,1430,8,8};
+    rectangle->type = 2125;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast22(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1295,1430,8,8};
+    rectangle->type = 2126;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast23(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1430,8,8};
+    rectangle->type = 2127;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast24(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1430,8,8};
+    rectangle->type = 2128;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast25(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1430,8,8};
+    rectangle->type = 2129;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast26(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1430,8,8};
+    rectangle->type = 2130;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast27(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1335,1430,8,8};
+    rectangle->type = 2131;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast28(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1343,1430,8,8};
+    rectangle->type = 2132;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast29(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1351,1430,8,8};
+    rectangle->type = 2133;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast30(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1359,1430,8,8};
+    rectangle->type = 2134;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast31(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1287,1438,8,8};
+    rectangle->type = 2135;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast32(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1295,1438,8,8};
+    rectangle->type = 2136;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast33(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1438,8,8};
+    rectangle->type = 2137;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast34(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1438,8,8};
+    rectangle->type = 2138;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast35(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1438,8,8};
+    rectangle->type = 2139;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast36(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1438,8,8};
+    rectangle->type = 2140;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast37(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1335,1438,8,8};
+    rectangle->type = 2141;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast38(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1343,1438,8,8};
+    rectangle->type = 2142;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast39(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1351,1438,8,8};
+    rectangle->type = 2143;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djdoorlast40(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1359,1438,8,8};
+    rectangle->type = 2144;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djtyphoon(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {302,2046,8,8};
+    rectangle->type = 2145;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djtyphoon2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {310,2046,8,8};
+    rectangle->type = 2146;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djtyphoon3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {302,2054,8,8};
+    rectangle->type = 2147;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djtyphoon4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {310,2054,8,8};
+    rectangle->type = 2148;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1751,8,8};
+    rectangle->type = 2149;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss2(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1751,8,8};
+    rectangle->type = 2150;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss3(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1751,8,8};
+    rectangle->type = 2151;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss4(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1751,8,8};
+    rectangle->type = 2152;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss5(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1759,8,8};
+    rectangle->type = 2153;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss6(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1759,8,8};
+    rectangle->type = 2154;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss7(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1759,8,8};
+    rectangle->type = 2155;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss8(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1759,8,8};
+    rectangle->type = 2156;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss9(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1767,8,8};
+    rectangle->type = 2157;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss10(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1767,8,8};
+    rectangle->type = 2158;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss11(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1767,8,8};
+    rectangle->type = 2159;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss12(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1767,8,8};
+    rectangle->type = 2160;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss13(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1303,1775,8,8};
+    rectangle->type = 2161;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss14(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1311,1775,8,8};
+    rectangle->type = 2162;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss15(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1319,1775,8,8};
+    rectangle->type = 2163;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
+
+void set_djboss16(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {1327,1775,8,8};
+    rectangle->type = 2164;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
