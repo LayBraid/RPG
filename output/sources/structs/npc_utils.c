@@ -17,6 +17,7 @@ npc_t *set_npc_texture(npc_t *node, texture_t *texture)
 {
     node->rect = texture->rect;
     node->max_rect = texture->max_rect;
+    node->texture_id = texture->id;
     sfRectangleShape_setTexture(node->rectangle, texture->texture, sfTrue);
     sfRectangleShape_setTextureRect(node->rectangle, node->rect);
     return (node);
