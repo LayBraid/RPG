@@ -36,7 +36,7 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
         data->texts = create_text(data->texts, my_fprintf("%s x%d", cursor->item_name, cursor->count), data->font);
         sfText_setPosition(data->texts->text, pos);
         if (cursor->count == 0)
-            sfText_setColor(data->texts->text, (sfColor){255, 155, 155, 155});
+            sfText_setColor(data->texts->text, (sfColor){128, 128, 128, 255});
         pos.y += 200;
         count++;
         cursor = cursor->next;

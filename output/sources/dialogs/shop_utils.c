@@ -50,7 +50,7 @@ char select_current(data_t *data, unsigned int current, unsigned int count, npc_
         return (0);
     cursor->count--;
     if (cursor->count == 0)
-        sfText_setColor(text->text, (sfColor){255, 155, 155, 155});
+        sfText_setColor(text->text, (sfColor){128, 128, 128, 255});
     sfText_setString(text->text, my_fprintf("%s x%d", cursor->item_name, cursor->count));
     // ! ajouter dans l'inventaire du joueur
     return (0);
