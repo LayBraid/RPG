@@ -9,9 +9,12 @@
     #define DIALOGS_H_
 
 // shop_utils.c
-sfVector2f shop_up(data_t *data, unsigned int *current, unsigned int count, sfVector2f pos);
-sfVector2f shop_down(data_t *data, unsigned int *current, unsigned int count, sfVector2f pos);
-char select_current(data_t *data, unsigned int current, unsigned int count, npc_t *npc);
+sfVector2f shop_up
+    (data_t *data, unsigned int *current, unsigned int count, sfVector2f pos);
+sfVector2f shop_down
+    (data_t *data, unsigned int *current, unsigned int count, sfVector2f pos);
+char select_current
+    (data_t *data, unsigned int current, unsigned int count, npc_t *npc);
 
 // shop.c
 void open_shop(data_t *data, int npc_id);

@@ -40,7 +40,8 @@ void shop_loop(data_t *data, unsigned int count, npc_t *npc)
     sfVector2f pos = {1000, 0};
     unsigned int current = 1;
 
-    while (sfRenderWindow_isOpen(data->video.window) && data->dialog_skip != 4) {
+    while (sfRenderWindow_isOpen(data->video.window) && 
+        data->dialog_skip != 4) {
         switch (data->dialog_skip) {
             case (3): pos = shop_up(data, &current, count, pos);
             data->dialog_skip = 0;
@@ -48,7 +49,8 @@ void shop_loop(data_t *data, unsigned int count, npc_t *npc)
             case (2): pos = shop_down(data, &current, count, pos);
             data->dialog_skip = 0;
             break;
-            case (1): data->dialog_skip = select_current(data, current, count, npc);
+            case (1): data->dialog_skip = select_current(data, current,
+                count, npc);
             break;
             default:
             break;

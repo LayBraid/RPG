@@ -11,7 +11,8 @@
 
 void init_dialog_shop_background(data_t *data, sfVector2f pos)
 {
-    data->texture_bank = create_texture(data->texture_bank, "assets/textures/dialog2.png", NULL);
+    data->texture_bank = create_texture(data->texture_bank,
+        "assets/textures/dialog2.png", NULL);
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){1, 0.35});
@@ -33,7 +34,8 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
     if (npc->inventory == NULL)
         return (0);
     while (cursor != NULL) {
-        data->texts = create_text(data->texts, my_fprintf("%s x%d", cursor->item_name, cursor->count), data->font);
+        data->texts = create_text(data->texts, my_fprintf("%s x%d",
+            cursor->item_name, cursor->count), data->font);
         sfText_setPosition(data->texts->text, pos);
         if (cursor->count == 0)
             sfText_setColor(data->texts->text, (sfColor){128, 128, 128, 255});
@@ -49,7 +51,8 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
 
 void init_dialog_choice(data_t *data, sfVector2f pos)
 {
-    data->texture_bank = create_texture(data->texture_bank, "assets/textures/dialog2.png", NULL);
+    data->texture_bank = create_texture(data->texture_bank,
+        "assets/textures/dialog2.png", NULL);
     data->tiles = create_tile(data->tiles);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){0.08, 0.09});
@@ -110,7 +113,8 @@ void set_dialog_characters(data_t *data, char is_talking, int id_npc)
 
 void dialog_init(data_t *data)
 {
-    data->texture_bank = create_texture(data->texture_bank, "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
+    data->texture_bank = create_texture(data->texture_bank,
+        "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
     data->player.name = strdup("Link");
     data->id_text_player = data->texture_bank->id;
     data->npcs = create_npc(data->npcs, "Arthur");
@@ -123,7 +127,8 @@ void dialog_init(data_t *data)
     // ! supprimer au dessus et cette ligne
     data->npcs = set_npc_texture(data->npcs, data->texture_bank);
     data->tiles = create_tile(data->tiles);
-    data->texture_bank = create_texture(data->texture_bank, "./assets/textures/dialog.png", NULL);
+    data->texture_bank = create_texture(data->texture_bank,
+        "./assets/textures/dialog.png", NULL);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_depth(data->tiles, 6);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f) {4, 4});

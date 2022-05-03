@@ -9,7 +9,8 @@
 #include "dialogs.h"
 #include "my.h"
 
-sfVector2f shop_up(data_t *data, unsigned int *current, unsigned int count, sfVector2f pos)
+sfVector2f shop_up
+    (data_t *data, unsigned int *current, unsigned int count, sfVector2f pos)
 {
     if (*current == 1)
         return (pos);
@@ -21,7 +22,8 @@ sfVector2f shop_up(data_t *data, unsigned int *current, unsigned int count, sfVe
     return (pos);
 }
 
-sfVector2f shop_down(data_t *data, unsigned int *current, unsigned int count, sfVector2f pos)
+sfVector2f shop_down
+    (data_t *data, unsigned int *current, unsigned int count, sfVector2f pos)
 {
     if (*current == count + 1)
         return (pos);
@@ -33,7 +35,8 @@ sfVector2f shop_down(data_t *data, unsigned int *current, unsigned int count, sf
     return (pos);
 }
 
-char select_current(data_t *data, unsigned int current, unsigned int count, npc_t *npc)
+char select_current
+    (data_t *data, unsigned int current, unsigned int count, npc_t *npc)
 {
     inventory_t *cursor = npc->inventory;
     text_t *text = data->texts;
@@ -51,7 +54,8 @@ char select_current(data_t *data, unsigned int current, unsigned int count, npc_
     cursor->count--;
     if (cursor->count == 0)
         sfText_setColor(text->text, (sfColor){128, 128, 128, 255});
-    sfText_setString(text->text, my_fprintf("%s x%d", cursor->item_name, cursor->count));
+    sfText_setString(text->text, my_fprintf("%s x%d",
+        cursor->item_name, cursor->count));
     // ! ajouter dans l'inventaire du joueur
     return (0);
 }

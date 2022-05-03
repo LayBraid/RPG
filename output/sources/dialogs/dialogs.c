@@ -30,7 +30,8 @@ static void analyse_events(data_t *data)
     }
 }
 
-void dialog(data_t *data, char *dialog, int id_npc_texture, char is_talking, int id_npc)
+void dialog(data_t *data, char *dialog,
+    int id_npc_texture, char is_talking, int id_npc)
 {
     char *new = malloc((strlen(dialog) + 1) * sizeof(char));
 
@@ -39,7 +40,8 @@ void dialog(data_t *data, char *dialog, int id_npc_texture, char is_talking, int
     data->texts = create_text(data->texts, new, data->font);
     sfText_setColor(data->texts->text, sfWhite);
     sfText_setPosition(data->texts->text, (sfVector2f){100, 900});
-    for (int i = 0; dialog[i] && sfRenderWindow_isOpen(data->video.window); i++) {
+    for (int i = 0; dialog[i] &&
+        sfRenderWindow_isOpen(data->video.window); i++) {
         new[i] = dialog[i];
         new[i + 1] = '\0';
         if (data->dialog_skip == 1) {
@@ -50,9 +52,11 @@ void dialog(data_t *data, char *dialog, int id_npc_texture, char is_talking, int
         printf("%d\n", i);
         if (dialog[i] != ' ' && data->dialog_skip == 0) {
             if (dialog[i] == '.' && dialog[i - 1] == '.')
-                while (sfClock_getElapsedTime(data->clock).microseconds < 600000);
+                while (sfClock_getElapsedTime(data->clock).microseconds
+                    < 600000);
             else
-                while (sfClock_getElapsedTime(data->clock).microseconds < 50000);
+                while (sfClock_getElapsedTime(data->clock).microseconds
+                    < 50000);
         }
         analyse_events(data);
         sfRenderWindow_clear(data->video.window, sfWhite);
@@ -68,13 +72,15 @@ void inter_dialog(data_t *data)
     int anim = 0;
     sfVector2f pos = {1850, 980};
     data->tiles = create_tile(data->tiles);
-    data->texture_bank = create_texture(data->texture_bank, "./assets/textures/iu-2.png", NULL);
+    data->texture_bank = create_texture(data->texture_bank,
+        "./assets/textures/iu-2.png", NULL);
     data->tiles = set_tile_depth(data->tiles, 9);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){0.3, 0.3});
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_position(data->tiles, pos);
     printf("init done\n");
-    while (data->dialog_skip != 1 && sfRenderWindow_isOpen(data->video.window)) {
+    while (data->dialog_skip != 1 &&
+        sfRenderWindow_isOpen(data->video.window)) {
         analyse_events(data);
         if (anim == 1) {
             pos.y += 1;
