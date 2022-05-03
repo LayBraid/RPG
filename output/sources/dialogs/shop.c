@@ -110,14 +110,10 @@ char select_current(data_t *data, unsigned int current, unsigned int count, npc_
         return (4);
     while (cursor && text && i < current) {
         cursor = cursor->next;
-        // if (i + 1 != current)
-        //     text = text->next;
         i++;
     }
-    for (int j = 0; j < (count - current) + 1; j++) {
-        // sfText_setColor(text->text, (sfColor){255, 155, 155, 155});
+    for (int j = 0; j < (count - current) + 1; j++)
         text = text->next;
-    }
     if (cursor == NULL || text == NULL || cursor->count == 0)
         return (0);
     cursor->count--;
