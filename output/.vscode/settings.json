@@ -3,6 +3,7 @@
         "my_event.h": "c",
         "utils.h": "c",
         "structures.h": "c",
-        "skill_tree.h": "c"
+        "skill_tree.h": "c",
+        "my_rpg.h": "c"
     }
 }
