@@ -87,6 +87,8 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
             cursor->item_name, cursor->count), data->font);*/
         data->texts = create_text(data->texts, my_fprintf("%s x%d", cursor->item_name, cursor->count), data->font);
         sfText_setPosition(data->texts->text, pos);
+        if (cursor->count == 0)
+            sfText_setColor(data->texts->text, (sfColor){255, 155, 155, 155});
         //data->texts->text = set_text_position(data->texts, pos);
         pos.y += 200;
         count++;
@@ -102,17 +104,26 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
 char select_current(data_t *data, unsigned int current, unsigned int count, npc_t *npc)
 {
     inventory_t *cursor = npc->inventory;
+    text_t *text = data->texts;
     unsigned int i = 1;
     if (current == count + 1)
         return (4);
-    while (cursor && i < current) {
+    while (cursor && text && i < current) {
         cursor = cursor->next;
+        // if (i + 1 != current)
+        //     text = text->next;
         i++;
     }
-    printf("%d\n", cursor->count);
-    if (cursor == NULL || cursor->count == 0)
+    for (int j = 0; j < (count - current) + 1; j++) {
+        // sfText_setColor(text->text, (sfColor){255, 155, 155, 155});
+        text = text->next;
+    }
+    if (cursor == NULL || text == NULL || cursor->count == 0)
         return (0);
     cursor->count--;
+    if (cursor->count == 0)
+        sfText_setColor(text->text, (sfColor){255, 155, 155, 155});
+    sfText_setString(text->text, my_fprintf("%s x%d", cursor->item_name, cursor->count));
     // ! ajouter dans l'inventaire du joueur
     return (0);
 }
