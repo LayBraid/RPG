@@ -13,7 +13,7 @@
 #include "settings.h"
 #include "name.h"
 #include "dialogs.h"
-
+// ! NE PAS PRENDRE CE QUI EST LA POUR MERGE
 void switch_scene(data_t *data)
 {
     switch (data->video.ui) {
