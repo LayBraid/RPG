@@ -83,20 +83,16 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
     if (npc->inventory == NULL)
         return (0);
     while (cursor != NULL) {
-        /*data->texts = create_text(data->texts, my_fprintf("%s x%d",
-            cursor->item_name, cursor->count), data->font);*/
         data->texts = create_text(data->texts, my_fprintf("%s x%d", cursor->item_name, cursor->count), data->font);
         sfText_setPosition(data->texts->text, pos);
         if (cursor->count == 0)
             sfText_setColor(data->texts->text, (sfColor){255, 155, 155, 155});
-        //data->texts->text = set_text_position(data->texts, pos);
         pos.y += 200;
         count++;
         cursor = cursor->next;
     }
     data->texts = create_text(data->texts, "Quitter", data->font);
     sfText_setPosition(data->texts->text, pos);
-    //data->texts = set_text_position(data->texts, pos);
     init_dialog_shop_background(data, (sfVector2f){1000, 0});
     return (count);
 }
