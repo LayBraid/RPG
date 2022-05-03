@@ -17,6 +17,7 @@
 #include "keybind.h"
 #include "pause.h"
 #include "howtoplay.h"
+#include "dialogs.h"
 
 void switch_scene(data_t *data)
 {

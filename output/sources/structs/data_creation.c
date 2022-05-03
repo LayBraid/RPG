@@ -73,7 +73,7 @@ void data_create(data_t *data)
     data->player.movement_anim_clock = sfClock_create();
     data->enemies_aggro = sfClock_create();
     data->texture_bank = NULL;
-    data->font = NULL; // TODO add font
+    data->font = sfFont_createFromFile("./assets/zeldadxt.ttf"); // TODO add font
     data->texts = NULL;
     data->buttons = NULL;
     data->npcs = NULL;

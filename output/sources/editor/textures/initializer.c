@@ -339,7 +339,7 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_caves_entry41_2, "caves_entry41_2", 466);
     add_next_texture(&texture, set_caves_entry41_3, "caves_entry41_3", 467);
     add_next_texture(&texture, set_caves_entry41_4, "caves_entry41_4", 380);
-    add_next_texture(&texture, set_caves_entry41_5, "caves_entry41_5", 381); 
+    add_next_texture(&texture, set_caves_entry41_5, "caves_entry41_5", 381);
     add_next_texture(&texture, set_enter_cave0_0, "enter_cave0_0", 382);
     add_next_texture(&texture, set_enter_cave0_1, "enter_cave0_1", 383);
     add_next_texture(&texture, set_enter_cave0_2, "enter_cave0_2", 384);
@@ -529,3 +529,4 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_snow, "snow",574);
     return texture;
     }
+
