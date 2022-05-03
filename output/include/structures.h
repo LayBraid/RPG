@@ -132,28 +132,21 @@ typedef struct texture {
 } texture_t;
 
 typedef struct inventory {
-    char *item_name;
+    sfTexture *texture_item;
+    sfTexture *texture_rect;
+    sfSprite *sprite_item;
+    sfSprite *sprite_rect;
+    sfVector2f position_item;
+    sfVector2f position_rect;
+    sfIntRect rect_item;
+    sfIntRect rect_rect;
+    int item;
+    sfTexture *texture;
     sfSprite *sprite;
-    sfIntRect rect;
-    unsigned int count;
+    sfVector2f position;
+    sfIntRect *rect;
     struct inventory *next;
 } inventory_t;
-
-typedef struct npc {
-    unsigned int id;
-    char *name;
-    unsigned char type;
-    unsigned char depth;
-    int hp_max;
-    int current_hp;
-    inventory_t *inventory;
-    sfSprite *sprite;
-    sfIntRect rect;
-    int max_rect;
-    sfVector2f position;
-    sfClock *clock;
-    struct npc *next;
-} npc_t;
 
 typedef struct node_movement_struct {
     int id;
@@ -168,25 +161,65 @@ typedef struct node_animation_struct {
     struct node_movement_struct *next;
 } node_animation;
 
+typedef struct attack_effect_s {
+    int id;
+    int type;
+    sfRectangleShape *rectangle;
+    sfVector2f position;
+    sfClock *movement_clock;
+    node_movement *movement;
+    struct attack_effect_s *next;
+} attack_effect_t;
+
+typedef struct npc {
+    unsigned int id;
+    char *name;
+    unsigned char type;
+    unsigned char map;
+    unsigned char depth;
+    int hp_max;
+    int current_hp;
+    inventory_t *inventory;
+    sfRectangleShape *rectangle;
+    sfIntRect rect;
+    char *event_call;
+    int max_rect;
+    sfVector2f position;
+    sfClock *clock;
+    struct npc *next;
+} npc_t;
+
 typedef struct enemy_struct {
     int id;
     char *name;
     int type;
     int depth;
-    int hp;
+    int range;
+    float hp;
+    float max_hp;
+    int display_life;
+    attack_effect_t *attack_effect;
+    sfClock *display_life_clock;
     sfClock *movement_clock;
     node_movement *movement;
     sfRectangleShape *rectangle;
     sfVector2f position;
+    struct enemy_struct *next;
 } enemy_t;
 
 typedef struct player {
     char *name;
+    char *items;
     unsigned char depth;
     int hp_max;
     int current_hp;
+    int equiped;
     int state;
     int animation;
+    int scale_reverse;
+    int skill_pts;
+    int damage_display;
+    sfClock *damage_display_clock;
     sfClock *movement_clock;
     node_movement *movement;
     sfClock *movement_anim_clock;
@@ -236,8 +269,8 @@ typedef struct letter {
     sfVector2f view;
     int count;
     int state;
-    sfClock *clock;
     char *name;
+    sfClock *clock;
 } letter_t;
 
 typedef struct node_letter_struct {
@@ -247,14 +280,42 @@ typedef struct node_letter_struct {
     struct node_letter_struct *next;
 } node_letter;
 
+typedef struct settings_s {
+    int fps;
+    int volume;
+} settings_t;
+
+typedef struct keys_s {
+    int up;
+    int down;
+    int left;
+    int right;
+    int attack;
+    int interact;
+    int back;
+    int inventory;
+    int pause;
+    char **key;
+} keys_t;
+
+typedef struct interact_s {
+    int status;
+    int npc_id;
+    int enemy_id;
+    double enemy_distance;
+} interact_t;
+
 struct data {
     video_t video;
+    settings_t *settings;
+    keys_t *keys;
     player_t player;
     texture_t *texture_bank;
     sfFont *font;
     text_t *texts;
     button_t *buttons;
     npc_t *npcs;
+    inventory_t *items;
     tile_t *tiles;
     sfEvent event;
     music_t *musics;
@@ -268,10 +329,19 @@ struct data {
     node_img *images;
     sfView *main;
     sfView *mapping;
-    sfView *players;
     node_rectangle *map;
     node_texture *textures;
     sfTexture *world;
+    sfTexture *npc;
+    sfTexture *enemies_texture;
+    interact_t interact;
+    int **collisions;
+    int **positions;
+    int x_pile;
+    int y_pile;
+    char *settings_state;
+    enemy_t *enemies;
+    sfClock *enemies_aggro;
 };
 
 struct editor_data {
@@ -305,6 +375,7 @@ void display_npc_depth(npc_t *start, video_t video, unsigned char depth);
 void display_buttons(button_t *start, video_t video);
 void display_texts(text_t *start, video_t video);
 void display_player_depth(player_t player, video_t video, unsigned char depth);
+void display_enemies_depth(enemy_t *start, video_t video, unsigned char depth);
 
 // data_creation.c
 data_t *data_delete(data_t *data);
@@ -331,7 +402,8 @@ npc_t *delete_npc(npc_t *node);
 npc_t *delete_all_npcs(npc_t *start);
 
 // music.c
-void create_music(data_t *data, const char *path, int loop);
+void add_music(data_t *data, char *path, int loop);
+void intro_music(data_t *data);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
@@ -344,6 +416,12 @@ npc_t *increase_npc_hp(npc_t *node, int value);
 npc_t *set_npc_max_hp(npc_t *node, int value);
 npc_t *set_npc_current_hp(npc_t *node, int value);
 npc_t *set_npc_to_max_hp(npc_t *node);
+npc_t *npc_set_event(npc_t *node, char *event);
+npc_t *npc_set_map(npc_t *node, int value);
+
+void npc_set_size_rectangle(npc_t *node, sfVector2f size);
+void npc_set_rectangle_texture(npc_t *node, sfTexture *texture);
+void npc_set_rectangle_texture_rect(npc_t *node, sfIntRect rect);
 
 // button.c
 button_t *create_button(button_t *start, char *string, sfFont *font);
@@ -371,14 +449,19 @@ texture_t *delete_all_textures(texture_t *start);
 // texture_utils.c
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 
-// inventory.c
-inventory_t *create_inventory(inventory_t *start, char *name);
-inventory_t *delete_inventory(inventory_t *node);
-inventory_t *delete_whole_inventory(inventory_t *start);
+// // inventory.c
+// inventory_t *create_inventory(inventory_t *start, char *name);
+// inventory_t *delete_inventory(inventory_t *node);
+// inventory_t *delete_whole_inventory(inventory_t *start);
+
+// // inventory_utils.c
+// inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
+// inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
 
 // inventory_utils.c
-inventory_t *set_inventory_count(inventory_t *node, unsigned int count);
-inventory_t *set_inventory_texture(inventory_t *node, texture_t *texture);
+void get_items(data_t *data);
+void display_items(data_t *data);
+void create_items(data_t *data, int idx);
 
 // video_utils.c
 void set_fps(sfRenderWindow *window, int fps, data_t *data);

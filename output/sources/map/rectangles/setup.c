@@ -38,8 +38,7 @@ const float info[4])
     new->type = (int) info[2];
     new->depth = (int) info[3];
     new->rectangle = sfRectangleShape_create();
-    sfRectangleShape_setSize(new->rectangle, (sfVector2f)
-    {(float) 15, (float) 15});
+    sfRectangleShape_setSize(new->rectangle, (sfVector2f) { 15.0f, 15.0f});
     while (texture->id_r != new->type)
         texture = texture->next;
     texture->function(data->world, new);
@@ -47,6 +46,7 @@ const float info[4])
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     new->next = (*node);
     tmp->next = new;
+    data->collisions[(int) new->y][(int) new->x] = new->type;
 }
 
 static void setup_map_rectangle(data_t *data, node_rectangle **node,
@@ -67,6 +67,7 @@ const float info[4])
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     (*node)->id = 0;
     (*node)->next = (*node);
+    data->collisions[(int) (*node)->y][(int) (*node)->x] = (*node)->type;
 }
 
 void add_map(data_t *data, const float info[4])

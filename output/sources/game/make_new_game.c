@@ -6,32 +6,37 @@
 */
 
 #include "player.h"
-#include "my_rpg.h"
 #include "my_event.h"
-
-//TODO Comment for compilation
+#include "enemies.h"
 
 static void analyse_key(data_t *data)
 {
+    if (data->event.key.code == sfKeyZ)
+        call_event(data, "player_walk_up");
+    if (data->event.key.code == sfKeyS)
+        call_event(data, "player_walk_down");
+    if (data->event.key.code == sfKeyD)
+        call_event(data, "player_walk_right");
+    if (data->event.key.code == sfKeyQ)
+        call_event(data, "player_walk_left");
     if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
         data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
         call_event(data, "player_walk_keys");
-    if (data->event.key.code == sfKeyZ)
-        sfView_move(data->mapping, (sfVector2f) {0, -10});
-    if (data->event.key.code == sfKeyS)
-        sfView_move(data->mapping, (sfVector2f) {0, 10});
-    if (data->event.key.code == sfKeyD)
-        sfView_move(data->mapping, (sfVector2f) {10, 0});
-    if (data->event.key.code == sfKeyQ)
-        sfView_move(data->mapping, (sfVector2f) {-10, 0});
-    if (data->event.key.code == sfKeyA) {
-        sfView_zoom(data->mapping, 0.9f);
-        sfView_zoom(data->players, 0.9f);
+    else
+        call_event(data, "player_stop_walk_keys");
+    if (data->event.key.code == sfKeyTab) {
+        get_items(data);
+        call_event(data, "open_inventory");
     }
-    if (data->event.key.code == sfKeyE) {
-        sfView_zoom(data->mapping, 1.1f);
-        sfView_zoom(data->players, 1.1f);
-    }
+    if (data->event.key.code == sfKeyK)
+        call_event(data, "open skill tree");
+}
+
+static void analyse_released_key(data_t *data)
+{
+    if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
+        data->event.key.code == sfKeyD || data->event.key.code == sfKeyQ)
+        call_event(data, "player_stop_walk_keys");
 }
 
 static void analyse_event(data_t *data)
@@ -42,10 +47,8 @@ static void analyse_event(data_t *data)
                 break;
             case (sfEvtKeyPressed): analyse_key(data);
                 break;
-            case (sfEvtKeyReleased): data->player.state = NOTHING;
+            case (sfEvtKeyReleased): analyse_released_key(data);
                 break;
-            // case (sfEvtMouseButtonPressed): analyse_mouse(data);
-            //     break;
             default: break;
         }
     }
@@ -56,4 +59,9 @@ void new_game_scene(data_t *data)
     display_all(data);
     analyse_event(data);
     clock_move_player(data);
+    clock_enemies_aggro(data);
+    clock_enemies_move(data);
+    clock_stop_display_life(data);
+    clock_enemies_life_display(data);
+    clock_enemies_effect(data);
 }

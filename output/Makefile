@@ -9,19 +9,29 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/display/*.c) \
 	  $(wildcard sources/structs/*.c) \
 	  $(wildcard sources/load/*.c) \
+	  $(wildcard sources/skill_tree/*.c) \
 	  $(wildcard sources/utils/*.c) \
+	  $(wildcard sources/inventory/*.c) \
 	  $(wildcard sources/my_event/*.c) \
-	  $(wildcard sources/my_event/functions/coins/*.c) \
+	  $(wildcard sources/my_event/functions/views/*.c) \
+	  $(wildcard sources/my_event/functions/enemies/*.c) \
+	  $(wildcard sources/my_event/functions/game/*.c) \
 	  $(wildcard sources/my_event/functions/player/*.c) \
+	  $(wildcard sources/my_event/functions/coins/*.c) \
+	  $(wildcard sources/my_event/functions/menu/*.c) \
+	  $(wildcard sources/my_event/functions/inventory/*.c) \
 	  $(wildcard sources/parsing_data/*.c) \
 	  $(wildcard sources/quests/*.c) \
 	  $(wildcard sources/intro/*.c) \
 	  $(wildcard sources/game/*.c) \
 	  $(wildcard sources/menu/*.c) \
+	  $(wildcard sources/how_to_play/*.c) \
+	  $(wildcard sources/pause_menu/*.c) \
 	  $(wildcard sources/name/*.c) \
 	  $(wildcard sources/buttons/*.c) \
 	  $(wildcard sources/buttons/functions/*.c) \
 	  $(wildcard sources/settings/*.c) \
+	  $(wildcard sources/settings/keybind/*.c)	\
 	  $(wildcard sources/player/*.c) \
 	  $(wildcard sources/player/animations/*.c) \
 	  $(wildcard sources/images/*.c) \
@@ -29,6 +39,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/map/rectangles/*.c) \
 	  $(wildcard sources/editor/*.c) \
 	  $(wildcard sources/fprintf/*.c) \
+	  $(wildcard sources/enemies/*.c) \
 	  $(wildcard sources/editor/rectangle/*.c) \
 	  $(wildcard sources/editor/textures/*.c) \
 	  $(wildcard lib/my/*.c) \

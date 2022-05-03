@@ -11,8 +11,14 @@
     #include "structures.h"
 
 enum Player_state {
-    NOTHING,
+    IDLE_DOWN,
+    IDLE_UP,
+    IDLE_RIGHT,
+    IDLE_LEFT,
     WALK_DOWN,
+    WALK_UP,
+    WALK_RIGHT,
+    WALK_LEFT,
 };
 
 void setup_texture_player(data_t *data);
@@ -20,5 +26,9 @@ void setup_texture_player(data_t *data);
 sfIntRect get_rect_player(int state, int animation);
 
 void clock_move_player(data_t *data);
+
+void update_anim_move_player(data_t *data);
+
+void clock_stop_display_life(data_t *data);
 
 #endif

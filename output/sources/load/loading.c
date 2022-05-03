@@ -11,7 +11,10 @@
 #include "load_game.h"
 #include "new_game.h"
 #include "settings.h"
+#include "keybind.h"
 #include "name.h"
+#include "pause.h"
+#include "howtoplay.h"
 
 void loading(data_t *data)
 {
@@ -37,15 +40,35 @@ void loading(data_t *data)
             break;
         case (9): delete_settings(data);
             break;
-        case (10): delete_new_game(data);
+        case (10): init_keybind(data);
             break;
-        case (11): delete_load_game(data);
+        case (11): delete_keybind(data);
             break;
-        case (12): init_name(data);
+        case (12): delete_new_game(data);
             break;
-        case (13): delete_nameC(data);
+        case (13): delete_load_game(data);
             break;
-        case (14): delete_nameM(data);
+        case (14): init_name(data);
+            break;
+        case (15): delete_nameC(data);
+            break;
+        case (16): delete_nameM(data);
+            break;
+        case (17): delete_settingsK(data);
+            break;
+        case (18): init_pause(data);
+            break;
+        case (19): delete_pauseN(data);
+            break;
+        case (20): delete_pauseM(data);
+            break;
+        case (21): delete_pauseH(data);
+            break;
+        case (22): delete_pauseS(data);
+            break;
+        case (23): init_howtoplay(data);
+            break;
+        case (24): delete_howtoplay(data);
             break;
     }
 }

@@ -18,6 +18,7 @@ button_t *set_button_texture(button_t *node, texture_t *texture)
 button_t *set_button_position(button_t *node, sfVector2f position)
 {
     node->position = position;
+    sfText_setPosition(node->text, node->position);
     return (node);
 }
 

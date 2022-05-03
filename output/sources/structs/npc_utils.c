@@ -17,14 +17,15 @@ npc_t *set_npc_texture(npc_t *node, texture_t *texture)
 {
     node->rect = texture->rect;
     node->max_rect = texture->max_rect;
-    sfSprite_setTexture(node->sprite, texture->texture, sfTrue);
-    sfSprite_setTextureRect(node->sprite, node->rect);
+    sfRectangleShape_setTexture(node->rectangle, texture->texture, sfTrue);
+    sfRectangleShape_setTextureRect(node->rectangle, node->rect);
     return (node);
 }
 
 npc_t *set_npc_position(npc_t *node, sfVector2f position)
 {
     node->position = position;
+    sfRectangleShape_setPosition(node->rectangle, node->position);
     return (node);
 }
 

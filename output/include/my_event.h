@@ -22,4 +22,40 @@ void add_3_coins(data_t *data);
 
 void player_walk_keys(data_t *data);
 
+void zoom_map(data_t *data);
+
+void unzoom_map(data_t *data);
+
+void player_walk_down(data_t *data);
+
+void player_walk_up(data_t *data);
+
+void player_walk_right(data_t *data);
+
+void player_walk_left(data_t *data);
+
+void inventory_loop(data_t *data);
+
+void pause_event(data_t *data);
+
+void player_stop_walk_keys(data_t *data);
+
+void check_range(data_t *data);
+
+void interact_npc(data_t *data);
+
+void stop_interact_npc(data_t *data);
+
+void init_skill_tree(data_t *data);
+
+void enemies_aggro(data_t *data);
+
+void move_enemy_aggro(data_t *data);
+
+void enemy_move(data_t *data);
+
+void enemy_attack(data_t *data);
+
+void loose_game(data_t *data);
+
 #endif
