@@ -30,6 +30,8 @@ static void analyse_key(data_t *data)
     }
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
+    
+    
 }
 
 static void analyse_released_key(data_t *data)

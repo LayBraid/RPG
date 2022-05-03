@@ -582,4 +582,5 @@ void set_desert_herbe1_0(sfTexture *texture, node_rectangle *rectangle);
 void set_cac0_0(sfTexture *texture, node_rectangle *rectangle);
 void set_cac1_0(sfTexture *texture, node_rectangle *rectangle);
 void set_cac2_0(sfTexture *texture, node_rectangle *rectangle);
+void set_desert(sfTexture *texture, node_rectangle *rectangle);
 #endif

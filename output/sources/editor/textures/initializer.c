@@ -532,5 +532,6 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_cac0_0, "cac0_0",578);
     add_next_texture(&texture, set_cac1_0, "cac1_0",581);
     add_next_texture(&texture, set_cac2_0, "cac2_0",584);
+    add_next_texture(&texture, set_desert, "desert",585);
     return texture;
     }

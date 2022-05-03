@@ -3014,3 +3014,11 @@ void set_cac2_0(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
+
+void set_desert(sfTexture *texture, node_rectangle *rectangle)
+{
+    sfIntRect rect = {83,299,16,16};
+    rectangle->type = 585;
+    sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
+    sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
+}
