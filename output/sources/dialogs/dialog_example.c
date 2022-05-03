@@ -28,7 +28,7 @@ void dialog_example(data_t *data, int npc_id)
     }
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, "Prends de la sauce.", data->id_text_player, 0, npc_id);
+    dialog(data, "Prends de la sauce.", data->id_text_player, 1, npc_id);
     inter_dialog(data);
     open_shop(data, npc_id);
     destroy_dialog_frame(data);

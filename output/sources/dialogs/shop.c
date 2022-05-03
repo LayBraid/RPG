@@ -76,7 +76,7 @@ void init_dialog_shop_background(data_t *data, sfVector2f pos)
 
 unsigned int init_dialog_shop(data_t *data, npc_t *npc)
 {
-    sfVector2f pos = {1020, 60};
+    sfVector2f pos = {1080, 70};
     inventory_t *cursor = npc->inventory;
     unsigned int count = 0;
 
@@ -85,7 +85,7 @@ unsigned int init_dialog_shop(data_t *data, npc_t *npc)
     while (cursor != NULL) {
         /*data->texts = create_text(data->texts, my_fprintf("%s x%d",
             cursor->item_name, cursor->count), data->font);*/
-        data->texts = create_text(data->texts, cursor->item_name, data->font);
+        data->texts = create_text(data->texts, my_fprintf("%s x%d", cursor->item_name, cursor->count), data->font);
         sfText_setPosition(data->texts->text, pos);
         //data->texts->text = set_text_position(data->texts, pos);
         pos.y += 200;

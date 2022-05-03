@@ -31,37 +31,6 @@ char *add_str(char *str, int *i, char *str2)
     return (new);
 }
 
-static int nblen(int nbr)
-{
-    int len;
-
-    len = (nbr <= 0 ? 1 : 0);
-    while (nbr != 0) {
-        nbr = nbr / 10;
-        len++;
-    }
-    return (len);
-}
-
-char *my_itoa(int n)
-{
-    unsigned int nbr = (n < 0 ? -n : n);
-    int sign = (n < 0 ? 1 : 0);
-    int len = nblen(n);
-    char *res = NULL;
-
-    res = (char *)malloc((len + 1) * sizeof(char));
-    res[len--] = '\0';
-    while (len >= 0) {
-        res[len] = nbr % 10 + '0';
-        nbr /= 10;
-        len--;
-    }
-    if (sign == 1)
-        res[0] = '-';
-    return (res);
-}
-
 char *check_format(char *str, int *i, va_list ap)
 {
     if (str[*i + 1] == 's')
