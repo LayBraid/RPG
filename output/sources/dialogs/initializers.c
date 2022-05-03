@@ -7,6 +7,45 @@
 
 #include "my_rpg.h"
 #include "dialogs.h"
+#include "my.h"
+
+void init_dialog_shop_background(data_t *data, sfVector2f pos)
+{
+    data->texture_bank = create_texture(data->texture_bank, "assets/textures/dialog2.png", NULL);
+    data->tiles = create_tile(data->tiles);
+    data->tiles = set_tile_texture(data->tiles, data->texture_bank);
+    data->tiles = set_tile_scale(data->tiles, (sfVector2f){1, 0.35});
+    data->tiles = set_tile_position(data->tiles, pos);
+    data->tiles = set_tile_depth(data->tiles, 9);
+    data->tiles = create_tile(data->tiles);
+    data->tiles = set_tile_texture(data->tiles, data->texture_bank->next);
+    data->tiles = set_tile_scale(data->tiles, (sfVector2f){1, 3});
+    data->tiles = set_tile_position(data->tiles, pos);
+    data->tiles = set_tile_depth(data->tiles, 9);
+}
+
+unsigned int init_dialog_shop(data_t *data, npc_t *npc)
+{
+    sfVector2f pos = {1080, 70};
+    inventory_t *cursor = npc->inventory;
+    unsigned int count = 0;
+
+    if (npc->inventory == NULL)
+        return (0);
+    while (cursor != NULL) {
+        data->texts = create_text(data->texts, my_fprintf("%s x%d", cursor->item_name, cursor->count), data->font);
+        sfText_setPosition(data->texts->text, pos);
+        if (cursor->count == 0)
+            sfText_setColor(data->texts->text, (sfColor){255, 155, 155, 155});
+        pos.y += 200;
+        count++;
+        cursor = cursor->next;
+    }
+    data->texts = create_text(data->texts, "Quitter", data->font);
+    sfText_setPosition(data->texts->text, pos);
+    init_dialog_shop_background(data, (sfVector2f){1000, 0});
+    return (count);
+}
 
 void init_dialog_choice(data_t *data, sfVector2f pos)
 {

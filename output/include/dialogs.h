@@ -8,6 +8,11 @@
 #ifndef DIALOGS_H_
     #define DIALOGS_H_
 
+// shop_utils.c
+sfVector2f shop_up(data_t *data, unsigned int *current, unsigned int count, sfVector2f pos);
+sfVector2f shop_down(data_t *data, unsigned int *current, unsigned int count, sfVector2f pos);
+char select_current(data_t *data, unsigned int current, unsigned int count, npc_t *npc);
+
 // shop.c
 void open_shop(data_t *data, int npc_id);
 
@@ -22,6 +27,8 @@ void destroy_dialogs(data_t *data);
 void destroy_dialog_frame(data_t *data);
 
 // initializers.c
+void init_dialog_shop_background(data_t *data, sfVector2f pos);
+unsigned int init_dialog_shop(data_t *data, npc_t *npc);
 void init_dialog_choice(data_t *data, sfVector2f pos);
 void set_dialog_characters
     (data_t *data, char is_talking, int id_npc);
