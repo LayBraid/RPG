@@ -71,13 +71,15 @@ void data_create(data_t *data)
     data->player.position = (sfVector2f){0, 0};
     data->player.movement_clock = sfClock_create();
     data->player.movement_anim_clock = sfClock_create();
+    data->enemies_aggro = sfClock_create();
     data->texture_bank = NULL;
-    data->font = NULL; // TODO add font
+    data->font = sfFont_createFromFile("assets/zeldadxt.ttf"); // TODO add font
     data->texts = NULL;
     data->buttons = NULL;
     data->npcs = NULL;
     data->tiles = NULL;
     data->enemies = NULL;
+    data->clock = sfClock_create();
     data->interact.status = 0;
     data->interact.npc_id = -1;
     data->delta = 1.0f;

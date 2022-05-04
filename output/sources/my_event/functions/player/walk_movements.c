@@ -7,10 +7,12 @@
 
 #include "my_event.h"
 #include "player.h"
+#include "enemies.h"
 
 void player_walk_keys(data_t *data)
 {
     call_event(data, "check_range");
+    calculate_new_coord_effects(data);
 }
 
 void player_stop_walk_keys(data_t *data)

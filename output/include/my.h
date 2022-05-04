@@ -9,7 +9,7 @@
     #define LIB_H_
 
     #include <stdlib.h>
-    #include "unistd.h"
+    #include <unistd.h>
 
 void my_putchar(char c);
 
@@ -38,7 +38,5 @@ char *my_strcat(char *s1, char *s2);
 char *my_itoa(int nb);
 
 void my_strcat_3(char **dest, char const *src);
-
-char *my_fprintf(char *str, ...);
 
 #endif /* !LIB_H_ */

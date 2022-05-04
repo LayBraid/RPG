@@ -52,4 +52,14 @@ IntR get_rect_type_enemies(int type);
 
 sfVector2f get_size_enemies(int type);
 
+enemy_t *get_enemy_by_id(data_t *data, int id);
+
+double get_damage(int type);
+
+void display_life_player(player_t *player, video_t video);
+
+sfVector2f get_size_effect(int type);
+
+IntR get_rect_effect(int type);
+
 #endif /* !UTILS_H_ */

@@ -161,6 +161,16 @@ typedef struct node_animation_struct {
     struct node_movement_struct *next;
 } node_animation;
 
+typedef struct attack_effect_s {
+    int id;
+    int type;
+    sfRectangleShape *rectangle;
+    sfVector2f position;
+    sfClock *movement_clock;
+    node_movement *movement;
+    struct attack_effect_s *next;
+} attack_effect_t;
+
 typedef struct npc {
     unsigned int id;
     char *name;
@@ -169,6 +179,7 @@ typedef struct npc {
     unsigned char depth;
     int hp_max;
     int current_hp;
+    int texture_id;
     inventory_t *inventory;
     sfRectangleShape *rectangle;
     sfIntRect rect;
@@ -184,8 +195,12 @@ typedef struct enemy_struct {
     char *name;
     int type;
     int depth;
+    int range;
     float hp;
     float max_hp;
+    int display_life;
+    attack_effect_t *attack_effect;
+    sfClock *display_life_clock;
     sfClock *movement_clock;
     node_movement *movement;
     sfRectangleShape *rectangle;
@@ -204,6 +219,8 @@ typedef struct player {
     int animation;
     int scale_reverse;
     int skill_pts;
+    int damage_display;
+    sfClock *damage_display_clock;
     sfClock *movement_clock;
     node_movement *movement;
     sfClock *movement_anim_clock;
@@ -267,7 +284,7 @@ typedef struct node_letter_struct {
 typedef struct settings_s {
     int fps;
     int volume;
-}settings_t;
+} settings_t;
 
 typedef struct keys_s {
     int up;
@@ -280,11 +297,13 @@ typedef struct keys_s {
     int inventory;
     int pause;
     char **key;
-}keys_t;
+} keys_t;
 
 typedef struct interact_s {
     int status;
     int npc_id;
+    int enemy_id;
+    double enemy_distance;
 } interact_t;
 
 struct data {
@@ -306,6 +325,9 @@ struct data {
     letter_t *letter;
     node_letter *letters;
     float delta;
+    sfClock *clock;
+    char dialog_skip;
+    int id_text_player;
     unsigned char loading_state;
     node_button *button;
     node_img *images;
@@ -323,6 +345,7 @@ struct data {
     int y_pile;
     char *settings_state;
     enemy_t *enemies;
+    sfClock *enemies_aggro;
 };
 
 struct editor_data {

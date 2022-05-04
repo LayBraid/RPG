@@ -7,6 +7,7 @@
 
 #include "my_rpg.h"
 #include "my.h"
+#include "my_fprintf.h"
 
 void init_howtoplay(data_t *data)
 {

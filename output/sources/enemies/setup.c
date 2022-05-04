@@ -41,13 +41,17 @@ void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
         tmp = tmp->next;
     dup->id = get_max_enemy(node) + 1;
     dup->name = new->name;
+    dup->attack_effect = NULL;
+    dup->display_life = 0;
     dup->type = new->type;
     dup->depth = new->depth;
     dup->hp = new->hp;
     dup->max_hp = new->max_hp;
+    dup->range = new->range;
     dup->position = new->position;
     update_rectangle(dup, texture);
     dup->movement_clock = sfClock_create();
+    dup->display_life_clock = sfClock_create();
     dup->movement = NULL;
     dup->next = (*node);
     tmp->next = dup;
@@ -57,14 +61,19 @@ void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
 {
     (*node) = malloc(sizeof(enemy_t));
     (*node)->id = 0;
+    (*node)->display_life = 0;
     (*node)->name = new->name;
     (*node)->type = new->type;
+    (*node)->attack_effect = NULL;
     (*node)->depth = new->depth;
     (*node)->hp = new->hp;
+    (*node)->max_hp = new->max_hp;
+    (*node)->range = new->range;
     (*node)->position = new->position;
     update_rectangle((*node), texture);
     (*node)->max_hp = new->max_hp;
     (*node)->movement_clock = sfClock_create();
+    (*node)->display_life_clock = sfClock_create();
     (*node)->movement = NULL;
     (*node)->next = (*node);
 }

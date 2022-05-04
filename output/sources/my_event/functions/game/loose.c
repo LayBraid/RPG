@@ -5,7 +5,9 @@
 ** No file there , just an epitech header example
 */
 
-void my_function()
-{
+#include "my_event.h"
 
+void loose_game(data_t *data)
+{
+    printf("Loose game pélo");
 }
