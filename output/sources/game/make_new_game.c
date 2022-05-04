@@ -28,6 +28,8 @@ static void analyse_key(data_t *data)
         get_items(data);
         call_event(data, "open_inventory");
     }
+    if (data->event.key.code == sfKeyR)
+        call_event(data, "interact_npc");
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
     if (data->event.key.code == sfKeyEscape) {

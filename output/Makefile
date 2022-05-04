@@ -20,6 +20,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/my_event/functions/coins/*.c) \
 	  $(wildcard sources/my_event/functions/menu/*.c) \
 	  $(wildcard sources/my_event/functions/inventory/*.c) \
+	  $(wildcard sources/my_event/functions/dialogue/*.c) \
 	  $(wildcard sources/parsing_data/*.c) \
 	  $(wildcard sources/quests/*.c) \
 	  $(wildcard sources/intro/*.c) \
@@ -43,8 +44,9 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/credits/*.c) \
 	  $(wildcard sources/editor/rectangle/*.c) \
 	  $(wildcard sources/editor/textures/*.c) \
-	  $(wildcard lib/my/*.c) \
 	  $(wildcard sources/dialogs/*.c) \
+	  $(wildcard sources/dialogs/scenes/*.c) \
+	  $(wildcard lib/my/*.c) \
 
 OBJ = $(SRC:%.c=%.o)
 .SILENT:$(OBJ)

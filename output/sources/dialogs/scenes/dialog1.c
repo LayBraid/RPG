@@ -5,8 +5,8 @@
 ** dialog1
 */
 
-#include "dialogs.h"
 #include "my_rpg.h"
+#include "dialogs.h"
 
 void dialog1(data_t *data, int npc_id)
 {
