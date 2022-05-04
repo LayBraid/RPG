@@ -158,16 +158,18 @@ typedef struct node_animation_struct {
     int id;
     int state;
     int value;
-    struct node_movement_struct *next;
+    struct node_animation_struct *next;
 } node_animation;
 
 typedef struct attack_effect_s {
     int id;
+    int movement_or_anim;
     int type;
     sfRectangleShape *rectangle;
     sfVector2f position;
     sfClock *movement_clock;
     node_movement *movement;
+    node_animation *animation;
     struct attack_effect_s *next;
 } attack_effect_t;
 

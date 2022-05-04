@@ -8,7 +8,7 @@
 #include "enemies.h"
 #include "utils.h"
 
-void texture_effect(data_t *data, player_t *player, int id)
+void texture_effect_player(data_t *data, player_t *player, int id)
 {
     attack_effect_t *tmp = player->attack_effect;
 
