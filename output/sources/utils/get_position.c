@@ -15,12 +15,12 @@ sfVector2i get_position(data_t *data, int entity, int index)
 
     for (int i = 0; i < SIZE_MAP; i++) {
         for (int j = 0; j < SIZE_MAP; j++) {
-            if (data->positions[i][j] == entity && count == index) {
+            if (data->positions_hyrule[i][j] == entity && count == index) {
                 pos.x = j;
                 pos.y = i;
                 return (pos);
             }
-            if (data->positions[i][j] == entity)
+            if (data->positions_hyrule[i][j] == entity)
                 count++;
         }
     }

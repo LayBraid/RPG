@@ -104,7 +104,7 @@ void data_create(data_t *data)
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
     sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243 + 750});
     data->textures = init_textures();
-    data->map = NULL;
+    data->map_hyrule = NULL;
     get_map(data);
     set_letters(data);
     setup_texture_player(data);

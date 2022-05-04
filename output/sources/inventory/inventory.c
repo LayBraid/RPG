@@ -31,6 +31,8 @@ void analyse_event_inventory(data_t *data)
                 break;
             case (sfEvtMouseButtonPressed): get_inventory_mouse_click(data);
                 break;
+            default:
+                break;
         }
     }
 }

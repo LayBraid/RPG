@@ -351,7 +351,7 @@ struct data {
     sfTexture *enemies_texture;
     interact_t interact;
     int **collisions_hyrule;
-    int **positions_huryle;
+    int **positions_hyrule;
     int x_pile;
     int y_pile;
     char *settings_state;
