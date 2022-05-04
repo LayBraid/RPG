@@ -40,10 +40,11 @@ sfVector2f player_position);
 
 void texture_effect_player(data_t *data, player_t *player, int id);
 
-
 void setup_effect_player(player_t *player, int id_effect,
 sfVector2f player_position);
 
-void texture_effect_player(data_t *data, player_t *player, int id);
+void display_effect_player(data_t *data);
+
+void player_effect_all(player_t *node);
 
 #endif

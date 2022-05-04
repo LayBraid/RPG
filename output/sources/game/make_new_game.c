@@ -34,6 +34,7 @@ static void analyse_key(data_t *data)
         call_event(data, "attack_player");
 }
 
+
 static void analyse_released_key(data_t *data)
 {
     if (data->event.key.code == sfKeyZ || data->event.key.code == sfKeyS ||
@@ -66,4 +67,5 @@ void new_game_scene(data_t *data)
     clock_stop_display_life(data);
     clock_enemies_life_display(data);
     clock_enemies_effect(data);
+    player_effect_all(&data->player);
 }

@@ -9,7 +9,7 @@
 #include "my_event.h"
 #include "enemies.h"
 
-static int get_max_effect(attack_effect_t **node)
+static int get_max_effect_player(attack_effect_t **node)
 {
     int count = 0;
     attack_effect_t *tmp = (*node);
@@ -23,7 +23,7 @@ static int get_max_effect(attack_effect_t **node)
     return count;
 }
 
-static int any_effect(attack_effect_t **node, int type,
+static int any_effect_player(attack_effect_t **node, int type,
 sfRectangleShape *rectangle, sfVector2f position)
 {
     attack_effect_t *tmp = (*node);
@@ -31,7 +31,7 @@ sfRectangleShape *rectangle, sfVector2f position)
 
     while (tmp->next->id != 0)
         tmp = tmp->next;
-    dup->id = get_max_effect(node) + 1;
+    dup->id = get_max_effect_player(node) + 1;
     dup->type = type;
     dup->rectangle = sfRectangleShape_create();
     sfRectangleShape_setPosition((*node)->rectangle, position);
@@ -44,7 +44,7 @@ sfRectangleShape *rectangle, sfVector2f position)
     return dup->id;
 }
 
-static int first_effect(attack_effect_t **node, int type,
+static int first_effect_player(attack_effect_t **node, int type,
 sfRectangleShape *rectangle, sfVector2f position)
 {
     (*node) = malloc(sizeof(attack_effect_t));
@@ -66,11 +66,14 @@ sfVector2f player_position)
     int id;
 
     if (player->attack_effect == NULL)
-        id = first_effect(&player->attack_effect, type,
+        id = first_effect_player(&player->attack_effect, type,
         player->rectangle, player->position);
     else
-        id = any_effect(&player->attack_effect, type,
+        id = any_effect_player(&player->attack_effect, type,
         player->rectangle, player->position);
+    printf("add %d\n", id);
     texture_effect_player(data, player, id);
+    printf("next add\n");
     setup_effect_player(player, id, player_position);
+    printf("finish add\n");
 }

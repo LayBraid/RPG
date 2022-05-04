@@ -7,24 +7,6 @@
 
 #include "player.h"
 
-static void add_movement_effect(attack_effect_t *node, sfVector2f position)
-{
-    node_movement *tmp = node->movement;
-
-    if (tmp == NULL) {
-        node->movement = malloc(sizeof(node_movement));
-        node->movement->delta = position;
-        node->movement->next = NULL;
-        return;
-    } else {
-        while (tmp->next != NULL)
-            tmp = tmp->next;
-        tmp->next = malloc(sizeof(node_movement));
-        tmp->next->delta = position;
-        tmp->next->next = NULL;
-    }
-}
-
 static void add_anim_effect(attack_effect_t *node, int value)
 {
     node_animation *tmp = node->animation;
