@@ -36,7 +36,7 @@ void dialog(data_t *data, char *dialog,
     char *new = malloc((strlen(dialog) + 1) * sizeof(char));
 
     new[0] = '\0';
-    set_dialog_characters(data, is_talking, id_npc); //TODO tester situation reelle
+    //set_dialog_characters(data, is_talking, id_npc); //TODO tester situation reelle
     data->texts = create_text(data->texts, new, data->font);
     sfText_setColor(data->texts->text, sfWhite);
     sfText_setPosition(data->texts->text, (sfVector2f){100, 900});
