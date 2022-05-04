@@ -32,16 +32,6 @@ static void analyse_event(data_t *data)
     }
 }
 
-
-
-static int is_in_rect(sfIntRect rect, int x, int y)
-{
-    if (((x >= rect.left) && (x <= (rect.left + rect.width))) &&
-    (y >= rect.top) && (y <= (rect.top + rect.height)))
-        return 1;
-    return 0;
-}
-
 void analyse_mouse_skill_tree(data_t *data)
 {
     if (is_in_rect((sfIntRect){504,420,95,95}, data->event.mouseButton.x, data->event.mouseButton.y) == 1
