@@ -166,7 +166,7 @@ typedef struct node_animation_struct {
     int id;
     int state;
     int value;
-    struct node_movement_struct *next;
+    struct node_animation_struct *next;
 } node_animation;
 
 typedef struct attack_effect_s {
