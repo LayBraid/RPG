@@ -39,7 +39,7 @@ sfVector2f shop_down
 char select_current
     (data_t *data, unsigned int current, unsigned int count, npc_t *npc)
 {
-    inventory_t *cursor = npc->inventory;
+    npc_inventory_t *cursor = npc->inventory;
     text_t *text = data->texts;
     unsigned int i = 1;
     if (current == count + 1)

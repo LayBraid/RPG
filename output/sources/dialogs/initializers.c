@@ -29,7 +29,7 @@ void init_dialog_shop_background(data_t *data, sfVector2f pos)
 unsigned int init_dialog_shop(data_t *data, npc_t *npc)
 {
     sfVector2f pos = {1080, 70};
-    inventory_t *cursor = npc->inventory;
+    npc_inventory_t *cursor = npc->inventory;
     unsigned int count = 0;
 
     if (npc->inventory == NULL)

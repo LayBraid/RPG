@@ -43,7 +43,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/editor/rectangle/*.c) \
 	  $(wildcard sources/editor/textures/*.c) \
 	  $(wildcard lib/my/*.c) \
-	  #$(wildcard sources/dialogs/*.c) \
+	  $(wildcard sources/dialogs/*.c) \
 
 OBJ = $(SRC:%.c=%.o)
 .SILENT:$(OBJ)
