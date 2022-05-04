@@ -8,6 +8,7 @@
 #include "map.h"
 #include "utils.h"
 #include "enemies.h"
+#include "player.h"
 
 void display_all(data_t *data)
 {
@@ -25,6 +26,7 @@ void display_all(data_t *data)
             display_enemies_depth(data->enemies, data->video, depth);
         }
         display_effect_enemies(data);
+        display_effect_player(data);
         if (data->interact.status) {
             sfRenderWindow_setView(data->video.window, data->main);
             my_text(data, (sfVector2f) {680, 980}, 4, "press R to interact");

@@ -89,6 +89,7 @@ void data_create(data_t *data)
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
     data->enemies_texture = sfTexture_createFromFile(ENEMIES_TILES, NULL);
+    data->link = sfTexture_createFromFile("assets/game/Link.png", NULL);
     init_music(data);
     data->quest = NULL;
     parsing_data(data);

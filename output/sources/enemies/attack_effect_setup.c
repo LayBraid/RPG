@@ -48,8 +48,8 @@ sfRectangleShape *enemy_rect, sfVector2f enemy_position)
     (*node)->id = 0;
     (*node)->type = type;
     (*node)->rectangle = sfRectangleShape_create();
-    sfRectangleShape_setPosition((*node)->rectangle,enemy_position);
     (*node)->position = sfRectangleShape_getPosition(enemy_rect);
+    sfRectangleShape_setPosition((*node)->rectangle,enemy_position);
     (*node)->movement = NULL;
     (*node)->movement_clock = sfClock_create();
     (*node)->next = (*node);

@@ -231,6 +231,7 @@ typedef struct player {
     int scale_reverse;
     int skill_pts;
     int damage_display;
+    attack_effect_t *attack_effect;
     sfClock *damage_display_clock;
     sfClock *movement_clock;
     node_movement *movement;
@@ -347,6 +348,7 @@ struct data {
     node_rectangle *map_hyrule;
     node_texture *textures;
     sfTexture *world;
+    sfTexture *link;
     sfTexture *npc;
     sfTexture *enemies_texture;
     interact_t interact;
