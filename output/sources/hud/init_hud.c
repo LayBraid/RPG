@@ -6,18 +6,34 @@
 */
 
 #include "my_rpg.h"
+#include "my.h"
+
+void init_stamina(data_t *data)
+{
+    float x = -20;
+    int i = 0;
+
+    for (; i < data->player.stamina ; i++) {
+        create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){x,0}, "./assets/game/stamina.png");
+        sfSprite_setScale(data->objects->sprite, (sfVector2f){3,3});
+        x += 50;
+    }
+    for (; i < 5 ; i++) {
+        create_object(data, (sfIntRect){64,0,32,32}, (sfVector2f){x,0}, "./assets/game/stamina.png");
+        sfSprite_setScale(data->objects->sprite, (sfVector2f){3,3});
+        x += 50;
+    }
+}
 
 void init_hud(data_t *data)
 {
     sfFont *font = sfFont_createFromFile("./assets/font.ttf");
-    data->texts = create_text(data->texts, data->player.name, font);
-    data->texts = set_text_position(data->texts, (sfVector2f){0,0});
+    data->texts = create_text(data->texts, "Merlish", font);
+    data->texts = set_text_position(data->texts, (sfVector2f){50,0});
     sfText_setCharacterSize(data->texts->text, 30);
-    create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){0,30}, "./assets/game/stamina.png");
-    // sfSprite_setTexture(data->objects->sprite, data->objects->texture, sfTrue);
-    // create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){,30}, "./assets/game/stamina.png");
-    // create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){0,30}, "./assets/game/stamina.png");
-    // create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){0,30}, "./assets/game/stamina.png");
-    // create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){0,30}, "./assets/game/stamina.png");
+    data->texts = create_text(data->texts, my_itoa(data->player.lvl), font);
+    data->texts = set_text_position(data->texts, (sfVector2f){10,0});
+    sfText_setCharacterSize(data->texts->text, 30);
+    init_stamina(data);
     data->video.ui = 2;
 }

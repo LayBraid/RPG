@@ -12,6 +12,7 @@ void init_new_game(data_t *data)
 {
     music_t *tmp = data->musics;
 
+    init_hud(data);
     sfMusic_stop(tmp->music);
     tmp = tmp->next;
     sfMusic_play(tmp->music);

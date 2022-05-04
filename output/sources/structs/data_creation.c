@@ -62,6 +62,8 @@ void data_create(data_t *data)
     data->player.items = malloc(sizeof(char) * 8);
     fill_items(data);
     data->player.skill_pts = 1;
+    data->player.stamina = 3;
+    data->player.lvl = 1;
     get_items(data);
     data->player.current_hp = 10;
     data->player.inventory = NULL;

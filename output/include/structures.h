@@ -219,12 +219,14 @@ typedef struct enemy_struct {
 typedef struct player {
     char *name;
     char *items;
+    int stamina;
     unsigned char depth;
     int hp_max;
     int current_hp;
     int equiped;
     int state;
     int animation;
+    int lvl;
     int scale_reverse;
     int skill_pts;
     int damage_display;
@@ -418,6 +420,7 @@ void intro_music(data_t *data);
 //objects.c
 void create_object(data_t *data, sfIntRect rect, sfVector2f pos, char *filepath);
 void display_all_objects(data_t *data);
+object_t *delete_all_objects(object_t *start);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
