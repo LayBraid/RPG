@@ -11,7 +11,6 @@
     #include "structures.h"
 
     #define MAP_PATH "data/hyrule"
-    #define SIZE_MAP 150
 
 enum Entity_list {
     VOID,

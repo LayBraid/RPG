@@ -91,7 +91,7 @@ void player_walk_left(data_t *data)
         data->positions_hyrule[position.y][position.x] = 0;
     } else
         data->x_pile -= 3;
-    if (player.x > 320 && player.x < 2250 - 317)
+    if (player.x > 340 && player.x < 2250 - 317)
         sfView_move(data->mapping, (sfVector2f) {-3, 0});
     data->player.state = WALK_LEFT;
     data->player.position = sfRectangleShape_getPosition(data->
