@@ -25,7 +25,6 @@ static void add_anim_effect(attack_effect_t *node, int value)
     }
 }
 
-
 void setup_effect_player(player_t *player, int id_effect,
 sfVector2f player_position)
 {
@@ -33,7 +32,6 @@ sfVector2f player_position)
 
     while (tmp->id != id_effect)
         tmp = tmp->next;
-
     for (int i = 0; i < 9; i++)
         add_anim_effect(tmp, i);
     for (int i = 9; i > 0; i--)

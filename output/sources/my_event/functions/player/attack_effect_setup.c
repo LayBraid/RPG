@@ -38,6 +38,7 @@ sfRectangleShape *rectangle, sfVector2f position)
     dup->position = sfRectangleShape_getPosition(rectangle);
     dup->movement_or_anim = 1;
     dup->movement = NULL;
+    dup->animation = NULL;
     dup->movement_clock = sfClock_create();
     dup->next = (*node);
     tmp->next = dup;
@@ -52,9 +53,10 @@ sfRectangleShape *rectangle, sfVector2f position)
     (*node)->type = type;
     (*node)->movement_or_anim = 1;
     (*node)->rectangle = sfRectangleShape_create();
+    sfRectangleShape_setPosition((*node)->rectangle, position);
     (*node)->position = sfRectangleShape_getPosition(rectangle);
-    sfRectangleShape_setPosition((*node)->rectangle,position);
     (*node)->movement = NULL;
+    (*node)->animation = NULL;
     (*node)->movement_clock = sfClock_create();
     (*node)->next = (*node);
     return 0;
@@ -67,10 +69,10 @@ sfVector2f player_position)
 
     if (player->attack_effect == NULL)
         id = first_effect_player(&player->attack_effect, type,
-        player->rectangle, player->position);
+        player->rectangle, sfRectangleShape_getPosition(player->rectangle));
     else
         id = any_effect_player(&player->attack_effect, type,
-        player->rectangle, player->position);
+        player->rectangle, sfRectangleShape_getPosition(player->rectangle));
     printf("add %d\n", id);
     texture_effect_player(data, player, id);
     printf("next add\n");
