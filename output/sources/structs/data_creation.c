@@ -77,6 +77,7 @@ void data_create(data_t *data)
     data->texts = NULL;
     data->buttons = NULL;
     data->npcs = NULL;
+    data->objects = NULL;
     data->tiles = NULL;
     data->enemies = NULL;
     data->interact.status = 0;

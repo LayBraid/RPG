@@ -19,6 +19,7 @@ void display_all(data_t *data)
     if (data->video.ui == 2 || data->video.ui == 6) {
         sfRenderWindow_setView(data->video.window, data->mapping);
         display_rectangles_map(data);
+        // display_all_objects(data);
         display_player_depth(data->player, data->video, data->player.depth);
         for (unsigned char depth = 0; depth < 10; depth++) {
             display_npc_depth(data->npcs, data->video, depth);

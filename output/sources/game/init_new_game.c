@@ -6,6 +6,7 @@
 */
 
 #include "my_rpg.h"
+#include "hud.h"
 
 void init_new_game(data_t *data)
 {
@@ -14,5 +15,5 @@ void init_new_game(data_t *data)
     sfMusic_stop(tmp->music);
     tmp = tmp->next;
     sfMusic_play(tmp->music);
-    data->video.ui = 2;
+    data->loading_state = 25;
 }

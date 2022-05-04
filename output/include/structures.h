@@ -131,6 +131,15 @@ typedef struct texture {
     struct texture *next;
 } texture_t;
 
+typedef struct object {
+    unsigned int id;
+    sfSprite *sprite;
+    sfTexture *texture;
+    sfIntRect rect;
+    sfVector2f position;
+    struct object *next;
+} object_t;
+
 typedef struct inventory {
     sfTexture *texture_item;
     sfTexture *texture_rect;
@@ -318,6 +327,7 @@ struct data {
     inventory_t *items;
     tile_t *tiles;
     sfEvent event;
+    object_t *objects;
     music_t *musics;
     event_t *my_event;
     quest_t *quest;
@@ -404,6 +414,10 @@ npc_t *delete_all_npcs(npc_t *start);
 // music.c
 void add_music(data_t *data, char *path, int loop);
 void intro_music(data_t *data);
+
+//objects.c
+void create_object(data_t *data, sfIntRect rect, sfVector2f pos, char *filepath);
+void display_all_objects(data_t *data);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
