@@ -18,10 +18,11 @@ void setup_texture_player(data_t *data)
     data->x_pile = 0;
     data->y_pile = 0;
     data->player.damage_display = 0;
+    data->player.attack_effect = NULL;
     data->player.damage_display_clock = sfClock_create();
     sfRectangleShape_setSize(data->player.rectangle, (sfVector2f) {16, 28});
     sfRectangleShape_setTexture(data->player.rectangle,
-    sfTexture_createFromFile("assets/game/Link.png", NULL), sfTrue);
+    data->link, sfTrue);
     sfRectangleShape_setTextureRect(data->player.rectangle,
     get_rect_player(data->player.state, data->player.animation));
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)

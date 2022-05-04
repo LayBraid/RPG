@@ -30,6 +30,8 @@ static void analyse_key(data_t *data)
     }
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
+    if (data->event.key.code == sfKeySpace)
+        call_event(data, "attack_player");
 }
 
 static void analyse_released_key(data_t *data)

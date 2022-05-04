@@ -1,10 +1,12 @@
 /*
 ** EPITECH PROJECT, 2022
-** output
+** my_rpg
 ** File description:
-** No file there , just an epitech header example
+** make_game
 */
 
+#include "player.h"
+#include "my_event.h"
 #include "enemies.h"
 
 static int get_max_effect(attack_effect_t **node)
@@ -22,7 +24,7 @@ static int get_max_effect(attack_effect_t **node)
 }
 
 static int any_effect(attack_effect_t **node, int type,
-sfRectangleShape *enemy_rect, sfVector2f enemy_position)
+sfRectangleShape *rectangle, sfVector2f position)
 {
     attack_effect_t *tmp = (*node);
     attack_effect_t *dup = malloc(sizeof(attack_effect_t));
@@ -32,8 +34,8 @@ sfRectangleShape *enemy_rect, sfVector2f enemy_position)
     dup->id = get_max_effect(node) + 1;
     dup->type = type;
     dup->rectangle = sfRectangleShape_create();
-    sfRectangleShape_setPosition((*node)->rectangle,enemy_position);
-    dup->position = sfRectangleShape_getPosition(enemy_rect);
+    sfRectangleShape_setPosition((*node)->rectangle, position);
+    dup->position = sfRectangleShape_getPosition(rectangle);
     dup->movement = NULL;
     dup->movement_clock = sfClock_create();
     dup->next = (*node);
@@ -42,31 +44,31 @@ sfRectangleShape *enemy_rect, sfVector2f enemy_position)
 }
 
 static int first_effect(attack_effect_t **node, int type,
-sfRectangleShape *enemy_rect, sfVector2f enemy_position)
+sfRectangleShape *rectangle, sfVector2f position)
 {
     (*node) = malloc(sizeof(attack_effect_t));
     (*node)->id = 0;
     (*node)->type = type;
     (*node)->rectangle = sfRectangleShape_create();
-    (*node)->position = sfRectangleShape_getPosition(enemy_rect);
-    sfRectangleShape_setPosition((*node)->rectangle,enemy_position);
+    (*node)->position = sfRectangleShape_getPosition(rectangle);
+    sfRectangleShape_setPosition((*node)->rectangle,position);
     (*node)->movement = NULL;
     (*node)->movement_clock = sfClock_create();
     (*node)->next = (*node);
     return 0;
 }
 
-void add_effect_enemy(data_t *data, enemy_t *enemy, int type,
+void add_effect_player(data_t *data, player_t *player, int type,
 sfVector2f player_position)
 {
     int id;
 
-    if (enemy->attack_effect == NULL)
-        id = first_effect(&enemy->attack_effect, type,
-        enemy->rectangle, enemy->position);
+    if (player->attack_effect == NULL)
+        id = first_effect(&player->attack_effect, type,
+        player->rectangle, player->position);
     else
-        id = any_effect(&enemy->attack_effect, type,
-        enemy->rectangle, enemy->position);
-    texture_effect(data, enemy, id);
-    setup_effect(enemy, id, player_position);
+        id = any_effect(&player->attack_effect, type,
+        player->rectangle, player->position);
+    texture_effect(data, player, id);
+    setup_effect(player, id, player_position);
 }
