@@ -74,19 +74,6 @@ static void analyse_event(data_t *data)
 
 void pause_scene(data_t *data)
 {
-    tile_t *tile = data->tiles;
-    text_t *node = data->texts;
-    sfVector2f pos;
-
-    while (tile != NULL && tile->type != 1)
-        tile = tile->next;
-    // pos = sfSprite_getPosition(tile->sprite);
-    // if (pos.y < 250)
-    //     tile = set_tile_move(tile, (sfVector2f){0, 2});
-    // sfSprite_setPosition(tile->sprite, tile->position);
-    // sfRenderWindow_drawSprite(data->video.window, tile->sprite, NULL);
     display_all(data);
-    // sfText_setPosition(node->text, node->position);
-    // sfRenderWindow_drawText(data->video.window, node->text, NULL);
     analyse_event(data);
 }

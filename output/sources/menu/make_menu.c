@@ -15,7 +15,8 @@ static void drawtext(data_t *data)
     my_text(data, (sfVector2f) {100, 200}, 5, "NEW GAME");
     my_text(data, (sfVector2f) {100, 300}, 5, "LOAD GAME");
     my_text(data, (sfVector2f) {100, 400}, 5, "SETTINGS");
-    my_text(data, (sfVector2f) {100, 500}, 5, "QUIT GAME");
+    my_text(data, (sfVector2f) {100, 500}, 5, "CREDITS");
+    my_text(data, (sfVector2f) {100, 600}, 5, "QUIT GAME");
 }
 
 static void gotoo(data_t *data)
@@ -38,7 +39,12 @@ static void gotoo(data_t *data)
         data->video.ui = 32;
         data->loading_state = 5;
     }
-    if (pos.y == 520)
+    if (pos.y == 520) {
+        data->tiles = delete_all_tiles(data->tiles);
+        data->video.ui = 32;
+        data->loading_state = 25;
+    }
+    if (pos.y == 620)
         sfRenderWindow_close(data->video.window);
 }
 

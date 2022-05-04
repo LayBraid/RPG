@@ -15,6 +15,7 @@
 #include "name.h"
 #include "pause.h"
 #include "howtoplay.h"
+#include "credits.h"
 
 void loading(data_t *data)
 {
@@ -69,6 +70,10 @@ void loading(data_t *data)
         case (23): init_howtoplay(data);
             break;
         case (24): delete_howtoplay(data);
+            break;
+        case (25): init_credits(data);
+            break;
+        case (26): delete_credits(data);
             break;
     }
 }

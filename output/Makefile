@@ -40,6 +40,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/editor/*.c) \
 	  $(wildcard sources/fprintf/*.c) \
 	  $(wildcard sources/enemies/*.c) \
+	  $(wildcard sources/credits/*.c) \
 	  $(wildcard sources/editor/rectangle/*.c) \
 	  $(wildcard sources/editor/textures/*.c) \
 	  $(wildcard lib/my/*.c) \

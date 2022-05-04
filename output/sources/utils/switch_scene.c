@@ -17,6 +17,7 @@
 #include "keybind.h"
 #include "pause.h"
 #include "howtoplay.h"
+#include "credits.h"
 #include "dialogs.h"
 
 void switch_scene(data_t *data)
@@ -43,6 +44,8 @@ void switch_scene(data_t *data)
         case (9): howtoplay_scene(data);
             break;
         case (10): skill_tree(data);
+            break;
+        case (11): credits_scene(data);
             break;
         case (32): loading(data);
             break;
