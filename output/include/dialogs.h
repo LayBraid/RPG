@@ -45,4 +45,6 @@ void dialog(data_t *data, char *dialog, int id_npc_texture,
     char is_talking, int id_npc);
 void inter_dialog(data_t *data);
 
+void dialog1(data_t *data, int npc_id);
+
 #endif /* !DIALOGS_H_ */

@@ -47,6 +47,8 @@ void switch_scene(data_t *data)
             break;
         case (11): credits_scene(data);
             break;
+        case (31): dialog1(data, 1);
+            break;
         case (32): loading(data);
             break;
         default:
