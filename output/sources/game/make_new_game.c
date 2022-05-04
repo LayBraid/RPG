@@ -29,6 +29,10 @@ static void analyse_key(data_t *data)
     }
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
+    if (data->event.key.code == sfKeyEscape) {
+        data->video.ui = 32;
+        data->loading_state = 18;
+    }
 }
 
 static void analyse_released_key(data_t *data)

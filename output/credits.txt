@@ -1,0 +1,57 @@
+                        CREDITS
+
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of
+the License, or (at your option) any later version.
+
+
+
+            Clement & Aymeric   -   Backend
+
+            Arthur              -   Intro
+
+            Eddie               -   Map Overworld
+
+            Clement             -   NPC
+
+            Arthur              -   Menu
+
+            Aymeric             -   Shop
+
+            Arthur              -   Settings
+
+            Clement             -   Interaction
+
+            Arthur              -   Keybinds
+
+            Clement             -   Ennemiess' range
+
+            Arthur              -   Pause
+
+            Aymeric             -   Dialogues
+
+            Arthur              -   How to Play
+
+            Clement             -   Events
+
+            Arthur              -   Credits
+
+            Clement             -   Collisions
+
+            Arthur              -   Audio
+
+            Oscar               -   Skill Tree
+
+            Clement             -   Ennemies attacks
+
+            Arthur              -   Maps Dungeons
+
+            Oscar               -   Inventory
+
+            Arthur              -   Maps House
+
+            Clement             -   Maps Editor
+
+            Arthur              -   Script
