@@ -114,17 +114,17 @@ void set_dialog_characters(data_t *data, char is_talking, int id_npc)
 
 void dialog_init(data_t *data)
 {
-    data->texture_bank = create_texture(data->texture_bank,
-        "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
-    data->player.name = strdup("Link");
-    data->id_text_player = data->texture_bank->id;
-    data->npcs = create_npc(data->npcs, "Arthur");
-    data->npcs->inventory = create_inventory(data->npcs->inventory, "bite");
-    data->npcs->inventory = set_inventory_count(data->npcs->inventory, 6);
-    data->npcs->inventory = create_inventory(data->npcs->inventory, "chatte");
-    data->npcs->inventory = set_inventory_count(data->npcs->inventory, 2);
-    data->npcs->inventory = create_inventory(data->npcs->inventory, "couille");
-    data->npcs->inventory = set_inventory_count(data->npcs->inventory, 1);
+    // data->texture_bank = create_texture(data->texture_bank,
+    //     "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
+    // data->player.name = strdup("Link");
+    // data->id_text_player = data->texture_bank->id;
+    // data->npcs = create_npc(data->npcs, "Arthur");
+    // data->npcs->inventory = create_inventory(data->npcs->inventory, "bite");
+    // data->npcs->inventory = set_inventory_count(data->npcs->inventory, 6);
+    // data->npcs->inventory = create_inventory(data->npcs->inventory, "chatte");
+    // data->npcs->inventory = set_inventory_count(data->npcs->inventory, 2);
+    // data->npcs->inventory = create_inventory(data->npcs->inventory, "couille");
+    // data->npcs->inventory = set_inventory_count(data->npcs->inventory, 1);
     // ! supprimer au dessus et cette ligne
     data->npcs = set_npc_texture(data->npcs, data->texture_bank);
     data->tiles = create_tile(data->tiles);
