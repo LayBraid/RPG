@@ -43,6 +43,16 @@ typedef struct anim_img_struct {
     int depth;
 } anim_img;
 
+typedef struct outline {
+    unsigned int id;
+    sfSprite *sprite;
+    sfIntRect rect;
+    sfTexture *texture;
+    sfVector2f position;
+    sfVector2f move;
+    struct outline *next;
+} outline_t;
+
 typedef struct hovered_button_struct {
     anim_img *button;
     float x_click;
@@ -221,6 +231,7 @@ typedef struct enemy_struct {
 
 typedef struct player {
     char *name;
+    char *comp;
     char *items;
     unsigned char depth;
     int hp_max;
@@ -230,6 +241,7 @@ typedef struct player {
     int animation;
     int scale_reverse;
     int skill_pts;
+    int dmg;
     int damage_display;
     attack_effect_t *attack_effect;
     sfClock *damage_display_clock;
@@ -336,6 +348,7 @@ struct data {
     quest_t *quest;
     letter_t *letter;
     node_letter *letters;
+    outline_t *outline;
     float delta;
     sfClock *clock;
     char dialog_skip;
@@ -404,6 +417,7 @@ tile_t *create_tile(tile_t *start);
 tile_t *delete_tile(tile_t *node);
 tile_t *delete_first_tile(data_t *data);
 tile_t *delete_all_tiles(tile_t *start);
+tile_t *tile_set_type(tile_t *tile, int type);
 
 // tiles_utils.c
 tile_t *set_tile_depth(tile_t *tile, unsigned char depth);
@@ -429,6 +443,11 @@ npc_t *set_npc_texture(npc_t *node, texture_t *texture);
 npc_t *set_npc_position(npc_t *node, sfVector2f position);
 npc_t *decrease_npc_hp(npc_t *node, int value);
 npc_t *increase_npc_hp(npc_t *node, int value);
+
+//outline.c
+void create_outline(data_t *data, sfIntRect rect, sfVector2f pos);
+void display_outline(data_t *data);
+outline_t *delete_all_outline(outline_t *start);
 
 // npc_utils_2.c
 npc_t *set_npc_max_hp(npc_t *node, int value);
