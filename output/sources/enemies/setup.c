@@ -46,6 +46,7 @@ void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
     dup->type = new->type;
     dup->depth = new->depth;
     dup->hp = new->hp;
+    dup->map = new->map;
     dup->max_hp = new->max_hp;
     dup->range = new->range;
     dup->position = new->position;
@@ -64,6 +65,7 @@ void first_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
     (*node)->display_life = 0;
     (*node)->name = new->name;
     (*node)->type = new->type;
+    (*node)->map = new->map;
     (*node)->attack_effect = NULL;
     (*node)->depth = new->depth;
     (*node)->hp = new->hp;

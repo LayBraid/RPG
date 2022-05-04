@@ -72,8 +72,8 @@ const float info[4])
 
 void add_map(data_t *data, const float info[4])
 {
-    if (data->map == NULL)
-        setup_map_rectangle(data, &data->map, info);
+    if (data->map_hyrule == NULL)
+        setup_map_rectangle(data, &data->map_hyrule, info);
     else
-        add_map_rectangle(data, &data->map, info);
+        add_map_rectangle(data, &data->map_hyrule, info);
 }

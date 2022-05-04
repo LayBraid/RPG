@@ -206,6 +206,7 @@ typedef struct enemy_struct {
     int type;
     int depth;
     int range;
+    int map;
     float hp;
     float max_hp;
     int display_life;
@@ -343,19 +344,20 @@ struct data {
     node_img *images;
     sfView *main;
     sfView *mapping;
-    node_rectangle *map;
+    node_rectangle *map_hyrule;
     node_texture *textures;
     sfTexture *world;
     sfTexture *npc;
     sfTexture *enemies_texture;
     interact_t interact;
-    int **collisions;
-    int **positions;
+    int **collisions_hyrule;
+    int **positions_huryle;
     int x_pile;
     int y_pile;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
+    int my_map;
 };
 
 struct editor_data {
