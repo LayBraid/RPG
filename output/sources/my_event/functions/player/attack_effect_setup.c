@@ -7,7 +7,6 @@
 
 #include "player.h"
 #include "my_event.h"
-#include "enemies.h"
 
 static int get_max_effect_player(attack_effect_t **node)
 {
@@ -73,9 +72,6 @@ sfVector2f player_position)
     else
         id = any_effect_player(&player->attack_effect, type,
         player->rectangle, sfRectangleShape_getPosition(player->rectangle));
-    printf("add %d\n", id);
     texture_effect_player(data, player, id);
-    printf("next add\n");
     setup_effect_player(player, id, player_position);
-    printf("finish add\n");
 }

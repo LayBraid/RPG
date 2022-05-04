@@ -15,11 +15,10 @@ static void clock_effect(player_t *player, attack_effect_t *node)
     double diff = time.microseconds / 1000000.0;
 
     if (diff > 0.1) {
-        printf("up anim %d\n%d %d\n\n", node->animation->value, player->attack_effect->type, node->animation->value);
-        sfVector2f fdp = sfRectangleShape_getPosition(node->rectangle);
-        printf("%f %f\n", fdp.x, fdp.y);
-        sfRectangleShape_setSize(node->rectangle, get_size_sword(player->attack_effect->type, node->animation->value));
-        sfRectangleShape_setTextureRect(node->rectangle, get_rect_sword(player->attack_effect->type, node->animation->value));
+        sfRectangleShape_setSize(node->rectangle,
+        get_size_sword(player->attack_effect->type, node->animation->value));
+        sfRectangleShape_setTextureRect(node->rectangle,
+        get_rect_sword(player->attack_effect->type, node->animation->value));
         if (player->attack_effect->animation->next == NULL) {
             if (player->attack_effect->id == player->attack_effect->next->id)
                 player->attack_effect = NULL;
