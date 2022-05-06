@@ -12,7 +12,7 @@
 void display_all(data_t *data)
 {
     sfRenderWindow_setView(data->video.window, data->main);
-    if (data->video.ui == 2 || data->video.ui == 6 || data->video.ui == 31) {
+    if (data->video.ui == 2 || data->video.ui == 6 || (data->video.ui <= 31 && data->video.ui >= 23)) {
         sfRenderWindow_setView(data->video.window, data->mapping);
         display_rectangles_map(data);
         display_player_depth(data->player, data->video, data->player.depth);
