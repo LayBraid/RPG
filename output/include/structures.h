@@ -371,6 +371,7 @@ struct data {
     int **positions_hyrule;
     int x_pile_hyrule;
     int y_pile_hyrule;
+    sfVector2f position_hyrule;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
