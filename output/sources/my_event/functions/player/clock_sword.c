@@ -14,7 +14,7 @@ static void clock_effect(player_t *player, attack_effect_t *node)
     sfTime time = sfClock_getElapsedTime(node->movement_clock);
     double diff = time.microseconds / 1000000.0;
 
-    if (diff > 0.1) {
+    if (diff > 0.05) {
         sfRectangleShape_setSize(node->rectangle,
         get_size_sword(player->attack_effect->type, node->animation->value));
         sfRectangleShape_setTextureRect(node->rectangle,
