@@ -55,4 +55,6 @@ void dialog7(data_t *data, int npc_id);
 void dialog8(data_t *data, int npc_id);
 void dialog9(data_t *data, int npc_id);
 
+void which_dialog(data_t *data, int npc_id);
+
 #endif /* !DIALOGS_H_ */

@@ -320,8 +320,3 @@ void which_dialog(data_t *data, int npc_id)
             break;
     }
 }
-
-void get_corresponding_dialog(data_t *data)
-{
-    which_dialog(data, data->interact.npc_id);
-}

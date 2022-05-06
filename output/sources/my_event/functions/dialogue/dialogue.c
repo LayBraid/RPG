@@ -8,8 +8,9 @@
 #include "my_rpg.h"
 #include "my_event.h"
 #include "utils.h"
+#include "dialogs.h"
 
 void event_dialog1(data_t *data)
 {
-    data->video.ui = 31;
+    which_dialog(data, data->interact.npc_id);
 }
