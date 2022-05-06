@@ -294,7 +294,7 @@ void dialog9(data_t *data, int npc_id)
     destroy_dialogs(data);
     data->video.ui = 2;
 }
-
+// TODO : donner aux NPC les id correspondant à leurs dialogues
 void which_dialog(data_t *data, int npc_id)
 {
     switch (npc_id) {
