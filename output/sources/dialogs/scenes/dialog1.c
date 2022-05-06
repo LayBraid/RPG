@@ -294,3 +294,34 @@ void dialog9(data_t *data, int npc_id)
     destroy_dialogs(data);
     data->video.ui = 2;
 }
+
+void which_dialog(data_t *data, int npc_id)
+{
+    switch (npc_id) {
+        case (1): dialog1(data, npc_id);
+            break;
+        case (2): dialog2(data, npc_id);
+            break;
+        case (3): dialog3(data, npc_id);
+            break;
+        case (4): dialog4(data, npc_id);
+            break;
+        case (5): dialog5(data, npc_id);
+            break;
+        case (6): dialog6(data, npc_id);
+            break;
+        case (7): dialog7(data, npc_id);
+            break;
+        case (8): dialog8(data, npc_id);
+            break;
+        case (9): dialog9(data, npc_id);
+            break;
+        default:
+            break;
+    }
+}
+
+void get_corresponding_dialog(data_t *data)
+{
+    which_dialog(data, data->interact.npc_id);
+}
