@@ -371,6 +371,10 @@ struct data {
     int **collisions_hyrule;
     int **positions_hyrule;
     sfVector2f position_hyrule;
+    node_rectangle *map_tophouse;
+    int **collisions_tophouse;
+    int **positions_tophouse;
+    sfVector2f position_tophouse;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
