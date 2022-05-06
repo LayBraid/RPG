@@ -45,4 +45,6 @@ void get_map_tophouse(data_t *data);
 
 void setup_collisions_tophouse(data_t *data);
 
+void display_rectangles_tophouse(data_t *data);
+
 #endif /* !MAP_H_ */

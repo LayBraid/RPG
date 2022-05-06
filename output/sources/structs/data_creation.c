@@ -111,7 +111,7 @@ void data_create(data_t *data)
     data->map_hyrule = NULL;
     get_map(data);
     get_map_tophouse(data);
-    set_map(data, 2);
+    set_map(data, 0);
     set_letters(data);
     setup_texture_player(data);
     get_items(data);

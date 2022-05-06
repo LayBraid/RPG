@@ -25,4 +25,5 @@ void setup_texture_player(data_t *data)
     get_rect_player(data->player.state, data->player.animation));
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
     {120, 1500 - 26 - 135 + 750});
+    data->position_tophouse = (sfVector2f) {50, 60};
 }
