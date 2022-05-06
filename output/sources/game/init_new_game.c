@@ -16,11 +16,13 @@ void init_new_game(data_t *data)
 
     sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
     {120, 1500 - 26 - 135 + 750});
+    data->player.position = sfRectangleShape_getPosition(data->player.rectangle);
     data->player.state = IDLE_DOWN;
     data->quest = NULL;
     data->enemies = NULL;
     data->npcs = NULL;
     parsing_data(data);
+    // sfView_setCenter(data->main, data->player.position);
     sfMusic_stop(tmp->music);
     tmp = tmp->next;
     sfMusic_play(tmp->music);
