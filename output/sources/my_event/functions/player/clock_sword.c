@@ -43,7 +43,10 @@ static void clock_effect(player_t *player, attack_effect_t *node)
         get_rect_sword(player->attack_effect->type, node->animation->value));
         update_rectangle(player, node);
         if (player->attack_effect->animation->next == NULL) {
-            player->state -= 8;
+            if (player->state > 8)
+                player->state -= 8;
+            else
+                player->state -= 4;
             if (player->attack_effect->id == player->attack_effect->next->id)
                 player->attack_effect = NULL;
             else
