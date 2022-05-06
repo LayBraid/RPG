@@ -36,5 +36,4 @@ sfVector2f player_position)
         add_anim_effect(tmp, i);
     for (int i = 9; i > 0; i--)
         add_anim_effect(tmp, i);
-    
 }

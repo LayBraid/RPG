@@ -367,8 +367,8 @@ struct data {
     interact_t interact;
     int **collisions_hyrule;
     int **positions_hyrule;
-    int x_pile;
-    int y_pile;
+    int x_pile_hyrule;
+    int y_pile_hyrule;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
