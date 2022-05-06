@@ -39,6 +39,7 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/map/*.c) \
 	  $(wildcard sources/map/rectangles/*.c) \
 	  $(wildcard sources/editor/*.c) \
+	  $(wildcard sources/save/*.c) \
 	  $(wildcard sources/fprintf/*.c) \
 	  $(wildcard sources/enemies/*.c) \
 	  $(wildcard sources/credits/*.c) \
