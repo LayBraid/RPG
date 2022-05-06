@@ -238,6 +238,7 @@ typedef struct player {
     int hp_max;
     int current_hp;
     int equipped;
+    int clement;
     int state;
     int animation;
     int scale_reverse;
