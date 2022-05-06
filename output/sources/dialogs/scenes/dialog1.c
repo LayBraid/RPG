@@ -55,6 +55,8 @@ void dialog1(data_t *data, int npc_id)
     dialog(data,
     my_fprintf("%s%s", "Bon je t'ai prepare des donuts sucres... au sucre,",
     "\n\ndonc descend me gouter ca."), data->id_text_player, 1, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -102,6 +104,8 @@ void dialog2(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, "EN AVANT !", data->id_text_player, 0, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -136,6 +140,8 @@ void dialog3(data_t *data, int npc_id)
     "Ganon s'est enfui dans la foret au Nord du village apres m'avoir vole",
     "\n\nmes gentils poulets. Tu devrais commencer ton expedition la-bas."),
     data->id_text_player, 0, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -176,6 +182,7 @@ void dialog4(data_t *data, int npc_id)
         dialog(data, "Non !", data->id_text_player, 0, npc_id);
         // ! sortir du dialog
     }
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -198,6 +205,8 @@ void dialog5(data_t *data, int npc_id)
     destroy_dialog_frame(data);
     dialog(data, "*Ca n'atteint pas ma motivation*",
     data->id_text_player, 0, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -214,6 +223,8 @@ void dialog6(data_t *data, int npc_id)
     destroy_dialog_frame(data);
     dialog(data, "*intrigue par le ton employe, mais je n’abandonnerai pas*",
     data->id_text_player, 0, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -243,6 +254,7 @@ void dialog7(data_t *data, int npc_id)
         dialog(data, "Non !", data->id_text_player, 0, npc_id);
         // ! sortir du dialog
     }
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -279,6 +291,8 @@ void dialog8(data_t *data, int npc_id)
     "laisser devoiler tout ce que tu viens d'appendre à tout le monde !\n\n",
     "Je vais donc devoir me debarrasser de toi !"),
         data->id_text_player, 1, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -291,6 +305,8 @@ void dialog9(data_t *data, int npc_id)
     "Non je rigole bien joue Link, grace à toi on va pouvoir\n\n",
     "de nouveau deguster du poulet ! Merci infiniment !"),
         data->id_text_player, 1, npc_id);
+    inter_dialog(data);
+    destroy_dialog_frame(data);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
