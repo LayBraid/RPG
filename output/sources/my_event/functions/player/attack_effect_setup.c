@@ -70,8 +70,12 @@ sfVector2f player_position)
         id = first_effect_player(&player->attack_effect, type,
         player->rectangle, sfRectangleShape_getPosition(player->rectangle));
     else
-        id = any_effect_player(&player->attack_effect, type,
-        player->rectangle, sfRectangleShape_getPosition(player->rectangle));
+        return;
+    if (player->state < 4)
+        player->state += 8;
+    else
+        player->state += 4;
     texture_effect_player(data, player, id);
     setup_effect_player(player, id, player_position);
+    update_rectangle(player, player->attack_effect);
 }
