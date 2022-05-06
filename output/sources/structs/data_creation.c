@@ -110,6 +110,7 @@ void data_create(data_t *data)
     data->textures = init_textures();
     data->map_hyrule = NULL;
     get_map(data);
+    get_map_tophouse(data);
     set_map(data, 2);
     set_letters(data);
     setup_texture_player(data);
