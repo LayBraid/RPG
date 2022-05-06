@@ -18,6 +18,6 @@ sfVector2i get_position(data_t *data, int entity, int index)
     player.x /= 15;
     player.y /= 15;
     cast.x = (int) player.x;
-    cast.y = (int) player.y;
+    cast.y = (int) player.y + 1;
     return cast;
 }
