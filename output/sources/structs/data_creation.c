@@ -13,6 +13,7 @@
 #include "player.h"
 #include "editor.h"
 #include "keybind.h"
+#include "my.h"
 
 const char *WORLD_TILES = "assets/game/Overworld tiles.png";
 const char *NPC_TILES = "assets/game/npc.png";
@@ -48,8 +49,9 @@ void init_music(data_t *data)
 
 void fill_items(data_t *data)
 {
-    for (int i = 0 ; i < 7 ; i++)
+    for (int i = 0 ; i < 3 ; i++)
         data->player.items[i] = '0';
+    data->player.items[0] = '1';
 }
 
 //TODO Resize function "data_create"
@@ -59,8 +61,9 @@ void data_create(data_t *data)
     data->video.ui = 32;
     data->player.depth = 0;
     data->player.hp_max = 10;
-    data->player.items = malloc(sizeof(char) * 8);
-    fill_items(data);
+    data->player.dmg = 1;
+    data->player.comp = my_strdup("0000000");
+    data->player.items = my_strdup("000");
     data->player.skill_pts = 1;
     get_items(data);
     data->player.current_hp = 10;
@@ -86,6 +89,7 @@ void data_create(data_t *data)
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
     data->enemies_texture = sfTexture_createFromFile(ENEMIES_TILES, NULL);
+    data->link = sfTexture_createFromFile("assets/game/Link.png", NULL);
     data->musics = NULL;
     init_music(data);
     initialize_events(data);
@@ -100,7 +104,7 @@ void data_create(data_t *data)
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
     sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243 + 750});
     data->textures = init_textures();
-    data->map = NULL;
+    data->map_hyrule = NULL;
     get_map(data);
     set_letters(data);
     setup_texture_player(data);

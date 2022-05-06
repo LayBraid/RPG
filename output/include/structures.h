@@ -43,6 +43,16 @@ typedef struct anim_img_struct {
     int depth;
 } anim_img;
 
+typedef struct outline {
+    unsigned int id;
+    sfSprite *sprite;
+    sfIntRect rect;
+    sfTexture *texture;
+    sfVector2f position;
+    sfVector2f move;
+    struct outline *next;
+} outline_t;
+
 typedef struct hovered_button_struct {
     anim_img *button;
     float x_click;
@@ -166,16 +176,19 @@ typedef struct node_animation_struct {
     int id;
     int state;
     int value;
-    struct node_movement_struct *next;
+    struct node_animation_struct *next;
 } node_animation;
 
 typedef struct attack_effect_s {
     int id;
+    int movement_or_anim;
     int type;
+    int equipped;
     sfRectangleShape *rectangle;
     sfVector2f position;
     sfClock *movement_clock;
     node_movement *movement;
+    node_animation *animation;
     struct attack_effect_s *next;
 } attack_effect_t;
 
@@ -204,6 +217,7 @@ typedef struct enemy_struct {
     int type;
     int depth;
     int range;
+    int map;
     float hp;
     float max_hp;
     int display_life;
@@ -218,16 +232,20 @@ typedef struct enemy_struct {
 
 typedef struct player {
     char *name;
+    char *comp;
     char *items;
     unsigned char depth;
     int hp_max;
     int current_hp;
-    int equiped;
+    int equipped;
+    int clement;
     int state;
     int animation;
     int scale_reverse;
     int skill_pts;
+    int dmg;
     int damage_display;
+    attack_effect_t *attack_effect;
     sfClock *damage_display_clock;
     sfClock *movement_clock;
     node_movement *movement;
@@ -333,6 +351,7 @@ struct data {
     quest_t *quest;
     letter_t *letter;
     node_letter *letters;
+    outline_t *outline;
     float delta;
     sfClock *clock;
     char dialog_skip;
@@ -342,19 +361,21 @@ struct data {
     node_img *images;
     sfView *main;
     sfView *mapping;
-    node_rectangle *map;
+    node_rectangle *map_hyrule;
     node_texture *textures;
     sfTexture *world;
+    sfTexture *link;
     sfTexture *npc;
     sfTexture *enemies_texture;
     interact_t interact;
-    int **collisions;
-    int **positions;
-    int x_pile;
-    int y_pile;
+    int **collisions_hyrule;
+    int **positions_hyrule;
+    int x_pile_hyrule;
+    int y_pile_hyrule;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
+    int my_map;
 };
 
 struct editor_data {
@@ -399,6 +420,7 @@ tile_t *create_tile(tile_t *start);
 tile_t *delete_tile(tile_t *node);
 tile_t *delete_first_tile(data_t *data);
 tile_t *delete_all_tiles(tile_t *start);
+tile_t *tile_set_type(tile_t *tile, int type);
 
 // tiles_utils.c
 tile_t *set_tile_depth(tile_t *tile, unsigned char depth);
@@ -424,6 +446,11 @@ npc_t *set_npc_texture(npc_t *node, texture_t *texture);
 npc_t *set_npc_position(npc_t *node, sfVector2f position);
 npc_t *decrease_npc_hp(npc_t *node, int value);
 npc_t *increase_npc_hp(npc_t *node, int value);
+
+//outline.c
+void create_outline(data_t *data, sfIntRect rect, sfVector2f pos);
+void display_outline(data_t *data);
+outline_t *delete_all_outline(outline_t *start);
 
 // npc_utils_2.c
 npc_t *set_npc_max_hp(npc_t *node, int value);

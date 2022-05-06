@@ -11,7 +11,6 @@
     #include "structures.h"
 
     #define MAP_PATH "data/hyrule"
-    #define SIZE_MAP 150
 
 enum Entity_list {
     VOID,
@@ -29,5 +28,15 @@ void add_map(data_t *data, const float info[4]);
 void display_rectangles_map(data_t *data);
 
 void setup_collisions(data_t *data);
+
+void set_map(data_t *data, int map);
+
+void hyrule_move_down(data_t *data);
+
+void hyrule_move_up(data_t *data);
+
+void hyrule_move_right(data_t *data);
+
+void hyrule_move_left(data_t *data);
 
 #endif /* !MAP_H_ */

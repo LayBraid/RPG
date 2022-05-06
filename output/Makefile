@@ -49,6 +49,8 @@ SRC = $(wildcard sources/*.c) \
 	  $(wildcard sources/dialogs/scenes/*.c) \
 	  $(wildcard lib/my/*.c) \
 
+SRC = $(shell find . -name '*.c')
+
 OBJ = $(SRC:%.c=%.o)
 .SILENT:$(OBJ)
 

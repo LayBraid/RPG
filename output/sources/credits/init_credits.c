@@ -11,7 +11,7 @@
 void init_credits(data_t *data)
 {
     sfFont *font = sfFont_createFromFile("assets/font.ttf");
-    data->buttons = create_button(data->buttons, get_in_buffer("credits.txt"), font);
+    data->buttons = create_button(data->buttons, get_in_buffer("data/credits"), font);
     data->buttons = set_button_position(data->buttons, (sfVector2f){150, 1200});
     sfText_setCharacterSize(data->buttons->text, 50);
     data->texture_bank = create_texture(data->texture_bank,

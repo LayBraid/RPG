@@ -32,10 +32,18 @@ static void analyse_key(data_t *data)
         call_event(data, "interact_npc");
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
+    if (data->event.key.code == sfKeySpace)
+        call_event(data, "attack_player");
     if (data->event.key.code == sfKeyEscape) {
         data->video.ui = 32;
         data->loading_state = 18;
     }
+    if (data->event.key.code == sfKeyNum1)
+        data->player.equipped = 1;
+    if (data->event.key.code == sfKeyNum2)
+        data->player.equipped = 2;
+    if (data->event.key.code == sfKeyNum3)
+        data->player.equipped = 3;
 }
 
 static void analyse_released_key(data_t *data)
@@ -70,4 +78,5 @@ void new_game_scene(data_t *data)
     clock_stop_display_life(data);
     clock_enemies_life_display(data);
     clock_enemies_effect(data);
+    player_effect_all(data, &data->player);
 }

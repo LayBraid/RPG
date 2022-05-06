@@ -22,7 +22,7 @@
 ['Kamel','event_dialog1',2,0,[1630, 2070]]
 ['Jean-Marie Bigard','event_dialog1',2,0,[1830, 2070]]
 ['Enemies']
-['name',0,0,30,100,[500,2070]]
+['name',0,0,30,100,2,[500,2070]]
 ['Profiles']
 ['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 54],[['kill_one_png',1],['kill_two_png',0]]]
 ['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 54],[['kill_one_png',1],['kill_two_png',0]]]

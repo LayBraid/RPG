@@ -10,8 +10,6 @@
 static void clock_effect(enemy_t *enemy, attack_effect_t *node)
 {
     if (node->movement == NULL)
-        enemy->attack_effect = enemy->attack_effect->next;
-    if (node->movement == NULL)
         return;
     sfTime time = sfClock_getElapsedTime(node->movement_clock);
     double diff = time.microseconds / 1000000.0;
@@ -19,7 +17,15 @@ static void clock_effect(enemy_t *enemy, attack_effect_t *node)
     if (diff > 0.06) {
         sfRectangleShape_setPosition(node->rectangle, node->movement->delta);
         node->position = sfRectangleShape_getPosition(node->rectangle);
+        if (node->movement->next == NULL)
+            enemy->attack_effect = enemy->attack_effect->next;
         node->movement = node->movement->next;
+        if (enemy->attack_effect->movement == NULL) {
+            if (enemy->attack_effect->next->id == 0)
+                enemy->attack_effect = NULL;
+            else
+                enemy->attack_effect = enemy->attack_effect->next;
+        }
         sfClock_restart(node->movement_clock);
     }
 }
