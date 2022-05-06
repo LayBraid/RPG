@@ -141,6 +141,7 @@ typedef struct inventory {
     sfIntRect rect_item;
     sfIntRect rect_rect;
     int item;
+    int main;
     struct inventory *next;
 } inventory_t;
 
@@ -189,9 +190,9 @@ typedef struct player {
     char *name;
     char *items;
     unsigned char depth;
+    int equiped;
     int hp_max;
     int current_hp;
-    int equiped;
     int state;
     int animation;
     sfClock *movement_clock;
@@ -208,6 +209,7 @@ typedef struct video {
     sfRenderWindow *window;
     sfVideoMode mode;
     unsigned int ui;
+    int drag;
 } video_t;
 
 typedef struct music {
@@ -395,7 +397,7 @@ texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 // inventory_utils.c
 void get_items(data_t *data);
 void display_items(data_t *data);
-void create_items(data_t *data, int idx);
+void create_items(data_t *data, int idx, int mod);
 
 
 // video_utils.c

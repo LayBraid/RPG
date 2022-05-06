@@ -19,16 +19,34 @@ static void analyse_event(data_t *data)
     }
 }
 
+int check_main_inventory(inventory_t *tmp, data_t *data)
+{
+    sfIntRect pos;
+
+    if (tmp->main == 1 && data->video.drag != -1) {
+        pos = (sfIntRect){tmp->position_rect.x, tmp->position_rect.y, 125, 125};
+        if (is_in_rect(tmp->rect_rect, data->event.mouseButton.x, data->event.mouseButton.y) == 0) {
+            data->player.equiped = data->video.drag;
+            data->video.ui = 2;
+        }
+        return 1;
+    }
+    return 0;
+}
+
 void get_inventory_mouse_click(data_t *data)
 {
     inventory_t *tmp = data->items;
     sfIntRect pos;
 
     while (tmp != NULL) {
+        if (check_main_inventory(tmp, data) == 1)
+            return;
         pos = (sfIntRect){tmp->position_rect.x, tmp->position_rect.y, 125, 125};
         if (is_in_rect(tmp->rect_rect, data->event.mouseButton.x, data->event.mouseButton.y) == 0) {
-            data->player.equiped = tmp->item;
+            data->video.drag = tmp->item;
             data->video.ui = 2;
+            return;
         }
         tmp = tmp->next;
     }
