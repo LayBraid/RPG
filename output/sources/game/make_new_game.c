@@ -36,6 +36,12 @@ static void analyse_key(data_t *data)
         data->video.ui = 32;
         data->loading_state = 18;
     }
+    if (data->event.key.code == sfKeyNum1)
+        data->player.equipped = 1;
+    if (data->event.key.code == sfKeyNum2)
+        data->player.equipped = 2;
+    if (data->event.key.code == sfKeyNum3)
+        data->player.equipped = 3;
 }
 
 static void analyse_released_key(data_t *data)

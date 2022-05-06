@@ -36,6 +36,7 @@ sfVector2f get_size_sword(int type, int value)
 
 IntR get_rect_sword(int type, int value)
 {
+
     if (type == 1) {
         if (value == 0)
             return (IntR) {96, 267, 9, 18};

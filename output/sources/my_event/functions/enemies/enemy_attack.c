@@ -15,7 +15,7 @@ void enemy_attack(data_t *data)
     double damage = get_damage(enemy->type);
     data->player.damage_display = 1;
     sfClock_restart(data->player.damage_display_clock);
-    add_effect_enemy(data, enemy, 0, data->player.position);
+    add_effect_enemy(data, enemy, data->player.equipped, data->player.position);
     if (data->player.current_hp >= damage)
         data->player.current_hp -= (int) damage;
     else {

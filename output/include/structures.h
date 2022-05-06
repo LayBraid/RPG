@@ -183,6 +183,7 @@ typedef struct attack_effect_s {
     int id;
     int movement_or_anim;
     int type;
+    int equipped;
     sfRectangleShape *rectangle;
     sfVector2f position;
     sfClock *movement_clock;
@@ -236,7 +237,7 @@ typedef struct player {
     unsigned char depth;
     int hp_max;
     int current_hp;
-    int equiped;
+    int equipped;
     int state;
     int animation;
     int scale_reverse;
