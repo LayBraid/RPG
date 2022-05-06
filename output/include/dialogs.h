@@ -46,5 +46,13 @@ void dialog(data_t *data, char *dialog, int id_npc_texture,
 void inter_dialog(data_t *data);
 
 void dialog1(data_t *data, int npc_id);
+void dialog2(data_t *data, int npc_id);
+void dialog3(data_t *data, int npc_id);
+void dialog4(data_t *data, int npc_id);
+void dialog5(data_t *data, int npc_id);
+void dialog6(data_t *data, int npc_id);
+void dialog7(data_t *data, int npc_id);
+void dialog8(data_t *data, int npc_id);
+void dialog9(data_t *data, int npc_id);
 
 #endif /* !DIALOGS_H_ */
