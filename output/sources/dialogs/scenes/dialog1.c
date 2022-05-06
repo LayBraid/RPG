@@ -39,7 +39,7 @@ void dialog1(data_t *data, int npc_id)
 {
     dialog_init(data);
     dialog(data,
-        "Link...\n\nLiiink... Liiiiiink..\n\nLIIIINNNNKK !!!",
+        "Link...\n\nLiiink... Liiiiiink...\n\nLIIIINNNNKK !!!",
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
