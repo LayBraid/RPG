@@ -53,8 +53,8 @@ void dialog1(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data,
-    my_fprintf("%s%s", "Bon je t’ai prepare des donuts sucres... au sucre,",
-    "\n\ndonc descend me gouter ça."), data->id_text_player, 1, npc_id);
+    my_fprintf("%s%s", "Bon je t'ai prepare des donuts sucres... au sucre,",
+    "\n\ndonc descend me gouter ca."), data->id_text_player, 1, npc_id);
     destroy_dialogs(data);
     data->video.ui = 2;
 }
@@ -63,8 +63,8 @@ void dialog2(data_t *data, int npc_id)
 {
     dialog_init(data);
     dialog(data, my_fprintf("%s%s",
-        "Bon garcon !\n\nAlors ? Comment étaient-ils ?\n\n",
-        "Je te les ai préparé avec amour."),
+        "Bon garcon !\n\nAlors ? Comment etaient-ils ?\n\n",
+        "Je te les ai prepare avec amour."),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -73,7 +73,7 @@ void dialog2(data_t *data, int npc_id)
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s",
     "Haaa ! Je savais qu’ils te plairaient ! Je suis content !",
-    "\n\nBon, comment tu t’appelles déjà ?"),
+    "\n\nBon, comment tu t’appelles deja ?"),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -86,9 +86,9 @@ void dialog2(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s%s",
-    "L’heure est grave Adidas ! Ganon est revenu sur l’île et à volé les\n\n",
-    "poulets du fermier du village ! Le KFC est donc à l’arrêt et tous\n\n",
-    "les habitants sont en plein désespoir !"),
+    "L'heure est grave Adidas ! Ganon est revenu sur l’ile et à vole les\n\n",
+    "poulets du fermier du village ! Le KFC est donc à l’arret et tous\n\n",
+    "les habitants sont en plein desespoir !"),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -96,8 +96,8 @@ void dialog2(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s",
-    "C’est pourquoi tu dois partir récupérer les poulets que l’horrible\n\n",
-    "Ganon nous a subtilisé. Je compte sur toi Adidas !"),
+    "C’est pourquoi tu dois partir recuperer les poulets que l’horrible\n\n",
+    "Ganon nous a subtilise. Je compte sur toi Adidas !"),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -110,8 +110,8 @@ void dialog3(data_t *data, int npc_id)
 {
     dialog_init(data);
     dialog(data, my_fprintf("%s%s",
-    "Ah Link ! Te voilà ! C’est horrible !\n\n",
-    "Ganon est venu et a volé tous les poulets !"),
+    "Ah Link ! Te voila ! C’est horrible !\n\n",
+    "Ganon est venu et a vole tous les poulets !"),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -119,7 +119,7 @@ void dialog3(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s", "Tu dois nous aider Link !\n\n",
-    "Acceptes-tu de récupérer les poulets pour moi ?"),
+    "Acceptes-tu de recuperer les poulets pour moi ?"),
     data->id_text_player, 1, npc_id);
     inter_dialog(data);
     if (dialog_choice(data) == 1) {
@@ -133,8 +133,8 @@ void dialog3(data_t *data, int npc_id)
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s%s",
     "Super ! Je savais que je pouvais compter sur toi Link !\n\n",
-    "Ganon s’est enfui dans la forêt au Nord du village après m’avoir volé",
-    "\n\nmes gentils poulets. Tu devrais commencer ton expédition là-bas."),
+    "Ganon s'est enfui dans la foret au Nord du village apres m'avoir vole",
+    "\n\nmes gentils poulets. Tu devrais commencer ton expedition la-bas."),
     data->id_text_player, 0, npc_id);
     destroy_dialogs(data);
     data->video.ui = 2;
@@ -143,7 +143,7 @@ void dialog3(data_t *data, int npc_id)
 void dialog4(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, "Pssst.. Pssssst.. Ouais c’est à toi que je parle",
+    dialog(data, "Pssst.. Pssssst.. Ouais c'est à toi que je parle",
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -151,21 +151,21 @@ void dialog4(data_t *data, int npc_id)
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s%s",
-    "Moi grossier ? Mais non voyons ! C’est seulement que j’ai decide que\n\n",
-    "vous etes l’heureux élu. En effet, vous allez pouvoir profiter de\n\n",
+    "Moi grossier ? Mais non voyons ! C’est seulement que j'ai decide que\n\n",
+    "vous etes l'heureux elu. En effet, vous allez pouvoir profiter de\n\n",
     "promotions extraordinaires."), data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s",
-    "Et si quelqu’un nous entend, il en deviendra complètement jaloux.\n\n",
-    "Voilà pourquoi je parle doucement."), data->id_text_player, 1, npc_id);
+    "Et si quelqu'un nous entend, il en deviendra completement jaloux.\n\n",
+    "Voila pourquoi je parle doucement."), data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, "*interrese*", data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data,
-    "Alors, ça te dit d’en profiter et de m’acheter mes superbes produits ?",
+    "Alors, ça te dit d'en profiter et de m'acheter mes superbes produits ?",
     data->id_text_player, 1, npc_id);
     if (dialog_choice(data) == 1) {
         destroy_dialog_frame(data);
@@ -185,18 +185,18 @@ void dialog5(data_t *data, int npc_id)
     dialog_init(data);
     dialog(data, my_fprintf("%s%s%s",
     "Bonjour je suis Kamel, le CEO de KFC !\n\n",
-    "J’ai entendu dire que tu souhaitais ramener\n\n",
-    "les poulets volés par Ganon au village !"),
+    "J'ai entendu dire que tu souhaitais ramener\n\n",
+    "les poulets voles par Ganon au village !"),
     data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s",
-    "Mais je dois te prévenir, tu t’aventures sur une route très dangereuse.",
-    "\n\nEt ça ne vaut pas de mettre en péril ta paisible vie."),
+    "Mais je dois te prevenir, tu t'aventures sur une route tres dangereuse.",
+    "\n\nEt ca ne vaut pas de mettre en peril ta paisible vie."),
     data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, "*Ca n’atteint pas ma motivation*",
+    dialog(data, "*Ca n'atteint pas ma motivation*",
     data->id_text_player, 0, npc_id);
     destroy_dialogs(data);
     data->video.ui = 2;
@@ -206,13 +206,13 @@ void dialog6(data_t *data, int npc_id)
 {
     dialog_init(data);
     dialog(data, my_fprintf("%s%s%s",
-    "Tu as alors réussi à parvenir jusqu’ici ?\n\n",
-    "Tu te mêles de choses qui te dépassent et ne te regardent pas !\n\n",
-    "Rebrousse chemin, je t’aurai prévenu !"),
+    "Tu as alors reussi a parvenir jusqu'ici ?\n\n",
+    "Tu te meles de choses qui te depassent et ne te regardent pas !\n\n",
+    "Rebrousse chemin, je t'aurai prévenu !"),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, "*intrigué par le ton employé, mais je n’abandonnerai pas*",
+    dialog(data, "*intrigue par le ton employe, mais je n’abandonnerai pas*",
     data->id_text_player, 0, npc_id);
     destroy_dialogs(data);
     data->video.ui = 2;
@@ -228,11 +228,11 @@ void dialog7(data_t *data, int npc_id)
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, "Il est bête ou quoi lui", data->id_text_player, 0, npc_id);
+    dialog(data, "Il est bete ou quoi lui", data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data,
-    "J’ai du nouveau en stock ! Et ça tue ! Alors, tu veux jeter un oeil ?",
+    "J'ai du nouveau en stock ! Et ca tue ! Alors, tu veux jeter un oeil ?",
     data->id_text_player, 1, npc_id);
     if (dialog_choice(data) == 1) {
         destroy_dialog_frame(data);
@@ -251,21 +251,21 @@ void dialog8(data_t *data, int npc_id)
 {
     dialog_init(data);
     dialog(data, my_fprintf("%s%s",
-    "Je t’avais pourtant dit de ne pas te mêler de choses\n\n",
-    "qui ne te regardent pas ! C’est moi qui ai volé tous les poulets."),
+    "Je t'avais pourtant dit de ne pas te meler de choses\n\n",
+    "qui ne te regardent pas ! C’est moi qui ai vole tous les poulets."),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s",
     "Le retour de Ganon dans notre royaume ne pouvait pas avoir un\n\n",
-    "meilleur timing, ça m’a permit de trouver le coupable parfait."),
+    "meilleur timing, ca m'a permis de trouver le coupable parfait."),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s%s",
-    "Si j’ai volé les poulets, c’est dans un but précis.\n\n",
-    "J’ai sorti une nouvelle recette au boeuf il y a 2 mois,\n\n",
-    "et personne n’a daigné ne serait-ce que goûter ma nouvelle création !"),
+    "Si j'ai vole les poulets, c'est dans un but precis.\n\n",
+    "J'ai sorti une nouvelle recette au boeuf il y a 2 mois,\n\n",
+    "et personne n’a daigne ne serait-ce que gouter ma nouvelle creation !"),
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -276,8 +276,8 @@ void dialog8(data_t *data, int npc_id)
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s%s",
     "Mais maintenant que tu sais tout, je ne peux me permettre de te\n\n",
-    "laisser dévoiler tout ce que tu viens d’appendre à tout le monde !\n\n",
-    "Je vais donc devoir me débarrasser de toi !"),
+    "laisser devoiler tout ce que tu viens d'appendre à tout le monde !\n\n",
+    "Je vais donc devoir me debarrasser de toi !"),
         data->id_text_player, 1, npc_id);
     destroy_dialogs(data);
     data->video.ui = 2;
@@ -287,9 +287,9 @@ void dialog9(data_t *data, int npc_id)
 {
     dialog_init(data);
     dialog(data, my_fprintf("%s%s%s",
-    "Salut ma couillasse c’est Jean-Marie Bigard !\n\n",
-    "Non je rigole bien joué Link, grâce à toi on va pouvoir\n\n",
-    "de nouveau déguster du poulet ! Merci infiniment !"),
+    "Salut ma couillasse c'est Jean-Marie Bigard !\n\n",
+    "Non je rigole bien joue Link, grace à toi on va pouvoir\n\n",
+    "de nouveau deguster du poulet ! Merci infiniment !"),
         data->id_text_player, 1, npc_id);
     destroy_dialogs(data);
     data->video.ui = 2;
