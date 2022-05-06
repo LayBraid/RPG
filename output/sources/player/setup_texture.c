@@ -15,8 +15,6 @@ void setup_texture_player(data_t *data)
     data->player.state = IDLE_DOWN;
     data->player.movement = NULL;
     data->player.movement_anim = NULL;
-    data->x_pile_hyrule = 0;
-    data->y_pile_hyrule = 0;
     data->player.damage_display = 0;
     data->player.attack_effect = NULL;
     data->player.damage_display_clock = sfClock_create();

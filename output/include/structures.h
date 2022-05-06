@@ -360,22 +360,20 @@ struct data {
     node_img *images;
     sfView *main;
     sfView *mapping;
-    node_rectangle *map_hyrule;
     node_texture *textures;
     sfTexture *world;
     sfTexture *link;
     sfTexture *npc;
     sfTexture *enemies_texture;
     interact_t interact;
+    int my_map;
+    node_rectangle *map_hyrule;
     int **collisions_hyrule;
     int **positions_hyrule;
-    int x_pile_hyrule;
-    int y_pile_hyrule;
     sfVector2f position_hyrule;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
-    int my_map;
 };
 
 struct editor_data {
