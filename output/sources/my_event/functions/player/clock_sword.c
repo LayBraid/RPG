@@ -6,6 +6,7 @@
 */
 
 #include "player.h"
+#include "my_event.h"
 
 void update_rectangle(player_t *player, attack_effect_t *node)
 {
@@ -29,7 +30,7 @@ void update_rectangle(player_t *player, attack_effect_t *node)
     sfRectangleShape_setPosition(node->rectangle, vector);
 }
 
-static void clock_effect(player_t *player, attack_effect_t *node)
+static void clock_effect(data_t *data, player_t *player, attack_effect_t *node)
 {
     if (node->animation == NULL)
         return;
@@ -43,6 +44,7 @@ static void clock_effect(player_t *player, attack_effect_t *node)
         get_rect_sword(player->attack_effect->type, node->animation->value));
         update_rectangle(player, node);
         if (player->attack_effect->animation->next == NULL) {
+            call_event(data, "attack_enemy");
             if (player->state > 8)
                 player->state -= 8;
             else
@@ -57,15 +59,15 @@ static void clock_effect(player_t *player, attack_effect_t *node)
     }
 }
 
-void player_effect_all(player_t *node)
+void player_effect_all(data_t *data, player_t *node)
 {
     attack_effect_t *tmp = node->attack_effect;
 
     if (node->attack_effect == NULL)
         return;
     while (tmp->id < tmp->next->id) {
-        clock_effect(node, tmp);
+        clock_effect(data, node, tmp);
         tmp = tmp->next;
     }
-    clock_effect(node, tmp);
+    clock_effect(data, node, tmp);
 }

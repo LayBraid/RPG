@@ -70,5 +70,5 @@ void new_game_scene(data_t *data)
     clock_stop_display_life(data);
     clock_enemies_life_display(data);
     clock_enemies_effect(data);
-    player_effect_all(&data->player);
+    player_effect_all(data, &data->player);
 }

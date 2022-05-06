@@ -49,7 +49,7 @@ sfVector2f player_position);
 
 void display_effect_player(data_t *data);
 
-void player_effect_all(player_t *node);
+void player_effect_all(data_t *data, player_t *node);
 
 void update_rectangle(player_t *player, attack_effect_t *node);
 
