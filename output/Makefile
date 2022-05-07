@@ -10,7 +10,7 @@ SRC = $(shell find . -name '*.c')
 OBJ = $(SRC:%.c=%.o)
 .SILENT:$(OBJ)
 
-SFML_L = -lcsfml-graphics -lcsfml-system -lcsfml-window -lcsfml-audio
+SFML_L = -lcsfml-graphics -lcsfml-system -lcsfml-window -lcsfml-audio -lm
 CFLAGS = -Iinclude/ -Wno-deprecated
 
 NAME = my_rpg

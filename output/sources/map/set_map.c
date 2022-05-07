@@ -10,4 +10,14 @@
 void set_map(data_t *data, int map)
 {
     data->my_map = map;
+    if (map == 2) {
+        sfRectangleShape_setPosition(data->player.rectangle,
+        data->position_hyrule);
+        //sfView_setCenter(data->mapping, data->position_hyrule);
+    }
+    if (map == 0) {
+        sfRectangleShape_setPosition(data->player.rectangle,
+        data->position_tophouse);
+        sfView_setCenter(data->mapping, (sfVector2f) {50, 30});
+    }
 }

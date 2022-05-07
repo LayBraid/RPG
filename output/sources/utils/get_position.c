@@ -8,23 +8,16 @@
 #include "utils.h"
 #include "map.h"
 
-const int SIZE_2[2] = {150, 30};
+const int SIZE_2[3] = {30, 30, 150};
 
 sfVector2i get_position(data_t *data, int entity, int index)
 {
-    sfVector2i pos = {0};
-    int count = 0;
+    sfVector2f player = sfRectangleShape_getPosition(data->player.rectangle);
+    sfVector2i cast;
 
-    for (int i = 0; i < SIZE_2[data->my_map]; i++) {
-        for (int j = 0; j < SIZE_2[data->my_map]; j++) {
-            if (data->positions_hyrule[i][j] == entity && count == index) {
-                pos.x = j;
-                pos.y = i;
-                return (pos);
-            }
-            if (data->positions_hyrule[i][j] == entity)
-                count++;
-        }
-    }
-    return (pos);
+    player.x /= 15;
+    player.y /= 15;
+    cast.x = (int) player.x;
+    cast.y = (int) player.y + 1;
+    return cast;
 }

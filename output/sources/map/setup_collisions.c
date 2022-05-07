@@ -22,3 +22,17 @@ void setup_collisions(data_t *data)
         }
     }
 }
+
+void setup_collisions_tophouse(data_t *data)
+{
+    data->collisions_tophouse = malloc(sizeof(int *) * SIZE[data->my_map]);
+    data->positions_tophouse = malloc(sizeof(int *) * SIZE[data->my_map]);
+    for (int i = 0; i < SIZE[data->my_map]; i++) {
+        data->collisions_tophouse[i] = malloc(sizeof(int) * SIZE[data->my_map]);
+        data->positions_tophouse[i] = malloc(sizeof(int) * SIZE[data->my_map]);
+        for (int j = 0; j < SIZE[data->my_map]; j++) {
+            data->collisions_tophouse[i][j] = 0;
+            data->positions_tophouse[i][j] = 0;
+        }
+    }
+}
