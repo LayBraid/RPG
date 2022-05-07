@@ -14,6 +14,8 @@ void destroy_interacted_ennemy(data_t *data)
 
     while (cursor->next && cursor->next->id != data->interact.enemy_id)
         cursor = cursor->next;
+    if (!cursor->next)
+        return;
     tmp = cursor;
     cursor = cursor->next;
     tmp->next = cursor->next;
