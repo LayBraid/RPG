@@ -39,6 +39,7 @@ void parse_enemy(data_t *data, char *buffer)
     get_it_char(buffer, '[', 1) + 1,get_it_char(buffer, ',', 6) - 1));
     pos.y = (float) my_atoi(extract_between_limits(buffer,
     get_it_char(buffer, ',', 6) + 1,get_it_char(buffer, ']', 0) - 1));
+    enemy->dead = 0;
     enemy->position = pos;
     parsing_enemy(data, enemy);
 }

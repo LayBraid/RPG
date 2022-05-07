@@ -14,7 +14,7 @@
 ['NPC']
 ['start','call_to_start',2,0,[230, 2070]]
 ['Enemies']
-['name',0,0,30,100,2,[500,2070]]
+['name',0,0,100,100,2,[500,2070]]
 ['Profiles']
 ['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 54],[['kill_one_png',1],['kill_two_png',0]]]
 ['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 54],[['kill_one_png',1],['kill_two_png',0]]]

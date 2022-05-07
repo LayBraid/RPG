@@ -221,6 +221,7 @@ typedef struct enemy_struct {
     float hp;
     float max_hp;
     int display_life;
+    int dead;
     attack_effect_t *attack_effect;
     sfClock *display_life_clock;
     sfClock *movement_clock;

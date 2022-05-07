@@ -42,8 +42,9 @@ static void clock_effect(data_t *data, player_t *player, attack_effect_t *node)
         sfRectangleShape_setTextureRect(node->rectangle,
         get_rect_sword(player->equipped, node->animation->value));
         update_rectangle(player, node);
-        if (player->attack_effect->animation->next == NULL) {
-            call_event(data, "attack_enemy");
+        node->animation = node->animation->next;
+        if (player->attack_effect->animation == NULL) {
+            call_event(data, "attack_on_enemy");
             if (player->state > 8)
                 player->state -= 8;
             else
@@ -53,7 +54,6 @@ static void clock_effect(data_t *data, player_t *player, attack_effect_t *node)
             else
                 player->attack_effect = player->attack_effect->next;
         }
-        node->animation = node->animation->next;
         sfClock_restart(node->movement_clock);
     }
 }
