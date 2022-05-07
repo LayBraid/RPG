@@ -397,7 +397,8 @@ texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 // inventory_utils.c
 void get_items(data_t *data);
 void display_items(data_t *data);
-void create_items(data_t *data, int idx, int mod);
+void create_items(data_t *data, int idx, int mod, sfVector2f pos);
+inventory_t *delete_inventory(data_t *data);
 
 
 // video_utils.c

@@ -11,6 +11,7 @@
 #include "new_game.h"
 #include "load_game.h"
 #include "settings.h"
+#include "inventory.h"
 #include "name.h"
 
 void switch_scene(data_t *data)

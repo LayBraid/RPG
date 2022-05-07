@@ -7,6 +7,7 @@
 
 #include "player.h"
 #include "my_event.h"
+#include "inventory.h"
 
 //TODO Comment for compilation
 

@@ -41,7 +41,7 @@ void init_music(data_t *data)
 void data_create(data_t *data)
 {
     data->video.ui = 32;
-    data->player.items = "1000000";
+    data->player.items = "1100000\0";
     data->player.equiped = 0;
     data->player.depth = 0;
     data->player.hp_max = 10;
