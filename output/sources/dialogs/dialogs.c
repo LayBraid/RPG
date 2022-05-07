@@ -7,6 +7,7 @@
 
 #include "my_rpg.h"
 #include "dialogs.h"
+#include "my.h"
 
 static void analyse_key_press(data_t *data, sfEvent event)
 {
@@ -33,7 +34,7 @@ static void analyse_events(data_t *data)
 void dialog(data_t *data, char *dialog,
     int id_npc_texture, char is_talking, int id_npc)
 {
-    char *new = malloc((strlen(dialog) + 1) * sizeof(char));
+    char *new = malloc((my_strlen(dialog) + 1) * sizeof(char));
 
     new[0] = '\0';
     set_dialog_characters(data, is_talking, id_npc); //TODO tester situation reelle
@@ -46,7 +47,7 @@ void dialog(data_t *data, char *dialog,
         new[i + 1] = '\0';
         if (data->dialog_skip == 1) {
             strcpy(new + i + 1, dialog + i + 1);
-            i = strlen(dialog) - 1;
+            i = my_strlen(dialog) - 1;
         }
         sfText_setString(data->texts->text, new);
         if (dialog[i] != ' ' && data->dialog_skip == 0) {
