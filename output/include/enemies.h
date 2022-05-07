@@ -33,4 +33,6 @@ void display_effect_enemies(data_t *data);
 
 void calculate_new_coord_effects(data_t *data);
 
+void destroy_interacted_ennemy(data_t *data);
+
 #endif
