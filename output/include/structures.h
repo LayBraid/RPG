@@ -357,6 +357,8 @@ struct data {
     char dialog_skip;
     int id_text_player;
     unsigned char loading_state;
+    int x_pile_hyrule;
+    int y_pile_hyrule;
     node_button *button;
     node_img *images;
     sfView *main;

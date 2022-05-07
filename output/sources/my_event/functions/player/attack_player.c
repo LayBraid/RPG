@@ -12,17 +12,10 @@
 
 void attack_player(data_t *data)
 {
-    // enemy_t *enemy = get_enemy_by_id(data, data->interact.enemy_id);
-    // double damage = ; // damage en fonction de l'épée equipé du joueur
     sfClock_restart(data->player.damage_display_clock);
     add_effect_player(data, &data->player, 1, data->player.position);
-    // if (enemy->hp >= damage)
-    //     enemy->hp -= (int) damage;
-    // else {
-    //     enemy->hp = 0;
-    //     call_event(data, "kill");
-    // }
 }
+
 static void kill_enemy(enemy_t *enemy)
 {
     if (enemy->hp < 10) {
@@ -36,7 +29,7 @@ void attack_on_enemy(data_t *data)
 {
     enemy_t *tmp = get_enemy_by_id(data, data->interact.enemy_id);
 
-    if (data->interact.enemy_distance <= 40 && data->interact.enemy_distance > 0) {
+    if (data->interact.enemy_distance <= 50 && data->interact.enemy_distance > 0) {
         tmp->display_life = 1;
         switch (data->player.equipped) {
             case 1:
@@ -66,6 +59,7 @@ void attack_on_enemy(data_t *data)
         if (tmp->dead == 1) {
             tmp->position = (sfVector2f) {-1000, -1000};
             sfRectangleShape_setPosition(tmp->rectangle, tmp->position);
+            //destroy_interacted_ennemy(data);
         }
     }
 }
