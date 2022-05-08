@@ -16,6 +16,7 @@
 #include "pause.h"
 #include "howtoplay.h"
 #include "credits.h"
+#include "hud.h"
 
 void loading_d(data_t *data)
 {
@@ -96,5 +97,7 @@ void loading(data_t *data)
         case (7): init_load_game(data);
             break;
         default: loading_b(data);
+        case (25): init_hud(data);
+            break;
     }
 }

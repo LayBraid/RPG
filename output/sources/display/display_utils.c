@@ -53,6 +53,7 @@ void display_texts(text_t *start, video_t video)
     text_t *node = start;
 
     while (node != NULL) {
+        sfText_setPosition(node->text, node->position);
         sfRenderWindow_drawText(video.window, node->text, NULL);
         node = node->next;
     }

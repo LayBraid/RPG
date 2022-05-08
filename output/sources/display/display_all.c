@@ -49,4 +49,7 @@ void display_all(data_t *data)
         sfRenderWindow_setView(data->video.window, data->main);
         display_items(data);
     }
+    sfRenderWindow_setView(data->video.window, data->main);
+    display_all_objects(data);
+    display_texts(data->texts, data->video);
 }

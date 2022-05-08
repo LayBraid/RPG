@@ -9,6 +9,7 @@
 #include "my_event.h"
 #include "enemies.h"
 #include "inventory.h"
+#include "hud.h"
 
 static void analyse_key(data_t *data)
 {
@@ -73,6 +74,7 @@ void new_game_scene(data_t *data)
 {
     display_all(data);
     analyse_event(data);
+    stamina_clock(data);
     clock_move_player(data);
     clock_enemies_aggro(data);
     clock_enemies_move(data);
@@ -80,4 +82,5 @@ void new_game_scene(data_t *data)
     clock_enemies_life_display(data);
     clock_enemies_effect(data);
     player_effect_all(data, &data->player);
+    manage_stamina(data);
 }
