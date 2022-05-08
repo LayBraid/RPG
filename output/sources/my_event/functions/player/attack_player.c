@@ -16,15 +16,6 @@ void attack_player(data_t *data)
     add_effect_player(data, &data->player, 1, data->player.position);
 }
 
-static void kill_enemy(enemy_t *enemy)
-{
-    if (enemy->hp < 10) {
-        enemy->position = (sfVector2f) {-100, -100};
-    } else {
-        enemy->hp -= 10;
-    }
-}
-
 void attack_on_enemy(data_t *data)
 {
     enemy_t *tmp = get_enemy_by_id(data, data->interact.enemy_id);
@@ -59,7 +50,7 @@ void attack_on_enemy(data_t *data)
         if (tmp->dead == 1) {
             tmp->position = (sfVector2f) {-1000, -1000};
             sfRectangleShape_setPosition(tmp->rectangle, tmp->position);
-            //destroy_interacted_ennemy(data);
+//            destroy_interacted_ennemy(data);
         }
     }
 }
