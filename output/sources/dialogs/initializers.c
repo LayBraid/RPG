@@ -78,24 +78,9 @@ void set_dialog_characters(data_t *data, char is_talking, int id_npc)
     texture_t *npc_texture = data->texture_bank;
     npc_t *npc = data->npcs;
 
+    set_dialog_characters2(data, player, id_npc, is_talking);
     while (player != NULL && player->id != data->id_text_player)
         player = player->next;
-    while (npc != NULL && npc->id != id_npc)
-        npc = npc->next;
-    while (npc_texture != NULL && npc_texture->id != npc->texture_id)
-        npc_texture = npc_texture->next;
-    data->tiles = create_tile(data->tiles);
-    data->tiles = set_tile_texture(data->tiles, player);
-    set_tile_scale(data->tiles, (sfVector2f){28, 28});
-    set_tile_position(data->tiles, (sfVector2f){60, 350});
-    if (is_talking)
-        data->tiles = set_tile_depth(data->tiles, 7);
-    else
-        data->tiles = set_tile_depth(data->tiles, 6);
-    data->tiles = create_tile(data->tiles);
-    data->tiles = set_tile_texture(data->tiles, npc_texture);
-    set_tile_scale(data->tiles, (sfVector2f){28, 28});
-    set_tile_position(data->tiles, (sfVector2f){1370, 350});
     if (is_talking)
         data->tiles = set_tile_depth(data->tiles, 6);
     else
@@ -116,18 +101,7 @@ void dialog_init(data_t *data)
 {
     data->texture_bank = create_texture(data->texture_bank,
         "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
-    data->player.name = my_strdup("Link");
-    data->id_text_player = data->texture_bank->id;
-    data->npcs = create_npc(data->npcs, "Arthur");
-    data->npcs->inventory = create_inventory(data->npcs->inventory, "bite");
-    data->npcs->inventory = set_inventory_count(data->npcs->inventory, 6);
-    data->npcs->inventory = create_inventory(data->npcs->inventory, "chatte");
-    data->npcs->inventory = set_inventory_count(data->npcs->inventory, 2);
-    data->npcs->inventory = create_inventory(data->npcs->inventory, "couille");
-    data->npcs->inventory = set_inventory_count(data->npcs->inventory, 1);
-    data->tiles = create_tile(data->tiles);
-    data->texture_bank = create_texture(data->texture_bank,
-        "./assets/textures/dialog.png", NULL);
+    dialog_init2(data);
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_depth(data->tiles, 6);
     data->tiles = set_tile_scale(data->tiles, (sfVector2f) {4, 4});

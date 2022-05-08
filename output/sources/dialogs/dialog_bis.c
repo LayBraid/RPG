@@ -31,6 +31,16 @@ static void analyse_events(data_t *data)
     }
 }
 
+void wait_microsecc(data_t *data, char *dialog, int i)
+{
+    if (dialog[i] == '.' && dialog[i - 1] == '.')
+        while (sfClock_getElapsedTime(data->clock).microseconds
+        < 600000);
+    else
+        while (sfClock_getElapsedTime(data->clock).microseconds
+        < 50000);
+}
+
 void dialog_loop(data_t *data, char *new, int i, char *dialog)
 {
     new[i] = dialog[i];
@@ -40,14 +50,8 @@ void dialog_loop(data_t *data, char *new, int i, char *dialog)
         i = my_strlen(dialog) - 1;
     }
     sfText_setString(data->texts->text, new);
-    if (dialog[i] != ' ' && data->dialog_skip == 0) {
-        if (dialog[i] == '.' && dialog[i - 1] == '.')
-            while (sfClock_getElapsedTime(data->clock).microseconds
-            < 600000);
-        else
-            while (sfClock_getElapsedTime(data->clock).microseconds
-            < 50000);
-    }
+    if (dialog[i] != ' ' && data->dialog_skip == 0)
+        wait_microsecc(data, dialog, i);
 }
 
 void dialog(data_t *data, char *dialog,

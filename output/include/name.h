@@ -45,4 +45,6 @@ void anim_end(data_t *data);
 void stop_anim_end(data_t *data);
 void enter_name(data_t *data);
 
+void analyse_key3(data_t *data);
+
 #endif /* !NAME_H_ */

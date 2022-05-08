@@ -9,6 +9,7 @@
 
 node_texture *init_texture19(node_texture *texture)
 {
+    add_next_texture(&texture, set_enter_cave22_2, "enter_cave22_2",411);
     add_next_texture(&texture, set_enter_cave22_3, "enter_cave22_3",412);
     add_next_texture(&texture, set_enter_cave23_0, "enter_cave23_0",414);
     add_next_texture(&texture, set_enter_cave23_1, "enter_cave23_1",415);
@@ -27,12 +28,12 @@ node_texture *init_texture19(node_texture *texture)
     add_next_texture(&texture, set_enter_cave31_1, "enter_cave31_1",428);
     add_next_texture(&texture, set_enter_cave31_2, "enter_cave31_2",429);
     add_next_texture(&texture, set_enter_cave31_3, "enter_cave31_3",430);
-    add_next_texture(&texture, set_enter_cave31_4, "enter_cave31_4",431);
     return init_texture20(texture);
 }
 
 node_texture *init_texture18(node_texture *texture)
 {
+    add_next_texture(&texture, set_enter_cave2_1, "enter_cave2_1",391);
     add_next_texture(&texture, set_enter_cave2_2, "enter_cave2_2",392);
     add_next_texture(&texture, set_enter_cave2_3, "enter_cave2_3",393);
     add_next_texture(&texture, set_enter_cave2_4, "enter_cave2_4",394);
@@ -51,12 +52,12 @@ node_texture *init_texture18(node_texture *texture)
     add_next_texture(&texture, set_enter_cave21_3, "enter_cave21_3",407);
     add_next_texture(&texture, set_enter_cave22_0, "enter_cave22_0",409);
     add_next_texture(&texture, set_enter_cave22_1, "enter_cave22_1",410);
-    add_next_texture(&texture, set_enter_cave22_2, "enter_cave22_2",411);
     return init_texture19(texture);
 }
 
 node_texture *init_texture17(node_texture *texture)
 {
+    add_next_texture(&texture, set_caves_entry40_4, "caves_entry40_4",378);
     add_next_texture(&texture, set_caves_entry40_5, "caves_entry40_5",379);
     add_next_texture(&texture, set_caves_entry41_0, "caves_entry41_0",464);
     add_next_texture(&texture, set_caves_entry41_1, "caves_entry41_1",465);
@@ -75,12 +76,12 @@ node_texture *init_texture17(node_texture *texture)
     add_next_texture(&texture, set_enter_cave1_3, "enter_cave1_3",389);
     add_next_texture(&texture, set_enter_cave1_4, "enter_cave1_4",390);
     add_next_texture(&texture, set_enter_cave2_0, "enter_cave2_0",390);
-    add_next_texture(&texture, set_enter_cave2_1, "enter_cave2_1",391);
     return init_texture18(texture);
 }
 
 node_texture *init_texture16(node_texture *texture)
 {
+    add_next_texture(&texture, set_caves_entry21_3, "caves_entry21_3",339);
     add_next_texture(&texture, set_caves_entry21_4, "caves_entry21_4",340);
     add_next_texture(&texture, set_caves_entry21_5, "caves_entry21_5",341);
     add_next_texture(&texture, set_caves_entry30_0, "caves_entry30_0",342);
@@ -99,12 +100,12 @@ node_texture *init_texture16(node_texture *texture)
     add_next_texture(&texture, set_caves_entry40_1, "caves_entry40_1",375);
     add_next_texture(&texture, set_caves_entry40_2, "caves_entry40_2",376);
     add_next_texture(&texture, set_caves_entry40_3, "caves_entry40_3",377);
-    add_next_texture(&texture, set_caves_entry40_4, "caves_entry40_4",378);
     return init_texture17(texture);
 }
 
 node_texture *init_texture15(node_texture *texture)
 {
+    add_next_texture(&texture, set_caves_entry1_0, "caves_entry1_0",308);
     add_next_texture(&texture, set_caves_entry1_1, "caves_entry1_1",309);
     add_next_texture(&texture, set_caves_entry2_0, "caves_entry2_0",314);
     add_next_texture(&texture, set_caves_entry2_1, "caves_entry2_1",315);
@@ -123,6 +124,5 @@ node_texture *init_texture15(node_texture *texture)
     add_next_texture(&texture, set_caves_entry21_0, "caves_entry21_0",336);
     add_next_texture(&texture, set_caves_entry21_1, "caves_entry21_1",337);
     add_next_texture(&texture, set_caves_entry21_2, "caves_entry21_2",338);
-    add_next_texture(&texture, set_caves_entry21_3, "caves_entry21_3",339);
     return init_texture16(texture);
 }

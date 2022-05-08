@@ -9,6 +9,7 @@
 
 node_texture *init_texture9(node_texture *texture)
 {
+    add_next_texture(&texture, set_house1_6, "house1_6",185);
     add_next_texture(&texture, set_house1_7, "house1_7",186);
     add_next_texture(&texture, set_house1_8, "house1_8",187);
     add_next_texture(&texture, set_house1_9, "house1_9",188);
@@ -27,12 +28,12 @@ node_texture *init_texture9(node_texture *texture)
     add_next_texture(&texture, set_house2_10, "house2_10",199);
     add_next_texture(&texture, set_house2_11, "house2_11",200);
     add_next_texture(&texture, set_house3_0, "house3_0",274);
-    add_next_texture(&texture, set_house3_1, "house3_1",275);
     return init_texture10(texture);
 }
 
 node_texture *init_texture8(node_texture *texture)
 {
+    add_next_texture(&texture, set_stairs16, "stairs16", 168);
     add_next_texture(&texture, set_house0_0, "house0_0",169);
     add_next_texture(&texture, set_house0_1, "house0_1",170);
     add_next_texture(&texture, set_house0_2, "house0_2",171);
@@ -51,12 +52,12 @@ node_texture *init_texture8(node_texture *texture)
     add_next_texture(&texture, set_house1_3, "house1_3",182);
     add_next_texture(&texture, set_house1_4, "house1_4",183);
     add_next_texture(&texture, set_house1_5, "house1_5",184);
-    add_next_texture(&texture, set_house1_6, "house1_6",185);
     return init_texture9(texture);
 }
 
 node_texture *init_texture7(node_texture *texture)
 {
+    add_next_texture(&texture, set_tronc13, "tronc13", 149);
     add_next_texture(&texture, set_tronc14, "tronc14", 150);
     add_next_texture(&texture, set_tronc15, "tronc15", 151);
     add_next_texture(&texture, set_tronc16, "tronc16", 152);
@@ -75,12 +76,12 @@ node_texture *init_texture7(node_texture *texture)
     add_next_texture(&texture, set_stairs13, "stairs13", 165);
     add_next_texture(&texture, set_stairs14, "stairs14", 166);
     add_next_texture(&texture, set_stairs15, "stairs15", 167);
-    add_next_texture(&texture, set_stairs16, "stairs16", 168);
     return init_texture8(texture);
 }
 
 node_texture *init_texture6(node_texture *texture)
 {
+    add_next_texture(&texture, set_tree92, "tree92", 130);
     add_next_texture(&texture, set_tree93, "tree93", 131);
     add_next_texture(&texture, set_tree94, "tree94", 132);
     add_next_texture(&texture, set_tree95, "tree95", 133);
@@ -99,12 +100,12 @@ node_texture *init_texture6(node_texture *texture)
     add_next_texture(&texture, set_tronc10, "tronc10", 146);
     add_next_texture(&texture, set_tronc11, "tronc11", 147);
     add_next_texture(&texture, set_tronc12, "tronc12", 148);
-    add_next_texture(&texture, set_tronc13, "tronc13", 149);
     return init_texture7(texture);
 }
 
 node_texture *init_texture5(node_texture *texture)
 {
+    add_next_texture(&texture, set_tree67, "tree67", 105);
     add_next_texture(&texture, set_tree68, "tree68", 106);
     add_next_texture(&texture, set_tree71, "tree71", 109);
     add_next_texture(&texture, set_tree72, "tree72", 110);
@@ -123,6 +124,5 @@ node_texture *init_texture5(node_texture *texture)
     add_next_texture(&texture, set_tree87, "tree87", 125);
     add_next_texture(&texture, set_tree88, "tree88", 126);
     add_next_texture(&texture, set_tree91, "tree91", 129);
-    add_next_texture(&texture, set_tree92, "tree92", 130);
     return init_texture6(texture);
 }
