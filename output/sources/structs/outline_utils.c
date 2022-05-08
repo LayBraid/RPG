@@ -13,7 +13,8 @@ void create_outline(data_t *data, sfIntRect rect, sfVector2f pos)
 
     new->rect = rect;
     new->sprite = sfSprite_create();
-    new->texture = sfTexture_createFromFile("assets/game/outline.png", &new->rect);
+    new->texture = sfTexture_createFromFile("assets/game/outline.png",
+    &new->rect);
     sfSprite_setTexture(new->sprite, new->texture, sfTrue);
     new->position = pos;
     new->next = data->outline;

@@ -27,14 +27,18 @@ void create_items(data_t *data, int idx)
 
     switch (idx) {
         case (0) : new->rect_item = (sfIntRect){0,270,10,20};
-            new->texture_item = sfTexture_createFromFile("./assets/game/Link.png", &new->rect_item);
+            new->texture_item =
+            sfTexture_createFromFile("./assets/game/Link.png",
+            &new->rect_item);
             new->position_item = (sfVector2f){800,980};
             new->item = 1;
             break;
     }
-    new->position_rect = (sfVector2f){new->position_item.x - 30, new->position_item.y - 20};
+    new->position_rect = (sfVector2f){new->position_item.x - 30,
+    new->position_item.y - 20};
     new->rect_rect = (sfIntRect){36,19,24,24};
-    new->texture_rect = sfTexture_createFromFile("./assets/game/HUD.png", &new->rect_rect);
+    new->texture_rect = sfTexture_createFromFile("./assets/game/HUD.png",
+    &new->rect_rect);
     new->sprite_item = sfSprite_create();
     new->sprite_rect = sfSprite_create();
     sfSprite_setTexture(new->sprite_item, new->texture_item, sfTrue);

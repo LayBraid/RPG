@@ -76,7 +76,7 @@ void data_create(data_t *data)
     data->player.movement_anim_clock = sfClock_create();
     data->enemies_aggro = sfClock_create();
     data->texture_bank = NULL;
-    data->font = sfFont_createFromFile("assets/zeldadxt.ttf"); // TODO add font
+    data->font = sfFont_createFromFile("assets/zeldadxt.ttf");
     data->texts = NULL;
     data->buttons = NULL;
     data->npcs = NULL;
@@ -103,7 +103,7 @@ void data_create(data_t *data)
     data->mapping = sfView_create();
     sfView_setSize(data->main, (sfVector2f) {1920, 1080});
     sfView_setSize(data->mapping, (sfVector2f) {1920, 1080});
-    sfView_zoom(data->mapping, 0.33f); //TODO Create a reverse function for zoom
+    sfView_zoom(data->mapping, 0.33f);
     sfView_setCenter(data->main, (sfVector2f) {1920.0f / 2, 1080.0f / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
     sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243 + 750});

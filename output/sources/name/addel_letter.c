@@ -15,7 +15,8 @@ void delete_letter(data_t *data)
 
     if (data->letter->count > 0) {
         data->tiles = delete_first_tile(data);
-        letter = get_letter_c(data, data->letter->name[data->letter->count - 1]);
+        letter = get_letter_c(data,
+        data->letter->name[data->letter->count - 1]);
         data->letter->view.x -= (float) letter->rect.width * 7.55f + 6;
         data->letter->name = my_strdel_c(data->letter->name);
         data->letter->count--;

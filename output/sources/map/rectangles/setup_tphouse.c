@@ -64,10 +64,11 @@ const float info[4])
         texture = texture->next;
     texture->function(data->world, (*node));
     sfRectangleShape_setPosition((*node)->rectangle,
-                                 (sfVector2f) {(info[0] * 15), (15 * info[1])});
+    (sfVector2f) {(info[0] * 15), (15 * info[1])});
     (*node)->id = 0;
     (*node)->next = (*node);
-    data->collisions_hyrule[(int) (*node)->y][(int) (*node)->x] = (*node)->type;
+    data->collisions_hyrule[(int) (*node)->y][(int) (*node)->x] =
+    (*node)->type;
 }
 
 void add_map_tophouse(data_t *data, const float info[4])

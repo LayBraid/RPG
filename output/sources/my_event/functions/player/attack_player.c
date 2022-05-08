@@ -55,7 +55,6 @@ void attack_on_enemy(data_t *data)
         if (tmp->dead == 1) {
             tmp->position = (sfVector2f) {-1000, -1000};
             sfRectangleShape_setPosition(tmp->rectangle, tmp->position);
-            //destroy_interacted_ennemy(data);
         }
     }
 }

@@ -57,6 +57,5 @@ char select_current
         sfText_setColor(text->text, (sfColor){128, 128, 128, 255});
     sfText_setString(text->text, my_fprintf("%s x%d",
         cursor->item_name, cursor->count));
-    // ! ajouter dans l'inventaire du joueur
     return (0);
 }

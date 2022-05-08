@@ -116,7 +116,7 @@ void dialog_init(data_t *data)
 {
     data->texture_bank = create_texture(data->texture_bank,
         "./assets/game/Link.png", &(sfIntRect){0, 0, 18, 26});
-    data->player.name = strdup("Link");
+    data->player.name = my_strdup("Link");
     data->id_text_player = data->texture_bank->id;
     data->npcs = create_npc(data->npcs, "Arthur");
     data->npcs->inventory = create_inventory(data->npcs->inventory, "bite");

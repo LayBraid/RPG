@@ -46,7 +46,7 @@ void dialog(data_t *data, char *dialog,
         new[i] = dialog[i];
         new[i + 1] = '\0';
         if (data->dialog_skip == 1) {
-            strcpy(new + i + 1, dialog + i + 1);
+            my_strcpy(new + i + 1, dialog + i + 1);
             i = my_strlen(dialog) - 1;
         }
         sfText_setString(data->texts->text, new);

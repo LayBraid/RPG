@@ -7,7 +7,8 @@
 
 #include "structures.h"
 
-static void put_letter(data_t *data, char letter, sfIntRect rect, sfVector2f vector)
+static void put_letter(data_t *data, char letter,
+sfIntRect rect, sfVector2f vector)
 {
     node_letter *new = malloc(sizeof(node_letter));
     new->letter = letter;
