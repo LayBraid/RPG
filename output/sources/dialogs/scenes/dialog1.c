@@ -9,8 +9,6 @@
 #include "dialogs.h"
 #include "my_fprintf.h"
 
-// ! destroy dialog frame bug (segfault)
-
 void dialog1(data_t *data, int npc_id)
 {
     dialog_init(data);
@@ -28,9 +26,8 @@ void dialog1(data_t *data, int npc_id)
     dialog(data, "*????????*", data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data,
-    my_fprintf("%s%s", "Bon je t'ai prepare des donuts sucres... au sucre,",
-    "\n\ndonc descend me gouter ca."), data->id_text_player, 1, npc_id);
+    dialog(data,"Bon je t'ai prepare des donuts sucres... au sucre,"
+    "\n\ndonc descend me gouter ca.", data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     destroy_dialogs(data);
@@ -286,27 +283,27 @@ void dialog9(data_t *data, int npc_id)
     destroy_dialogs(data);
     data->video.ui = 2;
 }
-// TODO : donner aux NPC les id correspondant à leurs dialogues
+
 void which_dialog(data_t *data, int npc_id)
 {
     switch (npc_id) {
-        case (1): data->video.ui = 31; // dialog1(data, npc_id); NPC 1
+        case (1): data->video.ui = 31;
             break;
-        case (2): data->video.ui = 30; // dialog2(data, npc_id); NPC 2
+        case (2): data->video.ui = 30;
             break;
-        case (3): data->video.ui = 29; // dialog3(data, npc_id); NPC 3
+        case (3): data->video.ui = 29;
             break;
-        case (4): data->video.ui = 28; // dialog4(data, npc_id); NPC 4
+        case (4): data->video.ui = 28;
             break;
-        case (5): data->video.ui = 27; // dialog5(data, npc_id); NPC 5
+        case (5): data->video.ui = 27;
             break;
-        case (6): data->video.ui = 26; // dialog6(data, npc_id); NPC 6
+        case (6): data->video.ui = 26;
             break;
-        case (7): data->video.ui = 25; // dialog7(data, npc_id); NPC 7
+        case (7): data->video.ui = 25;
             break;
-        case (8): data->video.ui = 24; // dialog8(data, npc_id); NPC 8
+        case (8): data->video.ui = 24;
             break;
-        case (9): data->video.ui = 23; // dialog9(data, npc_id); NPC 9
+        case (9): data->video.ui = 23;
             break;
         default:
             break;

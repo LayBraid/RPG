@@ -127,4 +127,3 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_entry3, "entry3", 16);
     return init_texture1(texture);
 }
-

@@ -58,40 +58,40 @@ node_texture *init_texture43(node_texture *texture)
 node_texture *init_texture42(node_texture *texture)
 {
     add_next_texture(&texture, set_village_house_top1_2,
-                     "village_house_top1_2", 512);
+    "village_house_top1_2", 512);
     add_next_texture(&texture, set_village_house_top1_3,
-                     "village_house_top1_3", 513);
+    "village_house_top1_3", 513);
     add_next_texture(&texture, set_village_house_top1_4,
-                     "village_house_top1_4", 514);
+    "village_house_top1_4", 514);
     add_next_texture(&texture, set_village_house_top1_5,
-                     "village_house_top1_5", 515);
+    "village_house_top1_5", 515);
     add_next_texture(&texture, set_village_house_top1_6,
-                     "village_house_top1_6", 476);
+    "village_house_top1_6", 476);
     add_next_texture(&texture, set_village_house_top1_7,
-                     "village_house_top1_7", 477);
+    "village_house_top1_7", 477);
     return init_texture43(texture);
 }
 
 node_texture *init_texture41(node_texture *texture)
 {
     add_next_texture(&texture, set_village_house_top0_1,
-                     "village_house_top0_1", 469);
+    "village_house_top0_1", 469);
     add_next_texture(&texture, set_village_house_top0_2,
-                     "village_house_top0_2", 470);
+    "village_house_top0_2", 470);
     add_next_texture(&texture, set_village_house_top0_3,
-                     "village_house_top0_3", 471);
+    "village_house_top0_3", 471);
     add_next_texture(&texture, set_village_house_top0_4,
-                     "village_house_top0_4", 472);
+    "village_house_top0_4", 472);
     add_next_texture(&texture, set_village_house_top0_5,
-                     "village_house_top0_5", 473);
+    "village_house_top0_5", 473);
     add_next_texture(&texture, set_village_house_top0_6,
-                     "village_house_top0_6", 474);
+    "village_house_top0_6", 474);
     add_next_texture(&texture, set_village_house_top0_7,
-                     "village_house_top0_7", 475);
+    "village_house_top0_7", 475);
     add_next_texture(&texture, set_village_house_top1_0,
-                     "village_house_top1_0", 510);
+    "village_house_top1_0", 510);
     add_next_texture(&texture, set_village_house_top1_1,
-                     "village_house_top1_1", 511);
+    "village_house_top1_1", 511);
     return init_texture42(texture);
 }
 
@@ -115,6 +115,6 @@ node_texture *init_texture40(node_texture *texture)
     add_next_texture(&texture, set_enter_cave44_2, "enter_cave44_2", 462);
     add_next_texture(&texture, set_enter_cave44_3, "enter_cave44_3", 463);
     add_next_texture(&texture, set_village_house_top0_0,
-                     "village_house_top0_0", 468);
+    "village_house_top0_0", 468);
     return init_texture41(texture);
 }

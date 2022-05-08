@@ -7,7 +7,6 @@
 
 #include "editor.h"
 
-
 node_texture *init_texture29(node_texture *texture)
 {
     add_next_texture(&texture, set_djcascade2, "djcascade2",2074);

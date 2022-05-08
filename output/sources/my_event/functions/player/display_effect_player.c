@@ -14,7 +14,8 @@ void display_effect_player(data_t *data)
     if (data->player.attack_effect == NULL)
         return;
     while (tmp->id < tmp->next->id) {
-        sfRenderWindow_drawRectangleShape(data->video.window,tmp->rectangle, NULL);
+        sfRenderWindow_drawRectangleShape(data->video.window,
+        tmp->rectangle, NULL);
         tmp = tmp->next;
     }
     sfRenderWindow_drawRectangleShape(data->video.window,tmp->rectangle, NULL);

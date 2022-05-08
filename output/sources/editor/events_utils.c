@@ -7,7 +7,7 @@
 
 #include "editor.h"
 
-void check_keys(editor_t *editor, sfEvent event)
+void check_keys2(editor_t *editor, sfEvent event)
 {
     if (editor->mode)
         research(editor, event);
@@ -18,6 +18,11 @@ void check_keys(editor_t *editor, sfEvent event)
         if (event.key.code == sfKeyE)
             sfView_zoom(editor->view, 1.1f);
     }
+}
+
+void check_keys(editor_t *editor, sfEvent event)
+{
+    check_keys2(editor, event);
     if (event.key.code == sfKeyRight) {
         editor->textures = editor->textures->next;
         editor->textures->prev->function(editor->world, editor->current_prev);

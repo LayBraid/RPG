@@ -10,8 +10,8 @@
 
 void draw_current(editor_t *editor)
 {
-    sfFont* font = sfFont_createFromFile("assets/font.ttf");
-    sfText* text = sfText_create();
+    sfFont *font = sfFont_createFromFile("assets/font.ttf");
+    sfText *text = sfText_create();
     sfVector2f vector2F;
     if (!font)
         return;
