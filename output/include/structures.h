@@ -374,12 +374,13 @@ struct data {
     int my_map;
     node_rectangle *map_hyrule;
     int **collisions_hyrule;
-    int **positions_hyrule;
     sfVector2f position_hyrule;
     node_rectangle *map_tophouse;
     int **collisions_tophouse;
-    int **positions_tophouse;
     sfVector2f position_tophouse;
+    node_rectangle *map_house;
+    int **collisions_house;
+    sfVector2f position_house;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;

@@ -23,4 +23,9 @@ void set_map(data_t *data, int map)
         data->position_tophouse);
         sfView_setCenter(data->mapping, data->position_tophouse);
     }
+    if (map == 1) {
+        sfRectangleShape_setPosition(data->player.rectangle,
+        data->position_house);
+        sfView_setCenter(data->mapping, data->position_house);
+    }
 }

@@ -17,6 +17,8 @@ void display_all_b(data_t *data)
         sfRenderWindow_setView(data->video.window, data->mapping);
         if (data->my_map == 2)
             display_rectangles_map(data);
+        if (data->my_map == 1)
+            display_rectangles_house(data);
         if (data->my_map == 0)
             display_rectangles_tophouse(data);
         display_effect_player(data);
