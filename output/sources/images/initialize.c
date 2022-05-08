@@ -26,7 +26,7 @@
 * 13: fichier de texture
 */
 
-cf PLAYING[14] = {683, 875, 0, 2045, 141, 434, 2, 0,0, 0, 0, MAIN_MENU, 0, 0};
+cf_t PLAYING[14] = {683, 875, 0, 2045, 141, 434, 2, 0,0, 0, 0, MAIN_MENU, 0, 0};
 
 node_img *setup_img(data_t *data)
 {

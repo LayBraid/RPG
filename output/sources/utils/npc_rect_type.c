@@ -7,9 +7,9 @@
 
 #include "utils.h"
 
-IntR get_rect_type(int type)
+IntR_t get_rect_type(int type)
 {
     if (type == 0)
-        return (IntR) {58, 230, 18, 28};
-    return (IntR) {0, 0, 0, 0};
+        return (IntR_t) {58, 230, 18, 28};
+    return (IntR_t) {0, 0, 0, 0};
 }

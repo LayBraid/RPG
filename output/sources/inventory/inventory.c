@@ -16,6 +16,12 @@ static void analyse_event(data_t *data)
                 break;
             case(sfEvtMouseButtonPressed): get_inventory_mouse_click(data);
                 break;
+            case (sfEvtKeyPressed): 
+                if (data->event.key.code == sfKeyTab) {
+                    data->items = delete_inventory_de_oscar(data);
+                    data->video.ui = 2;
+                }
+                break;
             default: break;
         }
     }
