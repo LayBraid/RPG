@@ -34,6 +34,15 @@ void check_keys(editor_t *editor, sfEvent event);
 void check_for_move(editor_t *editor, sfEvent event);
 
 node_texture *init_textures(void);
+node_texture *init_texture5(node_texture *texture);
+node_texture *init_texture10(node_texture *texture);
+node_texture *init_texture15(node_texture *texture);
+node_texture *init_texture20(node_texture *texture);
+node_texture *init_texture25(node_texture *texture);
+node_texture *init_texture30(node_texture *texture);
+node_texture *init_texture35(node_texture *texture);
+node_texture *init_texture40(node_texture *texture);
+node_texture *init_texture45(node_texture *texture);
 
 void add_next_texture(node_texture **node,
 void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name,
