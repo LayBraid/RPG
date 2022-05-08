@@ -28,7 +28,7 @@ void attack_on_enemy(data_t *data)
 {
     enemy_t *tmp = get_enemy_by_id(data, data->interact.enemy_id);
 
-    if (data->interact.enemy_distance <= 40 &&
+    if (data->interact.enemy_distance <= 50 &&
     data->interact.enemy_distance > 0) {
         tmp->display_life = 1;
         switch (data->player.equipped) {
@@ -55,6 +55,7 @@ void attack_on_enemy(data_t *data)
         if (tmp->dead == 1) {
             tmp->position = (sfVector2f) {-1000, -1000};
             sfRectangleShape_setPosition(tmp->rectangle, tmp->position);
+            //destroy_interacted_ennemy(data);
         }
     }
 }

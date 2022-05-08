@@ -907,6 +907,12 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_mount_entry3_3, "mount_entry3_3",572);
     add_next_texture(&texture, set_plain, "plain",573);
     add_next_texture(&texture, set_snow, "snow",574);
+    add_next_texture(&texture, set_desert_herbe0_0, "desert_herbe0_0",575);
+    add_next_texture(&texture, set_desert_herbe1_0, "desert_herbe1_0",577);
+    add_next_texture(&texture, set_cac0_0, "cac0_0",578);
+    add_next_texture(&texture, set_cac1_0, "cac1_0",581);
+    add_next_texture(&texture, set_cac2_0, "cac2_0",584);
+    add_next_texture(&texture, set_desert, "desert",585);
     return texture;
     }
 
