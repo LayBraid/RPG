@@ -23,6 +23,15 @@ static int get_max(node_rectangle **node)
 
 //TODO Resize function
 
+static void add_map_rectangle2(data_t *data, node_rectangle *new,
+const float info[4])
+{
+    new->x = info[0];
+    new->y = info[1];
+    new->type = (int) info[2];
+    new->depth = (int) info[3];
+}
+
 static void add_map_rectangle(data_t *data, node_rectangle **node,
 const float info[4])
 {
@@ -33,10 +42,7 @@ const float info[4])
     while (tmp->next->id != 0)
         tmp = tmp->next;
     new->id = get_max(node) + 1;
-    new->x = info[0];
-    new->y = info[1];
-    new->type = (int) info[2];
-    new->depth = (int) info[3];
+    add_map_rectangle2(data, new, info);
     new->rectangle = sfRectangleShape_create();
     sfRectangleShape_setSize(new->rectangle, (sfVector2f) { 15.0f, 15.0f});
     while (texture->id_r != new->type)

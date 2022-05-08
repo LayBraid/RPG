@@ -8,6 +8,21 @@
 #include "my_rpg.h"
 #include "name.h"
 
+static void analyse_key2(data_t *data)
+{
+    switch(data->event.key.code) {
+        case sfKeyEnter: analyse_key3(data);
+            break;
+        case sfKeyBackspace:
+            if (data->letter->state == 0)
+                delete_letter(data);
+            if (data->letter->state == 1)
+                stop_anim_end(data);
+            break;
+        default: break;
+    }
+}
+
 static void analyse_key(data_t *data)
 {
     switch (data->event.key.code) {
@@ -24,21 +39,7 @@ static void analyse_key(data_t *data)
             break;
         case sfKeySpace: put_letter(data);
             break;
-        case sfKeyEnter:
-            if (data->letter->state == 0 && data->letter->count > 0)
-                data->letter->state = 1;
-            else if (data->letter->state == 1) {
-                enter_name(data);
-                data->settings_state = "GAME";
-            }
-            break;
-        case sfKeyBackspace:
-            if (data->letter->state == 0)
-                delete_letter(data);
-            if (data->letter->state == 1)
-                stop_anim_end(data);
-            break;
-        default: break;
+        default: analyse_key2(data);
     }
 }
 

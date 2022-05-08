@@ -19,4 +19,22 @@ enum GAME_STATUS {
     END,
 };
 
+//move_select_b.c
+void go_left2(data_t *data, tile_t *tile, sfVector2f pos);
+void go_right2(data_t *data, tile_t *tile, sfVector2f pos);
+void go_up2(data_t *data, tile_t *tile, sfVector2f pos);
+void go_down2(data_t *data, tile_t *tile, sfVector2f pos);
+
+void go_left3(data_t *data, tile_t *tile, sfVector2f pos);
+void go_right3(data_t *data, tile_t *tile, sfVector2f pos);
+
+//read_map2.c
+void get_npcs(data_t *data, char *map);
+void construct_map(data_t *data, char *map);
+char *make_map(char *filepath);
+void create_map_from_file(data_t *data, char *filepath);
+int make_tile(data_t *data, char *map, int i, sfVector2f pos);
+int make_npc(data_t *data, char *map, int i);
+
+
 #endif

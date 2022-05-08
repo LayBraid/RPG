@@ -11,6 +11,26 @@
 #include "inventory.h"
 #include "hud.h"
 
+static void analyse_key2(data_t *data)
+{
+    if (data->event.key.code == data->keys->interact)
+        call_event(data, "interact_npc");
+    if (data->event.key.code == sfKeyK)
+        call_event(data, "open skill tree");
+    if (data->event.key.code == data->keys->attack)
+        call_event(data, "attack_player");
+    if (data->event.key.code == data->keys->pause) {
+        data->video.ui = 32;
+        data->loading_state = 18;
+    }
+    if (data->event.key.code == sfKeyNum1)
+        data->player.equipped = 1;
+    if (data->event.key.code == sfKeyNum2)
+        data->player.equipped = 2;
+    if (data->event.key.code == sfKeyNum3)
+        data->player.equipped = 3;
+}
+
 static void analyse_key(data_t *data)
 {
     if (data->event.key.code == data->keys->up)
@@ -32,22 +52,7 @@ static void analyse_key(data_t *data)
         get_items(data);
         call_event(data, "open_inventory");
     }
-    if (data->event.key.code == data->keys->interact)
-        call_event(data, "interact_npc");
-    if (data->event.key.code == sfKeyK)
-        call_event(data, "open skill tree");
-    if (data->event.key.code == data->keys->attack)
-        call_event(data, "attack_player");
-    if (data->event.key.code == data->keys->pause) {
-        data->video.ui = 32;
-        data->loading_state = 18;
-    }
-    if (data->event.key.code == sfKeyNum1)
-        data->player.equipped = 1;
-    if (data->event.key.code == sfKeyNum2)
-        data->player.equipped = 2;
-    if (data->event.key.code == sfKeyNum3)
-        data->player.equipped = 3;
+    analyse_key2(data);
 }
 
 static void analyse_released_key(data_t *data)

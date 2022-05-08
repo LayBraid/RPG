@@ -55,12 +55,14 @@ void shop_loop(data_t *data, unsigned int count, npc_t *npc)
             default:
             break;
         }
-        analyse_events(data);
-        sfRenderWindow_clear(data->video.window, sfWhite);
-        display_all(data);
-        sfRenderWindow_display(data->video.window);
     }
 }
+
+// ! a mettre dans la boucle d'au dessus
+// analyse_events(data);
+// sfRenderWindow_clear(data->video.window, sfWhite);
+// display_all(data);
+// sfRenderWindow_display(data->video.window);
 
 void destroy_shop(data_t *data)
 {

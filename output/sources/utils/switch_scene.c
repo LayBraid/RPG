@@ -21,6 +21,48 @@
 #include "credits.h"
 #include "dialogs.h"
 
+void switch_scenec(data_t *data)
+{
+    switch (data->video.ui) {
+        case (27): dialog5(data, 1);
+            break;
+        case (28): dialog4(data, 1);
+            break;
+        case (29): dialog3(data, 1);
+            break;
+        case (30): dialog2(data, 1);
+            break;
+        case (31): dialog1(data, 1);
+            break;
+        case (32): loading(data);
+            break;
+        default: break;
+    }
+}
+
+void switch_sceneb(data_t *data)
+{
+    switch (data->video.ui) {
+        case (8): pause_scene(data);
+            break;
+        case (9): howtoplay_scene(data);
+            break;
+        case (10): skill_tree(data);
+            break;
+        case (11): credits_scene(data);
+            break;
+        case (23): dialog9(data, 1);
+            break;
+        case (24): dialog8(data, 1);
+            break;
+        case (25): dialog7(data, 1);
+            break;
+        case (26): dialog6(data, 1);
+            break;
+        default: switch_scenec(data);
+    }
+}
+
 void switch_scene(data_t *data)
 {
     switch (data->video.ui) {
@@ -40,35 +82,6 @@ void switch_scene(data_t *data)
             break;
         case (7): keybind_scene(data);
             break;
-        case (8): pause_scene(data);
-            break;
-        case (9): howtoplay_scene(data);
-            break;
-        case (10): skill_tree(data);
-            break;
-        case (11): credits_scene(data);
-            break;
-        case (23): dialog9(data, 1);
-            break;
-        case (24): dialog8(data, 1);
-            break;
-        case (25): dialog7(data, 1);
-            break;
-        case (26): dialog6(data, 1);
-            break;
-        case (27): dialog5(data, 1);
-            break;
-        case (28): dialog4(data, 1);
-            break;
-        case (29): dialog3(data, 1);
-            break;
-        case (30): dialog2(data, 1);
-            break;
-        case (31): dialog1(data, 1);
-            break;
-        case (32): loading(data);
-            break;
-        default:
-            break;
+        default: switch_sceneb(data);
     }
 }

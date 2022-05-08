@@ -9,6 +9,21 @@
 #include "my.h"
 #include "utils.h"
 
+static void convert_data2(data_t *data, char *buffer, int *step)
+{
+    switch ((*step)) {
+        case 0: parsing_quest(data, buffer);
+            break;
+        case 1: parsing_profile(data, buffer);
+            break;
+        case 2: parsing_npc(data, buffer);
+            break;
+        case 3: parse_enemy(data, buffer);
+            break;
+        default: break;
+    }
+}
+
 static void convert_data(data_t *data, char *buffer, int *step)
 {
     int save = (*step);
@@ -23,18 +38,7 @@ static void convert_data(data_t *data, char *buffer, int *step)
         (*step) = 3;
     if (save != (*step))
         return;
-    switch ((*step)) {
-        case 0: parsing_quest(data, buffer);
-            break;
-        case 1: parsing_profile(data, buffer);
-            break;
-        case 2: parsing_npc(data, buffer);
-            break;
-        case 3: parse_enemy(data, buffer);
-            break;
-        default:
-            break;
-    }
+    convert_data2(data, buffer, step);
 }
 
 void parsing_data(data_t *data)

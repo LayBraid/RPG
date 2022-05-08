@@ -10,13 +10,19 @@
 #include "utils.h"
 #include "my.h"
 
-static void drawtext(data_t *data)
+static void gotoo2(data_t *data, sfVector2f pos)
 {
-    my_text(data, (sfVector2f) {100, 200}, 5, "NEW GAME");
-    my_text(data, (sfVector2f) {100, 300}, 5, "LOAD GAME");
-    my_text(data, (sfVector2f) {100, 400}, 5, "SETTINGS");
-    my_text(data, (sfVector2f) {100, 500}, 5, "CREDITS");
-    my_text(data, (sfVector2f) {100, 600}, 5, "QUIT GAME");
+    if (pos.y == 420) {
+        data->video.ui = 32;
+        data->loading_state = 5;
+    }
+    if (pos.y == 520) {
+        data->tiles = delete_all_tiles(data->tiles);
+        data->video.ui = 32;
+        data->loading_state = 25;
+    }
+    if (pos.y == 620)
+        sfRenderWindow_close(data->video.window);
 }
 
 static void gotoo(data_t *data)
@@ -35,17 +41,7 @@ static void gotoo(data_t *data)
         data->video.ui = 32;
         data->loading_state = 4;
     }
-    if (pos.y == 420) {
-        data->video.ui = 32;
-        data->loading_state = 5;
-    }
-    if (pos.y == 520) {
-        data->tiles = delete_all_tiles(data->tiles);
-        data->video.ui = 32;
-        data->loading_state = 25;
-    }
-    if (pos.y == 620)
-        sfRenderWindow_close(data->video.window);
+    gotoo2(data, pos);
 }
 
 static void analyse_key(data_t *data)
@@ -78,6 +74,6 @@ static void analyse_event(data_t *data)
 void menu_scene(data_t *data)
 {
     display_all(data);
-    drawtext(data);
+    drawtextmenu(data);
     analyse_event(data);
 }
