@@ -35,6 +35,9 @@ void display_all_b(data_t *data)
             "Press %s to interact", data->keys->key[data->keys->interact]));
         }
     }
+    sfRenderWindow_setView(data->video.window, data->main);
+    display_all_objects(data);
+    display_texts(data->texts, data->video);
 }
 
 void display_all(data_t *data)
@@ -49,7 +52,4 @@ void display_all(data_t *data)
         sfRenderWindow_setView(data->video.window, data->main);
         display_items(data);
     }
-    sfRenderWindow_setView(data->video.window, data->main);
-    display_all_objects(data);
-    display_texts(data->texts, data->video);
 }

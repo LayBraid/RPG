@@ -102,6 +102,7 @@ void data_create(data_t *data)
     data->map_hyrule = NULL;
     data->map_tophouse = NULL;
     data->map_house = NULL;
+    parsing_data(data);
     get_map(data);
     get_map_tophouse(data);
     get_map_house(data);

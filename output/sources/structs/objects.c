@@ -24,7 +24,6 @@ void display_object(data_t *data, object_t *node)
 {
     sfSprite_setPosition(node->sprite, node->position);
     sfRenderWindow_drawSprite(data->video.window, node->sprite, NULL);
-    printf("displaying\n");
 }
 
 void display_all_objects(data_t *data)
