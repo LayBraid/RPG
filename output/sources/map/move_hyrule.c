@@ -41,7 +41,6 @@ void hyrule_move_up(data_t *data)
     data->player.state = WALK_UP;
     data->player.position = sfRectangleShape_getPosition(data->
     player.rectangle);
-    printf("%f %f\n", data->player.position.x, data->player.position.y);
 
 }
 

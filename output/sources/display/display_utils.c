@@ -7,7 +7,8 @@
 
 #include "utils.h"
 
-void display_tile_depth(tile_t *start, video_t video, unsigned char depth)
+void display_tile_depth(tile_t *start, video_t video,
+unsigned char depth, int map)
 {
     tile_t *node = start;
 
@@ -20,7 +21,8 @@ void display_tile_depth(tile_t *start, video_t video, unsigned char depth)
     }
 }
 
-void display_npc_depth(npc_t *start, video_t video, unsigned char depth)
+void display_npc_depth(npc_t *start, video_t video,
+unsigned char depth, int map)
 {
     npc_t *node = start;
 

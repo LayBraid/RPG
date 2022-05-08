@@ -413,8 +413,10 @@ struct editor_data {
 void display_all(data_t *data);
 
 // display_utils.c
-void display_tile_depth(tile_t *start, video_t video, unsigned char depth);
-void display_npc_depth(npc_t *start, video_t video, unsigned char depth);
+void display_tile_depth(tile_t *start, video_t video,
+unsigned char depth, int map);
+void display_npc_depth(npc_t *start, video_t video,
+unsigned char depth, int map);
 void display_buttons(button_t *start, video_t video);
 void display_texts(text_t *start, video_t video);
 void display_player_depth(player_t player, video_t video, unsigned char depth);

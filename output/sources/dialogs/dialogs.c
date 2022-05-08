@@ -13,9 +13,9 @@ static void analyse_key_press(data_t *data, sfEvent event)
 {
     switch (event.key.code) {
         case (sfKeySpace): data->dialog_skip = 1;
-        break;
+            break;
         default:
-        break;
+            break;
     }
 }
 
@@ -37,7 +37,6 @@ void dialog(data_t *data, char *dialog,
     char *new = malloc((my_strlen(dialog) + 1) * sizeof(char));
 
     new[0] = '\0';
-    set_dialog_characters(data, is_talking, id_npc);
     data->texts = create_text(data->texts, new, data->font);
     sfText_setColor(data->texts->text, sfWhite);
     sfText_setPosition(data->texts->text, (sfVector2f){100, 900});

@@ -43,6 +43,8 @@ void tophouse_move_up(data_t *data)
     data->player.state = WALK_UP;
     data->player.position = sfRectangleShape_getPosition(data->
     player.rectangle);
+    data->position_tophouse = sfRectangleShape_getPosition(data->
+    player.rectangle);
     call_event(data, "check_exit_top");
 }
 
@@ -60,6 +62,8 @@ void tophouse_move_right(data_t *data)
     data->player.state = WALK_RIGHT;
     data->player.position = sfRectangleShape_getPosition(data->
     player.rectangle);
+    data->position_tophouse = sfRectangleShape_getPosition(data->
+    player.rectangle);
     call_event(data, "check_exit_top");
 }
 
@@ -76,6 +80,8 @@ void tophouse_move_left(data_t *data)
         sfView_move(data->mapping, (sfVector2f) {-3, 0});
     data->player.state = WALK_LEFT;
     data->player.position = sfRectangleShape_getPosition(data->
+    player.rectangle);
+    data->position_tophouse = sfRectangleShape_getPosition(data->
     player.rectangle);
     call_event(data, "check_exit_top");
 }

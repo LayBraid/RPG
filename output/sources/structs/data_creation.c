@@ -107,6 +107,7 @@ void data_create(data_t *data)
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
     data->textures = init_textures();
     data->map_hyrule = NULL;
+    data->map_tophouse = NULL;
     get_map(data);
     get_map_tophouse(data);
     set_letters(data);
