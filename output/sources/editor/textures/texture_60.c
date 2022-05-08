@@ -2,47 +2,47 @@
 ** EPITECH PROJECT, 2022
 ** output
 ** File description:
-** No file there , just an epitech header example
+** texture_60.c
 */
 
 #include "editor.h"
 
-void set_djboss9(sfTexture *texture, node_rectangle *rectangle)
+void set_mountain4_7(sfTexture *texture, node_rectangle *rectangle)
 {
-    sfIntRect rect = {1303,1767,8,8};
-    rectangle->type = 2157;
+    sfIntRect rect = {582,730,8,8};
+    rectangle->type = 544;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_djboss10(sfTexture *texture, node_rectangle *rectangle)
+void set_doorh(sfTexture *texture, node_rectangle *rectangle)
 {
-    sfIntRect rect = {1311,1767,8,8};
-    rectangle->type = 2158;
+    sfIntRect rect = {783,1496,8,8};
+    rectangle->type = 2040;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_djboss11(sfTexture *texture, node_rectangle *rectangle)
+void set_mount_entry0_0(sfTexture *texture, node_rectangle *rectangle)
 {
-    sfIntRect rect = {1319,1767,8,8};
-    rectangle->type = 2159;
+    sfIntRect rect = {607,706,8,8};
+    rectangle->type = 557;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_djboss12(sfTexture *texture, node_rectangle *rectangle)
+void set_doorh1(sfTexture *texture, node_rectangle *rectangle)
 {
-    sfIntRect rect = {1327,1767,8,8};
-    rectangle->type = 2160;
+    sfIntRect rect = {791,1411,8,8};
+    rectangle->type = 2041;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
 
-void set_djboss13(sfTexture *texture, node_rectangle *rectangle)
+void set_mount_entry0_1(sfTexture *texture, node_rectangle *rectangle)
 {
-    sfIntRect rect = {1303,1775,8,8};
-    rectangle->type = 2161;
+    sfIntRect rect = {615,706,8,8};
+    rectangle->type = 558;
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
