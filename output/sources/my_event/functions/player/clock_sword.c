@@ -11,16 +11,16 @@
 void update_rectangle(player_t *player, attack_effect_t *node)
 {
     sfVector2f vector = sfRectangleShape_getPosition(player->rectangle);
-    if (player->state == IDLE_UP || player->state == WALK_UP) {
-        vector.y -= 12;
+    if (player->state == IDLE_UP || player->state == WALK_UP || player->state == COMBAT_UP) {
+        vector.y -= 9;
         vector.x -= 7;
         sfRectangleShape_setScale(node->rectangle, (sfVector2f) {1, 1});
-    } else if (player->state == IDLE_DOWN || player->state == WALK_DOWN) {
-        vector.y += 12;
-        vector.x -= 7;
+    } else if (player->state == IDLE_DOWN || player->state == WALK_DOWN || player->state == COMBAT_DOWN) {
+        vector.y += 14;
+//        vector.x += 5;
         sfRectangleShape_setScale(node->rectangle, (sfVector2f) {-1, 1});
     }
-    if (player->state == IDLE_LEFT || player->state == WALK_LEFT) {
+    if (player->state == IDLE_LEFT || player->state == WALK_LEFT || player->state == COMBAT_LEFT) {
         vector.x -= 12;
         sfRectangleShape_setScale(node->rectangle, (sfVector2f) {-1, 1});
     } else {
@@ -36,7 +36,7 @@ static void clock_effect(data_t *data, player_t *player, attack_effect_t *node)
         return;
     sfTime time = sfClock_getElapsedTime(node->movement_clock);
     double diff = time.microseconds / 1000000.0;
-    if (diff > 0.02) {
+    if (diff > 0.01) {
         sfRectangleShape_setSize(node->rectangle,
         get_size_sword(player->equipped, node->animation->value));
         sfRectangleShape_setTextureRect(node->rectangle,

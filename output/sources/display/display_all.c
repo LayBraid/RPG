@@ -18,13 +18,13 @@ void display_all_b(data_t *data)
             display_rectangles_map(data);
         if (data->my_map == 0)
             display_rectangles_tophouse(data);
+        display_effect_player(data);
         display_player_depth(data->player, data->video, data->player.depth);
         for (unsigned char depth = 0; depth < 10; depth++) {
             display_npc_depth(data->npcs, data->video, depth);
             display_enemies_depth(data->enemies, data->video, depth);
         }
         display_effect_enemies(data);
-        display_effect_player(data);
         if (data->interact.status) {
             sfRenderWindow_setView(data->video.window, data->main);
             my_text(data, (sfVector2f) {680, 980}, 4, "press R to interact");
