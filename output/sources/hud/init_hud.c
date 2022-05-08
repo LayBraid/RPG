@@ -45,7 +45,7 @@ void init_fight_stamina(data_t *data)
 void init_hud(data_t *data)
 {
     sfFont *font = sfFont_createFromFile("./assets/font.ttf");
-    data->texts = create_text(data->texts, "Merlish", font);
+    data->texts = create_text(data->texts, data->player.name, font);
     data->texts = set_text_position(data->texts, (sfVector2f){50,0});
     sfText_setCharacterSize(data->texts->text, 30);
     data->texts = create_text(data->texts, my_itoa(data->player.lvl), font);
