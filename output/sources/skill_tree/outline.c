@@ -22,7 +22,8 @@ void move_outline(outline_t *tile)
     sfSprite_setTexture(tile->sprite, tile->texture, sfTrue);
 }
 
-void move_all_outline(data_t *data) {
+void move_all_outline(data_t *data)
+{
     outline_t *tmp = data->outline;
 
     while (tmp != NULL) {

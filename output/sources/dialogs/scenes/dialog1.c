@@ -105,7 +105,6 @@ void dialog3(data_t *data, int npc_id)
     } else {
         destroy_dialog_frame(data);
         dialog(data, "Non !", data->id_text_player, 0, npc_id);
-        // !sortir du dialog
     }
     destroy_dialog_frame(data);
     dialog(data, my_fprintf("%s%s%s",
@@ -149,11 +148,9 @@ void dialog4(data_t *data, int npc_id)
     if (dialog_choice(data) == 1) {
         destroy_dialog_frame(data);
         dialog(data, "Oui !", data->id_text_player, 0, npc_id);
-        // ! ouvrir le shop
     } else {
         destroy_dialog_frame(data);
         dialog(data, "Non !", data->id_text_player, 0, npc_id);
-        // ! sortir du dialog
     }
     destroy_dialog_frame(data);
     destroy_dialogs(data);
@@ -221,11 +218,9 @@ void dialog7(data_t *data, int npc_id)
     if (dialog_choice(data) == 1) {
         destroy_dialog_frame(data);
         dialog(data, "Oui !", data->id_text_player, 0, npc_id);
-        // ! ouvrir le shop
     } else {
         destroy_dialog_frame(data);
         dialog(data, "Non !", data->id_text_player, 0, npc_id);
-        // ! sortir du dialog
     }
     destroy_dialog_frame(data);
     destroy_dialogs(data);

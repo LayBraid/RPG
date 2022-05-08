@@ -124,8 +124,7 @@ void go_up(data_t *data)
         if (pos.y == 590 && pos.x < 798) {
             tile = set_tile_position(tile, (sfVector2f){pos.x, 470});
             data->letter->pos.y = 470;
-        }
-        else if (pos.y == 590 && pos.x > 798) {
+        } else if (pos.y == 590 && pos.x > 798) {
             tile = set_tile_position(tile, (sfVector2f){pos.x, 390});
             data->letter->pos.y = 390;
         }
@@ -154,10 +153,9 @@ void go_down(data_t *data)
             data->letter->pos.y = 390;
         }
         if (pos.y == 390 && pos.x < 798) {
-            tile = set_tile_position(tile, (sfVector2f){pos.x, 470});
+            tile = set_tile_position(tile, (sfVector2f) {pos.x, 470});
             data->letter->pos.y = 470;
-        }
-        else if (pos.y == 390 && pos.x > 798) {
+        } else if (pos.y == 390 && pos.x > 798) {
             tile = set_tile_position(tile, (sfVector2f){pos.x, 590});
             data->letter->pos.y = 590;
         }

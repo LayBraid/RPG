@@ -16,7 +16,8 @@ void init_new_game(data_t *data)
     music_t *tmp = data->musics;
 
     init_hud(data);
-    data->player.position = sfRectangleShape_getPosition(data->player.rectangle);
+    data->player.position =
+    sfRectangleShape_getPosition(data->player.rectangle);
     data->player.state = IDLE_DOWN;
     data->quest = NULL;
     data->enemies = NULL;
