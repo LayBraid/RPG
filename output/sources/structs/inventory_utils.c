@@ -20,6 +20,7 @@ void create_items(data_t *data, int idx, int mod, sfVector2f pos)
     inventory_t *new = malloc(sizeof(inventory_t));
 
     new->main = mod;
+    printf("%d\n", idx);
     switch (idx) {
         case (0) : new = set_items_value(new, (sfIntRect){0,270,10,20}, pos);
             break;
@@ -36,26 +37,6 @@ void create_items(data_t *data, int idx, int mod, sfVector2f pos)
     sfSprite_setScale(new->sprite_item, (sfVector2f){5,5});
     sfSprite_setScale(new->sprite_rect, (sfVector2f){5,5});
     new->item = idx;
-    new->next = data->items;
-    data->items = new;
-}
-
-void create_slot(data_t *data, sfVector2f pos)
-{
-    inventory_t *new = malloc(sizeof(inventory_t));
-
-    new = set_items_value(new, (sfIntRect){0,0,1,1}, pos);
-    new->position_rect = (sfVector2f){new->position_item.x - 30, new->position_item.y - 20};
-    new->rect_rect = (sfIntRect){36,19,24,24};
-    new->texture_rect = sfTexture_createFromFile("./assets/game/HUD.png", &new->rect_rect);
-    new->sprite_item = sfSprite_create();
-    new->sprite_rect = sfSprite_create();
-    sfSprite_setTexture(new->sprite_item, new->texture_item, sfTrue);
-    sfSprite_setTexture(new->sprite_rect, new->texture_rect, sfTrue);
-    sfSprite_setScale(new->sprite_item, (sfVector2f){5,5});
-    sfSprite_setScale(new->sprite_rect, (sfVector2f){5,5});
-    new->item = -1;
-    new->main = 0;
     new->next = data->items;
     data->items = new;
 }
