@@ -28,8 +28,8 @@ static void add_movement_effect(attack_effect_t *node, sfVector2f position)
 void setup_effect(enemy_t *enemy, int id_effect, sfVector2f player_position)
 {
     attack_effect_t *tmp = enemy->attack_effect;
-    sfVector2f vector = {player_position.x -
-    enemy->position.x, player_position.y - enemy->position.y};
+    sfVector2f vector = {player_position.x - enemy->position.x,
+    player_position.y - enemy->position.y};
     sfVector2f calculate = {vector.x / 30, vector.y / 30};
 
     while (tmp->id != id_effect)

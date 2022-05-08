@@ -14,12 +14,14 @@ void init_stamina(data_t *data)
     int i = 0;
 
     for (; i < data->player.stamina ; i++) {
-        create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){x,0}, "./assets/game/stamina.png");
+        create_object(data, (sfIntRect){0,0,32,32}, (sfVector2f){x,0},
+        "./assets/game/stamina.png");
         sfSprite_setScale(data->objects->sprite, (sfVector2f){3,3});
         x += 50;
     }
     for (; i < 5 ; i++) {
-        create_object(data, (sfIntRect){64,0,32,32}, (sfVector2f){x,0}, "./assets/game/stamina.png");
+        create_object(data, (sfIntRect){64,0,32,32}, (sfVector2f){x,0},
+        "./assets/game/stamina.png");
         sfSprite_setScale(data->objects->sprite, (sfVector2f){3,3});
         x += 50;
     }
@@ -31,12 +33,14 @@ void init_fight_stamina(data_t *data)
     int i = 0;
 
     for (; i < data->player.stamina ; i++) {
-        create_object(data, (sfIntRect){32,0,32,32}, (sfVector2f){x,0}, "./assets/game/stamina.png");
+        create_object(data, (sfIntRect){32,0,32,32}, (sfVector2f){x,0},
+        "./assets/game/stamina.png");
         sfSprite_setScale(data->objects->sprite, (sfVector2f){3,3});
         x += 50;
     }
     for (; i < 5 ; i++) {
-        create_object(data, (sfIntRect){64,0,32,32}, (sfVector2f){x,0}, "./assets/game/stamina.png");
+        create_object(data, (sfIntRect){64,0,32,32}, (sfVector2f){x,0},
+        "./assets/game/stamina.png");
         sfSprite_setScale(data->objects->sprite, (sfVector2f){3,3});
         x += 50;
     }
