@@ -11,12 +11,16 @@ void set_map(data_t *data, int map)
 {
     data->my_map = map;
     if (map == 2) {
+        if (data->position_hyrule.x == 120 && data->position_hyrule.y == 2089)
+            sfView_setCenter(data->mapping, (sfVector2f) {960 / 3, 2070});
+        else
+            sfView_setCenter(data->mapping, data->position_hyrule);
         sfRectangleShape_setPosition(data->player.rectangle,
         data->position_hyrule);
     }
     if (map == 0) {
         sfRectangleShape_setPosition(data->player.rectangle,
         data->position_tophouse);
-        sfView_setCenter(data->mapping, (sfVector2f) {50, 30});
+        sfView_setCenter(data->mapping, data->position_tophouse);
     }
 }

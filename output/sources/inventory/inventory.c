@@ -5,7 +5,6 @@
 ** inventory
 */
 
-#include "my_rpg.h"
 #include "inventory.h"
 #include "utils.h"
 
@@ -16,6 +15,8 @@ static void analyse_event(data_t *data)
             case (sfEvtClosed): sfRenderWindow_close(data->video.window);
                 break;
             case(sfEvtMouseButtonPressed): get_inventory_mouse_click(data);
+                break;
+            default: break;
         }
     }
 }
@@ -26,11 +27,11 @@ int check_main_inventory(inventory_t *tmp, data_t *data)
 
     if (tmp->main == 1 && data->video.drag != -1) {
         pos = (sfIntRect){770, 900, 120, 120};
-        if (is_in_rect(pos, data->event.mouseButton.x, data->event.mouseButton.y) == 1) {
+        if (is_in_rect(pos, data->event.mouseButton.x,
+            data->event.mouseButton.y) == 1) {
             data->player.equiped = data->video.drag;
             data->video.drag = -1;
-            printf("drop, %d\n", data->player.equiped);
-            data->items = delete_inventory(data);
+            data->items = delete_inventory_de_oscar(data);
             data->video.ui = 2;
         }
         return 1;
@@ -46,10 +47,11 @@ void get_inventory_mouse_click(data_t *data)
     while (tmp != NULL) {
         if (check_main_inventory(tmp, data) == 1)
             return;
-        pos = (sfIntRect){tmp->position_rect.x, tmp->position_rect.y, 125, 125};
-        if (is_in_rect(pos, data->event.mouseButton.x, data->event.mouseButton.y) == 1 && tmp->item != -1) {
+        pos = (sfIntRect){tmp->position_rect.x,
+        tmp->position_rect.y, 125, 125};
+        if (is_in_rect(pos, data->event.mouseButton.x,
+            data->event.mouseButton.y) == 1 && tmp->item != -1) {
             data->video.drag = tmp->item;
-            printf("drag, %d\n", tmp->item);
             return;
         }
         tmp = tmp->next;

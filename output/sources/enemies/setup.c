@@ -32,6 +32,16 @@ static void update_rectangle(enemy_t *node, sfTexture *texture)
     sfRectangleShape_setPosition(node->rectangle, node->position);
 }
 
+static void update_this(enemy_t *dup, enemy_t *new)
+{
+    dup->type = new->type;
+    dup->depth = new->depth;
+    dup->hp = new->hp;
+    dup->map = new->map;
+    dup->max_hp = new->max_hp;
+    dup->range = new->range;
+}
+
 void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
 {
     enemy_t *tmp = (*node);
@@ -43,12 +53,7 @@ void any_enemy(enemy_t **node, enemy_t *new, sfTexture *texture)
     dup->name = new->name;
     dup->attack_effect = NULL;
     dup->display_life = 0;
-    dup->type = new->type;
-    dup->depth = new->depth;
-    dup->hp = new->hp;
-    dup->map = new->map;
-    dup->max_hp = new->max_hp;
-    dup->range = new->range;
+    update_this(dup, new);
     dup->position = new->position;
     update_rectangle(dup, texture);
     dup->movement_clock = sfClock_create();

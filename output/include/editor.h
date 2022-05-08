@@ -29,6 +29,10 @@ void display_rectangles(editor_t *editor);
 
 void check_events(editor_t *editor);
 
+void check_keys(editor_t *editor, sfEvent event);
+
+void check_for_move(editor_t *editor, sfEvent event);
+
 node_texture *init_textures(void);
 
 void add_next_texture(node_texture **node,

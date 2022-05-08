@@ -7,6 +7,14 @@
 
 #include "enemies.h"
 
+static void changement(enemy_t *enemy)
+{
+    if (enemy->attack_effect->next->id == 0)
+        enemy->attack_effect = NULL;
+    else
+        enemy->attack_effect = enemy->attack_effect->next;
+}
+
 static void clock_effect(enemy_t *enemy, attack_effect_t *node)
 {
     if (node->movement == NULL)
@@ -21,10 +29,7 @@ static void clock_effect(enemy_t *enemy, attack_effect_t *node)
             enemy->attack_effect = enemy->attack_effect->next;
         node->movement = node->movement->next;
         if (enemy->attack_effect->movement == NULL) {
-            if (enemy->attack_effect->next->id == 0)
-                enemy->attack_effect = NULL;
-            else
-                enemy->attack_effect = enemy->attack_effect->next;
+            changement(enemy);
         }
         sfClock_restart(node->movement_clock);
     }

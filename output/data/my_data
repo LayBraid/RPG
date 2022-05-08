@@ -16,5 +16,4 @@
 ['Enemies']
 ['name',0,0,100,100,2,[500,2070]]
 ['Profiles']
-['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 54],[['kill_one_png',1],['kill_two_png',0]]]
-['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 54],[['kill_one_png',1],['kill_two_png',0]]]
+['LayBraid',[['Coins', 4],['Boots', 'Gold']],[12, 2089],[['kill_one_png',1],['kill_two_png',0]]]

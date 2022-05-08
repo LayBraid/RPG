@@ -521,7 +521,7 @@ texture_t *texture);
 void get_items(data_t *data);
 void display_items(data_t *data);
 void create_items(data_t *data, int idx, int mod, sfVector2f pos);
-inventory_t *delete_inventory(data_t *data);
+inventory_t *delete_inventory_de_oscar(data_t *data);
 
 // video_utils.c
 void set_fps(sfRenderWindow *window, int fps, data_t *data);
