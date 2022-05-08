@@ -8,6 +8,7 @@
 #include "player.h"
 #include "my_event.h"
 #include "enemies.h"
+#include "inventory.h"
 
 static void analyse_key(data_t *data)
 {

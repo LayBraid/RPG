@@ -59,6 +59,8 @@ void fill_items(data_t *data)
 void data_create(data_t *data)
 {
     data->video.ui = 32;
+    data->player.items = "1100000\0";
+    data->player.equiped = 0;
     data->player.depth = 0;
     data->player.hp_max = 10;
     data->player.dmg = 1;
@@ -69,6 +71,7 @@ void data_create(data_t *data)
     data->player.current_hp = 10;
     data->player.inventory = NULL;
     data->player.name = "";
+    data->video.drag = -1;
     data->player.rectangle = sfRectangleShape_create();
     data->player.rect = (sfIntRect){0, 0, 0, 0};
     data->player.position = (sfVector2f){0, 0};

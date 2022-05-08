@@ -13,6 +13,7 @@
 #include "load_game.h"
 #include "settings.h"
 #include "my_event.h"
+#include "inventory.h"
 #include "name.h"
 #include "keybind.h"
 #include "pause.h"
