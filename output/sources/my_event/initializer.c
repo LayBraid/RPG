@@ -29,4 +29,6 @@ void initialize_events(data_t *data)
     add_event(&data->my_event, "enemy_move", enemy_move);
     add_event(&data->my_event, "enemy_attack", enemy_attack);
     add_event(&data->my_event, "loose", loose_game);
+    add_event(&data->my_event, "attack_player", attack_player);
+    add_event(&data->my_event, "attack_on_enemy", attack_on_enemy);
 }
