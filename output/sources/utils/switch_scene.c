@@ -48,7 +48,7 @@ void switch_scene(data_t *data)
             break;
         case (11): credits_scene(data);
             break;
-        case (23): dialog9(data, 1); // TODO changer les 1 par l'id du NPC
+        case (23): dialog9(data, 1);
             break;
         case (24): dialog8(data, 1);
             break;

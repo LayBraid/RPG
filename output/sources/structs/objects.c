@@ -7,7 +7,8 @@
 
 #include "structures.h"
 
-void create_object(data_t *data, sfIntRect rect, sfVector2f pos, char *filepath)
+void create_object
+    (data_t *data, sfIntRect rect, sfVector2f pos, char *filepath)
 {
     object_t *new = malloc(sizeof(object_t));
 

@@ -34,7 +34,8 @@ sfVector2f get_size_sword(int type, int value)
     return (sfVector2f) {0};
 }
 
-sfVector2f get_size_particle(int type, int value) {
+sfVector2f get_size_particle(int type, int value)
+{
     if (type == 1 || type == 2 || type == 3) {
         if (value == 0)
             return (sfVector2f) {8, 9};

@@ -18,10 +18,11 @@ void attack_player(data_t *data)
 
 static void kill_enemy(enemy_t *enemy)
 {
-    if (enemy->hp < 10)
+    if (enemy->hp < 10) {
         enemy->position = (sfVector2f) {-100, -100};
-    else
+    } else {
         enemy->hp -= 10;
+    }
 }
 
 void attack_on_enemy(data_t *data)

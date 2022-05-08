@@ -17,7 +17,6 @@ void update_rectangle(player_t *player, attack_effect_t *node)
         sfRectangleShape_setScale(node->rectangle, (sfVector2f) {1, 1});
     } else if (player->state == IDLE_DOWN || player->state == WALK_DOWN || player->state == COMBAT_DOWN) {
         vector.y += 14;
-//        vector.x += 5;
         sfRectangleShape_setScale(node->rectangle, (sfVector2f) {-1, 1});
     }
     if (player->state == IDLE_LEFT || player->state == WALK_LEFT || player->state == COMBAT_LEFT) {
