@@ -5,37 +5,50 @@
 ** init_skill_tree
 */
 
-
 #include "my_rpg.h"
 #include "my.h"
+
+void init_outline_b(data_t *data, int idx)
+{
+    switch (idx) {
+        case 4: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){852, 578});
+            sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
+            break;
+        case 5: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){1047, 267});
+            sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
+            break;
+        case 6: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){1047, 578});
+            sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
+            break;
+        default: break;
+    }
+}
 
 void init_outline(data_t *data, int idx)
 {
     switch (idx) {
-        case 0: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){504, 420});
+        case 0: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){504, 420});
             sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
             break;
-        case 1: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){660, 267});
+        case 1: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){660, 267});
             sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
             break;
-        case 2: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){660, 578});
+        case 2: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){660, 578});
             sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
             break;
-        case 3: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){852, 267});
+        case 3: create_outline(data,
+            (sfIntRect){0, 0, 32, 32}, (sfVector2f){852, 267});
             sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
             break;
-        case 4: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){852, 578});
-            sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
-            break;
-        case 5: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){1047, 267});
-            sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
-            break;
-        case 6: create_outline(data, (sfIntRect){0, 0, 32, 32}, (sfVector2f){1047, 578});
-            sfSprite_setScale(data->outline->sprite, (sfVector2f){2.95, 2.95});
-            break;
+        default: init_outline_b(data, idx);
     }
 }
-
 
 void init_tree_text2(data_t *data, sfFont *font)
 {

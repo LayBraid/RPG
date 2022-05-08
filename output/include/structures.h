@@ -142,12 +142,12 @@ typedef struct texture {
 } texture_t;
 
 typedef struct npc_inventory {
-     char *item_name;
-     sfSprite *sprite;
-     sfIntRect rect;
-     unsigned int count;
-     struct npc_inventory *next;
- } npc_inventory_t;
+    char *item_name;
+    sfSprite *sprite;
+    sfIntRect rect;
+    unsigned int count;
+    struct npc_inventory *next;
+} npc_inventory_t;
 
 typedef struct inventory {
     sfTexture *texture_item;
@@ -493,13 +493,15 @@ texture_t *delete_all_textures(texture_t *start);
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 
 // npc_inventory.c
- npc_inventory_t *create_inventory(npc_inventory_t *start, char *name);
- npc_inventory_t *delete_inventory(npc_inventory_t *node);
- npc_inventory_t *delete_whole_inventory(npc_inventory_t *start);
+npc_inventory_t *create_inventory(npc_inventory_t *start, char *name);
+npc_inventory_t *delete_inventory(npc_inventory_t *node);
+npc_inventory_t *delete_whole_inventory(npc_inventory_t *start);
 
 // npc_inventory_utils.c
-npc_inventory_t *set_inventory_count(npc_inventory_t *node, unsigned int count);
-npc_inventory_t *set_npc_inventory_texture(npc_inventory_t *node, texture_t *texture);
+npc_inventory_t *set_inventory_count(npc_inventory_t *node,
+unsigned int count);
+npc_inventory_t *set_npc_inventory_texture(npc_inventory_t *node,
+texture_t *texture);
 
 // // inventory.c
 // inventory_t *create_inventory(inventory_t *start, char *name);

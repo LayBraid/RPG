@@ -36,7 +36,7 @@ void dialog(data_t *data, char *dialog,
     char *new = malloc((strlen(dialog) + 1) * sizeof(char));
 
     new[0] = '\0';
-    set_dialog_characters(data, is_talking, id_npc); //TODO tester situation reelle
+    set_dialog_characters(data, is_talking, id_npc);
     data->texts = create_text(data->texts, new, data->font);
     sfText_setColor(data->texts->text, sfWhite);
     sfText_setPosition(data->texts->text, (sfVector2f){100, 900});
@@ -49,7 +49,6 @@ void dialog(data_t *data, char *dialog,
             i = strlen(dialog) - 1;
         }
         sfText_setString(data->texts->text, new);
-        printf("%d\n", i);
         if (dialog[i] != ' ' && data->dialog_skip == 0) {
             if (dialog[i] == '.' && dialog[i - 1] == '.')
                 while (sfClock_getElapsedTime(data->clock).microseconds
@@ -78,7 +77,6 @@ void inter_dialog(data_t *data)
     data->tiles = set_tile_scale(data->tiles, (sfVector2f){0.3, 0.3});
     data->tiles = set_tile_texture(data->tiles, data->texture_bank);
     data->tiles = set_tile_position(data->tiles, pos);
-    printf("init done\n");
     while (data->dialog_skip != 1 &&
         sfRenderWindow_isOpen(data->video.window)) {
         analyse_events(data);
@@ -93,7 +91,6 @@ void inter_dialog(data_t *data)
             if (pos.y <= 980)
                 anim = 1;
         }
-        printf("%f\n", pos.y);
         sfRenderWindow_clear(data->video.window, sfWhite);
         display_all(data);
         sfRenderWindow_display(data->video.window);
@@ -105,5 +102,4 @@ void inter_dialog(data_t *data)
     data->texture_bank = data->texture_bank->next;
     delete_texture(cursor);
     delete_first_tile(data);
-    printf("exiting\n");
 }

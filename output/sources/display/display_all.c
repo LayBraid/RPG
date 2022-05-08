@@ -10,13 +10,8 @@
 #include "enemies.h"
 #include "player.h"
 
-void display_all(data_t *data)
+void display_all_b(data_t *data)
 {
-    sfRenderWindow_setView(data->video.window, data->main);
-    for (unsigned char depth = 0; depth < 10; depth++)
-        display_tile_depth(data->tiles, data->video, depth);
-    display_buttons(data->buttons, data->video);
-    display_texts(data->texts, data->video);
     if (data->video.ui == 2 || data->video.ui == 6) {
         sfRenderWindow_setView(data->video.window, data->mapping);
         if (data->my_map == 2)
@@ -35,6 +30,16 @@ void display_all(data_t *data)
             my_text(data, (sfVector2f) {680, 980}, 4, "press R to interact");
         }
     }
+}
+
+void display_all(data_t *data)
+{
+    sfRenderWindow_setView(data->video.window, data->main);
+    for (unsigned char depth = 0; depth < 10; depth++)
+        display_tile_depth(data->tiles, data->video, depth);
+    display_buttons(data->buttons, data->video);
+    display_texts(data->texts, data->video);
+    display_all_b(data);
     if (data->video.ui == 6) {
         sfRenderWindow_setView(data->video.window, data->main);
         display_items(data);

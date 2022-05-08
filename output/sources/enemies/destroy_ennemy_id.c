@@ -18,8 +18,6 @@ void destroy_interacted_ennemy(data_t *data)
     cursor = cursor->next;
     tmp->next = cursor->next;
     sfRectangleShape_destroy(cursor->rectangle);
-    // ! destroy attack_effect_t
-    // ! destroy node_movement_t
     sfClock_destroy(cursor->display_life_clock);
     sfClock_destroy(cursor->movement_clock);
     free(cursor->name);

@@ -17,9 +17,9 @@ void move_outline(outline_t *tile)
         tile->rect.left += 32;
     else if (tile->rect.left >= 96)
         tile->rect.left = 0;
-    tile->texture = sfTexture_createFromFile("assets/game/outline.png", &tile->rect);
+    tile->texture = sfTexture_createFromFile("assets/game/outline.png",
+    &tile->rect);
     sfSprite_setTexture(tile->sprite, tile->texture, sfTrue);
-    // printf("%d\n", tile->rect.left);
 }
 
 void move_all_outline(data_t *data) {

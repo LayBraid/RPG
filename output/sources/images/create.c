@@ -31,16 +31,14 @@
 * 13: fichier de texture
 */
 
-void update(data_t *data, sfSprite *sprite, sfIntRect rect, const float info[10])
+void update(data_t *data, sfSprite *spr, sfIntRect rect, const float info[10])
 {
     sfVector2f vector;
     vector.x = info[0];
     vector.y = info[1];
 
-    //TODO Set texture
-    //sfSprite_setTexture(sprite,df->texture, sfTrue);
-    sfSprite_setTextureRect(sprite, rect);
-    sfSprite_setPosition(sprite, vector);
+    sfSprite_setTextureRect(spr, rect);
+    sfSprite_setPosition(spr, vector);
 }
 
 anim_img *setup_a_anim_img(data_t *data, const float info[10])
