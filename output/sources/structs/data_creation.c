@@ -47,26 +47,19 @@ void init_music(data_t *data)
     add_music(data, "assets/sound/finalboss.ogg", 1);
 }
 
-void fill_items(data_t *data)
-{
-    for (int i = 0 ; i < 3 ; i++)
-        data->player.items[i] = '0';
-    data->player.items[0] = '1';
-}
-
 //TODO Resize function "data_create"
 
 void data_create(data_t *data)
 {
     data->video.ui = 32;
-    data->player.items = "1100000\0";
+    // data->player.items = "10000\0";
     data->player.equiped = 0;
     data->player.depth = 0;
     data->player.hp_max = 10;
     data->player.dmg = 1;
     data->player.comp = my_strdup("0000000");
-    data->player.items = my_strdup("000");
-    data->player.skill_pts = 1;
+    data->player.items = my_strdup("10000");
+    data->player.skill_pts = 4;
     get_items(data);
     data->player.current_hp = 10;
     data->player.inventory = NULL;
