@@ -96,8 +96,8 @@ void loading(data_t *data)
             break;
         case (7): init_load_game(data);
             break;
-        default: loading_b(data);
         case (25): init_hud(data);
             break;
+        default: loading_b(data);
     }
 }
