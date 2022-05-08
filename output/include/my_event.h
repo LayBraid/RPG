@@ -58,6 +58,8 @@ void enemy_attack(data_t *data);
 
 void loose_game(data_t *data);
 
+void event_dialog1(data_t *data);
+
 void attack_player(data_t *data);
 
 void attack_on_enemy(data_t *data);

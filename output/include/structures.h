@@ -334,6 +334,7 @@ typedef struct interact_s {
     int npc_id;
     int enemy_id;
     double enemy_distance;
+    int npc_id_dialogs;
 } interact_t;
 
 struct data {
