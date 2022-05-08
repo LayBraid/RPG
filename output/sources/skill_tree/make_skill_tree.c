@@ -76,7 +76,7 @@ void analyse_mouse_skill_tree(data_t *data)
     if (is_in_rect((sfIntRect){1047,267,95,95}, data->event.mouseButton.x,
     data->event.mouseButton.y) == 1 && data->player.comp[3] == '1' &&
     data->player.skill_pts > 0) {
-        data->player.items[1] = '1';
+        data->player.items[2] = '1';
         data->player.comp[5] = '1';
         data->player.skill_pts -= 1;
         init_outline(data, 5);
@@ -84,7 +84,7 @@ void analyse_mouse_skill_tree(data_t *data)
     if (is_in_rect((sfIntRect){1047,578,95,95}, data->event.mouseButton.x,
     data->event.mouseButton.y) == 1 && data->player.comp[4] == '1' &&
     data->player.skill_pts > 0) {
-        data->player.items[2] = '1';
+        data->player.items[1] = '1';
         data->player.comp[6] = '1';
         data->player.skill_pts -= 1;
         init_outline(data, 6);

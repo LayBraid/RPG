@@ -15,8 +15,6 @@
     #include <SFML/System.h>
     #include <SFML/OpenGL.h>
 
-//TODO Reformat imports
-
     #include <stdlib.h>
     #include <unistd.h>
     #include <stdio.h>
@@ -27,8 +25,8 @@
 
 typedef struct data data_t;
 typedef struct editor_data editor_t;
-typedef const float cf;
-typedef sfIntRect IntR;
+typedef const float cf_t;
+typedef sfIntRect IntR_t;
 
 typedef struct anim_img_struct {
     sfSprite *sprite;
@@ -376,12 +374,13 @@ struct data {
     int my_map;
     node_rectangle *map_hyrule;
     int **collisions_hyrule;
-    int **positions_hyrule;
     sfVector2f position_hyrule;
     node_rectangle *map_tophouse;
     int **collisions_tophouse;
-    int **positions_tophouse;
     sfVector2f position_tophouse;
+    node_rectangle *map_house;
+    int **collisions_house;
+    sfVector2f position_house;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;

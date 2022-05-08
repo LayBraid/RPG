@@ -14,6 +14,8 @@ void player_walk_down(data_t *data)
     switch (data->my_map) {
         case 0: tophouse_move_down(data);
             break;
+        case 1: house_move_down(data);
+            break;
         case 2: hyrule_move_down(data);
             break;
         default:
@@ -25,6 +27,8 @@ void player_walk_up(data_t *data)
 {
     switch (data->my_map) {
         case 0: tophouse_move_up(data);
+            break;
+        case 1: house_move_up(data);
             break;
         case 2: hyrule_move_up(data);
             break;
@@ -38,6 +42,8 @@ void player_walk_right(data_t *data)
     switch (data->my_map) {
         case 0: tophouse_move_right(data);
             break;
+        case 1: house_move_right(data);
+            break;
         case 2: hyrule_move_right(data);
             break;
         default:
@@ -49,6 +55,8 @@ void player_walk_left(data_t *data)
 {
     switch (data->my_map) {
         case 0: tophouse_move_left(data);
+            break;
+        case 1: house_move_left(data);
             break;
         case 2: hyrule_move_left(data);
             break;

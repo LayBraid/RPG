@@ -49,7 +49,7 @@ const float info[4])
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     new->next = (*node);
     tmp->next = new;
-    data->collisions_tophouse[(int) new->y][(int) new->x] = new->type;
+    data->collisions_house[(int) new->y][(int) new->x] = new->type;
 }
 
 static void setup_map_rectangle(data_t *data, node_rectangle **node,
@@ -70,14 +70,14 @@ const float info[4])
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     (*node)->id = 0;
     (*node)->next = (*node);
-    data->collisions_tophouse[(int) (*node)->y][(int) (*node)->x] =
+    data->collisions_house[(int) (*node)->y][(int) (*node)->x] =
     (*node)->type;
 }
 
-void add_map_tophouse(data_t *data, const float info[4])
+void add_map_house(data_t *data, const float info[4])
 {
-    if (data->map_tophouse == NULL)
-        setup_map_rectangle(data, &data->map_tophouse, info);
+    if (data->map_house == NULL)
+        setup_map_rectangle(data, &data->map_house, info);
     else
-        add_map_rectangle(data, &data->map_tophouse, info);
+        add_map_rectangle(data, &data->map_house, info);
 }
