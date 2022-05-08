@@ -9,6 +9,7 @@
 #include "utils.h"
 #include "enemies.h"
 #include "player.h"
+#include "my_fprintf.h"
 
 void display_all_b(data_t *data)
 {
@@ -28,7 +29,8 @@ void display_all_b(data_t *data)
         }
         if (data->interact.status) {
             sfRenderWindow_setView(data->video.window, data->main);
-            my_text(data, (sfVector2f) {680, 980}, 4, "press R to interact");
+            my_text(data, (sfVector2f) {680, 980}, 4, my_fprintf(
+            "Press %s to interact", data->keys->key[data->keys->interact]));
         }
     }
 }
