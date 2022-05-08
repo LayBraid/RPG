@@ -15,8 +15,6 @@
     #include <SFML/System.h>
     #include <SFML/OpenGL.h>
 
-//TODO Reformat imports
-
     #include <stdlib.h>
     #include <unistd.h>
     #include <stdio.h>
@@ -27,8 +25,8 @@
 
 typedef struct data data_t;
 typedef struct editor_data editor_t;
-typedef const float cf;
-typedef sfIntRect IntR;
+typedef const float cf_t;
+typedef sfIntRect IntR_t;
 
 typedef struct anim_img_struct {
     sfSprite *sprite;

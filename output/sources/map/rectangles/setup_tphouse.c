@@ -21,7 +21,7 @@ static int get_max(node_rectangle **node)
     return count;
 }
 
-static void update_this(node_rectangle *new, cf info[4])
+static void update_this(node_rectangle *new, cf_t info[4])
 {
     new->x = info[0];
     new->y = info[1];

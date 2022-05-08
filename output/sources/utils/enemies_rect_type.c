@@ -7,9 +7,9 @@
 
 #include "utils.h"
 
-IntR get_rect_type_enemies(int type)
+IntR_t get_rect_type_enemies(int type)
 {
     if (type == 0)
-        return (IntR) {1, 5, 18, 32};
-    return (IntR) {0, 0, 0, 0};
+        return (IntR_t) {1, 5, 18, 32};
+    return (IntR_t) {0, 0, 0, 0};
 }
