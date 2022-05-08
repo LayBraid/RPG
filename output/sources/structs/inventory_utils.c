@@ -20,7 +20,6 @@ void create_items(data_t *data, int idx, int mod, sfVector2f pos)
     inventory_t *new = malloc(sizeof(inventory_t));
 
     new->main = mod;
-    printf("%d\n", idx);
     switch (idx) {
         case (0) : new = set_items_value(new, (sfIntRect){0,270,10,20}, pos);
             break;
