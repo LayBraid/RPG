@@ -51,8 +51,6 @@ static void display_life(enemy_t *node, video_t video)
 void display_enemies_depth(enemy_t *start, video_t video, unsigned char depth)
 {
     enemy_t *node = start;
-    if (node == NULL)
-        return;
 
     while (node->id < node->next->id) {
         if (node->depth == depth) {

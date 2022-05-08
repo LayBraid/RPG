@@ -29,23 +29,16 @@ void check_range(data_t *data)
     data->interact.npc_id = -1;
 }
 
-static void up_this(data_t *data, int id, double range)
-{
-    data->interact.enemy_id = id;
-    data->interact.enemy_distance = range;
-}
-
 void enemies_aggro(data_t *data)
 {
     enemy_t *tmp = data->enemies;
     double range;
 
-    if (tmp == NULL)
-        return;
     while (tmp->id < tmp->next->id) {
         range = my_range(data->player.position, tmp->position);
         if (range <= tmp->range) {
-            up_this(data, tmp->id, range);
+            data->interact.enemy_id = tmp->id;
+            data->interact.enemy_distance = range;
             tmp->movement = NULL;
             call_event(data, "move_enemy_aggro");
         }
@@ -53,7 +46,8 @@ void enemies_aggro(data_t *data)
     }
     range = my_range(data->player.position, tmp->position);
     if (range <= tmp->range) {
-        up_this(data, tmp->id, range);
+        data->interact.enemy_id = tmp->id;
+        data->interact.enemy_distance = range;
         tmp->movement = NULL;
         call_event(data, "move_enemy_aggro");
     }
