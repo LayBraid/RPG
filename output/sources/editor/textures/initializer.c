@@ -877,4 +877,3 @@ node_texture *init_textures(void)
     add_next_texture(&texture, set_snow, "snow",574);
     return texture;
     }
-
