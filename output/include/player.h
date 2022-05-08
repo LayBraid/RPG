@@ -37,7 +37,7 @@ void clock_stop_display_life(data_t *data);
 
 sfVector2f get_size_sword(int type, int value);
 
-IntR get_rect_sword(int type, int value);
+IntR_t get_rect_sword(int type, int value);
 
 void add_effect_player(data_t *data, player_t *player, int type,
 sfVector2f player_position);

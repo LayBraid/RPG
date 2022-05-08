@@ -35,7 +35,7 @@ void get_map_tophouse(data_t *data)
         if (buffer[i] == ']') {
             info[1] = i;
             update_texture(data,
-           extract_between_limits(buffer, info[0], info[1]), info);
+            extract_between_limits(buffer, info[0], info[1]), info);
             info[3]++;
         }
     }

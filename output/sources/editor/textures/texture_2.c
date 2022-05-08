@@ -46,4 +46,3 @@ void set_trefle2(sfTexture *texture, node_rectangle *rectangle)
     sfRectangleShape_setTexture(rectangle->rectangle, texture, sfTrue);
     sfRectangleShape_setTextureRect(rectangle->rectangle, rect);
 }
-

@@ -14,25 +14,15 @@ static void analyse_key(data_t *data)
         case sfKeyEscape: data->video.ui = 32;
             data->loading_state = 16;
             break;
-        case sfKeyLeft:
-            if (data->letter->state == 0)
-                go_left(data);
+        case sfKeyLeft: go_left(data);
             break;
-        case sfKeyRight:
-            if (data->letter->state == 0)
-                go_right(data);
+        case sfKeyRight: go_right(data);
             break;
-        case sfKeyUp:
-            if (data->letter->state == 0)
-                go_up(data);
+        case sfKeyUp: go_up(data);
             break;
-        case sfKeyDown:
-            if (data->letter->state == 0)
-                go_down(data);
+        case sfKeyDown: go_down(data);
             break;
-        case sfKeySpace:
-            if (data->letter->state == 0)
-                put_letter(data);
+        case sfKeySpace: put_letter(data);
             break;
         case sfKeyEnter:
             if (data->letter->state == 0 && data->letter->count > 0)

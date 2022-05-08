@@ -32,7 +32,8 @@ void my_text(data_t *data, sfVector2f position, float scale, const char *text)
     for (int i = 0; text[i] != '\0'; i++) {
         letter = get_letter_c(data, text[i]);
         sfRectangleShape_setSize(rectangle, (sfVector2f)
-        {(float) letter->rect.width * scale,(float) letter->rect.height * scale});
+        {(float) letter->rect.width * scale,
+        (float) letter->rect.height * scale});
         sfRectangleShape_setTexture(rectangle, texture, sfTrue);
         sfRectangleShape_setTextureRect(rectangle, letter->rect);
         sfRectangleShape_setPosition(rectangle, (sfVector2f) {vector.x,

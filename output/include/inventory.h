@@ -2,16 +2,18 @@
 ** EPITECH PROJECT, 2022
 ** output
 ** File description:
-** No file there , just an epitech header example
+** inventory
 */
 
-#ifndef OUTPUT_INVENTORY_H
-    #define OUTPUT_INVENTORY_H
+#ifndef INVENTORY_H_
+    #define INVENTORY_H_
 
-    #include "structures.h"
+    #include "my_rpg.h"
 
-void get_inventory_mouse_click(data_t *data);
+    void inventory_loop(data_t *data);
 
-void analyse_event_inventory(data_t *data);
+    void get_inventory_mouse_click(data_t *data);
 
-#endif
+    void move_sprite_drag_and_drop(data_t *data);
+
+#endif /* !INVENTORY_H_ */

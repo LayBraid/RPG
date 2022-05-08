@@ -47,28 +47,24 @@ void init_music(data_t *data)
     add_music(data, "assets/sound/finalboss.ogg", 1);
 }
 
-void fill_items(data_t *data)
-{
-    for (int i = 0 ; i < 3 ; i++)
-        data->player.items[i] = '0';
-    data->player.items[0] = '1';
-}
-
 //TODO Resize function "data_create"
 
 void data_create(data_t *data)
 {
     data->video.ui = 32;
+    // data->player.items = "10000\0";
+    data->player.equiped = 0;
     data->player.depth = 0;
     data->player.hp_max = 10;
     data->player.dmg = 1;
     data->player.comp = my_strdup("0000000");
-    data->player.items = my_strdup("000");
-    data->player.skill_pts = 1;
+    data->player.items = my_strdup("10000");
+    data->player.skill_pts = 4;
     get_items(data);
     data->player.current_hp = 10;
     data->player.inventory = NULL;
     data->player.name = "";
+    data->video.drag = -1;
     data->player.rectangle = sfRectangleShape_create();
     data->player.rect = (sfIntRect){0, 0, 0, 0};
     data->player.position = (sfVector2f){0, 0};
@@ -76,26 +72,22 @@ void data_create(data_t *data)
     data->player.movement_anim_clock = sfClock_create();
     data->enemies_aggro = sfClock_create();
     data->texture_bank = NULL;
-    data->font = sfFont_createFromFile("assets/zeldadxt.ttf"); // TODO add font
+    data->font = sfFont_createFromFile("assets/zeldadxt.ttf");
     data->texts = NULL;
     data->buttons = NULL;
-    data->npcs = NULL;
     data->tiles = NULL;
-    data->enemies = NULL;
     data->clock = sfClock_create();
     data->interact.status = 0;
     data->interact.npc_id = -1;
     data->delta = 1.0f;
     data->loading_state = 0;
     data->my_event = NULL;
-    data->musics = NULL;
     data->world = sfTexture_createFromFile(WORLD_TILES, NULL);
     data->npc = sfTexture_createFromFile(NPC_TILES, NULL);
     data->enemies_texture = sfTexture_createFromFile(ENEMIES_TILES, NULL);
     data->link = sfTexture_createFromFile("assets/game/Link.png", NULL);
+    data->musics = NULL;
     init_music(data);
-    data->quest = NULL;
-    parsing_data(data);
     initialize_events(data);
     data->button = setup_buttons(data);
     data->images = setup_img(data);
@@ -103,17 +95,20 @@ void data_create(data_t *data)
     data->mapping = sfView_create();
     sfView_setSize(data->main, (sfVector2f) {1920, 1080});
     sfView_setSize(data->mapping, (sfVector2f) {1920, 1080});
-    sfView_zoom(data->mapping, 0.33f); //TODO Create a reverse function for zoom
+    sfView_zoom(data->mapping, 0.33f);
     sfView_setCenter(data->main, (sfVector2f) {1920.0f / 2, 1080.0f / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
-    sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243 + 750});
     data->textures = init_textures();
     data->map_hyrule = NULL;
+    data->map_tophouse = NULL;
+    data->map_house = NULL;
+    parsing_data(data);
     get_map(data);
     get_map_tophouse(data);
-    set_map(data, 2);
+    get_map_house(data);
     set_letters(data);
     setup_texture_player(data);
+    set_map(data, 0);
     get_items(data);
     assign_keys(data);
     data->settings_state = malloc(sizeof(char) * 4);

@@ -67,7 +67,8 @@ const float info[4])
     (sfVector2f) {(info[0] * 15), (15 * info[1])});
     (*node)->id = 0;
     (*node)->next = (*node);
-    data->collisions_hyrule[(int) (*node)->y][(int) (*node)->x] = (*node)->type;
+    data->collisions_hyrule[(int) (*node)->y][(int) (*node)->x] =
+    (*node)->type;
 }
 
 void add_map(data_t *data, const float info[4])

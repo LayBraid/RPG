@@ -15,8 +15,6 @@
     #include <SFML/System.h>
     #include <SFML/OpenGL.h>
 
-//TODO Reformat imports
-
     #include <stdlib.h>
     #include <unistd.h>
     #include <stdio.h>
@@ -27,8 +25,8 @@
 
 typedef struct data data_t;
 typedef struct editor_data editor_t;
-typedef const float cf;
-typedef sfIntRect IntR;
+typedef const float cf_t;
+typedef sfIntRect IntR_t;
 
 typedef struct anim_img_struct {
     sfSprite *sprite;
@@ -142,12 +140,21 @@ typedef struct texture {
 } texture_t;
 
 typedef struct npc_inventory {
-     char *item_name;
-     sfSprite *sprite;
-     sfIntRect rect;
-     unsigned int count;
-     struct npc_inventory *next;
- } npc_inventory_t;
+    char *item_name;
+    sfSprite *sprite;
+    sfIntRect rect;
+    unsigned int count;
+    struct npc_inventory *next;
+} npc_inventory_t;
+
+typedef struct object {
+    unsigned int id;
+    sfSprite *sprite;
+    sfTexture *texture;
+    sfIntRect rect;
+    sfVector2f position;
+    struct object *next;
+} object_t;
 
 typedef struct inventory {
     sfTexture *texture_item;
@@ -159,6 +166,7 @@ typedef struct inventory {
     sfIntRect rect_item;
     sfIntRect rect_rect;
     int item;
+    int main;
     sfTexture *texture;
     sfSprite *sprite;
     sfVector2f position;
@@ -221,6 +229,7 @@ typedef struct enemy_struct {
     float hp;
     float max_hp;
     int display_life;
+    int dead;
     attack_effect_t *attack_effect;
     sfClock *display_life_clock;
     sfClock *movement_clock;
@@ -234,13 +243,16 @@ typedef struct player {
     char *name;
     char *comp;
     char *items;
+    int stamina;
     unsigned char depth;
+    int equiped;
     int hp_max;
     int current_hp;
     int equipped;
     int clement;
     int state;
     int animation;
+    int lvl;
     int scale_reverse;
     int skill_pts;
     int dmg;
@@ -261,6 +273,7 @@ typedef struct video {
     sfRenderWindow *window;
     sfVideoMode mode;
     unsigned int ui;
+    int drag;
 } video_t;
 
 typedef struct music {
@@ -330,6 +343,7 @@ typedef struct interact_s {
     int npc_id;
     int enemy_id;
     double enemy_distance;
+    int npc_id_dialogs;
 } interact_t;
 
 struct data {
@@ -345,6 +359,7 @@ struct data {
     inventory_t *items;
     tile_t *tiles;
     sfEvent event;
+    object_t *objects;
     music_t *musics;
     event_t *my_event;
     quest_t *quest;
@@ -356,6 +371,8 @@ struct data {
     char dialog_skip;
     int id_text_player;
     unsigned char loading_state;
+    int x_pile_hyrule;
+    int y_pile_hyrule;
     node_button *button;
     node_img *images;
     sfView *main;
@@ -369,12 +386,13 @@ struct data {
     int my_map;
     node_rectangle *map_hyrule;
     int **collisions_hyrule;
-    int **positions_hyrule;
     sfVector2f position_hyrule;
     node_rectangle *map_tophouse;
     int **collisions_tophouse;
-    int **positions_tophouse;
     sfVector2f position_tophouse;
+    node_rectangle *map_house;
+    int **collisions_house;
+    sfVector2f position_house;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
@@ -406,8 +424,10 @@ struct editor_data {
 void display_all(data_t *data);
 
 // display_utils.c
-void display_tile_depth(tile_t *start, video_t video, unsigned char depth);
-void display_npc_depth(npc_t *start, video_t video, unsigned char depth);
+void display_tile_depth(tile_t *start, video_t video,
+unsigned char depth, int map);
+void display_npc_depth(npc_t *start, video_t video,
+unsigned char depth, int map);
 void display_buttons(button_t *start, video_t video);
 void display_texts(text_t *start, video_t video);
 void display_player_depth(player_t player, video_t video, unsigned char depth);
@@ -441,6 +461,11 @@ npc_t *delete_all_npcs(npc_t *start);
 // music.c
 void add_music(data_t *data, char *path, int loop);
 void intro_music(data_t *data);
+
+//objects.c
+void create_object(data_t *data, sfIntRect rect, sfVector2f pos, char *filepath);
+void display_all_objects(data_t *data);
+object_t *delete_all_objects(object_t *start);
 
 // npc_utils.c
 npc_t *set_npc_type(npc_t *node, unsigned char type);
@@ -492,13 +517,15 @@ texture_t *delete_all_textures(texture_t *start);
 texture_t *set_texture_rect(texture_t *node, sfIntRect rect, int max_r);
 
 // npc_inventory.c
- npc_inventory_t *create_inventory(npc_inventory_t *start, char *name);
- npc_inventory_t *delete_inventory(npc_inventory_t *node);
- npc_inventory_t *delete_whole_inventory(npc_inventory_t *start);
+npc_inventory_t *create_inventory(npc_inventory_t *start, char *name);
+npc_inventory_t *delete_inventory(npc_inventory_t *node);
+npc_inventory_t *delete_whole_inventory(npc_inventory_t *start);
 
 // npc_inventory_utils.c
-npc_inventory_t *set_inventory_count(npc_inventory_t *node, unsigned int count);
-npc_inventory_t *set_npc_inventory_texture(npc_inventory_t *node, texture_t *texture);
+npc_inventory_t *set_inventory_count(npc_inventory_t *node,
+unsigned int count);
+npc_inventory_t *set_npc_inventory_texture(npc_inventory_t *node,
+texture_t *texture);
 
 // // inventory.c
 // inventory_t *create_inventory(inventory_t *start, char *name);
@@ -512,7 +539,8 @@ npc_inventory_t *set_npc_inventory_texture(npc_inventory_t *node, texture_t *tex
 // inventory_utils.c
 void get_items(data_t *data);
 void display_items(data_t *data);
-void create_items(data_t *data, int idx);
+void create_items(data_t *data, int idx, int mod, sfVector2f pos);
+inventory_t *delete_inventory_de_oscar(data_t *data);
 
 // video_utils.c
 void set_fps(sfRenderWindow *window, int fps, data_t *data);

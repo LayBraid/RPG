@@ -19,11 +19,7 @@ char select_current
 // shop.c
 void open_shop(data_t *data, int npc_id);
 
-// dialog_utils.c
 //void delete_first_tile(data_t *data);
-
-// dialog_example.c
-void dialog_example(data_t *data, int npc_id);
 
 // dialog_destroy.c
 void destroy_dialogs(data_t *data);
@@ -44,5 +40,21 @@ int dialog_choice(data_t *data);
 void dialog(data_t *data, char *dialog, int id_npc_texture,
     char is_talking, int id_npc);
 void inter_dialog(data_t *data);
+
+void choice_up(data_t *data);
+void choice_down(data_t *data);
+void dialog_choice_loop(data_t *data);
+
+void dialog1(data_t *data, int npc_id);
+void dialog2(data_t *data, int npc_id);
+void dialog3(data_t *data, int npc_id);
+void dialog4(data_t *data, int npc_id);
+void dialog5(data_t *data, int npc_id);
+void dialog6(data_t *data, int npc_id);
+void dialog7(data_t *data, int npc_id);
+void dialog8(data_t *data, int npc_id);
+void dialog9(data_t *data, int npc_id);
+
+void which_dialog(data_t *data, int npc_id);
 
 #endif /* !DIALOGS_H_ */

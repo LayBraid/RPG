@@ -9,5 +9,5 @@
 
 void loose_game(data_t *data)
 {
-    printf("Loose game pélo");
+    return;
 }
