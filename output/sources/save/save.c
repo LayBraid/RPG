@@ -25,8 +25,6 @@ int write_to_save(data_t *data)
     fd = open("data_save", O_WRONLY);
     if (fd == -1)
         return (84);
-    // save_all(data, fd);
-    // ! TODO écrire la save dans le fichier data_save
     close(fd);
     return (0);
 }

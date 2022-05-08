@@ -463,7 +463,8 @@ void add_music(data_t *data, char *path, int loop);
 void intro_music(data_t *data);
 
 //objects.c
-void create_object(data_t *data, sfIntRect rect, sfVector2f pos, char *filepath);
+void create_object
+(data_t *data, sfIntRect rect, sfVector2f pos, char *filepath);
 void display_all_objects(data_t *data);
 object_t *delete_all_objects(object_t *start);
 

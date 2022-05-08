@@ -30,10 +30,12 @@ static void add_movement_enemy(enemy_t *enemy, sfVector2f vector)
 void enemy_move(data_t *data)
 {
     enemy_t *enemy = get_enemy_by_id(data, data->interact.enemy_id);
-    sfVector2f calculate = {data->player.position.x - enemy->position.x,
-    data->player.position.y - enemy->position.y};
+    sfVector2f calculate;
     sfVector2f vector = enemy->position;
     double blocks = data->interact.enemy_distance;
+
+    calculate.x = data->player.position.x - enemy->position.x;
+    calculate.y = data->player.position.y - enemy->position.y;
     for (int i = 0; i < 15; i++) {
         vector.x += calculate.x / blocks;
         vector.y += calculate.y / blocks;

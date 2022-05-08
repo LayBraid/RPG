@@ -16,7 +16,8 @@ void init_new_game(data_t *data)
     music_t *tmp = data->musics;
 
     init_hud(data);
-    data->player.position = sfRectangleShape_getPosition(data->player.rectangle);
+    data->player.position =
+    sfRectangleShape_getPosition(data->player.rectangle);
     data->player.state = IDLE_DOWN;
     data->quest = NULL;
     data->enemies = NULL;
@@ -25,7 +26,7 @@ void init_new_game(data_t *data)
     sfMusic_stop(tmp->music);
     tmp = tmp->next;
     sfMusic_play(tmp->music);
-    data->loading_state = 25;
+    data->loading_state = 27;
     set_map(data, 0);
     data->video.ui = 2;
 }

@@ -61,10 +61,11 @@ void registerr(data_t *data)
 
     while (tmp->id != NAME_REGISTER)
         tmp = tmp->next;
-    if (data->letter->count != 0)
-        tmp = set_tile_position(tmp, (sfVector2f){340, -900});
-    else
-        tmp = set_tile_position(tmp, (sfVector2f){340, 90});
+    if (data->letter->count != 0) {
+        tmp = set_tile_position(tmp, (sfVector2f) {340, -900});
+    } else {
+        tmp = set_tile_position(tmp, (sfVector2f) {340, 90});
+    }
 }
 
 void name_scene(data_t *data)

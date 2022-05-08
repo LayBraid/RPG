@@ -21,7 +21,6 @@ const char *ENEMIES_TILES = "assets/game/enemies.png";
 
 data_t *data_delete(data_t *data)
 {
-    // data->player.inventory = delete_inventory(data->player.inventory);
     sfClock_destroy(data->player.movement_clock);
     sfClock_destroy(data->player.movement_anim_clock);
     data->texture_bank = delete_all_textures(data->texture_bank);
@@ -52,7 +51,6 @@ void init_music(data_t *data)
 void data_create(data_t *data)
 {
     data->video.ui = 32;
-    // data->player.items = "10000\0";
     data->player.equiped = 0;
     data->player.depth = 0;
     data->player.hp_max = 10;
