@@ -7,6 +7,20 @@
 
 #include "my_rpg.h"
 
+void change_goods_b(data_t *data, sfVector2f pos, sfKeyCode key)
+{
+    if (pos.y == 520)
+        data->keys->attack = key;
+    if (pos.y == 620)
+        data->keys->interact = key;
+    if (pos.y == 710)
+        data->keys->back = key;
+    if (pos.y == 810)
+        data->keys->inventory = key;
+    if (pos.y == 910)
+        data->keys->pause = key;
+}
+
 void change_goods(data_t *data, sfKeyCode key)
 {
     tile_t *tile = data->tiles;
@@ -23,16 +37,7 @@ void change_goods(data_t *data, sfKeyCode key)
         data->keys->left = key;
     if (pos.y == 420)
         data->keys->right = key;
-    if (pos.y == 520)
-        data->keys->attack = key;
-    if (pos.y == 620)
-        data->keys->interact = key;
-    if (pos.y == 710)
-        data->keys->back = key;
-    if (pos.y == 810)
-        data->keys->inventory = key;
-    if (pos.y == 910)
-        data->keys->pause = key;
+    change_goods_b(data, pos, key);
 }
 
 void change_key_g(data_t *data)

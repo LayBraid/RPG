@@ -34,9 +34,18 @@ sfVector2f get_size_sword(int type, int value)
     return (sfVector2f) {0};
 }
 
+sfVector2f get_size_particle(int type, int value) {
+    if (type == 1 || type == 2 || type == 3) {
+        if (value == 0)
+            return (sfVector2f) {8, 9};
+        if (value == 1)
+            return (sfVector2f) {9, 9};
+    }
+    return (sfVector2f) {0};
+}
+
 IntR get_rect_sword(int type, int value)
 {
-
     if (type == 1) {
         if (value == 0)
             return (IntR) {96, 267, 9, 18};
@@ -103,6 +112,28 @@ IntR get_rect_sword(int type, int value)
         if (value == 9)
             return (IntR) {518, 267, 16, 18};
     }
+    return (IntR) {0};
+}
 
+IntR get_rect_particle(int type, int value)
+{
+    if (type == 1) {
+        if (value == 0)
+            return (IntR) {527, 311, 8, 9};
+        if (value == 1)
+            return (IntR) {535, 311, 9, 9};
+    }
+    if (type == 2) {
+        if (value == 0)
+            return (IntR) {541, 311, 8, 9};
+        if (value == 1)
+            return (IntR) {553, 311, 9, 9};
+    }
+    if (type == 3) {
+        if (value == 0)
+            return (IntR) {562, 311, 8, 9};
+        if (value == 1)
+            return (IntR) {571, 311, 9, 9};
+    }
     return (IntR) {0};
 }

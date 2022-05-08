@@ -12,7 +12,8 @@ void display_rectangles(editor_t *editor)
     node_rectangle *tmp = editor->rectangles;
 
     while (tmp->id < tmp->next->id) {
-        sfRenderWindow_drawRectangleShape(editor->window, tmp->rectangle, NULL);
+        sfRenderWindow_drawRectangleShape(editor->window,
+        tmp->rectangle, NULL);
         tmp = tmp->next;
     }
     sfRenderWindow_drawRectangleShape(editor->window, tmp->rectangle, NULL);

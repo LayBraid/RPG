@@ -15,8 +15,7 @@ void setup_texture_player(data_t *data)
     data->player.state = IDLE_DOWN;
     data->player.movement = NULL;
     data->player.movement_anim = NULL;
-    data->x_pile_hyrule = 0;
-    data->y_pile_hyrule = 0;
+    data->player.equipped = 1;
     data->player.damage_display = 0;
     data->player.attack_effect = NULL;
     data->player.damage_display_clock = sfClock_create();
@@ -25,7 +24,7 @@ void setup_texture_player(data_t *data)
     data->link, sfTrue);
     sfRectangleShape_setTextureRect(data->player.rectangle,
     get_rect_player(data->player.state, data->player.animation));
-    sfRectangleShape_setPosition(data->player.rectangle, (sfVector2f)
-    {120, 1500 - 26 - 135 + 750});
+    data->position_hyrule = (sfVector2f) {120, 2089};
+    data->position_tophouse = (sfVector2f) {120, 50};
     data->positions_hyrule[149 - 9][8] = PLAYER;
 }

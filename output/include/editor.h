@@ -29,7 +29,20 @@ void display_rectangles(editor_t *editor);
 
 void check_events(editor_t *editor);
 
+void check_keys(editor_t *editor, sfEvent event);
+
+void check_for_move(editor_t *editor, sfEvent event);
+
 node_texture *init_textures(void);
+node_texture *init_texture5(node_texture *texture);
+node_texture *init_texture10(node_texture *texture);
+node_texture *init_texture15(node_texture *texture);
+node_texture *init_texture20(node_texture *texture);
+node_texture *init_texture25(node_texture *texture);
+node_texture *init_texture30(node_texture *texture);
+node_texture *init_texture35(node_texture *texture);
+node_texture *init_texture40(node_texture *texture);
+node_texture *init_texture45(node_texture *texture);
 
 void add_next_texture(node_texture **node,
 void (*function)(sfTexture *texture, node_rectangle *rectangle), char *name,
@@ -742,4 +755,10 @@ void set_mount_entry3_2(sfTexture *texture, node_rectangle *rectangle);
 void set_mount_entry3_3(sfTexture *texture, node_rectangle *rectangle);
 void set_plain(sfTexture *texture, node_rectangle *rectangle);
 void set_snow(sfTexture *texture, node_rectangle *rectangle);
+void set_desert_herbe0_0(sfTexture *texture, node_rectangle *rectangle);
+void set_desert_herbe1_0(sfTexture *texture, node_rectangle *rectangle);
+void set_cac0_0(sfTexture *texture, node_rectangle *rectangle);
+void set_cac1_0(sfTexture *texture, node_rectangle *rectangle);
+void set_cac2_0(sfTexture *texture, node_rectangle *rectangle);
+void set_desert(sfTexture *texture, node_rectangle *rectangle);
 #endif

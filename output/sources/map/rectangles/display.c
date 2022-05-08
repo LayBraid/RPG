@@ -19,3 +19,16 @@ void display_rectangles_map(data_t *data)
     sfRenderWindow_drawRectangleShape(data->video.window,
     tmp->rectangle, NULL);
 }
+
+void display_rectangles_tophouse(data_t *data)
+{
+    node_rectangle *tmp = data->map_tophouse;
+
+    while (tmp->id < tmp->next->id) {
+        sfRenderWindow_drawRectangleShape(data->video.window,
+        tmp->rectangle, NULL);
+        tmp = tmp->next;
+    }
+    sfRenderWindow_drawRectangleShape(data->video.window,
+    tmp->rectangle, NULL);
+}

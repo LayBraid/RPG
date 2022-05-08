@@ -12,12 +12,14 @@ void update_anim_move_player(data_t *data)
     if (data->player.scale_reverse == 0 && (data->player.state == WALK_LEFT ||
         data->player.state == IDLE_LEFT ||
         data->player.state == COMBAT_LEFT)) {
-        sfRectangleShape_setScale(data->player.rectangle, (sfVector2f) {-1, 1});
+        sfRectangleShape_setScale(data->player.rectangle,
+        (sfVector2f) {-1, 1});
         sfRectangleShape_move(data->player.rectangle, (sfVector2f) {14, 0});
         data->player.scale_reverse = !data->player.scale_reverse;
     }
     if (data->player.scale_reverse == 1 && (data->player.state != WALK_LEFT &&
-        data->player.state != IDLE_LEFT && data->player.state != COMBAT_LEFT)) {
+        data->player.state != IDLE_LEFT &&
+        data->player.state != COMBAT_LEFT)) {
         sfRectangleShape_setScale(data->player.rectangle, (sfVector2f) {1, 1});
         sfRectangleShape_move(data->player.rectangle, (sfVector2f) {-14, 0});
         data->player.scale_reverse = !data->player.scale_reverse;

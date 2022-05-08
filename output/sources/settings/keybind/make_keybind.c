@@ -14,15 +14,24 @@
 
 static void drawtext(data_t *data)
 {
-    char *up = my_fprintf("                    Up           %s", data->keys->key[data->keys->up]);
-    char *down = my_fprintf("                    Down        %s", data->keys->key[data->keys->down]);
-    char *left = my_fprintf("                    Left        %s", data->keys->key[data->keys->left]);
-    char *right = my_fprintf("                    Right       %s", data->keys->key[data->keys->right]);
-    char *attack = my_fprintf("                    Attack      %s", data->keys->key[data->keys->attack]);
-    char *interact = my_fprintf("                    Interact    %s", data->keys->key[data->keys->interact]);
-    char *back = my_fprintf("                    Back         %s", data->keys->key[data->keys->back]);
-    char *inventory = my_fprintf("                    Inventory   %s", data->keys->key[data->keys->inventory]);
-    char *pause = my_fprintf("                    Pause       %s", data->keys->key[data->keys->pause]);
+    char *up = my_fprintf("                    Up           %s",
+    data->keys->key[data->keys->up]);
+    char *down = my_fprintf("                    Down        %s",
+    data->keys->key[data->keys->down]);
+    char *left = my_fprintf("                    Left        %s",
+    data->keys->key[data->keys->left]);
+    char *right = my_fprintf("                    Right       %s",
+    data->keys->key[data->keys->right]);
+    char *attack = my_fprintf("                    Attack      %s",
+    data->keys->key[data->keys->attack]);
+    char *interact = my_fprintf("                    Interact    %s",
+    data->keys->key[data->keys->interact]);
+    char *back = my_fprintf("                    Back         %s",
+    data->keys->key[data->keys->back]);
+    char *inventory = my_fprintf("                    Inventory   %s",
+    data->keys->key[data->keys->inventory]);
+    char *pause = my_fprintf("                    Pause       %s",
+    data->keys->key[data->keys->pause]);
 
     my_text(data, (sfVector2f) {100, 100}, 5, up);
     my_text(data, (sfVector2f) {100, 200}, 5, down);

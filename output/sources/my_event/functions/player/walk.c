@@ -11,24 +11,24 @@
 
 void player_walk_down(data_t *data)
 {
-    if (data->my_map == 0)
+    if (data->my_map == 2)
         hyrule_move_down(data);
 }
 
 void player_walk_up(data_t *data)
 {
-    if (data->my_map == 0)
+    if (data->my_map == 2)
         hyrule_move_up(data);
 }
 
 void player_walk_right(data_t *data)
 {
-    if (data->my_map == 0)
+    if (data->my_map == 2)
         hyrule_move_right(data);
 }
 
 void player_walk_left(data_t *data)
 {
-    if (data->my_map == 0)
+    if (data->my_map == 2)
         hyrule_move_left(data);
 }

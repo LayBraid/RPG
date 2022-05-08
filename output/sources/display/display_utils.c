@@ -61,7 +61,8 @@ void display_player_depth(player_t player, video_t video, unsigned char depth)
     if (player.depth == depth) {
         if (player.damage_display)
             display_life_player(&player, video);
-        sfRenderWindow_drawRectangleShape(video.window, player.rectangle, NULL);
+        sfRenderWindow_drawRectangleShape(video.window,
+        player.rectangle, NULL);
         player.position = sfRectangleShape_getPosition(player.rectangle);
     }
 }

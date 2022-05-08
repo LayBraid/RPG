@@ -40,7 +40,7 @@ void shop_loop(data_t *data, unsigned int count, npc_t *npc)
     sfVector2f pos = {1000, 0};
     unsigned int current = 1;
 
-    while (sfRenderWindow_isOpen(data->video.window) && 
+    while (sfRenderWindow_isOpen(data->video.window) &&
         data->dialog_skip != 4) {
         switch (data->dialog_skip) {
             case (3): pos = shop_up(data, &current, count, pos);
@@ -80,7 +80,6 @@ void open_shop(data_t *data, int npc_id)
     nb_items = init_dialog_shop(data, cursor);
     if (nb_items == 0)
         return;
-    printf("%d\n", nb_items);
     shop_loop(data, nb_items, cursor);
     destroy_shop(data);
 }
