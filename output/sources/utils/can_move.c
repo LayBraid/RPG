@@ -44,6 +44,7 @@ int can_move(int block)
         case 574:
         case 575:
         case 577:
+        case 2012:
         case 585: return (1);
         default: return (0);
     }

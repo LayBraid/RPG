@@ -24,7 +24,7 @@ void setup_texture_player(data_t *data)
     data->link, sfTrue);
     sfRectangleShape_setTextureRect(data->player.rectangle,
     get_rect_player(data->player.state, data->player.animation));
-    data->position_hyrule = (sfVector2f) {120, 2089};
+    data->position_hyrule = (sfVector2f) {174, 2086};
     data->position_tophouse = (sfVector2f) {120, 50};
     data->positions_hyrule[149 - 9][8] = PLAYER;
 }

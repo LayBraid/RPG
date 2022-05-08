@@ -11,24 +11,48 @@
 
 void player_walk_down(data_t *data)
 {
-    if (data->my_map == 2)
-        hyrule_move_down(data);
+    switch (data->my_map) {
+        case 0: tophouse_move_down(data);
+            break;
+        case 2: hyrule_move_down(data);
+            break;
+        default:
+            break;
+    }
 }
 
 void player_walk_up(data_t *data)
 {
-    if (data->my_map == 2)
-        hyrule_move_up(data);
+    switch (data->my_map) {
+        case 0: tophouse_move_up(data);
+            break;
+        case 2: hyrule_move_up(data);
+            break;
+        default:
+            break;
+    }
 }
 
 void player_walk_right(data_t *data)
 {
-    if (data->my_map == 2)
-        hyrule_move_right(data);
+    switch (data->my_map) {
+        case 0: tophouse_move_right(data);
+            break;
+        case 2: hyrule_move_right(data);
+            break;
+        default:
+            break;
+    }
 }
 
 void player_walk_left(data_t *data)
 {
-    if (data->my_map == 2)
-        hyrule_move_left(data);
+    switch (data->my_map) {
+        case 0: tophouse_move_left(data);
+            break;
+        case 2: hyrule_move_left(data);
+            break;
+        default:
+            break;
+    }
 }

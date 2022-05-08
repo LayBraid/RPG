@@ -11,7 +11,7 @@ void set_map(data_t *data, int map)
 {
     data->my_map = map;
     if (map == 2) {
-        if (data->position_hyrule.x == 120 && data->position_hyrule.y == 2089)
+        if (data->position_hyrule.x == 174 && data->position_hyrule.y == 2086)
             sfView_setCenter(data->mapping, (sfVector2f) {960 / 3, 2070});
         else
             sfView_setCenter(data->mapping, data->position_hyrule);

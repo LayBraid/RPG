@@ -62,4 +62,6 @@ void attack_player(data_t *data);
 
 void attack_on_enemy(data_t *data);
 
+void check_exit_top(data_t *data);
+
 #endif

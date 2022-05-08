@@ -109,14 +109,13 @@ void data_create(data_t *data)
     sfView_zoom(data->mapping, 0.33f);
     sfView_setCenter(data->main, (sfVector2f) {1920.0f / 2, 1080.0f / 2});
     sfView_setCenter(data->mapping, (sfVector2f) {0.0f, 0.0f});
-    //sfView_move(data->mapping, (sfVector2f) {316, 1080 + 243 + 750});
     data->textures = init_textures();
     data->map_hyrule = NULL;
     get_map(data);
     get_map_tophouse(data);
     set_letters(data);
     setup_texture_player(data);
-    set_map(data, 2);
+    set_map(data, 0);
     get_items(data);
     assign_keys(data);
     data->settings_state = malloc(sizeof(char) * 4);
