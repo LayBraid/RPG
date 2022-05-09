@@ -21,7 +21,7 @@ static void update_texture(data_t *data, char *buffer, int info[5])
 
 void get_map_dj(data_t *data)
 {
-    char *buffer = get_in_buffer("data/dj");
+    char *buffer = get_in_buffer("data/dj1");
     int info[5] = {0};
 
     setup_collisions_dj(data);
