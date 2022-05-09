@@ -37,12 +37,6 @@ static void analyse_event(data_t *data)
     }
 }
 
-// void intro_music(data_t *data)
-// {
-//     create_music(data, "./assets/Sound/kokiri.ogg", 1);
-//     sfMusic_play(data->musics->music);
-// }
-
 void intro_scene(data_t *data)
 {
     tile_t *tile = data->tiles;

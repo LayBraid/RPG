@@ -16,7 +16,7 @@ void add_music(data_t *data, char *path, int loop)
     new->next = NULL;
     if (loop == 1)
         sfMusic_setLoop(new->music, sfTrue);
-    sfMusic_setVolume(new->music, 0);
+    sfMusic_setVolume(new->music, 50);
     if (data->musics == NULL)
         data->musics = new;
     else {
