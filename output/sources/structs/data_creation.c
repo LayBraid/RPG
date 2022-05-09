@@ -103,7 +103,6 @@ void data_create(data_t *data)
     data->map_dj = NULL;
     parsing_data(data);
     get_map(data);
-    write(1, "APRES INIT MUSIQUE\n", 21);
     get_map_tophouse(data);
     get_map_house(data);
     get_map_dj(data);
