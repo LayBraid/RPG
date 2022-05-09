@@ -23,6 +23,22 @@ static void drawtext(data_t *data)
     my_text(data, (sfVector2f) {100, 400}, 5, "                    Controls");
 }
 
+static void analyse_key2(data_t *data, sfVector2f pos)
+{
+    switch (data->event.key.code) {
+        case sfKeySpace:
+            if (pos.y == 430) {
+                data->video.ui = 32;
+                data->loading_state = 17;
+            }
+            break;
+        case sfKeyEscape: data->video.ui = 32;
+            data->loading_state = 9;
+            break;
+        default: break;
+    }
+}
+
 static void analyse_key(data_t *data)
 {
     tile_t *tile = data->tiles;
@@ -40,16 +56,7 @@ static void analyse_key(data_t *data)
             break;
         case sfKeyLeft: goleft(data);
             break;
-        case sfKeySpace:
-            if (pos.y == 430) {
-                data->video.ui = 32;
-                data->loading_state = 17;
-            }
-            break;
-        case sfKeyEscape: data->video.ui = 32;
-            data->loading_state = 9;
-            break;
-        default: break;
+        default: analyse_key2(data, pos);
     }
 }
 

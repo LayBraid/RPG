@@ -7,19 +7,9 @@
 
 #include "utils.h"
 
-int can_move(int block)
+static int can_move3(int block)
 {
     switch (block) {
-        case 1:
-        case 2:
-        case 3:
-        case 8:
-        case 9:
-        case 30:
-        case 31:
-        case 32:
-        case 33:
-        case 34:
         case 35:
         case 36:
         case 37:
@@ -37,8 +27,14 @@ int can_move(int block)
         case 390:
         case 391:
         case 415:
-        case 416:
-        case 570:
+        case 570: return (1);
+        default: return (0);
+    }
+}
+
+int can_move2(int block)
+{
+    switch (block) {
         case 571:
         case 573:
         case 574:
@@ -56,9 +52,27 @@ int can_move(int block)
         case 2045:
         case 2046:
         case 2047:
+        case 2049: return (1);
+        default: return (can_move3(block));
+    }
+}
+
+int can_move(int block)
+{
+    switch (block) {
+        case 1:
+        case 2:
+        case 3:
+        case 8:
+        case 9:
+        case 30:
+        case 31:
+        case 32:
+        case 33:
+        case 34:
         case 2048:
-        case 2049:
+        case 416:
         case 585: return (1);
-        default: return (0);
+        default: return (can_move2(block));
     }
 }

@@ -25,4 +25,6 @@ void delete_menuS(data_t *data);
 void godown(data_t *data);
 void gotop(data_t *data);
 
+void drawtextmenu(data_t *data);
+
 #endif /* !MENU_H_ */

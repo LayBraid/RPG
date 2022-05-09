@@ -9,6 +9,7 @@
 
 node_texture *init_texture14(node_texture *texture)
 {
+    add_next_texture(&texture, set_house9_5, "house9_5",264);
     add_next_texture(&texture, set_house9_6, "house9_6",265);
     add_next_texture(&texture, set_house9_7, "house9_7",266);
     add_next_texture(&texture, set_house9_8, "house9_8",267);
@@ -27,12 +28,12 @@ node_texture *init_texture14(node_texture *texture)
     add_next_texture(&texture, set_water_edge0_3, "water_edge0_3",301);
     add_next_texture(&texture, set_caves_entry0_0, "caves_entry0_0",302);
     add_next_texture(&texture, set_caves_entry0_1, "caves_entry0_1",303);
-    add_next_texture(&texture, set_caves_entry1_0, "caves_entry1_0",308);
     return init_texture15(texture);
 }
 
 node_texture *init_texture13(node_texture *texture)
 {
+    add_next_texture(&texture, set_house7_10, "house7_10",249);
     add_next_texture(&texture, set_house7_11, "house7_11",250);
     add_next_texture(&texture, set_house8_0, "house8_0",284);
     add_next_texture(&texture, set_house8_1, "house8_1",285);
@@ -51,12 +52,12 @@ node_texture *init_texture13(node_texture *texture)
     add_next_texture(&texture, set_house9_2, "house9_2",261);
     add_next_texture(&texture, set_house9_3, "house9_3",262);
     add_next_texture(&texture, set_house9_4, "house9_4",263);
-    add_next_texture(&texture, set_house9_5, "house9_5",264);
     return init_texture14(texture);
 }
 
 node_texture *init_texture12(node_texture *texture)
 {
+    add_next_texture(&texture, set_house6_3, "house6_3",232);
     add_next_texture(&texture, set_house6_4, "house6_4",233);
     add_next_texture(&texture, set_house6_5, "house6_5",234);
     add_next_texture(&texture, set_house6_6, "house6_6",235);
@@ -75,12 +76,12 @@ node_texture *init_texture12(node_texture *texture)
     add_next_texture(&texture, set_house7_7, "house7_7",246);
     add_next_texture(&texture, set_house7_8, "house7_8",247);
     add_next_texture(&texture, set_house7_9, "house7_9",248);
-    add_next_texture(&texture, set_house7_10, "house7_10",249);
     return init_texture13(texture);
 }
 
 node_texture *init_texture11(node_texture *texture)
 {
+    add_next_texture(&texture, set_house4_8, "house4_8",217);
     add_next_texture(&texture, set_house4_9, "house4_9",218);
     add_next_texture(&texture, set_house4_10, "house4_10",219);
     add_next_texture(&texture, set_house4_11, "house4_11",220);
@@ -99,12 +100,12 @@ node_texture *init_texture11(node_texture *texture)
     add_next_texture(&texture, set_house6_0, "house6_0",280);
     add_next_texture(&texture, set_house6_1, "house6_1",281);
     add_next_texture(&texture, set_house6_2, "house6_2",231);
-    add_next_texture(&texture, set_house6_3, "house6_3",232);
     return init_texture12(texture);
 }
 
 node_texture *init_texture10(node_texture *texture)
 {
+    add_next_texture(&texture, set_house3_1, "house3_1",275);
     add_next_texture(&texture, set_house3_2, "house3_2",201);
     add_next_texture(&texture, set_house3_3, "house3_3",202);
     add_next_texture(&texture, set_house3_4, "house3_4",203);
@@ -123,6 +124,5 @@ node_texture *init_texture10(node_texture *texture)
     add_next_texture(&texture, set_house4_5, "house4_5",214);
     add_next_texture(&texture, set_house4_6, "house4_6",215);
     add_next_texture(&texture, set_house4_7, "house4_7",216);
-    add_next_texture(&texture, set_house4_8, "house4_8",217);
     return init_texture11(texture);
 }

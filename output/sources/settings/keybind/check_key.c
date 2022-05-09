@@ -54,6 +54,7 @@ void check_key_b(data_t *data)
     data->keys->key[38] = "LShift";
     data->keys->key[39] = "LAlt";
 }
+
 void check_key_c(data_t *data)
 {
     data->keys->key[40] = "LSystem";

@@ -9,196 +9,6 @@
 #include "dialogs.h"
 #include "my_fprintf.h"
 
-void dialog1(data_t *data, int npc_id)
-{
-    dialog_init(data);
-    dialog(data,
-        "Link...\n\nLiiink... Liiiiiink...\n\nLIIIINNNNKK !!!",
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "...", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "Tu dors ?", data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "*????????*", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data,"Bon je t'ai prepare des donuts sucres... au sucre,"
-    "\n\ndonc descend me gouter ca.", data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
-    data->video.ui = 2;
-}
-
-void dialog2(data_t *data, int npc_id)
-{
-    dialog_init(data);
-    dialog(data, my_fprintf("%s%s",
-        "Bon garcon !\n\nAlors ? Comment etaient-ils ?\n\n",
-        "Je te les ai prepare avec amour."),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "...", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Haaa ! Je savais qu'ils te plairaient ! Je suis content !",
-    "\n\nBon, comment tu t'appelles deja ?"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data,
-    "Nico ? Non c'est pas ca. Yanis ? Non plus. Ah je me souviens ! Adidas !",
-    data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "........", data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "L'heure est grave Adidas ! Ganon est revenu sur l'ile et a vole les\n\n",
-    "poulets du fermier du village ! Le KFC est donc a l'arret et tous\n\n",
-    "les habitants sont en plein desespoir !"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "panique", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "C'est pourquoi tu dois partir recuperer les poulets que l'horrible\n\n",
-    "Ganon nous a subtilise. Je compte sur toi Adidas !"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "EN AVANT !", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
-    data->video.ui = 2;
-}
-
-void dialog3(data_t *data, int npc_id)
-{
-    dialog_init(data);
-    dialog(data, my_fprintf("%s%s",
-    "Ah Link ! Te voila ! C'est horrible !\n\n",
-    "Ganon est venu et a vole tous les poulets !"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, ".....", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s", "Tu dois nous aider Link !\n\n",
-    "Acceptes-tu de recuperer les poulets pour moi ?"),
-    data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    if (dialog_choice(data) == 1) {
-        destroy_dialog_frame(data);
-        dialog(data, "Oui !", data->id_text_player, 0, npc_id);
-    } else {
-        destroy_dialog_frame(data);
-        dialog(data, "Non !", data->id_text_player, 0, npc_id);
-    }
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Super ! Je savais que je pouvais compter sur toi Link !\n\n",
-    "Ganon s'est enfui dans la foret au Nord du village apres m'avoir vole",
-    "\n\nmes gentils poulets. Tu devrais commencer ton expedition la-bas."),
-    data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
-    data->video.ui = 2;
-}
-
-void dialog4(data_t *data, int npc_id)
-{
-    dialog_init(data);
-    dialog(data, "Pssst.. Pssssst.. Ouais c'est a toi que je parle",
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "!!!", data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Moi grossier ? Mais non voyons ! C'est seulement que j'ai decide que\n\n",
-    "vous etes l'heureux elu. En effet, vous allez pouvoir profiter de\n\n",
-    "promotions extraordinaires."), data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Et si quelqu'un nous entend, il en deviendra completement jaloux.\n\n",
-    "Voila pourquoi je parle doucement."), data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "*interrese*", data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data,
-    "Alors, ca te dit d'en profiter et de m'acheter mes superbes produits ?",
-    data->id_text_player, 1, npc_id);
-    if (dialog_choice(data) == 1) {
-        destroy_dialog_frame(data);
-        dialog(data, "Oui !", data->id_text_player, 0, npc_id);
-    } else {
-        destroy_dialog_frame(data);
-        dialog(data, "Non !", data->id_text_player, 0, npc_id);
-    }
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
-    data->video.ui = 2;
-}
-
-void dialog5(data_t *data, int npc_id)
-{
-    dialog_init(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Bonjour je suis Kamel, le CEO de KFC !\n\n",
-    "J'ai entendu dire que tu souhaitais ramener\n\n",
-    "les poulets voles par Ganon au village !"),
-    data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Mais je dois te prevenir, tu t'aventures sur une route tres dangereuse.",
-    "\n\nEt ca ne vaut pas de mettre en peril ta paisible vie."),
-    data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "*Ca n'atteint pas ma motivation*",
-    data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
-    data->video.ui = 2;
-}
-
-void dialog6(data_t *data, int npc_id)
-{
-    dialog_init(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Tu as alors reussi a parvenir jusqu'ici ?\n\n",
-    "Tu te meles de choses qui te depassent et ne te regardent pas !\n\n",
-    "Rebrousse chemin, je t'aurai prevenu !"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, "*intrigue par le ton employe, mais je n'abandonnerai pas*",
-    data->id_text_player, 0, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
-    data->video.ui = 2;
-}
-
 void dialog7(data_t *data, int npc_id)
 {
     dialog_init(data);
@@ -212,18 +22,7 @@ void dialog7(data_t *data, int npc_id)
     dialog(data, "Il est bete ou quoi lui", data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data,
-    "J'ai du nouveau en stock ! Et ca tue ! Alors, tu veux jeter un oeil ?",
-    data->id_text_player, 1, npc_id);
-    if (dialog_choice(data) == 1) {
-        destroy_dialog_frame(data);
-        dialog(data, "Oui !", data->id_text_player, 0, npc_id);
-    } else {
-        destroy_dialog_frame(data);
-        dialog(data, "Non !", data->id_text_player, 0, npc_id);
-    }
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
+    dialog7b(data, npc_id);
     data->video.ui = 2;
 }
 
@@ -247,21 +46,7 @@ void dialog8(data_t *data, int npc_id)
     "J'ai sorti une nouvelle recette au boeuf il y a 2 mois,\n\n",
     "et personne n'a daigne ne serait-ce que gouter ma nouvelle creation !"),
         data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s", "Alors il me fallait agir !\n\n",
-    "Cette nouvelle creation doit devenir le nouveau produit phare de KFC !"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Mais maintenant que tu sais tout, je ne peux me permettre de te\n\n",
-    "laisser devoiler tout ce que tu viens d'appendre a tout le monde !\n\n",
-    "Je vais donc devoir me debarrasser de toi !"),
-        data->id_text_player, 1, npc_id);
-    inter_dialog(data);
-    destroy_dialog_frame(data);
-    destroy_dialogs(data);
+    dialog8b(data, npc_id);
     data->video.ui = 2;
 }
 
@@ -279,6 +64,19 @@ void dialog9(data_t *data, int npc_id)
     data->video.ui = 2;
 }
 
+void which_dialog2(data_t *data, int npc_id)
+{
+    switch (npc_id) {
+        case (7): data->video.ui = 25;
+            break;
+        case (8): data->video.ui = 24;
+            break;
+        case (9): data->video.ui = 23;
+            break;
+        default: break;
+    }
+}
+
 void which_dialog(data_t *data, int npc_id)
 {
     switch (npc_id) {
@@ -294,13 +92,6 @@ void which_dialog(data_t *data, int npc_id)
             break;
         case (6): data->video.ui = 26;
             break;
-        case (7): data->video.ui = 25;
-            break;
-        case (8): data->video.ui = 24;
-            break;
-        case (9): data->video.ui = 23;
-            break;
-        default:
-            break;
+        default: which_dialog2(data, npc_id);
     }
 }
