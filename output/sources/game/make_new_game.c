@@ -11,27 +11,8 @@
 #include "inventory.h"
 #include "hud.h"
 
-static void analyse_key(data_t *data)
+static void analyse_key2(data_t *data)
 {
-    if (data->event.key.code == data->keys->up)
-        call_event(data, "player_walk_up");
-    if (data->event.key.code == data->keys->down)
-        call_event(data, "player_walk_down");
-    if (data->event.key.code == data->keys->right)
-        call_event(data, "player_walk_right");
-    if (data->event.key.code == data->keys->left)
-        call_event(data, "player_walk_left");
-    if (data->event.key.code == data->keys->up ||
-    data->event.key.code == data->keys->down ||
-    data->event.key.code == data->keys->left ||
-    data->event.key.code == data->keys->right)
-        call_event(data, "player_walk_keys");
-    else
-        call_event(data, "player_stop_walk_keys");
-    if (data->event.key.code == data->keys->inventory) {
-        get_items(data);
-        call_event(data, "open_inventory");
-    }
     if (data->event.key.code == data->keys->interact)
         call_event(data, "interact_npc");
     if (data->event.key.code == sfKeyK)
@@ -50,12 +31,32 @@ static void analyse_key(data_t *data)
         data->player.equipped = 3;
 }
 
+static void analyse_key(data_t *data)
+{
+    if (data->event.key.code == data->keys->up)
+        call_event(data, "player_walk_up");
+    if (data->event.key.code == data->keys->down)
+        call_event(data, "player_walk_down");
+    if (data->event.key.code == data->keys->right)
+        call_event(data, "player_walk_right");
+    if (data->event.key.code == data->keys->left)
+        call_event(data, "player_walk_left");
+    if (data->event.key.code == data->keys->up || data->event.key.code == data->keys->down ||
+        data->event.key.code == data->keys->left || data->event.key.code == data->keys->right)
+        call_event(data, "player_walk_keys");
+    else
+        call_event(data, "player_stop_walk_keys");
+    if (data->event.key.code == data->keys->inventory) {
+        get_items(data);
+        call_event(data, "open_inventory");
+    }
+    analyse_key2(data);
+}
+
 static void analyse_released_key(data_t *data)
 {
-    if (data->event.key.code == data->keys->up ||
-    data->event.key.code == data->keys->down ||
-    data->event.key.code == data->keys->left ||
-    data->event.key.code == data->keys->right)
+    if (data->event.key.code == data->keys->up || data->event.key.code == data->keys->down ||
+        data->event.key.code == data->keys->left || data->event.key.code == data->keys->right)
         call_event(data, "player_stop_walk_keys");
 }
 
