@@ -27,7 +27,7 @@ unsigned char depth, int map)
     npc_t *node = start;
 
     while (node != NULL) {
-        if (node->depth == depth) {
+        if (node->depth == depth && map == node->map) {
             sfRenderWindow_drawRectangleShape(video.window,
             node->rectangle, NULL);
             node->position = sfRectangleShape_getPosition(node->rectangle);
