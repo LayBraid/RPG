@@ -63,6 +63,7 @@ void dialog(data_t *data, char *dialog,
     data->texts = create_text(data->texts, new, data->font);
     sfText_setColor(data->texts->text, sfWhite);
     sfText_setPosition(data->texts->text, (sfVector2f){100, 900});
+    data->texts->position = (sfVector2f){100, 900};
     for (int i = 0; dialog[i] &&
     sfRenderWindow_isOpen(data->video.window); i++) {
         dialog_loop(data, new, i, dialog);
