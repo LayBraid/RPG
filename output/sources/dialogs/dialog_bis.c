@@ -68,7 +68,7 @@ void dialog(data_t *data, char *dialog,
     sfRenderWindow_isOpen(data->video.window); i++) {
         dialog_loop(data, new, i, dialog);
         analyse_events(data);
-        sfRenderWindow_clear(data->video.window, sfWhite);
+        sfRenderWindow_clear(data->video.window, sfBlack);
         display_all(data);
         sfRenderWindow_display(data->video.window);
         sfClock_restart(data->clock);

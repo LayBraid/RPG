@@ -67,7 +67,9 @@ void init_dialog_choice(data_t *data, sfVector2f pos)
     data->texts = create_text(data->texts, "Oui", data->font);
     data->texts = create_text(data->texts, "Non", data->font);
     sfText_setPosition(data->texts->text, (sfVector2f){1850, 760});
+    data->texts->position = (sfVector2f){1850, 760};
     sfText_setPosition(data->texts->next->text, (sfVector2f){1850, 810});
+    data->texts->position = (sfVector2f){1850, 810};
 }
 
 // TODO tester en situation reelle

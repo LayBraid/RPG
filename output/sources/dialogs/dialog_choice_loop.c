@@ -37,7 +37,7 @@ static void analyse_events(data_t *data)
 void dialog_choice_loop(data_t *data)
 {
     analyse_events(data);
-    sfRenderWindow_clear(data->video.window, sfWhite);
+    sfRenderWindow_clear(data->video.window, sfBlack);
     display_all(data);
     sfRenderWindow_drawText(data->video.window, data->texts->text, NULL);
     sfRenderWindow_drawText(data->video.window,

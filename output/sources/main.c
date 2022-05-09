@@ -20,6 +20,7 @@ static void myh(void)
 int main(int ac, char **av)
 {
     data_t *data = malloc(sizeof(data_t));
+    printf("turbo bitasse\n");
     data_create(data);
 
     if (ac != 1 && (my_strcmp(av[1], "--editor") == 0 ||

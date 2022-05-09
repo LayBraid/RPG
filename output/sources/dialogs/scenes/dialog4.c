@@ -61,8 +61,7 @@ void dialog3(data_t *data, int npc_id)
     dialog(data, ".....", data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s", "Tu dois nous aider Link !\n\n",
-    "Acceptes-tu de recuperer les poulets pour moi ?"),
+    dialog(data, "Tu dois nous aider Link !\n\nAcceptes-tu de recuperer les poulets pour moi ?",
     data->id_text_player, 1, npc_id);
     dialog3b(data, npc_id);
     data->video.ui = 2;
@@ -78,10 +77,9 @@ void dialog4(data_t *data, int npc_id)
     dialog(data, "!!!", data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Moi grossier ? Mais non voyons ! C'est seulement que j'ai decide que\n\n",
-    "vous etes l'heureux elu. En effet, vous allez pouvoir profiter de\n\n",
-    "promotions extraordinaires."), data->id_text_player, 1, npc_id);
+    dialog(data, "Moi grossier ? Mais non voyons ! C'est seulement que j'ai decide que\n\n"
+                 "vous etes l'heureux elu. En effet, vous allez pouvoir profiter de\n\n"
+                 "promotions extraordinaires.", data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data,
@@ -94,16 +92,11 @@ void dialog4(data_t *data, int npc_id)
 void dialog5(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Bonjour je suis Kamel, le CEO de KFC !\n\n",
-    "J'ai entendu dire que tu souhaitais ramener\n\n",
-    "les poulets voles par Ganon au village !"),
+    dialog(data, "Bonjour je suis Kamel, le CEO de KFC !\n\nJ'ai entendu dire que tu souhaitais ramener\n\nles poulets voles par Ganon au village !",
     data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Mais je dois te prevenir, tu t'aventures sur une route tres dangereuse.",
-    "\n\nEt ca ne vaut pas de mettre en peril ta paisible vie."),
+    dialog(data, "Mais je dois te prevenir, tu t'aventures sur une route tres dangereuse.\n\nEt ca ne vaut pas de mettre en peril ta paisible vie.",
     data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);

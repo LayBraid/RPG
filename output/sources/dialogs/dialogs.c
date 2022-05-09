@@ -45,7 +45,7 @@ void inter_dialog_loop(data_t *data, int *anim, sfVector2f *pos)
         if (pos->y <= 980)
             *anim = 1;
     }
-    sfRenderWindow_clear(data->video.window, sfWhite);
+    sfRenderWindow_clear(data->video.window, sfBlack);
     display_all(data);
     sfRenderWindow_display(data->video.window);
     while (sfClock_getElapsedTime(data->clock).microseconds < 20000);

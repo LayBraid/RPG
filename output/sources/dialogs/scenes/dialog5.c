@@ -12,10 +12,7 @@
 void dialog6(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Tu as alors reussi a parvenir jusqu'ici ?\n\n",
-    "Tu te meles de choses qui te depassent et ne te regardent pas !\n\n",
-    "Rebrousse chemin, je t'aurai prevenu !"),
+    dialog(data, "Tu as alors reussi a parvenir jusqu'ici ?\n\nTu te meles de choses qui te depassent et ne te regardent pas !\n\nRebrousse chemin, je t'aurai prevenu !",
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
