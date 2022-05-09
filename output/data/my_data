@@ -1,5 +1,5 @@
 ['Quests']
-['go_downstairs_taste_cake','Go downstairs and taste the cake','Go downstairs to taste grandfather s cake',0,[['go_downstairs',1],['taste_cake',1]],[['nothing', 1]]]
+['go_downstairs_taste_cake','Go downstairs and taste the cake','Go downstairs to taste grandfather s cake',1,[['go_downstairs',1],['taste_cake',1]],[['nothing', 1]]]
 ['go_village_and_talk_farmer','Go in the village to talk to the farmer','Reach the village in the North and talk to the farmer',0,[['go_village',1],['talk_farmer',1]],[['add_5_coins', 1],['add_1_emerald', 1]]]
 ['go_forest','Go in the Forest','Reach the Forest in the West',0,[['go_forest',1]],[['nothing', 1]]]
 ['go_plains','Go in the Plains','Reach the Plains in the North-East of the Forest',0,[['go_plains',1]],[['nothing', 1]]]

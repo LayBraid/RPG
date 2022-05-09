@@ -13,6 +13,7 @@ void check_exit_top(data_t *data)
     if (data->my_map == 0)
         if (data->player.position.y < 5 && data->player.position.x >= 120) {
             data->position_house = (sfVector2f) {120, 50};
+            call_event(data, "go_downstairs");
             set_map(data, 1);
             return;
         }
