@@ -7,7 +7,7 @@
 
 #include "map.h"
 
-const int SIZE[2] = {150, 30};
+const int SIZE[4] = {30, 30, 150, 30};
 
 void setup_collisions(data_t *data)
 {
@@ -38,5 +38,16 @@ void setup_collisions_house(data_t *data)
         malloc(sizeof(int) * SIZE[data->my_map]);
         for (int j = 0; j < SIZE[data->my_map]; j++)
             data->collisions_house[i][j] = 0;
+    }
+}
+
+void setup_collisions_dj(data_t *data)
+{
+    data->collisions_dj = malloc(sizeof(int *) * SIZE[data->my_map]);
+    for (int i = 0; i < SIZE[data->my_map]; i++) {
+        data->collisions_dj[i] =
+        malloc(sizeof(int) * SIZE[data->my_map]);
+        for (int j = 0; j < SIZE[data->my_map]; j++)
+            data->collisions_dj[i][j] = 0;
     }
 }

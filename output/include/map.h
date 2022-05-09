@@ -55,6 +55,14 @@ void house_move_right(data_t *data);
 
 void house_move_left(data_t *data);
 
+void dj_move_down(data_t *data);
+
+void dj_move_up(data_t *data);
+
+void dj_move_right(data_t *data);
+
+void dj_move_left(data_t *data);
+
 void add_map_tophouse(data_t *data, const float info[4]);
 
 void get_map_tophouse(data_t *data);
@@ -70,5 +78,11 @@ void get_map_house(data_t *data);
 void add_map_house(data_t *data, const float info[4]);
 
 void display_rectangles_house(data_t *data);
+
+void setup_collisions_dj(data_t *data);
+
+void add_map_dj(data_t *data, const float info[4]);
+
+void get_map_dj(data_t *data);
 
 #endif /* !MAP_H_ */

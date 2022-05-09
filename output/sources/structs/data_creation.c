@@ -100,10 +100,12 @@ void data_create(data_t *data)
     data->map_hyrule = NULL;
     data->map_tophouse = NULL;
     data->map_house = NULL;
+    data->map_dj = NULL;
     parsing_data(data);
     get_map(data);
     get_map_tophouse(data);
     get_map_house(data);
+    get_map_dj(data);
     set_letters(data);
     setup_texture_player(data);
     set_map(data, 0);

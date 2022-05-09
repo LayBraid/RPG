@@ -393,6 +393,9 @@ struct data {
     node_rectangle *map_house;
     int **collisions_house;
     sfVector2f position_house;
+    node_rectangle *map_dj;
+    int **collisions_dj;
+    sfVector2f position_dj;
     char *settings_state;
     enemy_t *enemies;
     sfClock *enemies_aggro;
