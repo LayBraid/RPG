@@ -59,5 +59,4 @@ void init_hud(data_t *data)
         init_fight_stamina(data);
     else
         init_stamina(data);
-    data->video.ui = 2;
 }

@@ -93,5 +93,6 @@ void which_dialog(data_t *data, int npc_id)
         case (6): data->video.ui = 26;
             break;
         default: which_dialog2(data, npc_id);
+            break;
     }
 }
