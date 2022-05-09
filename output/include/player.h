@@ -53,4 +53,6 @@ void player_effect_all(data_t *data, player_t *node);
 
 void update_rectangle(player_t *player, attack_effect_t *node);
 
+void get_interaction(data_t *data);
+
 #endif

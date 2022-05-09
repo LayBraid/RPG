@@ -25,6 +25,8 @@ void create_items(data_t *data, int idx, int mod, sfVector2f pos)
             break;
         case (1) : new = set_items_value(new, (sfIntRect){427,320,14,16}, pos);
             break;
+        case (2) : new = set_items_value(new, (sfIntRect){393,320,14,16}, pos);
+            break;
     }
     new->position_rect = (sfVector2f){new->position_item.x - 30, new->position_item.y - 20};
     new->rect_rect = (sfIntRect){36,19,24,24};

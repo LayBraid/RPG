@@ -373,6 +373,7 @@ struct data {
     unsigned char loading_state;
     int x_pile_hyrule;
     int y_pile_hyrule;
+    int quest_nb;
     node_button *button;
     node_img *images;
     sfView *main;

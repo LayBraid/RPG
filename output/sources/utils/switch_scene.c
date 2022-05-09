@@ -19,7 +19,9 @@
 #include "pause.h"
 #include "howtoplay.h"
 #include "credits.h"
+#include "hud.h"
 #include "dialogs.h"
+#include "quests.h"
 
 void switch_scenec(data_t *data)
 {

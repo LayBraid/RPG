@@ -10,6 +10,7 @@
 #include "player.h"
 #include "parsing_data.h"
 #include "map.h"
+#include "quests.h"
 
 void init_new_game(data_t *data)
 {

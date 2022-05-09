@@ -55,6 +55,7 @@ void data_create(data_t *data)
     data->player.depth = 0;
     data->player.hp_max = 10;
     data->player.dmg = 1;
+    data->player.stamina = 5;
     data->player.comp = my_strdup("0000000");
     data->player.items = my_strdup("10000");
     data->player.skill_pts = 4;
@@ -62,6 +63,7 @@ void data_create(data_t *data)
     data->player.current_hp = 10;
     data->player.inventory = NULL;
     data->player.name = "";
+    data->quest_nb;
     data->video.drag = -1;
     data->player.rectangle = sfRectangleShape_create();
     data->player.rect = (sfIntRect){0, 0, 0, 0};
@@ -107,7 +109,6 @@ void data_create(data_t *data)
     set_letters(data);
     setup_texture_player(data);
     set_map(data, 0);
-    get_items(data);
     assign_keys(data);
     data->settings_state = malloc(sizeof(char) * 4);
     data->settings_state = "MENU";

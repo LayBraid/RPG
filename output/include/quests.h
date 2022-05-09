@@ -27,4 +27,6 @@ void call_to_quests(data_t *data, char *event);
 
 void finish_quest(data_t *data, quest_t *quest);
 
+void init_quest(data_t *data);
+
 #endif

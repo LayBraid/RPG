@@ -13,4 +13,5 @@ void add_quest(data_t *data, quest_t *quest)
         first_quest(&data->quest, quest);
     else
         any_quest(&data->quest, quest);
+    data->quest_nb += 1;
 }

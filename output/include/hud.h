@@ -16,4 +16,6 @@ void manage_stamina(data_t *data);
 
 void stamina_clock(data_t *data);
 
+void init_hud_loop(data_t *data);
+
 #endif /* !HUD_H_ */

@@ -3,6 +3,12 @@
         "array": "c",
         "string": "c",
         "string_view": "c",
-        "hud.h": "c"
+        "hud.h": "c",
+        "inventory.h": "c",
+        "enemies.h": "c",
+        "my_event.h": "c",
+        "player.h": "c",
+        "quests.h": "c",
+        "dialogs.h": "c"
     }
 }

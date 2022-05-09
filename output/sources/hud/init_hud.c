@@ -53,11 +53,18 @@ void init_hud(data_t *data)
     data->texts = set_text_position(data->texts, (sfVector2f){50,0});
     sfText_setCharacterSize(data->texts->text, 30);
     data->texts = create_text(data->texts, my_itoa(data->player.lvl), font);
-    data->texts = set_text_position(data->texts, (sfVector2f){10,0});
+    data->texts = set_text_position(data->texts, (sfVector2f){5,0});
     sfText_setCharacterSize(data->texts->text, 30);
     if (data->player.damage_display == 1)
         init_fight_stamina(data);
     else
         init_stamina(data);
-    data->video.ui = 2;
+}
+
+void init_hud_loop(data_t *data)
+{
+    if (data->player.damage_display == 1)
+        init_fight_stamina(data);
+    else
+        init_stamina(data);
 }

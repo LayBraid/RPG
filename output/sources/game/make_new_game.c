@@ -10,6 +10,7 @@
 #include "enemies.h"
 #include "inventory.h"
 #include "hud.h"
+#include "quests.h"
 
 static void analyse_key2(data_t *data)
 {
@@ -18,7 +19,7 @@ static void analyse_key2(data_t *data)
     if (data->event.key.code == sfKeyK)
         call_event(data, "open skill tree");
     if (data->event.key.code == data->keys->attack)
-        call_event(data, "attack_player");
+        get_interaction(data);
     if (data->event.key.code == data->keys->pause) {
         data->video.ui = 32;
         data->loading_state = 18;
