@@ -54,12 +54,13 @@ static void display_enemies_depth_loop(enemy_t *node, video_t video)
         display_life(node, video);
 }
 
-void display_enemies_depth(enemy_t *start, video_t video, unsigned char depth)
+void display_enemies_depth(enemy_t *start, video_t video,
+unsigned char depth, int map)
 {
     enemy_t *node = start;
 
     while (node->id < node->next->id) {
-        if (node->depth == depth) {
+        if (node->depth == depth && node->map == map) {
             sfRenderWindow_drawRectangleShape(video.window,
             node->rectangle, NULL);
             display_enemies_depth_loop(node, video);
@@ -67,7 +68,7 @@ void display_enemies_depth(enemy_t *start, video_t video, unsigned char depth)
         }
         node = node->next;
     }
-    if (node->depth == depth) {
+    if (node->depth == depth && node->map == map) {
         sfRenderWindow_drawRectangleShape(video.window,
         node->rectangle, NULL);
         if (node->display_life)

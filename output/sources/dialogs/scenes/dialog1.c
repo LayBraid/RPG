@@ -12,14 +12,13 @@
 void dialog7(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Pssst.. Pssssst..\n\n",
-    "Oui bon maintenant on se connait toi et moi\n\n",
-    "plus besoin de me cacher effectivement."),
-        data->id_text_player, 1, npc_id);
+    dialog(data, "Pssst.. Pssssst..\n\n Oui bon maintenant on se"
+    "connait toi et moi\n\n plus besoin de me cacher effectivement.",
+    data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, "Il est bete ou quoi lui", data->id_text_player, 0, npc_id);
+    dialog(data, "Il est bete ou quoi lui",
+    data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog7b(data, npc_id);
@@ -29,23 +28,19 @@ void dialog7(data_t *data, int npc_id)
 void dialog8(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s",
-    "Je t'avais pourtant dit de ne pas te meler de choses\n\n",
-    "qui ne te regardent pas ! C'est moi qui ai vole tous les poulets."),
-        data->id_text_player, 1, npc_id);
+    dialog(data, "Je t'avais pourtant dit de ne pas te meler de choses\n\n qui ne te regardent pas ! C'est moi qui ai vole tous les poulets.",
+    data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Le retour de Ganon dans notre royaume ne pouvait pas avoir un\n\n",
-    "meilleur timing, ca m'a permis de trouver le coupable parfait."),
-        data->id_text_player, 1, npc_id);
+    dialog(data, "Le retour de Ganon dans notre royaume ne pouvait pas avoir un\n\n"
+    "meilleur timing, ca m'a permis de trouver le coupable parfait.",
+    data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Si j'ai vole les poulets, c'est dans un but precis.\n\n",
-    "J'ai sorti une nouvelle recette au boeuf il y a 2 mois,\n\n",
-    "et personne n'a daigne ne serait-ce que gouter ma nouvelle creation !"),
-        data->id_text_player, 1, npc_id);
+    dialog(data, "Si j'ai vole les poulets, c'est dans un but precis.\n\n"
+    "J'ai sorti une nouvelle recette au boeuf il y a 2 mois,\n\n"
+    "et personne n'a daigne ne serait-ce que gouter ma nouvelle creation !",
+    data->id_text_player, 1, npc_id);
     dialog8b(data, npc_id);
     data->video.ui = 2;
 }
@@ -53,11 +48,10 @@ void dialog8(data_t *data, int npc_id)
 void dialog9(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Salut ma couillasse c'est Jean-Marie Bigard !\n\n",
-    "Non je rigole bien joue Link, grace a toi on va pouvoir\n\n",
-    "de nouveau deguster du poulet ! Merci infiniment !"),
-        data->id_text_player, 1, npc_id);
+    dialog(data,"Salut ma couillasse c'est Jean-Marie Bigard !\n\n"
+    "Non je rigole bien joue Link, grace a toi on va pouvoir\n\n"
+    "de nouveau deguster du poulet ! Merci infiniment !",
+    data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     destroy_dialogs(data);

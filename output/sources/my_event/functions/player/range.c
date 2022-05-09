@@ -36,7 +36,7 @@ void enemies_aggro(data_t *data)
 
     while (tmp->id < tmp->next->id) {
         range = my_range(data->player.position, tmp->position);
-        if (range <= tmp->range) {
+        if (range <= tmp->range && tmp->map == data->my_map) {
             data->interact.enemy_id = tmp->id;
             data->interact.enemy_distance = range;
             tmp->movement = NULL;
@@ -45,7 +45,7 @@ void enemies_aggro(data_t *data)
         tmp = tmp->next;
     }
     range = my_range(data->player.position, tmp->position);
-    if (range <= tmp->range) {
+    if (range <= tmp->range && tmp->map == data->my_map) {
         data->interact.enemy_id = tmp->id;
         data->interact.enemy_distance = range;
         tmp->movement = NULL;

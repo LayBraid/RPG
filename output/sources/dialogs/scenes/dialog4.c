@@ -30,18 +30,18 @@ void dialog1(data_t *data, int npc_id)
 void dialog2(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s",
-        "Bon garcon !\n\nAlors ? Comment etaient-ils ?\n\n",
-        "Je te les ai prepare avec amour."),
+    dialog(data,
+        "Bon garcon !\n\nAlors ? Comment etaient-ils ?\n\n"
+        "Je te les ai prepare avec amour.",
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, "...", data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Haaa ! Je savais qu'ils te plairaient ! Je suis content !",
-    "\n\nBon, comment tu t'appelles deja ?"),
+    dialog(data,
+    "Haaa ! Je savais qu'ils te plairaient ! Je suis content !"
+    "\n\nBon, comment tu t'appelles deja ?",
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -52,9 +52,9 @@ void dialog2(data_t *data, int npc_id)
 void dialog3(data_t *data, int npc_id)
 {
     dialog_init(data);
-    dialog(data, my_fprintf("%s%s",
-    "Ah Link ! Te voila ! C'est horrible !\n\n",
-    "Ganon est venu et a vole tous les poulets !"),
+    dialog(data,
+    "Ah Link ! Te voila ! C'est horrible !\n\n"
+    "Ganon est venu et a vole tous les poulets !",
         data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -84,9 +84,9 @@ void dialog4(data_t *data, int npc_id)
     "promotions extraordinaires."), data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s",
-    "Et si quelqu'un nous entend, il en deviendra completement jaloux.\n\n",
-    "Voila pourquoi je parle doucement."), data->id_text_player, 1, npc_id);
+    dialog(data,
+    "Et si quelqu'un nous entend, il en deviendra completement jaloux.\n\n"
+    "Voila pourquoi je parle doucement.", data->id_text_player, 1, npc_id);
     dialog4b(data, npc_id);
     data->video.ui = 2;
 }

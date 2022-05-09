@@ -25,7 +25,7 @@ void display_all_c(data_t *data)
     for (unsigned char depth = 0; depth < 10; depth++) {
         display_player_depth(data->player, data->video, depth);
         display_npc_depth(data->npcs, data->video, depth, data->my_map);
-        display_enemies_depth(data->enemies, data->video, depth);
+        display_enemies_depth(data->enemies,data->video, depth, data->my_map);
     }
     if (data->interact.status) {
         sfRenderWindow_setView(data->video.window, data->main);

@@ -57,10 +57,9 @@ void dialog3b(data_t *data, int npc_id)
         dialog(data, "Non !", data->id_text_player, 0, npc_id);
     }
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "Super ! Je savais que je pouvais compter sur toi Link !\n\n",
-    "Ganon s'est enfui dans la foret au Nord du village apres m'avoir vole",
-    "\n\nmes gentils poulets. Tu devrais commencer ton expedition la-bas."),
+    dialog(data, "Super ! Je savais que je pouvais compter sur toi Link !\n\n"
+    "Ganon s'est enfui dans la foret au Nord du village apres m'avoir vole"
+    "\n\nmes gentils poulets. Tu devrais commencer ton expedition la-bas.",
     data->id_text_player, 0, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
@@ -77,11 +76,10 @@ void dialog2b(data_t *data, int npc_id)
     dialog(data, "........", data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
-    dialog(data, my_fprintf("%s%s%s",
-    "L'heure est grave Adidas ! Ganon est revenu sur l'ile et a vole les\n\n",
-    "poulets du fermier du village ! Le KFC est donc a l'arret et tous\n\n",
-    "les habitants sont en plein desespoir !"),
-        data->id_text_player, 1, npc_id);
+    dialog(data,   "L'heure est grave Adidas ! Ganon est revenu sur l'ile et a vole les\n\n"
+    "poulets du fermier du village ! Le KFC est donc a l'arret et tous\n\n"
+    "les habitants sont en plein desespoir !",
+    data->id_text_player, 1, npc_id);
     inter_dialog(data);
     destroy_dialog_frame(data);
     dialog(data, "panique", data->id_text_player, 0, npc_id);

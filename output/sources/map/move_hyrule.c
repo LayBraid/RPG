@@ -36,7 +36,7 @@ void hyrule_move_up(data_t *data)
     if (!can_move(data->collisions_hyrule[position.y - 1][position.x]))
         return;
     sfRectangleShape_move(data->player.rectangle, (sfVector2f) {0, -3});
-    if (player.y > 360 && player.y < 2250 - 177)
+    if (player.y > 360 / 2 && player.y < 2250 - 177)
         sfView_move(data->mapping, (sfVector2f) {0, -3});
     data->player.state = WALK_UP;
     data->player.position = sfRectangleShape_getPosition(data->
