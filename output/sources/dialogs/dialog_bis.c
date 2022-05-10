@@ -39,19 +39,20 @@ void wait_microsecc(data_t *data, char *dialog, int i)
     else
         while (sfClock_getElapsedTime(data->clock).microseconds
         < 50000);
+    sfClock_restart(data->clock);
 }
 
-void dialog_loop(data_t *data, char *new, int i, char *dialog)
+void dialog_loop(data_t *data, char *new, int *i, char *dialog)
 {
-    new[i] = dialog[i];
-    new[i + 1] = '\0';
+    new[*i] = dialog[*i];
+    new[*i + 1] = '\0';
     if (data->dialog_skip == 1) {
-        my_strcpy(new + i + 1, dialog + i + 1);
-        i = my_strlen(dialog) - 1;
+        my_strcpy(new + *i + 1, dialog + *i + 1);
+        *i = my_strlen(dialog) - 1;
     }
     sfText_setString(data->texts->text, new);
-    if (dialog[i] != ' ' && data->dialog_skip == 0)
-        wait_microsecc(data, dialog, i);
+    if (dialog[*i] != ' ' && data->dialog_skip == 0)
+        wait_microsecc(data, dialog, *i);
 }
 
 void dialog(data_t *data, char *dialog,
@@ -66,12 +67,11 @@ void dialog(data_t *data, char *dialog,
     data->texts->position = (sfVector2f){100, 900};
     for (int i = 0; dialog[i] &&
     sfRenderWindow_isOpen(data->video.window); i++) {
-        dialog_loop(data, new, i, dialog);
         analyse_events(data);
+        dialog_loop(data, new, &i, dialog);
         sfRenderWindow_clear(data->video.window, sfBlack);
         display_all(data);
         sfRenderWindow_display(data->video.window);
-        sfClock_restart(data->clock);
     }
     data->dialog_skip = 0;
 }

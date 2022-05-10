@@ -16,5 +16,5 @@ void destroy_dialogs(data_t *data)
 
 void destroy_dialog_frame(data_t *data)
 {
-    data->texts = NULL;
+    data->texts = data->texts->next;
 }

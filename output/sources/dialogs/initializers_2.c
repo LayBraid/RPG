@@ -36,7 +36,6 @@ char is_talking)
 
 void dialog_init2(data_t *data)
 {
-    data->player.name = my_strdup("Link");
     data->id_text_player = data->texture_bank->id;
     data->npcs = create_npc(data->npcs, "Arthur");
     data->npcs->inventory = create_inventory(data->npcs->inventory, "bite");
