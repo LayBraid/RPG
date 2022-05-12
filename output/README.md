@@ -12,4 +12,7 @@ We based our RPG on the very legendary `The Legend of Zelda` license.
 Get in the directory and use the `make` command in your terminal.<br>
 Then just type `./my_rpg` and you're good to go !
 
-| [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/LayBraid) | [<img src="https://github.com/AymericChaverot.png?size=85" width=85><br><sub>Aymeric Chaverot</sub>](https://github.com/AymericChaverot) | [<img src="https://github.com/arthurphn.png?size=85" width=85><br><sub>Arthur Pahon</sub>](https://github.com/arthurphn) | [<img src="https://github.com/Eddieklai.png?size=85" width=85><br><sub>Eddie Klai</sub>](https://github.com/Eddieklai) | [<img src="https://github.com/McGalagane.png?size=85" width=85><br><sub>Oscar Malandain</sub>](https://github.com/McGalagane) | :---: | :---: |
+## Developers
+
+| [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/LayBraid) | [<img src="https://github.com/AymericChaverot.png?size=85" width=85><br><sub>Aymeric Chaverot</sub>](https://github.com/AymericChaverot) | [<img src="https://github.com/arthurphn.png?size=85" width=85><br><sub>Arthur Pahon</sub>](https://github.com/arthurphn) | [<img src="https://github.com/Eddieklai.png?size=85" width=85><br><sub>Eddie Klai</sub>](https://github.com/Eddieklai) | [<img src="https://github.com/McGalagane.png?size=85" width=85><br><sub>Oscar Malandain</sub>](https://github.com/McGalagane)
+| :---: | :---: | :---: | :---: | :---: |
