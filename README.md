@@ -17,5 +17,5 @@ Developers
 | :---: | :---: |
 
 Developers
-| [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/LayBraid) | [<img src="https://github.com/AymericChaverot.png?size=85" width=85><br><sub>Aymeric Chaverot</sub>](https://github.com/AymericChaverot)
+| [<img src="https://github.com/LayBraid.png?size=85" width=85><br><sub>Clément Loeuillet</sub>](https://github.com/LayBraid) | [<img src="https://github.com/AymericChaverot.png?size=85" width=85><br><sub>Aymeric Chaverot</sub>](https://github.com/AymericChaverot) | [<img src="https://github.com/arthurphn.png?size=85" width=85><br><sub>Arthur Pahon</sub>](https://github.com/arthurphn)
 | :---: | :---: |
